@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "[windows] 快速打开当前文件夹对应的Console"
+date:   2018-01-12
+comments: true
+categories: windows
+tags: console
+description:
+published: true
+---
+
+ctrl + shift + 鼠标右键
+

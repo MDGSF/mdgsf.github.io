@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Art] [leetcode - C++] 24 Swap Nodes in Pairs"
+title: "[Art][leetcode - C++] 24 Swap Nodes in Pairs"
 date: 2016-12-21
 author: mdgsf
 comments: true

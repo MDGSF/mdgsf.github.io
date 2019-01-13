@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[windows] VSCode 添加 mingw"
+title:  "[Windows] VSCode 添加 mingw"
 date:   2017-11-24
 comments: true
-categories: windows
+categories: Windows
 tags: windows
 description:
 published: true

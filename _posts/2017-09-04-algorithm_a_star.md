@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[图] A Star"
+title: "[Art][图] A Star"
 date: 2017-09-04
 author: mdgsf
 comments: true

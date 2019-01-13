@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Art] [leetcode - C++] 3 Longest Substring without Repeating Characters"
+title: "[Art][leetcode - C++] 3 Longest Substring without Repeating Characters"
 date: 2017-07-20
 author: mdgsf
 comments: true

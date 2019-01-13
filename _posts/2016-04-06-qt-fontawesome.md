@@ -3,7 +3,7 @@ layout: post
 title:  "[Qt] Use fontawesome in qt."
 date:   2016-04-06
 comments: true
-categories: qt
+categories: Qt
 tags: [c++,qt]
 description: "Use fontawesome in qt"
 published: true

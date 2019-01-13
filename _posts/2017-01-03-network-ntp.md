@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "[NTP] 网络时间同步技术"
+title: "[Network][NTP] 网络时间同步技术"
 date: 2017-01-08
 author: mdgsf
 comments: true
-categories: network
+categories: Network
 tags: network,ntp
 description:
 published: true #default true

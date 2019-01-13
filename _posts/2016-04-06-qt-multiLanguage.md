@@ -3,7 +3,7 @@ layout: post
 title:  "[Qt] 制作多语言"
 date:   2016-04-06
 comments: true
-categories: qt
+categories: Qt
 tags: [c++,qt]
 description: "qt 制作多语言"
 published: true

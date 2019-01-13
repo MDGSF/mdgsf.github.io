@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Go Web编程] import"
+title:  "[GO] import"
 date:   2017-10-13
 comments: true
 categories: GO
@@ -8,9 +8,6 @@ tags: GO
 description: ""
 published: true
 ---
-
-
-
 
 ## 1. 相对路径
 

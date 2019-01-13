@@ -4,7 +4,7 @@ title: "[Network] TCP Connection Establishment and Termination"
 date: 2016-05-12
 author: mdgsf
 comments: true
-categories: network
+categories: Network
 tags: network,tcp
 description:
 published: true #default true

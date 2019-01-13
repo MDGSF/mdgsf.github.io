@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[windows] VSCode 添加Code Snippets"
+title:  "[Windows] VSCode 添加Code Snippets"
 date:   2017-07-19
 comments: true
-categories: windows
+categories: Windows
 tags: windows
 description:
 published: true

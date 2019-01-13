@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[vim] c++ syntax"
+title:  "[Linux][vim] c++ syntax"
 date:   2016-03-05
 comments: true
 categories: Linux

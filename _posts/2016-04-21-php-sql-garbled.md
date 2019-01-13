@@ -4,7 +4,7 @@ title: "[PHP] 乱码解决方法"
 date: 2016-04-21
 author: mdgsf
 comments: true
-categories: php
+categories: PHP
 tags: php
 description:
 published: true #default true

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Art] [leetcode - C++] 231 Power of Two"
+title: "[Art][leetcode - C++] 231 Power of Two"
 date: 2017-03-03
 author: mdgsf
 comments: true

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Art] [leetcode - C++] 19 Remove Nth Node From End of List"
+title: "[Art][leetcode - C++] 19 Remove Nth Node From End of List"
 date: 2016-12-21
 author: mdgsf
 comments: true

@@ -4,7 +4,7 @@ title: "[Network] Frame in data link layer"
 date: 2016-06-15
 author: mdgsf
 comments: true
-categories: network
+categories: Network
 tags: network,frame
 description:
 published: true #default true

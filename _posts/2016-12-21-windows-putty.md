@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[windows] putty 颜色配置"
+title:  "[Windows] putty 颜色配置"
 date:   2016-12-21
 comments: true
-categories: windows
+categories: Windows
 tags: windows
 description:
 published: true

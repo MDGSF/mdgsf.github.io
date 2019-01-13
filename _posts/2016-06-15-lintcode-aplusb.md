@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[LintCode] A + B"
+title:  "[Art][LintCode] A + B"
 date:   2016-06-15
 comments: true
-categories: LintCode
+categories: Art
 tags: c, a+b
 description:
 published: true

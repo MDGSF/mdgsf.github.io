@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[windows] char和wchar 转换"
+title:  "[Windows] char和wchar 转换"
 date:   2016-05-12
 comments: true
-categories: windows
+categories: Windows
 tags: windows
 description:
 published: true

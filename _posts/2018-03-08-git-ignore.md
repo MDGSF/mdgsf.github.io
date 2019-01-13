@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[git] gitignore修改不起作用"
+title:  "[Git] gitignore修改不起作用"
 date:   2018-03-08
 comments: true
-categories: git
+categories: Git
 tags: git
 description:
 published: true

@@ -4,7 +4,7 @@ title: "[PHP] 开启debug模式"
 date: 2016-04-26
 author: mdgsf
 comments: true
-categories: php
+categories: PHP
 tags: php
 description:
 published: true #default true

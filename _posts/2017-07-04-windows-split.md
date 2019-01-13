@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[windows] 切割文件"
+title:  "[Windows] 切割文件"
 date:   2017-07-04
 comments: true
-categories: windows
+categories: Windows
 tags: windows
 description:
 published: true

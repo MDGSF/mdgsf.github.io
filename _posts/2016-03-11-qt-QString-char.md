@@ -3,7 +3,7 @@ layout: post
 title:  "[Qt] QString 和 char* 转换"
 date:   2016-03-11
 comments: true
-categories: qt
+categories: Qt
 tags: qt, QString
 description:
 published: true

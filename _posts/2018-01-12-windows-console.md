@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[windows] 快速打开当前文件夹对应的Console"
+title:  "[Windows] 快速打开当前文件夹对应的Console"
 date:   2018-01-12
 comments: true
-categories: windows
+categories: Windows
 tags: console
 description:
 published: true

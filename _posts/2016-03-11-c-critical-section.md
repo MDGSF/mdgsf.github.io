@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[windows] CRITICAL_SECTION 临界区"
+title:  "[Windows] CRITICAL_SECTION 临界区"
 date:   2016-03-11
 comments: true
-categories: windows
+categories: Windows
 tags: CRITICAL_SECTION
 description:
 published: true

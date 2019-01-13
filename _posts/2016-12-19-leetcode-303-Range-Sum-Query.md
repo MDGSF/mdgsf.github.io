@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Art] [leetcode - C++] 303 Range Sum Query - Immutable"
+title: "[Art][leetcode - C++] 303 Range Sum Query - Immutable"
 date: 2016-12-19
 author: mdgsf
 comments: true

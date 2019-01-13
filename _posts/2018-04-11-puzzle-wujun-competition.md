@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[智力题] 锦标赛排序算法"
+title:  "[Art][智力题] 锦标赛排序算法"
 date:   2018-04-11
 comments: true
-categories: 智力题
+categories: Art
 tags: 
 description: ""
 published: true

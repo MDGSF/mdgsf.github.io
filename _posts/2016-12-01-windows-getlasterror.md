@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[windows] 输出GetLastError详细信息"
+title:  "[Windows] 输出GetLastError详细信息"
 date:   2016-12-01
 comments: true
-categories: windows
+categories: Windows
 tags: windows
 description:
 published: true

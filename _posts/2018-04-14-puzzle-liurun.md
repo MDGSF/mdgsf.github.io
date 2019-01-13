@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[智力题] 被6整除的数"
+title:  "[Art][智力题] 被6整除的数"
 date:   2018-04-14
 comments: true
-categories: 智力题
+categories: Art
 tags: 
 description: ""
 published: true

@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[git] fork同步"
+title:  "[Git] fork同步"
 date:   2018-02-24
 comments: true
-categories: git
+categories: Git
 tags: git
 description:
 published: true

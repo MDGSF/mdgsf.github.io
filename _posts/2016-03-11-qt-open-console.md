@@ -3,7 +3,7 @@ layout: post
 title:  "[Qt] qtcreator 中打开console"
 date:   2016-03-11
 comments: true
-categories: qt
+categories: Qt
 tags: qt, console
 description:
 published: true

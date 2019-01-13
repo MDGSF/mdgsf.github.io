@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[windows] Ping icmp"
+title:  "[Windows] Ping icmp"
 date:   2016-03-11
 comments: true
-categories: windows
+categories: Windows
 tags: c, ping, icmp
 description:
 published: true

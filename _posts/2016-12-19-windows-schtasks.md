@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[windows] 任务计划schtasks"
+title:  "[Windows] 任务计划schtasks"
 date:   2016-12-19
 comments: true
-categories: windows
+categories: Windows
 tags: windows
 description:
 published: true

@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[windows] vs2008 两个工程文件用同一份代码"
+title:  "[Windows] vs2008 两个工程文件用同一份代码"
 date:   2016-04-18
 comments: true
-categories: windows
+categories: Windows
 tags: windows
 description:
 published: true

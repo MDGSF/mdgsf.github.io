@@ -3,7 +3,7 @@ layout: post
 title:  "[Qt] 从主界面返回登录界面"
 date:   2016-09-25
 comments: true
-categories: qt
+categories: Qt
 tags: [c++,qt]
 description: 
 published: true

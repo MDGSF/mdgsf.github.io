@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "javascript npm msgpack"
+title: "[Web] javascript npm msgpack"
 date: 2018-07-11
 author: mdgsf
 comments: true
-categories: web
+categories: Web
 tags: js
 description: ""
 published: true #default true

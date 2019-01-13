@@ -4,7 +4,7 @@ title: "[PHP] not allowed to connect to this MySQL"
 date: 2016-04-26
 author: mdgsf
 comments: true
-categories: php
+categories: PHP
 tags: php,mysql
 description:
 published: true #default true

@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[智力题] 喝酒问题"
+title:  "[Art][智力题] 喝酒问题"
 date:   2018-04-13
 comments: true
-categories: 智力题
+categories: Art
 tags: 
 description: ""
 published: true

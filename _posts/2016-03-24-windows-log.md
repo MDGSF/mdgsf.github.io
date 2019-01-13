@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[windows] 查看windows系统log"
+title:  "[Windows] 查看windows系统log"
 date:   2016-03-24
 comments: true
-categories: windows
+categories: Windows
 tags: windows
 description:
 published: true

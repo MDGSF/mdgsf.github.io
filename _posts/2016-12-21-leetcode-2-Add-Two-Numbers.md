@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Art] [leetcode - C++] 2 Add Two Numbers"
+title: "[Art][leetcode - C++] 2 Add Two Numbers"
 date: 2016-12-21
 author: mdgsf
 comments: true

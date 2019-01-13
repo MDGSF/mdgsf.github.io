@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[git - 翻译] Syncing a fork"
+title:  "[Git][翻译] Syncing a fork"
 date:   2018-02-25
 comments: true
-categories: git
+categories: Git
 tags: git
 description:
 published: true

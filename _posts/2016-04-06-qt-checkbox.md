@@ -3,7 +3,7 @@ layout: post
 title:  "[Qt] checkbox."
 date:   2016-04-06
 comments: true
-categories: qt
+categories: Qt
 tags: [c++,qt]
 description: ""
 published: true

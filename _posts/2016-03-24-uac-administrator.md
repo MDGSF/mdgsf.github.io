@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[windows] 程序自动获取管理员权限"
+title:  "[Windows] 程序自动获取管理员权限"
 date:   2016-03-24
 comments: true
-categories: windows
+categories: Windows
 tags: UAC
 description:
 published: true

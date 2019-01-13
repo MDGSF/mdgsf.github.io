@@ -4,7 +4,7 @@ title: "[PHP] 入门 Hello World"
 date: 2016-04-15
 author: mdgsf
 comments: true
-categories: php
+categories: PHP
 tags: php
 description:
 published: true #default true

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Art] [leetcode - C++] 237 Delete Node in a Linked List"
+title: "[Art][leetcode - C++] 237 Delete Node in a Linked List"
 date: 2016-12-03
 author: mdgsf
 comments: true

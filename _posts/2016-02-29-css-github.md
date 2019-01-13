@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "css github"
+title: "[Web] css github"
 date: 2016-02-29
 author: mdgsf
 comments: true
-categories: web
+categories: Web
 tags: [css, web]
 description: "some common css"
 published: true #default true

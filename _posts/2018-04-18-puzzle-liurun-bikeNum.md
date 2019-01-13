@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[智力题] 上海有多少辆自行车？"
+title:  "[Art][智力题] 上海有多少辆自行车？"
 date:   2018-04-18
 comments: true
-categories: 智力题
+categories: Art
 tags: 
 description: ""
 published: true

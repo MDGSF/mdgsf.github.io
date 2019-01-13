@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[windows] 32位的程序运行在64位系统中"
+title:  "[Windows] 32位的程序运行在64位系统中"
 date:   2016-12-01
 comments: true
-categories: windows
+categories: Windows
 tags: windows
 description:
 published: true

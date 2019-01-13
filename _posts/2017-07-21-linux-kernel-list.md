@@ -1,15 +1,13 @@
 ---
 layout: post
-title:  "[linux-kernel] list"
+title:  "[Linux] list"
 date:   2017-07-21
 comments: true
-categories: Linux-kernel
+categories: Linux
 tags: linux, kernel, c, list
 description:
 published: true
 ---
-
-
 
 ## list.h 源码
 

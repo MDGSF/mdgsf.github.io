@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[ProjectEuler] Problem 3"
+title:  "[GO][ProjectEuler] Problem 3"
 date:   2017-10-10
 comments: true
 categories: GO

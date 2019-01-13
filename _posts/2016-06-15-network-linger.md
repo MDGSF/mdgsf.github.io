@@ -4,7 +4,7 @@ title: "[Network] socket linger usage"
 date: 2016-06-15
 author: mdgsf
 comments: true
-categories: network
+categories: Network
 tags: network,linger
 description:
 published: true #default true

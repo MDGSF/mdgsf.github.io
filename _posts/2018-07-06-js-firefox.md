@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "firefox 下测试 javascript 代码"
+title: "[Web] firefox 下测试 javascript 代码"
 date: 2018-07-06
 author: mdgsf
 comments: true
-categories: web
+categories: Web
 tags: js
 description: ""
 published: true #default true

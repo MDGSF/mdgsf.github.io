@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[Javascript] Arrow function"
+title:  "[Web][Javascript] Arrow function"
 date:   2018-05-16
 comments: true
-categories: Javascript
+categories: Web
 tags: js, javascript
 description: ""
 published: true

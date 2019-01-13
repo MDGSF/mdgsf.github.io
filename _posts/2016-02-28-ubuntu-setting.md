@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Ubuntu setting"
+title: "[Linux] Ubuntu setting"
 date: 2016-02-28
 author: mdgsf
 comments: true

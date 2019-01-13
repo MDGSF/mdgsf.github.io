@@ -4,7 +4,7 @@ title: "[Network] TIME_WAIT State"
 date: 2016-05-14
 author: mdgsf
 comments: true
-categories: network
+categories: Network
 tags: network,tcp,timewait
 description:
 published: true #default true

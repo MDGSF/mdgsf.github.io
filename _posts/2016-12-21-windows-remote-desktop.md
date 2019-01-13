@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[windows] 远程桌面控制"
+title:  "[Windows] 远程桌面控制"
 date:   2016-12-21
 comments: true
-categories: windows
+categories: Windows
 tags: windows
 description:
 published: true

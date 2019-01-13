@@ -4,7 +4,7 @@ title: "[Network] 缩略语"
 date: 2018-03-19
 author: mdgsf
 comments: true
-categories: network
+categories: Network
 tags: network
 description:
 published: true #default true

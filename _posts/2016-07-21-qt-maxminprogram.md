@@ -3,7 +3,7 @@ layout: post
 title:  "[Qt] 点击任务栏最大化最小化程序"
 date:   2016-07-21
 comments: true
-categories: qt
+categories: Qt
 tags: [c++,qt]
 description:
 published: true

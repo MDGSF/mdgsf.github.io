@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[windows] open telnet in windows"
+title:  "[Windows] open telnet in windows"
 date:   2016-11-15
 comments: true
-categories: windows
+categories: Windows
 tags: windows
 description:
 published: true

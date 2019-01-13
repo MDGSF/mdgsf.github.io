@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[git] git 基础使用"
+title:  "[Git] git 基础使用"
 date:   2017-07-14
 comments: true
-categories: git
+categories: Git
 tags: git
 description:
 published: true

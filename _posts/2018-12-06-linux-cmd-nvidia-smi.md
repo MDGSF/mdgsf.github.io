@@ -9,9 +9,9 @@ description:
 published: true
 ---
 
-nvidia-smi 查看 GPU 数据
+`nvidia-smi` 查看 GPU 数据
 
-watch -d -n nvidia-smi 实时监控 GPU 数据
+`watch -d -n 1 nvidia-smi` 实时监控 GPU 数据
 
 ```
 ➜  huangjian nvidia-smi

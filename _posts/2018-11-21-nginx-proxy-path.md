@@ -28,7 +28,19 @@ location /api {
 
 application_server_addr 那里会收到 /api/v1/xxx
 
-如果 `proxy_pass http://application_server_addr;` 修改为 `proxy_pass http://application_server_addr/;` 的话。
+如果将
+
+```
+proxy_pass http://application_server_addr;
+```
+
+修改为 
+
+```
+proxy_pass http://application_server_addr/;
+``` 
+
+的话（就是在末尾价格斜杠）。
 
 那 application_server_addr 那里会收到 /v1/xxx 。
 

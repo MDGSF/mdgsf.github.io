@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C++] find_if"
+title:  "[C/C++] find_if"
 date:   2017-08-24
 comments: true
-categories: c
+categories: C/C++
 tags: find_if
 description:
 published: true

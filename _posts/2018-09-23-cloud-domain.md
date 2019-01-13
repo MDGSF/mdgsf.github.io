@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[Cloud] 域名配置"
+title:  "[Linux][Cloud] 域名配置"
 date:   2018-09-23
 comments: true
-categories: linux
+categories: Linux
 tags: linux, cloud
 description:
 published: true

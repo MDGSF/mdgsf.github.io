@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C++] shared_ptr"
+title:  "[C/C++] shared_ptr"
 date:   2017-08-22
 comments: true
-categories: c
+categories: C/C++
 tags: shared_ptr
 description:
 published: true

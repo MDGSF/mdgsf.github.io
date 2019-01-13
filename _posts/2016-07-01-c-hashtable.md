@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C++] hashtable "
+title:  "[C/C++] hashtable "
 date:   2016-07-01
 comments: true
-categories: c
+categories: C/C++
 tags: c++,hashtable
 description:
 published: true

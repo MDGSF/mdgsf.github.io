@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "[vim] vundle管理插件, astyle"
+title:  "[Linux][vim] vundle管理插件, astyle"
 date:   2016-07-01
 comments: true
-categories: linux
-tags: [vim]
+categories: Linux
+tags: Linux,vim
 description: ""
 published: true
 ---

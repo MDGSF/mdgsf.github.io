@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "[信号] 常见的Linux信号"
+title: "[Linux][信号] 常见的Linux信号"
 date: 2018-04-22
 author: mdgsf
 comments: true
-categories: linux
+categories: Linux
 tags: linux
 description: ""
 published: true #default true

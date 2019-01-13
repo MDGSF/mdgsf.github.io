@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C] Windows下使用getopt"
+title:  "[C/C++] Windows下使用getopt"
 date:   2017-12-01
 comments: true
-categories: c
+categories: C/C++
 tags: c
 description: ""
 published: true

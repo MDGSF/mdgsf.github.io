@@ -3,7 +3,7 @@ layout: post
 title:  "[linux-kernel] 内核学习"
 date:   2016-04-12
 comments: true
-categories: linux-kernel
+categories: Linux-kernel
 tags: linux, kernel, c, asm
 description:
 published: true

@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C] sizeof struct"
+title:  "[C/C++] sizeof struct"
 date:   2017-02-24
 comments: true
-categories: c
+categories: C/C++
 tags: c 
 description: ""
 published: true

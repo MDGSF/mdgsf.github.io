@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C] 和数组有关的一道题"
+title:  "[C/C++] 和数组有关的一道题"
 date:   2016-12-28
 comments: true
-categories: c
+categories: C/C++
 tags: c 
 description: ""
 published: true

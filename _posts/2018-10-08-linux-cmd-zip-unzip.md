@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[linux] zip unzip 压缩命令"
+title:  "[Linux] zip unzip 压缩命令"
 date:   2018-10-08
 comments: true
-categories: linux
+categories: Linux
 tags: linux, zip, unzip
 description:
 published: true

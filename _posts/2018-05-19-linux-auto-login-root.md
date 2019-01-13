@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[linux] root用户自动登录"
+title:  "[Linux] root用户自动登录"
 date:   2018-05-19
 comments: true
-categories: linux
+categories: Linux
 tags: linux, apt
 description:
 published: true

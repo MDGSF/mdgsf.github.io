@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[linux] nvidia-smi 命令"
+title:  "[Linux] nvidia-smi 命令"
 date:   2018-12-06
 comments: true
-categories: linux
+categories: Linux
 tags: linux, nvidia-smi
 description:
 published: true

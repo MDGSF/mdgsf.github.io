@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C++] Replace Tab"
+title:  "[C/C++] Replace Tab"
 date:   2016-09-18
 comments: true
-categories: c
+categories: C/C++
 tags: c  
 description:
 published: true

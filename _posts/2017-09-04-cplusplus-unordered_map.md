@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C++] unordered_map"
+title:  "[C/C++] unordered_map"
 date:   2017-09-04
 comments: true
-categories: c
+categories: C/C++
 tags: unordered_map
 description:
 published: true

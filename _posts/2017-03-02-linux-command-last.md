@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[Linux常用命令] last查看现在与过去登录过系统的用户"
+title:  "[Linux][常用命令] last查看现在与过去登录过系统的用户"
 date:   2017-03-02
 comments: true
-categories: linux
+categories: Linux
 tags: ls
 description:
 published: true

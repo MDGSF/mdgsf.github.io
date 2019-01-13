@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C] malloc 实现"
+title:  "[C/C++] malloc 实现"
 date:   2017-03-08
 comments: true
-categories: c
+categories: C/C++
 tags: c, strcat
 description:
 published: true

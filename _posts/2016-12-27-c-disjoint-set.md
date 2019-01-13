@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C] 并查集 Disjoint set"
+title:  "[C/C++] 并查集 Disjoint set"
 date:   2016-12-27
 comments: true
-categories: c
+categories: C/C++
 tags: c 
 description: ""
 published: true

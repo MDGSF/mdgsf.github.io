@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[STL] map 中用char*作为key"
+title:  "[C/C++][STL] map 中用char*作为key"
 date:   2016-03-30
 comments: true
-categories: c
+categories: C/C++
 tags: c++, map
 description:
 published: true

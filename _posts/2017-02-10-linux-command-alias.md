@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[Linux常用命令] alias"
+title:  "[Linux][常用命令] alias"
 date:   2017-02-10
 comments: true
-categories: linux
+categories: Linux
 tags: ls
 description:
 published: true

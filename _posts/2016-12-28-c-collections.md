@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C] 复习题"
+title:  "[C/C++] 复习题"
 date:   2016-12-28
 comments: true
-categories: c
+categories: C/C++
 tags: c 
 description: ""
 published: true

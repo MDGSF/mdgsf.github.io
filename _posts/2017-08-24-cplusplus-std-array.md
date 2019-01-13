@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C++] array"
+title:  "[C/C++] array"
 date:   2017-08-24
 comments: true
-categories: c
+categories: C/C++
 tags: array
 description:
 published: true

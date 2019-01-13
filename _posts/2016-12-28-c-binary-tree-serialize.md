@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C] 二叉树的序列化和反序列化"
+title:  "[C/C++] 二叉树的序列化和反序列化"
 date:   2016-12-28
 comments: true
-categories: c
+categories: C/C++
 tags: c 
 description: ""
 published: true

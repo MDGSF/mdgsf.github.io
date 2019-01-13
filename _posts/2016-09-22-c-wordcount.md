@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C] Word Count"
+title:  "[C/C++] Word Count"
 date:   2016-09-22
 comments: true
-categories: c
+categories: C/C++
 tags: c
 description:
 published: true

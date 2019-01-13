@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C++] 记录一个C++内存bug"
+title:  "[C/C++] 记录一个C++内存bug"
 date:   2017-12-03
 comments: true
-categories: c
+categories: C/C++
 tags: memory bug
 description:
 published: true

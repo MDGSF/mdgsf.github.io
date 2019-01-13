@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "[C++] double fork"
+title: "[C/C++] double fork"
 date: 2016-08-29
 author: mdgsf
 comments: true
-categories: c
+categories: C/C++
 tags: ubuntu, fork
 description: ""
 published: true #default true

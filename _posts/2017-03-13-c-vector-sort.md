@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C] vector 排序"
+title:  "[C/C++] vector 排序"
 date:   2017-03-13
 comments: true
-categories: c
+categories: C/C++
 tags: c, strcat
 description:
 published: true

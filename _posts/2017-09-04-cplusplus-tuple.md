@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C++] tuple"
+title:  "[C/C++] tuple"
 date:   2017-09-04
 comments: true
-categories: c
+categories: C/C++
 tags: tuple
 description:
 published: true

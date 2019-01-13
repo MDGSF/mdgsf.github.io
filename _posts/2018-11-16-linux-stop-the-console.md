@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[linux] ctrl+s 和 ctrl+q"
+title:  "[Linux] ctrl+s 和 ctrl+q"
 date:   2018-11-16
 comments: true
-categories: linux
+categories: Linux
 tags: linux
 description:
 published: true

@@ -1,18 +1,16 @@
 ---
 layout: post
-title:  "[vim] delete \'\\r\' in window file"
+title:  "[Linux][vim] delete \'\\r\' in window file"
 date:   2016-11-15
 comments: true
-categories: linux
-tags: vim
+categories: Linux
+tags: Linux,vim
 description:
 published: true
 ---
 
+删除文件末尾的 `\r`
 
+```
 :%s/\r//g
-
-
-
-
-
+```

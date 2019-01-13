@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C++] Coding Standards"
+title:  "[C/C++] Coding Standards"
 date:   2016-03-11
 comments: true
-categories: c
+categories: C/C++
 tags: c, coding standard
 description:
 published: true

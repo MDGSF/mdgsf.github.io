@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[linux] tool xclip"
+title:  "[Linux] tool xclip"
 date:   2018-05-19
 comments: true
-categories: linux
+categories: Linux
 tags: linux, apt
 description:
 published: true

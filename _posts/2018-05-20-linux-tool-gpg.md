@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[linux] gpg加密工具"
+title:  "[Linux] gpg加密工具"
 date:   2018-05-20
 comments: true
-categories: linux
+categories: Linux
 tags: linux, apt
 description:
 published: true

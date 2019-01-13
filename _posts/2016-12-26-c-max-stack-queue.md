@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C] 队列O(1)求最大元素"
+title:  "[C/C++] 队列O(1)求最大元素"
 date:   2016-12-26
 comments: true
-categories: c
+categories: C/C++
 tags: c 
 description: ""
 published: true

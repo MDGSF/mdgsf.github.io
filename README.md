@@ -6,6 +6,8 @@ My github blog.
 
 ```
 bundle exec jekyll serve
+
+--incremental
 ```
 
 Now browse to http://localhost:4000

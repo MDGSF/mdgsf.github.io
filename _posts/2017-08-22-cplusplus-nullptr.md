@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C++] NULL,nullptr,nullptr_t"
+title:  "[C/C++] NULL,nullptr,nullptr_t"
 date:   2017-08-22
 comments: true
-categories: c
+categories: C/C++
 tags: nullptr
 description:
 published: true

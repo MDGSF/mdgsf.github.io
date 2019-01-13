@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "[scp] scp出现stalled的原因和解决方法"
-date:   2016-11-15
+title: "[Linux][scp] scp出现stalled的原因和解决方法"
+date: 2016-11-15
 comments: true
-categories: linux
-tags: scp
+categories: Linux
+tags: Linux,scp
 description:
 published: true
 ---

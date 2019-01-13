@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C] 数组哨兵"
+title:  "[C/C++] 数组哨兵"
 date:   2016-12-21
 comments: true
-categories: c
+categories: C/C++
 tags: c 
 description: ""
 published: true

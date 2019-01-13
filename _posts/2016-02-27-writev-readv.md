@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C++] writev and readv"
+title:  "[C/C++] writev and readv"
 date:   2016-02-27
 comments: true
-categories: c
+categories: C/C++
 tags: writev, readv
 description:
 published: true

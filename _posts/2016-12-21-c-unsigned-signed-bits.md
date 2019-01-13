@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "无符号数 和 有符号数 的二进制图"
+title:  "[C/C++] 无符号数 和 有符号数 的二进制图"
 date:   2016-12-21
 comments: true
-categories: c
+categories: C/C++
 tags: c 
 description: ""
 published: true

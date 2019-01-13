@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[linux] watch 命令"
+title:  "[Linux] watch 命令"
 date:   2018-12-06
 comments: true
-categories: linux
+categories: Linux
 tags: linux, watch
 description:
 published: true

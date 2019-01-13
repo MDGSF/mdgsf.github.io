@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[linux] tmux 软件"
+title:  "[Linux] tmux 软件"
 date:   2018-11-13
 comments: true
-categories: linux
+categories: Linux
 tags: linux, tmux
 description:
 published: true

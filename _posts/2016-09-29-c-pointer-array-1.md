@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C] Pointer and Array 1"
+title:  "[C/C++] Pointer and Array 1"
 date:   2016-09-29
 comments: true
-categories: c
+categories: C/C++
 tags: c
 description:
 published: true

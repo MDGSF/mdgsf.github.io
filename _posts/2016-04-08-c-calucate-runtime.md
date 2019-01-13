@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[C++] 计算程序运行时间"
+title:  "[C/C++] 计算程序运行时间"
 date:   2016-04-08
 comments: true
 categories: Art

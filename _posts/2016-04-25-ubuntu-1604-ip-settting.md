@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Ubuntu 16.04 ip setting"
+title: "[Linux] Ubuntu 16.04 ip setting"
 date: 2016-04-25
 author: mdgsf
 comments: true
-categories: linux
-tags: ubuntu, vbox
+categories: Linux
+tags: Linux, ubuntu, vbox
 description: ""
 published: true #default true
 ---

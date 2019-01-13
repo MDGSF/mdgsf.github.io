@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C++] 为release生成dump文件"
+title:  "[C/C++] 为release生成dump文件"
 date:   2017-09-13
 comments: true
-categories: c
+categories: C/C++
 tags: dump
 description:
 published: true

@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[linux] 开机自启动脚本"
+title:  "[Linux] 开机自启动脚本"
 date:   2018-05-19
 comments: true
-categories: linux
+categories: Linux
 tags: linux, apt
 description:
 published: true

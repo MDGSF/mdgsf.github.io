@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C++] 指针的引用作为参数"
+title:  "[C/C++] 指针的引用作为参数"
 date:   2016-06-24
 comments: true
-categories: c
+categories: C/C++
 tags: c++
 description:
 published: true

@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[linux] printf命令"
+title:  "[Linux] printf命令"
 date:   2018-07-20
 comments: true
-categories: linux
+categories: Linux
 tags: linux, apt
 description:
 published: true

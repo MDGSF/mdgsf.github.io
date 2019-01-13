@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[Linux常用命令] wc"
+title:  "[Linux][常用命令] wc"
 date:   2017-03-14
 comments: true
-categories: linux
+categories: Linux
 tags: ls
 description:
 published: true

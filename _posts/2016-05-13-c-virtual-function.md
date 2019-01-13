@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C++] 虚函数"
+title:  "[C/C++] 虚函数"
 date:   2016-05-13
 comments: true
-categories: c
+categories: C/C++
 tags: c, virtual
 description:
 published: true

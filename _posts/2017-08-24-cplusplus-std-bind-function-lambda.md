@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C++] bind function lambda"
+title:  "[C/C++] bind function lambda"
 date:   2017-08-24
 comments: true
-categories: c
+categories: C/C++
 tags: bind
 description:
 published: true

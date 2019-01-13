@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[linux] apt use sock5 proxy"
+title:  "[Linux] apt use sock5 proxy"
 date:   2018-05-19
 comments: true
-categories: linux
+categories: Linux
 tags: linux, apt
 description:
 published: true

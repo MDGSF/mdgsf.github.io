@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[linux] 建立一个新的账号"
+title:  "[Linux] 建立一个新的账号"
 date:   2018-11-14
 comments: true
-categories: linux
+categories: Linux
 tags: linux, new user
 description:
 published: true

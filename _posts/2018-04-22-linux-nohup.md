@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "[信号] nohup 和 &"
+title: "[Linux][信号] nohup 和 &"
 date: 2018-04-22
 author: mdgsf
 comments: true
-categories: linux
-tags: linux
+categories: Linux
+tags: linux,signal
 description: ""
 published: true #default true
 ---

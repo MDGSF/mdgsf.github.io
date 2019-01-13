@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C++] 代码检查"
+title:  "[C/C++] 代码检查"
 date:   2016-05-27
 comments: true
-categories: c
+categories: C/C++
 tags: c, codechecking
 description:
 published: true

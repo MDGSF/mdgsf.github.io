@@ -3,7 +3,7 @@ layout: post
 title:  "[vim] c++ syntax"
 date:   2016-03-05
 comments: true
-categories: linux
+categories: Linux
 tags: [vim,c++,syntax]
 description: "vim syntax for c++"
 published: true

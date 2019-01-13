@@ -3,7 +3,7 @@ layout: post
 title:  "[Linux] memalign 和 posix_memalign"
 date:   2017-08-07
 comments: true
-categories: linux
+categories: Linux
 tags: memalign, posix_memalign
 description:
 published: true

@@ -3,7 +3,7 @@ layout: post
 title:  "[linux-kernel] list"
 date:   2017-07-21
 comments: true
-categories: linux-kernel
+categories: Linux-kernel
 tags: linux, kernel, c, list
 description:
 published: true

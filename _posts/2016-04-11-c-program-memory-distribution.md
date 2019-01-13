@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C++] 程序在内存中的分布"
+title:  "[C/C++] 程序在内存中的分布"
 date:   2016-04-11
 comments: true
-categories: c
+categories: C/C++
 tags: c, bit
 description:
 published: true

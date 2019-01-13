@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C++] thread"
+title:  "[C/C++] thread"
 date:   2017-08-24
 comments: true
-categories: c
+categories: C/C++
 tags: thread
 description:
 published: true

@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C++] 位操作 例子"
+title:  "[C/C++] 位操作 例子"
 date:   2016-05-13
 comments: true
-categories: c
+categories: C/C++
 tags: c, bit
 description:
 published: true

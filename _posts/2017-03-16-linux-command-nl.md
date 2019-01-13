@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[Linux常用命令] nl"
+title:  "[Linux][常用命令] nl"
 date:   2017-03-16
 comments: true
-categories: linux
+categories: Linux
 tags: ls
 description:
 published: true

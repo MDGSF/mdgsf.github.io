@@ -1,15 +1,14 @@
 ---
 layout: post
-title: "[Makefile] 基础--跨目录"
+title: "[Linux][Makefile] 基础--跨目录"
 date: 2016-09-18
 author: mdgsf
 comments: true
-categories: c
-tags: ubuntu, Makefile
+categories: Linux
+tags: Linux, Makefile
 description: ""
 published: true #default true
 ---
-
 
 ### Makefile
 

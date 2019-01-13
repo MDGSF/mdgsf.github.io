@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[Linux常用命令] file查看文件/文件夹信息"
+title:  "[Linux][常用命令] file查看文件/文件夹信息"
 date:   2017-02-28
 comments: true
-categories: linux
+categories: Linux
 tags: ls
 description:
 published: true

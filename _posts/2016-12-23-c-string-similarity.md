@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C] 字符串相似度"
+title:  "[C/C++] 字符串相似度"
 date:   2016-12-23
 comments: true
-categories: c
+categories: C/C++
 tags: c 
 description: ""
 published: true

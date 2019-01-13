@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C++] Generate random string"
+title:  "[C/C++] Generate random string"
 date:   2016-06-06
 comments: true
-categories: c
+categories: C/C++
 tags: rand
 description:
 published: true

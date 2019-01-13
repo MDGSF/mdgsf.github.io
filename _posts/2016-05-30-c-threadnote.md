@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C++] 线程加锁 例子"
+title:  "[C/C++] 线程加锁 例子"
 date:   2016-05-30
 comments: true
-categories: c
+categories: C/C++
 tags: c
 description:
 published: true

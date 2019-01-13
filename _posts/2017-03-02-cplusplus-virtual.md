@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[C++] virtual"
+title:  "[C/C++] virtual"
 date:   2017-03-02
 comments: true
-categories: c
+categories: C/C++
 tags: c++,virtual
 description:
 published: true

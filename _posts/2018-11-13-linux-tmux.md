@@ -109,6 +109,7 @@ set -g mouse on
 
 ### 参考链接
 
-https://github.com/tmux/tmux
-https://blog.csdn.net/gatieme/article/details/49301037
+[https://github.com/tmux/tmux](https://github.com/tmux/tmux)
+
+[https://blog.csdn.net/gatieme/article/details/49301037](https://blog.csdn.net/gatieme/article/details/49301037)
 

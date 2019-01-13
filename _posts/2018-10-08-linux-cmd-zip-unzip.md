@@ -9,19 +9,26 @@ description:
 published: true
 ---
 
+### 安装 zip
+
+```
 apt-get install zip
+```
 
-### 1
+### zip 压缩
 
+```
 zip -r xxx.zip ./*
+```
 
-### 2
+### 解压 zip 文件到当前目录
 
-解压zip文件到当前目录
-
+```
 unzip filename.zip
+```
 
-### 3 
+### 解压 zip 文件到指定目录 
 
+```
 unzip -d /home/sunny myfile.zip
-
+```

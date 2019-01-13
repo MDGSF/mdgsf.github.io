@@ -40,7 +40,7 @@ proxy_pass http://application_server_addr;
 proxy_pass http://application_server_addr/;
 ``` 
 
-的话（就是在末尾价格斜杠）。
+的话（就是在末尾加个斜杠）。
 
 那 application_server_addr 那里会收到 /v1/xxx 。
 

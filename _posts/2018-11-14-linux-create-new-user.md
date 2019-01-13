@@ -10,26 +10,44 @@ published: true
 ---
 
 删除用户
-userdel spark 
+
+```
+userdel huangjian 
+```
 
 添加用户
-useradd -r -m -s /bin/bash lyy
+
+```
+useradd -r -m -s /bin/bash huangjian
+```
 
 设置用户密码
-passwd lyy
+
+```
+passwd huangjian
+```
 
 添加 root 权限
+
+```
 chmod +w /etc/sudoers
 vim /etc/sudoers
+```
 
 ```
 root ALL=(ALL:ALL) ALL
-lyy  ALL=(ALL:ALL) ALL
+huangjian  ALL=(ALL:ALL) ALL
 ```
 
 切换用户
+
+```
 su lyy
+```
 
 切换到 root
+
+```
 sudo su
+```
 

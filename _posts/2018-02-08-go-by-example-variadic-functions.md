@@ -4,7 +4,7 @@ title:  "[Go By Example] Variadic Functions"
 date:   2018-02-08
 comments: true
 categories: GoByExample
-tags: GO
+tags: [Go]
 description: ""
 published: true
 ---

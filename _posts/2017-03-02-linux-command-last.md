@@ -4,7 +4,7 @@ title:  "[Linux][常用命令] last查看现在与过去登录过系统的用户
 date:   2017-03-02
 comments: true
 categories: Linux
-tags: ls
+tags: [Ls]
 description:
 published: true
 ---

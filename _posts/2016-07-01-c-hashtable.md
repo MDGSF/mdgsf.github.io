@@ -4,7 +4,7 @@ title:  "[C/C++] hashtable "
 date:   2016-07-01
 comments: true
 categories: C/C++
-tags: c++,hashtable
+tags: [C++,Hashtable]
 description:
 published: true
 ---

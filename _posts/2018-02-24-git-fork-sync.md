@@ -4,7 +4,7 @@ title:  "[Git] fork同步"
 date:   2018-02-24
 comments: true
 categories: Git
-tags: git
+tags: [Git]
 description:
 published: true
 ---

@@ -5,7 +5,7 @@ date: 2017-03-09
 author: mdgsf
 comments: true
 categories: Art
-tags: c 
+tags: [C]
 description:
 published: true #default true
 ---

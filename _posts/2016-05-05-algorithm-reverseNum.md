@@ -4,7 +4,7 @@ title:  "[数组] 反转数组"
 date:   2016-05-05
 comments: true
 categories: Art
-tags: art, algorithm, c
+tags: [Art,Algorithm,C]
 description:
 published: true
 ---

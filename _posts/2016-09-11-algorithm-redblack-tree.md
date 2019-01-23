@@ -4,7 +4,7 @@ title:  "[Algorithm] 红黑树"
 date:   2016-09-11
 comments: true
 categories: Art
-tags: art, algorithm, c
+tags: [Art,Algorithm,C]
 description:
 published: true
 ---

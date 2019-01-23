@@ -4,7 +4,7 @@ title:  "[Linux][vim] vundle管理插件, astyle"
 date:   2016-07-01
 comments: true
 categories: Linux
-tags: Linux,vim
+tags: [Linux,Vim]
 description: ""
 published: true
 ---

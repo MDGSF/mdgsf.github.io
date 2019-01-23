@@ -4,7 +4,7 @@ title:  "[Windows] CRITICAL_SECTION 临界区"
 date:   2016-03-11
 comments: true
 categories: Windows
-tags: CRITICAL_SECTION
+tags: [Critical_section]
 description:
 published: true
 ---

@@ -4,7 +4,7 @@ title:  "[GCTT - M] SliceTricks"
 date:   2018-03-13
 comments: true
 categories: GCTT
-tags: Go Slice
+tags: [Go slice]
 description:
 published: true
 ---

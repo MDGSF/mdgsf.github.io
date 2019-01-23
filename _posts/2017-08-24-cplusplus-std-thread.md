@@ -4,7 +4,7 @@ title:  "[C/C++] thread"
 date:   2017-08-24
 comments: true
 categories: C/C++
-tags: thread
+tags: [Thread]
 description:
 published: true
 ---

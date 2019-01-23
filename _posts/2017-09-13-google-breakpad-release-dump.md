@@ -4,7 +4,7 @@ title:  "[C/C++] 为release生成dump文件"
 date:   2017-09-13
 comments: true
 categories: C/C++
-tags: dump
+tags: [Dump]
 description:
 published: true
 ---

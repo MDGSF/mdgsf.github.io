@@ -5,7 +5,7 @@ date: 2016-08-26
 author: mdgsf
 comments: true
 categories: DesignPattern
-tags: singleton
+tags: [Singleton]
 description:
 published: true #default true
 ---

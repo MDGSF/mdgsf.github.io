@@ -4,7 +4,7 @@ title:  "[vk_mj] Go实现赖子胡牌"
 date:   2017-11-14
 comments: true
 categories: vk_mj
-tags: mj
+tags: [Mj]
 description:
 published: true
 ---

@@ -4,7 +4,7 @@ title:  "[Bugfree] Fix bug时的解决方案选择"
 date:   2016-12-21
 comments: true
 categories: tester
-tags: tester, bugfree
+tags: [Tester,Bugfree]
 description: ""
 published: true
 ---

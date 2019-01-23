@@ -4,7 +4,7 @@ title:  "[位运算] 数组中只出现1次的两个数字"
 date:   2016-04-10
 comments: true
 categories: Art
-tags: c
+tags: [C]
 description:
 published: true
 ---

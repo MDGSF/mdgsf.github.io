@@ -4,7 +4,7 @@ title:  "[C/C++] Windows下使用getopt"
 date:   2017-12-01
 comments: true
 categories: C/C++
-tags: c
+tags: [C]
 description: ""
 published: true
 ---

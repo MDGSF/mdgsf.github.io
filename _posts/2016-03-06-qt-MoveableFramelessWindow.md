@@ -4,7 +4,7 @@ title:  "[Qt] 无边框窗体"
 date:   2016-03-06
 comments: true
 categories: Qt
-tags: [c++,qt]
+tags: [C++,Qt]
 description: "qt 无边框窗体基类"
 published: true
 ---

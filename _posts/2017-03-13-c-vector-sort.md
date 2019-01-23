@@ -4,7 +4,7 @@ title:  "[C/C++] vector 排序"
 date:   2017-03-13
 comments: true
 categories: C/C++
-tags: c, strcat
+tags: [C,Strcat]
 description:
 published: true
 ---

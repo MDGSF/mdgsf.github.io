@@ -5,7 +5,7 @@ date: 2016-04-25
 author: mdgsf
 comments: true
 categories: Linux
-tags: Linux, ubuntu, vbox
+tags: [Linux,Ubuntu,Vbox]
 description: ""
 published: true #default true
 ---

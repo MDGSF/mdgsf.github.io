@@ -5,7 +5,7 @@ date: 2017-03-06
 author: mdgsf
 comments: true
 categories: Art
-tags: c, string, Permutation
+tags: [C,String,Permutation]
 description:
 published: true #default true
 ---

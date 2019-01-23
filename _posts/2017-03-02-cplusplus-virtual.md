@@ -4,7 +4,7 @@ title:  "[C/C++] virtual"
 date:   2017-03-02
 comments: true
 categories: C/C++
-tags: c++,virtual
+tags: [C++,Virtual]
 description:
 published: true
 ---

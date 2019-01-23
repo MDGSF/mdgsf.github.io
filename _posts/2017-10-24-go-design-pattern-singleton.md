@@ -4,7 +4,7 @@ title:  "[GO] Singleton单例模式"
 date:   2017-10-24
 comments: true
 categories: GO
-tags: GO 
+tags: [Go]
 description: ""
 published: true
 ---

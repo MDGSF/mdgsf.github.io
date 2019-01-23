@@ -4,7 +4,7 @@ title:  "[Linux] list"
 date:   2017-07-21
 comments: true
 categories: Linux
-tags: linux, kernel, c, list
+tags: [Linux,Kernel,C,List]
 description:
 published: true
 ---

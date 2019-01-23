@@ -4,7 +4,7 @@ title:  "[vk_mj] 麻将胡牌算法"
 date:   2017-12-05
 comments: true
 categories: vk_mj
-tags: mj
+tags: [Mj]
 description:
 published: true
 ---

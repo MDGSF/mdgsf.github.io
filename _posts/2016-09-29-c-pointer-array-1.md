@@ -4,7 +4,7 @@ title:  "[C/C++] Pointer and Array 1"
 date:   2016-09-29
 comments: true
 categories: C/C++
-tags: c
+tags: [C]
 description:
 published: true
 ---

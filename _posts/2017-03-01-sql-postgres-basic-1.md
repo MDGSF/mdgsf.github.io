@@ -4,7 +4,7 @@ title:  "[PostgreSQL] ubuntu下安装PostgreSQL"
 date:   2017-03-01
 comments: true
 categories: 数据库
-tags: sql, postgres
+tags: [Sql,Postgres]
 description:
 published: true
 ---

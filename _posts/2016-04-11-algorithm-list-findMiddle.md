@@ -4,7 +4,7 @@ title:  "[链表] 如何找到一个链表的中间元素"
 date:   2016-04-11
 comments: true
 categories: Art
-tags: c, list
+tags: [C,List]
 description:
 published: true
 ---

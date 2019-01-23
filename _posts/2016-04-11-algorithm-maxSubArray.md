@@ -4,7 +4,7 @@ title:  "[数组] 最大子数组之和"
 date:   2016-04-11
 comments: true
 categories: Art
-tags: c
+tags: [C]
 description:
 published: true
 ---

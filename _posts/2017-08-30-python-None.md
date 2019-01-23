@@ -4,7 +4,7 @@ title: "[python] None"
 date: 2017-08-30
 comments: true
 categories: python
-tags: python
+tags: [Python]
 description:
 published: true
 ---

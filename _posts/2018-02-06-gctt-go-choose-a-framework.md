@@ -4,7 +4,7 @@ title:  "[GCTT] Choosing a Go framework"
 date:   2018-02-06
 comments: true
 categories: GCTT
-tags: Go framework
+tags: [Go framework]
 description:
 published: true
 ---

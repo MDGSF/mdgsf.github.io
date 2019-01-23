@@ -5,7 +5,7 @@ date: 2016-04-26
 author: mdgsf
 comments: true
 categories: PHP
-tags: php,mysql
+tags: [Php,Mysql]
 description:
 published: true #default true
 ---

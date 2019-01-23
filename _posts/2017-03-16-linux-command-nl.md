@@ -4,7 +4,7 @@ title:  "[Linux][常用命令] nl"
 date:   2017-03-16
 comments: true
 categories: Linux
-tags: ls
+tags: [Ls]
 description:
 published: true
 ---

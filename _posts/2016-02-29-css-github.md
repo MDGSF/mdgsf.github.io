@@ -5,7 +5,7 @@ date: 2016-02-29
 author: mdgsf
 comments: true
 categories: Web
-tags: [css, web]
+tags: [Css,Web]
 description: "some common css"
 published: true #default true
 ---

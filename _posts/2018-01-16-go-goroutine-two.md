@@ -4,7 +4,7 @@ title:  "[GO] 两协程交替输出数字"
 date:   2018-01-16
 comments: true
 categories: GO
-tags: GO
+tags: [Go]
 description: ""
 published: true
 ---

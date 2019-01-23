@@ -4,7 +4,7 @@ title:  "[C/C++] 程序在内存中的分布"
 date:   2016-04-11
 comments: true
 categories: C/C++
-tags: c, bit
+tags: [C,Bit]
 description:
 published: true
 ---

@@ -5,7 +5,7 @@ date: 2017-08-14
 author: mdgsf
 comments: true
 categories: DesignPattern
-tags: observer
+tags: [Observer]
 description:
 published: true #default true
 ---

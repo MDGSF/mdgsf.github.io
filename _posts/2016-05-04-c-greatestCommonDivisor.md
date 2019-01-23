@@ -4,7 +4,7 @@ title:  "最大公约数"
 date:   2016-05-04
 comments: true
 categories: Art
-tags: art, algorithm, c
+tags: [Art,Algorithm,C]
 description:
 published: true
 ---

@@ -4,7 +4,7 @@ title:  "[C/C++][STL] map 中用char*作为key"
 date:   2016-03-30
 comments: true
 categories: C/C++
-tags: c++, map
+tags: [C++,Map]
 description:
 published: true
 ---

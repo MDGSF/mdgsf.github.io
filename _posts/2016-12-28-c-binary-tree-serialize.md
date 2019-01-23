@@ -4,7 +4,7 @@ title:  "[C/C++] 二叉树的序列化和反序列化"
 date:   2016-12-28
 comments: true
 categories: C/C++
-tags: c 
+tags: [C]
 description: ""
 published: true
 ---

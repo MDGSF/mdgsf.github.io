@@ -4,7 +4,7 @@ title:  "[数学] 判素数"
 date:   2016-05-05
 comments: true
 categories: Art
-tags: art, algorithm, c
+tags: [Art,Algorithm,C]
 description:
 published: true
 ---

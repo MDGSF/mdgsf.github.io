@@ -4,7 +4,7 @@ title:  "[C/C++] sizeof struct"
 date:   2017-02-24
 comments: true
 categories: C/C++
-tags: c 
+tags: [C]
 description: ""
 published: true
 ---

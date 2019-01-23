@@ -4,7 +4,7 @@ title:  "[C/C++] tuple"
 date:   2017-09-04
 comments: true
 categories: C/C++
-tags: tuple
+tags: [Tuple]
 description:
 published: true
 ---

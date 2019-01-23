@@ -4,7 +4,7 @@ title:  "[Linux][常用命令] alias"
 date:   2017-02-10
 comments: true
 categories: Linux
-tags: ls
+tags: [Ls]
 description:
 published: true
 ---

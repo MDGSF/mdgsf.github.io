@@ -4,7 +4,7 @@ title:  "[Windows] 输出GetLastError详细信息"
 date:   2016-12-01
 comments: true
 categories: Windows
-tags: windows
+tags: [Windows]
 description:
 published: true
 ---

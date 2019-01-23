@@ -4,7 +4,7 @@ title:  "[锁] 悲观锁和乐观锁"
 date:   2017-11-13
 comments: true
 categories: miscellanea
-tags: lock
+tags: [Lock]
 description:
 published: true
 ---

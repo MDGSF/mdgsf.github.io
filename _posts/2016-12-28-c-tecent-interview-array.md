@@ -4,7 +4,7 @@ title:  "[C/C++] 和数组有关的一道题"
 date:   2016-12-28
 comments: true
 categories: C/C++
-tags: c 
+tags: [C]
 description: ""
 published: true
 ---

@@ -4,7 +4,7 @@ title:  "时间复杂度分析"
 date:   2016-05-14
 comments: true
 categories: Art
-tags: art, algorithm, c
+tags: [Art,Algorithm,C]
 description:
 published: true
 ---

@@ -4,7 +4,7 @@ title:  "[C/C++] Ring buffer"
 date:   2017-02-09
 comments: true
 categories: C/C++
-tags: c 
+tags: [C]
 description: ""
 published: true
 ---

@@ -4,7 +4,7 @@ title:  "[python] 安装pip"
 date:   2017-08-29
 comments: true
 categories: python
-tags: python, pip
+tags: [Python,Pip]
 description:
 published: true
 ---

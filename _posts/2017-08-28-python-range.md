@@ -4,7 +4,7 @@ title:  "[python] range"
 date:   2017-08-28
 comments: true
 categories: python
-tags: python, range
+tags: [Python,Range]
 description:
 published: true
 ---

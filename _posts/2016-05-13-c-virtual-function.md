@@ -4,7 +4,7 @@ title:  "[C/C++] 虚函数"
 date:   2016-05-13
 comments: true
 categories: C/C++
-tags: c, virtual
+tags: [C,Virtual]
 description:
 published: true
 ---

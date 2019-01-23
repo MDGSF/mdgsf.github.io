@@ -4,7 +4,7 @@ title:  "[GO] map用来保存函数"
 date:   2017-10-20
 comments: true
 categories: GO
-tags: GO 
+tags: [Go]
 description: ""
 published: true
 ---

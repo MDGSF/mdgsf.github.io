@@ -4,7 +4,7 @@ title:  "[boost] daytime - A combined TCP/UDP asynchronous server"
 date:   2017-08-24
 comments: true
 categories: boost
-tags: boost
+tags: [Boost]
 description:
 published: true
 ---

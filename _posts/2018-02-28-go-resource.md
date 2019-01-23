@@ -4,7 +4,7 @@ title:  "[GO] 学习资料收集"
 date:   2018-02-28
 comments: true
 categories: GO
-tags: GO
+tags: [Go]
 description: ""
 published: true
 ---

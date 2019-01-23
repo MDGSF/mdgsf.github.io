@@ -4,7 +4,7 @@ title:  "[Qt] QString 和 char* 转换"
 date:   2016-03-11
 comments: true
 categories: Qt
-tags: qt, QString
+tags: [Qt,Qstring]
 description:
 published: true
 ---

@@ -5,7 +5,7 @@ date: 2017-08-14
 author: mdgsf
 comments: true
 categories: DesignPattern
-tags: decorator
+tags: [Decorator]
 description:
 published: true #default true
 ---

@@ -5,7 +5,7 @@ date: 2017-01-13
 author: mdgsf
 comments: true
 categories: FreeRTOS
-tags: FreeRTOS
+tags: [Freertos]
 description:
 published: true #default true
 ---

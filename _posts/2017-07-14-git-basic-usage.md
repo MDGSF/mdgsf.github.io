@@ -4,7 +4,7 @@ title:  "[Git] git 基础使用"
 date:   2017-07-14
 comments: true
 categories: Git
-tags: git
+tags: [Git]
 description:
 published: true
 ---

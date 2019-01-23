@@ -4,7 +4,7 @@ title:  "[Qt] Use fontawesome in qt."
 date:   2016-04-06
 comments: true
 categories: Qt
-tags: [c++,qt]
+tags: [C++,Qt]
 description: "Use fontawesome in qt"
 published: true
 ---

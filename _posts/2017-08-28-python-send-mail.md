@@ -4,7 +4,7 @@ title:  "[python] send mail"
 date:   2017-08-28
 comments: true
 categories: python
-tags: python, mail
+tags: [Python,Mail]
 description:
 published: true
 ---

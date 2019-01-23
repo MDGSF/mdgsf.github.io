@@ -5,7 +5,7 @@ date: 2017-01-08
 author: mdgsf
 comments: true
 categories: Network
-tags: network,ntp
+tags: [Network,Ntp]
 description:
 published: true #default true
 ---

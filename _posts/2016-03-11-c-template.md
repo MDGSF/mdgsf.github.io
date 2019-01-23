@@ -4,7 +4,7 @@ title:  "A Simple C++ template"
 date:   2016-03-11
 comments: true
 categories: Art
-tags: art, algorithm, c, template
+tags: [Art,Algorithm,C,Template]
 description: "a simple template for c"
 published: true
 ---

@@ -4,7 +4,7 @@ title:  "[vk_mj] 山西扣点点"
 date:   2017-12-06
 comments: true
 categories: vk_mj
-tags: mj
+tags: [Mj]
 description:
 published: true
 ---

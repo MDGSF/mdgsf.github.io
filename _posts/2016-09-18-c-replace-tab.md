@@ -4,7 +4,7 @@ title:  "[C/C++] Replace Tab"
 date:   2016-09-18
 comments: true
 categories: C/C++
-tags: c  
+tags: [C]
 description:
 published: true
 ---

@@ -4,7 +4,7 @@ title:  "[Windows] Ping icmp"
 date:   2016-03-11
 comments: true
 categories: Windows
-tags: c, ping, icmp
+tags: [C,Ping,Icmp]
 description:
 published: true
 ---

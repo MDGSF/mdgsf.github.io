@@ -4,7 +4,7 @@ title:  "[C/C++] 复习题"
 date:   2016-12-28
 comments: true
 categories: C/C++
-tags: c 
+tags: [C]
 description: ""
 published: true
 ---

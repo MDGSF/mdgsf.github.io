@@ -4,7 +4,7 @@ title:  "[Qt] 制作多语言"
 date:   2016-04-06
 comments: true
 categories: Qt
-tags: [c++,qt]
+tags: [C++,Qt]
 description: "qt 制作多语言"
 published: true
 ---

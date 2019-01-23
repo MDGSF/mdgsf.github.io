@@ -4,7 +4,7 @@ title:  "[C/C++] strstr 不使用KMP达到O(n)的时间复杂度"
 date:   2016-12-28
 comments: true
 categories: C/C++
-tags: c 
+tags: [C]
 description: ""
 published: true
 ---

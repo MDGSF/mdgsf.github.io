@@ -4,7 +4,7 @@ title:  "[Qt] qtcreator 中打开console"
 date:   2016-03-11
 comments: true
 categories: Qt
-tags: qt, console
+tags: [Qt,Console]
 description:
 published: true
 ---

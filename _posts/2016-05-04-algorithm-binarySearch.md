@@ -4,7 +4,7 @@ title:  "二分查找"
 date:   2016-05-04
 comments: true
 categories: Art
-tags: art, algorithm, binarySearch
+tags: [Art,Algorithm,Binarysearch]
 description:
 published: true
 ---

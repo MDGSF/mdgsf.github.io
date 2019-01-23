@@ -4,7 +4,7 @@ title:  "[Windows] 程序自动获取管理员权限"
 date:   2016-03-24
 comments: true
 categories: Windows
-tags: UAC
+tags: [Uac]
 description:
 published: true
 ---

@@ -5,7 +5,7 @@ date: 2016-04-08
 author: mdgsf
 comments: true
 categories: Art
-tags: c, sort
+tags: [C,Sort]
 description:
 published: true #default true
 ---

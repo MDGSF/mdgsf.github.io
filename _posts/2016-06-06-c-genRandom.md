@@ -4,7 +4,7 @@ title:  "[C/C++] Generate random string"
 date:   2016-06-06
 comments: true
 categories: C/C++
-tags: rand
+tags: [Rand]
 description:
 published: true
 ---

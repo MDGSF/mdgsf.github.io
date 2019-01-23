@@ -4,7 +4,7 @@ title:  "[C/C++] 位操作 例子"
 date:   2016-05-13
 comments: true
 categories: C/C++
-tags: c, bit
+tags: [C,Bit]
 description:
 published: true
 ---

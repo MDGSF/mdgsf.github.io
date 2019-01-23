@@ -5,7 +5,7 @@ date: 2016-05-14
 author: mdgsf
 comments: true
 categories: Network
-tags: network,tcp,timewait
+tags: [Network,Tcp,Timewait]
 description:
 published: true #default true
 ---

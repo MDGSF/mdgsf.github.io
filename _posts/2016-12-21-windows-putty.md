@@ -4,7 +4,7 @@ title:  "[Windows] putty 颜色配置"
 date:   2016-12-21
 comments: true
 categories: Windows
-tags: windows
+tags: [Windows]
 description:
 published: true
 ---

@@ -4,7 +4,7 @@ title:  "[C/C++] writev and readv"
 date:   2016-02-27
 comments: true
 categories: C/C++
-tags: writev, readv
+tags: [Writev,Readv]
 description:
 published: true
 ---

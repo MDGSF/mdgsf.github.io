@@ -4,7 +4,7 @@ title:  "[字符串] KMP"
 date:   2016-04-14
 comments: true
 categories: Art
-tags: c,kmp
+tags: [C,Kmp]
 description:
 published: true
 ---

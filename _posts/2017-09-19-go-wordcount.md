@@ -4,7 +4,7 @@ title:  "[GO] word count"
 date:   2017-09-19
 comments: true
 categories: GO
-tags: GO 
+tags: [Go]
 description: ""
 published: true
 ---

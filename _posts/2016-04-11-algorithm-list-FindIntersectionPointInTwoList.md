@@ -4,7 +4,7 @@ title:  "[链表] 判断两个链表是否相交并找出交点 "
 date:   2016-04-11
 comments: true
 categories: Art
-tags: c, list
+tags: [C,List]
 description:
 published: true
 ---

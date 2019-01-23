@@ -4,7 +4,7 @@ title:  "[C/C++] NULL,nullptr,nullptr_t"
 date:   2017-08-22
 comments: true
 categories: C/C++
-tags: nullptr
+tags: [Nullptr]
 description:
 published: true
 ---

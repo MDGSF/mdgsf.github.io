@@ -4,7 +4,7 @@ title:  "[GO] 接收者为指针的方法"
 date:   2017-09-19
 comments: true
 categories: GO
-tags: GO
+tags: [Go]
 description: ""
 published: true
 ---

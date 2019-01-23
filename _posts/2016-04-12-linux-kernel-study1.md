@@ -4,7 +4,7 @@ title:  "[Linux] 内核学习"
 date:   2016-04-12
 comments: true
 categories: Linux
-tags: linux, kernel, c, asm
+tags: [Linux,Kernel,C,Asm]
 description:
 published: true
 ---

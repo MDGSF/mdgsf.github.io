@@ -5,7 +5,7 @@ date: 2017-08-07
 author: mdgsf
 comments: true
 categories: nginx
-tags: nginx
+tags: [Nginx]
 description:
 published: true #default true
 ---

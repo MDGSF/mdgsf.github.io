@@ -4,7 +4,7 @@ title:  "[GO] 字符数组转化为16进制字符串"
 date:   2018-01-09
 comments: true
 categories: GO
-tags: GO
+tags: [Go]
 description: ""
 published: true
 ---

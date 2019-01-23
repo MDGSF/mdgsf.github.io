@@ -4,7 +4,7 @@ title:  "[GCTT] Golang tutorial series Part 17: Methods"
 date:   2018-01-07
 comments: true
 categories: GCTT
-tags: method
+tags: [Method]
 description:
 published: true
 ---

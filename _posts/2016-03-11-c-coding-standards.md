@@ -4,7 +4,7 @@ title:  "[C/C++] Coding Standards"
 date:   2016-03-11
 comments: true
 categories: C/C++
-tags: c, coding standard
+tags: [C,Coding standard]
 description:
 published: true
 ---

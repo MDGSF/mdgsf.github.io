@@ -4,7 +4,7 @@ title:  "从归并排序到数列的逆序数对"
 date:   2016-04-10
 comments: true
 categories: Art
-tags: c
+tags: [C]
 description:
 published: true
 ---

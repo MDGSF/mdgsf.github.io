@@ -4,7 +4,7 @@ title:  "[C/C++] 记录一个C++内存bug"
 date:   2017-12-03
 comments: true
 categories: C/C++
-tags: memory bug
+tags: [Memory bug]
 description:
 published: true
 ---

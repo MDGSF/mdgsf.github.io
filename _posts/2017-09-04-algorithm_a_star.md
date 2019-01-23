@@ -5,7 +5,7 @@ date: 2017-09-04
 author: mdgsf
 comments: true
 categories: Art
-tags: art, algorithm
+tags: [Art,Algorithm]
 description:
 published: true #default true
 ---

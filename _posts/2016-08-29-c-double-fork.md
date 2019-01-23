@@ -5,7 +5,7 @@ date: 2016-08-29
 author: mdgsf
 comments: true
 categories: C/C++
-tags: ubuntu, fork
+tags: [Ubuntu,Fork]
 description: ""
 published: true #default true
 ---

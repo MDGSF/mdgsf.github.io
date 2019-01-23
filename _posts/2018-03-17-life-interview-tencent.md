@@ -4,7 +4,7 @@ title:  "[生活] 你最擅长什么？"
 date:   2018-03-17
 comments: true
 categories: life
-tags: flag
+tags: [Flag]
 description:
 published: true
 ---

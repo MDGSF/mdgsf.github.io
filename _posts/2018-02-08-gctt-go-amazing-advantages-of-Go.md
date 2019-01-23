@@ -4,7 +4,7 @@ title:  "[GCTT] Here are some amazing advantages of Go that you don't hear much 
 date:   2018-02-08
 comments: true
 categories: GCTT
-tags: Go framework
+tags: [Go framework]
 description:
 published: true
 ---

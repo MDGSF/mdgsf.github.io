@@ -5,7 +5,7 @@ date: 2016-02-28
 author: mdgsf
 comments: true
 categories: Linux
-tags: ubuntu, vbox
+tags: [Ubuntu,Vbox]
 description: "After install ubuntu in vbox, do some common setting"
 published: true #default true
 ---

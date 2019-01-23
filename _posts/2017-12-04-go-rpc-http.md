@@ -4,7 +4,7 @@ title:  "[GO] RPC http方式"
 date:   2017-12-04
 comments: true
 categories: GO
-tags: GO
+tags: [Go]
 description: ""
 published: true
 ---

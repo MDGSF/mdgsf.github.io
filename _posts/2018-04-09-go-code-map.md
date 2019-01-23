@@ -4,7 +4,7 @@ title:  "[GO] map 内部实现"
 date:   2018-04-09
 comments: true
 categories: GO
-tags: GO
+tags: [Go]
 description: ""
 published: true
 ---

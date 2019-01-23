@@ -4,7 +4,7 @@ title:  "[转]0-1背包问题"
 date:   2016-05-31
 comments: true
 categories: Art
-tags: art, algorithm, c
+tags: [Art,Algorithm,C]
 description:
 published: true
 ---

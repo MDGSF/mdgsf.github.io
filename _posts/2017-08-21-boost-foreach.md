@@ -4,7 +4,7 @@ title:  "[boost] foreach"
 date:   2017-08-21
 comments: true
 categories: boost
-tags: boost
+tags: [Boost]
 description:
 published: true
 ---

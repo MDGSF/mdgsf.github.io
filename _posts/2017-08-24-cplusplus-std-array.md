@@ -4,7 +4,7 @@ title:  "[C/C++] array"
 date:   2017-08-24
 comments: true
 categories: C/C++
-tags: array
+tags: [Array]
 description:
 published: true
 ---

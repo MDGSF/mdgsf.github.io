@@ -4,7 +4,7 @@ title:  "[基础] 判断是否是闰年"
 date:   2016-03-30
 comments: true
 categories: Art
-tags: art, algorithm, c
+tags: [Art,Algorithm,C]
 description: "Leap year"
 published: true
 ---

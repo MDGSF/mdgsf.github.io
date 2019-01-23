@@ -4,7 +4,7 @@ title:  "[Windows] 切割文件"
 date:   2017-07-04
 comments: true
 categories: Windows
-tags: windows
+tags: [Windows]
 description:
 published: true
 ---

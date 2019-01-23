@@ -4,7 +4,7 @@ title:  "[python] Insertion sort"
 date:   2017-08-29
 comments: true
 categories: python
-tags: python, insertion sort
+tags: [Python,Insertion sort]
 description:
 published: true
 ---

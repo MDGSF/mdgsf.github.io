@@ -4,7 +4,7 @@ title:  "[C/C++] 字符串相似度"
 date:   2016-12-23
 comments: true
 categories: C/C++
-tags: c 
+tags: [C]
 description: ""
 published: true
 ---

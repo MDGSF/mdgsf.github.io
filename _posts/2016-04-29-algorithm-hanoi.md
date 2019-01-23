@@ -4,7 +4,7 @@ title:  "[递归] 汉诺塔"
 date:   2016-04-29
 comments: true
 categories: Art
-tags: art, algorithm, c, Tower of Hanoi
+tags: [Art,Algorithm,C,Tower of hanoi]
 description:
 published: true
 ---

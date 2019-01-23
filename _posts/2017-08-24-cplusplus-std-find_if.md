@@ -4,7 +4,7 @@ title:  "[C/C++] find_if"
 date:   2017-08-24
 comments: true
 categories: C/C++
-tags: find_if
+tags: [Find_if]
 description:
 published: true
 ---

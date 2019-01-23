@@ -4,7 +4,7 @@ title:  "[C/C++] 代码检查"
 date:   2016-05-27
 comments: true
 categories: C/C++
-tags: c, codechecking
+tags: [C,Codechecking]
 description:
 published: true
 ---

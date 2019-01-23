@@ -4,7 +4,7 @@ title:  "[GCTT] Go Funcs--Baby-Gopher's Visual Guide"
 date:   2018-01-10
 comments: true
 categories: GCTT
-tags: funcs
+tags: [Funcs]
 description:
 published: true
 ---

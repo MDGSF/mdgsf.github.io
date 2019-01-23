@@ -5,7 +5,7 @@ date: 2017-07-31
 author: mdgsf
 comments: true
 categories: lua
-tags: lua
+tags: [Lua]
 description:
 published: true #default true
 ---

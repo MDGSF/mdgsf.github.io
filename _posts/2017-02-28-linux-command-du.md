@@ -4,7 +4,7 @@ title:  "[Linux][常用命令] du查看文件/文件夹大小"
 date:   2017-02-28
 comments: true
 categories: Linux
-tags: ls
+tags: [Ls]
 description:
 published: true
 ---

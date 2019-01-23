@@ -4,7 +4,7 @@ title:  "[C/C++] 数组哨兵"
 date:   2016-12-21
 comments: true
 categories: C/C++
-tags: c 
+tags: [C]
 description: ""
 published: true
 ---

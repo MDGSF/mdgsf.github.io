@@ -4,7 +4,7 @@ title:  "[Windows] VSCode 添加Code Snippets"
 date:   2017-07-19
 comments: true
 categories: Windows
-tags: windows
+tags: [Windows]
 description:
 published: true
 ---

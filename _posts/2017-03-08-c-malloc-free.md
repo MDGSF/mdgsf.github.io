@@ -4,7 +4,7 @@ title:  "[C/C++] malloc 实现"
 date:   2017-03-08
 comments: true
 categories: C/C++
-tags: c, strcat
+tags: [C,Strcat]
 description:
 published: true
 ---

@@ -5,7 +5,7 @@ date: 2016-06-23
 author: mdgsf
 comments: true
 categories: Linux
-tags: Linux, command
+tags: [Linux,Command]
 description: ""
 published: true #default true
 ---

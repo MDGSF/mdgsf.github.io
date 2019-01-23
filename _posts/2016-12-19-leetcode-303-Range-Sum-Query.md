@@ -5,7 +5,7 @@ date: 2016-12-19
 author: mdgsf
 comments: true
 categories: Art
-tags: leetcode
+tags: [Leetcode]
 description:
 published: true #default true
 ---

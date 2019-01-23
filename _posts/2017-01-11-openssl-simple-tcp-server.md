@@ -5,7 +5,7 @@ date: 2017-01-11
 author: mdgsf
 comments: true
 categories: openssl
-tags: openssl, server
+tags: [Openssl,Server]
 description:
 published: true #default true
 ---

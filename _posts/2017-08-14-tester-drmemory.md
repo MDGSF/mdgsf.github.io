@@ -4,7 +4,7 @@ title:  "[内存检测] drmemory"
 date:   2017-08-14
 comments: true
 categories: tester
-tags: drmemory, memory
+tags: [Drmemory,Memory]
 description: ""
 published: true
 ---

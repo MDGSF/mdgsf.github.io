@@ -4,7 +4,7 @@ title:  "[python] 切片"
 date:   2017-08-28
 comments: true
 categories: python
-tags: python, slice
+tags: [Python,Slice]
 description:
 published: true
 ---

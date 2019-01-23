@@ -4,7 +4,7 @@ title:  "[数学] 数学常用公式"
 date:   2016-05-08
 comments: true
 categories: Art
-tags: math
+tags: [Math]
 description:
 published: true
 ---

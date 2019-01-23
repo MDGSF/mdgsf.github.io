@@ -4,7 +4,7 @@ title:  "树"
 date:   2016-05-08
 comments: true
 categories: Art
-tags: art, algorithm, c, tree
+tags: [Art,Algorithm,C,Tree]
 description:
 published: true
 ---

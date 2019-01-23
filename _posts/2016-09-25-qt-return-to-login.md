@@ -4,7 +4,7 @@ title:  "[Qt] 从主界面返回登录界面"
 date:   2016-09-25
 comments: true
 categories: Qt
-tags: [c++,qt]
+tags: [C++,Qt]
 description: 
 published: true
 ---

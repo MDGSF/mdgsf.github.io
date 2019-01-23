@@ -5,7 +5,7 @@ date: 2016-09-18
 author: mdgsf
 comments: true
 categories: Linux
-tags: Linux, Makefile
+tags: [Linux,Makefile]
 description: ""
 published: true #default true
 ---

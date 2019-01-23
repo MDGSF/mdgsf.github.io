@@ -4,7 +4,7 @@ title:  "[链表] 链表基础算法"
 date:   2016-04-11
 comments: true
 categories: Art
-tags: c, list
+tags: [C,List]
 description:
 published: true
 ---

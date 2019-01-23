@@ -4,7 +4,7 @@ title:  "[Windows] VSCode 添加 mingw"
 date:   2017-11-24
 comments: true
 categories: Windows
-tags: windows
+tags: [Windows]
 description:
 published: true
 ---

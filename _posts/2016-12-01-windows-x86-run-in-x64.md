@@ -4,7 +4,7 @@ title:  "[Windows] 32位的程序运行在64位系统中"
 date:   2016-12-01
 comments: true
 categories: Windows
-tags: windows
+tags: [Windows]
 description:
 published: true
 ---

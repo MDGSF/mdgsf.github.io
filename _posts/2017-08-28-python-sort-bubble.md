@@ -4,7 +4,7 @@ title:  "[python] bubble sort"
 date:   2017-08-28
 comments: true
 categories: python
-tags: python, bubble sort
+tags: [Python,Bubble sort]
 description:
 published: true
 ---

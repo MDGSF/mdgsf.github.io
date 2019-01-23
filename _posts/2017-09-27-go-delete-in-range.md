@@ -4,7 +4,7 @@ title:  "[GO] delete range map"
 date:   2017-09-27
 comments: true
 categories: GO
-tags: GO
+tags: [Go]
 description: ""
 published: true
 ---

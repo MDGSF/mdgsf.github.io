@@ -4,7 +4,7 @@ title:  "[Windows] 查看windows系统log"
 date:   2016-03-24
 comments: true
 categories: Windows
-tags: windows
+tags: [Windows]
 description:
 published: true
 ---

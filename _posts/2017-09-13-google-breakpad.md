@@ -4,7 +4,7 @@ title:  "[google] 使用breakpad生成dump文件"
 date:   2017-09-13
 comments: true
 categories: google
-tags: breakpad
+tags: [Breakpad]
 description:
 published: true
 ---

@@ -4,7 +4,7 @@ title:  "[GO][ProjectEuler] Problem 5"
 date:   2017-10-10
 comments: true
 categories: GO
-tags: GO 
+tags: [Go]
 description: ""
 published: true
 ---

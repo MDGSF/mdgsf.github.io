@@ -4,7 +4,7 @@ title:  "[C/C++] GetAbsolutePath"
 date:   2016-09-10
 comments: true
 categories: C/C++
-tags: c
+tags: [C]
 description:
 published: true
 ---

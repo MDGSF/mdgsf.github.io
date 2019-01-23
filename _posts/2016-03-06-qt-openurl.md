@@ -4,7 +4,7 @@ title:  "[Qt] 打开网页"
 date:   2016-03-06
 comments: true
 categories: Qt
-tags: [c++,qt]
+tags: [C++,Qt]
 description: "qt 打开网页的两种方法"
 published: true
 ---

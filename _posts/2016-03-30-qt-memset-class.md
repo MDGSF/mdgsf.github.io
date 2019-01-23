@@ -4,7 +4,7 @@ title:  "[Qt] memset不能对class的实例使用"
 date:   2016-03-30
 comments: true
 categories: Qt
-tags: [c++,qt]
+tags: [C++,Qt]
 description:
 published: true
 ---

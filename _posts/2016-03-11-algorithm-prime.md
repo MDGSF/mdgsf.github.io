@@ -4,7 +4,7 @@ title:  "[数学] prime generate"
 date:   2016-03-11
 comments: true
 categories: Art
-tags: art, algorithm, c, prime
+tags: [Art,Algorithm,C,Prime]
 description:
 published: true
 ---

@@ -4,7 +4,7 @@ title:  "[C/C++] 并查集 Disjoint set"
 date:   2016-12-27
 comments: true
 categories: C/C++
-tags: c 
+tags: [C]
 description: ""
 published: true
 ---

@@ -4,7 +4,7 @@ title:  "[Windows] vs2008 两个工程文件用同一份代码"
 date:   2016-04-18
 comments: true
 categories: Windows
-tags: windows
+tags: [Windows]
 description:
 published: true
 ---

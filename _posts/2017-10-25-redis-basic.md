@@ -4,7 +4,7 @@ title:  "[Redis] 基础使用"
 date:   2017-10-25
 comments: true
 categories: Redis
-tags: redis
+tags: [Redis]
 description: ""
 published: true
 ---

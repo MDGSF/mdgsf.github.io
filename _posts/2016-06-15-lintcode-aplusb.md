@@ -4,7 +4,7 @@ title:  "[Art][LintCode] A + B"
 date:   2016-06-15
 comments: true
 categories: Art
-tags: c, a+b
+tags: [C,A+b]
 description:
 published: true
 ---

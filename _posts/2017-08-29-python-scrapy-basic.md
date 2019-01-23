@@ -4,7 +4,7 @@ title:  "[python] Scrapy"
 date:   2017-08-29
 comments: true
 categories: python
-tags: python, scrapy
+tags: [Python,Scrapy]
 description:
 published: true
 ---

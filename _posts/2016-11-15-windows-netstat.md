@@ -4,7 +4,7 @@ title:  "[Windows] netstat usage in windows"
 date:   2016-11-15
 comments: true
 categories: Windows
-tags: windows
+tags: [Windows]
 description:
 published: true
 ---

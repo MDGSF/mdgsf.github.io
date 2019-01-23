@@ -4,7 +4,7 @@ title:  "[GO] panic"
 date:   2018-01-17
 comments: true
 categories: GO
-tags: GO
+tags: [Go]
 description: ""
 published: true
 ---

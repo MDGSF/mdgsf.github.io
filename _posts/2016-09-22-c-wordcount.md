@@ -4,7 +4,7 @@ title:  "[C/C++] Word Count"
 date:   2016-09-22
 comments: true
 categories: C/C++
-tags: c
+tags: [C]
 description:
 published: true
 ---

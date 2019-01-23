@@ -4,7 +4,7 @@ title:  "[Qt] 给toolbutton增加阴影效果"
 date:   2016-07-21
 comments: true
 categories: Qt
-tags: [c++,qt]
+tags: [C++,Qt]
 description:
 published: true
 ---

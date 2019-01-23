@@ -4,7 +4,7 @@ title:  "[Git] gitignore修改不起作用"
 date:   2018-03-08
 comments: true
 categories: Git
-tags: git
+tags: [Git]
 description:
 published: true
 ---

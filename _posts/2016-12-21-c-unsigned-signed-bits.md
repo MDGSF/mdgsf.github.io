@@ -4,7 +4,7 @@ title:  "[C/C++] 无符号数 和 有符号数 的二进制图"
 date:   2016-12-21
 comments: true
 categories: C/C++
-tags: c 
+tags: [C]
 description: ""
 published: true
 ---

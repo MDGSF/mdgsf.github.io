@@ -4,7 +4,7 @@ title:  "[python] simple tcp"
 date:   2017-08-28
 comments: true
 categories: python
-tags: python, tcp
+tags: [Python,Tcp]
 description:
 published: true
 ---

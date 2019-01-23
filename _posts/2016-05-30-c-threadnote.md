@@ -4,7 +4,7 @@ title:  "[C/C++] 线程加锁 例子"
 date:   2016-05-30
 comments: true
 categories: C/C++
-tags: c
+tags: [C]
 description:
 published: true
 ---

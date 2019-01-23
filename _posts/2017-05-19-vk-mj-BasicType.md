@@ -4,7 +4,7 @@ title:  "[vk_mj] 麻将基础类型设计"
 date:   2017-05-19
 comments: true
 categories: vk_mj
-tags: mj
+tags: [Mj]
 description:
 published: true
 ---

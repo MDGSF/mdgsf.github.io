@@ -4,7 +4,7 @@ title:  "[C/C++] bind function lambda"
 date:   2017-08-24
 comments: true
 categories: C/C++
-tags: bind
+tags: [Bind]
 description:
 published: true
 ---

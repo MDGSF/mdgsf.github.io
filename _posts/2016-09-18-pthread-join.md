@@ -4,7 +4,7 @@ title:  "[pthread] join"
 date:   2016-09-18
 comments: true
 categories: pthread
-tags: pthread
+tags: [Pthread]
 description:
 published: true
 ---

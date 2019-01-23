@@ -4,7 +4,7 @@ title:  "[Git][翻译] Syncing a fork"
 date:   2018-02-25
 comments: true
 categories: Git
-tags: git
+tags: [Git]
 description:
 published: true
 ---

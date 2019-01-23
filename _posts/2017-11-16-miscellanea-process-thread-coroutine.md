@@ -4,7 +4,7 @@ title:  "进程、线程和协程"
 date:   2017-11-16
 comments: true
 categories: miscellanea
-tags: process,thread,coroutine
+tags: [Process,Thread,Coroutine]
 description:
 published: true
 ---

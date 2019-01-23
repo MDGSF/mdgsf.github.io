@@ -4,7 +4,7 @@ title:  "[C/C++] 指针的引用作为参数"
 date:   2016-06-24
 comments: true
 categories: C/C++
-tags: c++
+tags: [C++]
 description:
 published: true
 ---

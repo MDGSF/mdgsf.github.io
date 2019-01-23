@@ -4,7 +4,7 @@ title:  "[Linux][常用命令] xargs和管道的区别"
 date:   2017-03-14
 comments: true
 categories: Linux
-tags: ls
+tags: [Ls]
 description:
 published: true
 ---

@@ -4,7 +4,7 @@ title:  "[vk_mj] 重庆麻将"
 date:   2017-08-16
 comments: true
 categories: vk_mj
-tags: mj,chongqingmj
+tags: [Mj,Chongqingmj]
 description:
 published: true
 ---

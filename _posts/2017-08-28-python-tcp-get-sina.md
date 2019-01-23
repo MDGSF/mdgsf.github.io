@@ -4,7 +4,7 @@ title:  "[python] get sina html"
 date:   2017-08-28
 comments: true
 categories: python
-tags: python, http
+tags: [Python,Http]
 description:
 published: true
 ---

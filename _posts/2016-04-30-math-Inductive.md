@@ -4,7 +4,7 @@ title:  "[数学] 数学归纳法"
 date:   2016-04-30
 comments: true
 categories: Art
-tags: math
+tags: [Math]
 description:
 published: true
 ---

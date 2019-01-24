@@ -4,7 +4,7 @@ title:  "[Rust] string type change"
 date:   2019-01-16
 comments: true
 categories: Rust
-tags: Rust, string
+tags: [Rust,String]
 description:
 published: true
 ---

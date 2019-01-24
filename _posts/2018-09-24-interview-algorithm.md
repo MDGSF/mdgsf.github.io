@@ -4,7 +4,7 @@ title:  "[Art] 需要学习的算法大纲"
 date:   2018-09-24
 comments: true
 categories: Art
-tags: interview, algorithm
+tags: [Interview,Algorithm]
 description: "所有需要学习的算法"
 published: true
 ---

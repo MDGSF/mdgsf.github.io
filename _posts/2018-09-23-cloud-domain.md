@@ -4,7 +4,7 @@ title:  "[Linux][Cloud] 域名配置"
 date:   2018-09-23
 comments: true
 categories: Linux
-tags: linux, cloud
+tags: [Linux,Cloud]
 description:
 published: true
 ---

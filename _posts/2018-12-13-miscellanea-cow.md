@@ -4,7 +4,7 @@ title:  "copy on write"
 date:   2018-12-13
 comments: true
 categories: miscellanea
-tags: cow, copy on write
+tags: [Cow,Copy on write]
 description:
 published: true
 ---

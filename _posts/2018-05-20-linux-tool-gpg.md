@@ -4,7 +4,7 @@ title:  "[Linux] gpg加密工具"
 date:   2018-05-20
 comments: true
 categories: Linux
-tags: linux, apt
+tags: [Linux,Apt]
 description:
 published: true
 ---

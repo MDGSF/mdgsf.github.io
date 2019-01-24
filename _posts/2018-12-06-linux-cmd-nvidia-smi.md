@@ -4,7 +4,7 @@ title:  "[Linux] nvidia-smi 命令"
 date:   2018-12-06
 comments: true
 categories: Linux
-tags: linux, nvidia-smi
+tags: [Linux,Nvidia-smi]
 description:
 published: true
 ---

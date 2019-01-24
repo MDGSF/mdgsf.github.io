@@ -4,7 +4,7 @@ title:  "[Linux] ctrl+s 和 ctrl+q"
 date:   2018-11-16
 comments: true
 categories: Linux
-tags: linux
+tags: [Linux]
 description:
 published: true
 ---

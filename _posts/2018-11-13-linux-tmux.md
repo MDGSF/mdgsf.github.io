@@ -4,7 +4,7 @@ title:  "[Linux] tmux 软件"
 date:   2018-11-13
 comments: true
 categories: Linux
-tags: linux, tmux
+tags: [Linux,Tmux]
 description:
 published: true
 ---

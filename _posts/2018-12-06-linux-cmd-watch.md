@@ -4,7 +4,7 @@ title:  "[Linux] watch 命令"
 date:   2018-12-06
 comments: true
 categories: Linux
-tags: linux, watch
+tags: [Linux,Watch]
 description:
 published: true
 ---

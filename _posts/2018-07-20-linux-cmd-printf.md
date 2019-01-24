@@ -4,7 +4,7 @@ title:  "[Linux] printf命令"
 date:   2018-07-20
 comments: true
 categories: Linux
-tags: linux, apt
+tags: [Linux,Apt]
 description:
 published: true
 ---

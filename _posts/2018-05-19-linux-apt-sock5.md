@@ -4,7 +4,7 @@ title:  "[Linux] apt use sock5 proxy"
 date:   2018-05-19
 comments: true
 categories: Linux
-tags: linux, apt
+tags: [Linux,Apt]
 description:
 published: true
 ---

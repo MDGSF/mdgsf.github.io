@@ -4,7 +4,7 @@ title:  "[Art] 面试题收集1"
 date:   2018-12-23
 comments: true
 categories: Art
-tags: interview, algorithm
+tags: [Interview,Algorithm]
 description: ""
 published: true
 ---

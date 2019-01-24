@@ -5,7 +5,7 @@ date: 2018-04-22
 author: mdgsf
 comments: true
 categories: Linux
-tags: linux
+tags: [Linux]
 description: ""
 published: true #default true
 ---

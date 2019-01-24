@@ -4,7 +4,7 @@ title:  "[Web][Javascript] Arrow function"
 date:   2018-05-16
 comments: true
 categories: Web
-tags: js, javascript
+tags: [Js,Javascript]
 description: ""
 published: true
 ---

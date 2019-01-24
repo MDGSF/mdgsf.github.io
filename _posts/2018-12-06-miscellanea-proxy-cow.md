@@ -4,7 +4,7 @@ title:  "[proxy 代理] cow"
 date:   2018-12-06
 comments: true
 categories: miscellanea
-tags: cow, proxy
+tags: [Cow,Proxy]
 description:
 published: true
 ---

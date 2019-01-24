@@ -4,7 +4,7 @@ title:  "[Art] Manacher Algorithm"
 date:   2019-01-06
 comments: true
 categories: Art
-tags: art, algorithm, manacher
+tags: [Art,Algorithm,Manacher]
 description:
 published: true
 ---

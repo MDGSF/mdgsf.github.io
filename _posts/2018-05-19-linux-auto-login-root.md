@@ -4,7 +4,7 @@ title:  "[Linux] root用户自动登录"
 date:   2018-05-19
 comments: true
 categories: Linux
-tags: linux, apt
+tags: [Linux,Apt]
 description:
 published: true
 ---

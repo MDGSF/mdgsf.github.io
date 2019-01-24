@@ -5,7 +5,7 @@ date: 2018-07-06
 author: mdgsf
 comments: true
 categories: Web
-tags: js
+tags: [Js]
 description: ""
 published: true #default true
 ---

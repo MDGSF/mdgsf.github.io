@@ -22,7 +22,6 @@ published: true #default true
 
 ## 链接
 
-[游船费问题](https://mdgsf.github.io/2016/12/21/algorithm-pleasure-boat/)
+[游船费问题]({{ site.url }}/2016/12/21/algorithm-pleasure-boat/)
 
-[斐波那契数列](https://mdgsf.github.io/2019/01/26/algorithm-dp-fib/)
-
+[斐波那契数列]({{ site.url }}/2019/01/26/algorithm-dp-fib/)

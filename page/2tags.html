@@ -19,6 +19,7 @@ type: page
 
         <ul>
         {% for tag in sortedtags %}
+        {% if site.tags[tag].size > 0 %}
           <h2 id="{{ tag }}">{{ tag }}</h2>
           {% for post in site.tags[tag] %}
             <li>
@@ -31,6 +32,7 @@ type: page
                 {% include tag.html %}
             </li>
           {% endfor %}
+        {% endif %}
         {% endfor %}
         </ul>
 
@@ -46,11 +48,13 @@ type: page
                 </div>
                 <ul id="content-side" class="content-ul">
                     {% for tag in sortedtags %}
+                    {% if site.tags[tag].size > 0 %}
                     <li>
                         <a data-scroll href="#{{ tag }}">
                             {{ tag }} ({{ site.tags[tag].size }})
                         </a>
                     </li>
+                    {% endif %}
                     {% endfor %}
 
                 </ul>

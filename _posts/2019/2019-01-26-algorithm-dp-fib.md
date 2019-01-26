@@ -33,10 +33,10 @@ fib[1] = 1
 
 ```golang
 func fib(n int) int {
-	if n <= 1 {
-		return n
-	}
-	return fib(n-1) + fib(n-2)
+    if n <= 1 {
+        return n
+    }
+    return fib(n-1) + fib(n-2)
 }
 ```
 
@@ -48,13 +48,13 @@ func fib(n int) int {
 
 ```golang
 func fib(n int, m map[int]int) int {
-	if n <= 1 {
-		return n
-	}
-	if _, ok := m[n]; !ok {
-		m[n] = fib(n-1, m) + fib(n-2, m)
-	}
-	return m[n]
+    if n <= 1 {
+        return n
+    }
+    if _, ok := m[n]; !ok {
+        m[n] = fib(n-1, m) + fib(n-2, m)
+    }
+    return m[n]
 }
 ```
 
@@ -68,15 +68,15 @@ func fib(n int, m map[int]int) int {
 
 ```golang
 func fib(n int) int {
-	if n <= 1 {
-		return n
-	}
+    if n <= 1 {
+        return n
+    }
 
-	i, j := 0, 1
-	for idx := 2; idx <= n; idx++ {
-		i, j = j, i+j
-	}
-	return j
+    i, j := 0, 1
+    for idx := 2; idx <= n; idx++ {
+        i, j = j, i+j
+    }
+    return j
 }
 ```
 

@@ -59,12 +59,12 @@ F[2] = 2
 
 ```golang
 func climbStairs(n int) int {
-	if n == 1 {
-		return 1
-	} else if n == 2 {
-		return 2
-	}
-	return climbStairs(n-1) + climbStairs(n-2)
+    if n == 1 {
+        return 1
+    } else if n == 2 {
+        return 2
+    }
+    return climbStairs(n-1) + climbStairs(n-2)
 }
 ```
 
@@ -74,18 +74,18 @@ func climbStairs(n int) int {
 
 ```golang
 func climbStairs(n int) int {
-	m := make(map[int]int)
-	return inner(n, m)
+    m := make(map[int]int)
+    return inner(n, m)
 }
 
 func inner(n int, m map[int]int) int {
-	if n <= 2 {
-		return n
-	}
-	if _, ok := m[n]; !ok {
-		m[n] = inner(n-1, m) + inner(n-2, m)
-	}
-	return m[n]
+    if n <= 2 {
+        return n
+    }
+    if _, ok := m[n]; !ok {
+        m[n] = inner(n-1, m) + inner(n-2, m)
+    }
+    return m[n]
 }
 ```
 
@@ -95,13 +95,13 @@ func inner(n int, m map[int]int) int {
 
 ```golang
 func climbStairs(n int) int {
-	if n <= 2 {
-		return n
-	}
-	i, j := 1, 2
-	for idx := 3; idx <= n; idx++ {
-		i, j = j, i+j
-	}
-	return j
+    if n <= 2 {
+        return n
+    }
+    i, j := 1, 2
+    for idx := 3; idx <= n; idx++ {
+        i, j = j, i+j
+    }
+    return j
 }
 ```

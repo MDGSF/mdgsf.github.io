@@ -22,6 +22,9 @@ published: true #default true
 
 ## 链接
 
+[斐波那契数列]({{ site.url }}/2019/01/26/algorithm-dp-fib/)
+
+[爬楼梯]({{ site.url }}/2019/01/27/algorithm-dp-climb-stairs/)
+
 [游船费问题]({{ site.url }}/2016/12/21/algorithm-pleasure-boat/)
 
-[斐波那契数列]({{ site.url }}/2019/01/26/algorithm-dp-fib/)

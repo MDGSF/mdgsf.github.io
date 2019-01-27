@@ -97,6 +97,8 @@ func fib(n int, m map[int]int) int {
 
 时间复杂度：O(n)
 
+<img src="{{ site.url }}/images/2019/01/01_03.png" alt="penguin" />
+
 ## 方法三、递推
 
 `递推`其实就只是把递归的代码修改为用循环实现。
@@ -129,7 +131,7 @@ func fib(n int) int {
 
 斐波那契数列通项公式：
 
-<img src="{{ site.url }}/images/2019/01/01_02.jpeg" alt="penguin" />
+<img src="{{ site.url }}/images/2019/01/01_02.png" alt="penguin" />
 
 这个是数学上的方法了。
 

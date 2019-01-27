@@ -26,5 +26,7 @@ published: true #default true
 
 [爬楼梯]({{ site.url }}/2019/01/27/algorithm-dp-climb-stairs/)
 
+[计算路径数]({{ site.url }}/2019/01/27/algorithm-dp-count-the-path/)
+
 [游船费问题]({{ site.url }}/2016/12/21/algorithm-pleasure-boat/)
 

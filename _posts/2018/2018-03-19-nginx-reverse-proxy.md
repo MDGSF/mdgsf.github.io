@@ -21,7 +21,7 @@ pid logs/nginx.pid;
 
 worker_rlimit_nofile 65535;
 events {
-	use epoll;
+    use epoll;
     worker_connections 65535;
 }
 
@@ -37,32 +37,32 @@ http {
 
     sendfile on;
     tcp_nopush on;
-	tcp_nodelay on;
+    tcp_nodelay on;
     keepalive_timeout  65;
     gzip on;
-	gzip_min_length 1k;
-	gzip_buffers 4 16k;
+    gzip_min_length 1k;
+    gzip_buffers 4 16k;
 
-	upstream webservers {
-		server 111.230.34.80:12345 weight=10;
-		server 111.230.34.80:12346 weight=10;
-	}
+    upstream webservers {
+        server 111.230.34.80:12345 weight=10;
+        server 111.230.34.80:12346 weight=10;
+    }
 
     server {
         listen 80 default;
         server_name  localhost;
 
         location /server1 {
-			proxy_pass http://127.0.0.1:12345;
-			#proxy_pass http://webservers;
+            proxy_pass http://127.0.0.1:12345;
+            #proxy_pass http://webservers;
             proxy_redirect    off;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header Host $http_host;
         }
         location /server2 {
-			proxy_pass http://127.0.0.1:12346;
-			#proxy_pass http://webservers;
+            proxy_pass http://127.0.0.1:12346;
+            #proxy_pass http://webservers;
             proxy_redirect    off;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
             proxy_set_header X-Real-IP $remote_addr;
@@ -80,16 +80,16 @@ http {
         server_name  localhost;
 
         location /server1 {
-			proxy_pass http://127.0.0.1:12345/;
-			#proxy_pass http://webservers;
+            proxy_pass http://127.0.0.1:12345/;
+            #proxy_pass http://webservers;
             proxy_redirect    off;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header Host $http_host;
         }
         location /server2 {
-			proxy_pass http://127.0.0.1:12346/;
-			#proxy_pass http://webservers;
+            proxy_pass http://127.0.0.1:12346/;
+            #proxy_pass http://webservers;
             proxy_redirect    off;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
             proxy_set_header X-Real-IP $remote_addr;
@@ -106,16 +106,16 @@ http {
         server_name  localhost;
 
         location /server1/ {
-			proxy_pass http://127.0.0.1:12345;
-			#proxy_pass http://webservers;
+            proxy_pass http://127.0.0.1:12345;
+            #proxy_pass http://webservers;
             proxy_redirect    off;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header Host $http_host;
         }
         location /server2/ {
-			proxy_pass http://127.0.0.1:12346;
-			#proxy_pass http://webservers;
+            proxy_pass http://127.0.0.1:12346;
+            #proxy_pass http://webservers;
             proxy_redirect    off;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
             proxy_set_header X-Real-IP $remote_addr;
@@ -132,16 +132,16 @@ http {
         server_name  localhost;
 
         location /server1/ {
-			proxy_pass http://127.0.0.1:12345/;
-			#proxy_pass http://webservers;
+            proxy_pass http://127.0.0.1:12345/;
+            #proxy_pass http://webservers;
             proxy_redirect    off;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header Host $http_host;
         }
         location /server2/ {
-			proxy_pass http://127.0.0.1:12346/;
-			#proxy_pass http://webservers;
+            proxy_pass http://127.0.0.1:12346/;
+            #proxy_pass http://webservers;
             proxy_redirect    off;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
             proxy_set_header X-Real-IP $remote_addr;
@@ -157,25 +157,25 @@ http {
 package main
 
 import (
-	"fmt"
-	"io"
-	"log"
-	"net/http"
+    "fmt"
+    "io"
+    "log"
+    "net/http"
 )
 
 //HelloServer server1
 func HelloServer(w http.ResponseWriter, req *http.Request) {
-	io.WriteString(w, "server1\n")
+    io.WriteString(w, "server1\n")
 }
 
 func main() {
-	fmt.Println("vim-go")
+    fmt.Println("vim-go")
 
-	http.HandleFunc("/", HelloServer)
-	err := http.ListenAndServe(":12345", nil)
-	if err != nil {
-		log.Fatal("ListenAndServe: ", err)
-	}
+    http.HandleFunc("/", HelloServer)
+    err := http.ListenAndServe(":12345", nil)
+    if err != nil {
+        log.Fatal("ListenAndServe: ", err)
+    }
 }
 ```
 

@@ -9,6 +9,16 @@ type: page
 * content
 {:toc}
 
+## 资源
+
+[Nginx 资源汇总]({{ site.url }}/2019/02/21/nginx-resource/)
+
+[Golang 资源汇总]({{ site.url }}/2018/02/28/go-resource/)
+
+[Mysql 资源汇总]()
+
+[常用算法]()
+
 ## 画图
 
 [http://asciiflow.com/](http://asciiflow.com/)

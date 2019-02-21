@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Bugfree] Fix bug时的解决方案选择"
+title:  "[测试][Bugfree] Fix bug时的解决方案选择"
 date:   2016-12-21
 comments: true
 categories: tester
@@ -8,7 +8,6 @@ tags: [Tester,Bugfree]
 description: ""
 published: true
 ---
-
 
 
 By Design 这不是个bug，就是这么设计的

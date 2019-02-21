@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[内存检测] drmemory"
+title:  "[测试][内存检测] drmemory"
 date:   2017-08-14
 comments: true
 categories: tester
@@ -25,8 +25,4 @@ drmemory -brief -- foo.exe arg1 arg2
 ### VS2015
 
 工具-->Dr memory
-
-
-
-
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[GO] 学习资料收集"
+title:  "[GO] 资源汇总"
 date:   2018-02-28
 comments: true
 categories: GO

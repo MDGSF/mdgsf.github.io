@@ -11,13 +11,15 @@ type: page
 
 ## 资源
 
+[常用算法]({{ site.url }}/2019/02/28/algorithm-resource/)
+
 [Nginx 资源汇总]({{ site.url }}/2019/02/21/nginx-resource/)
 
 [Golang 资源汇总]({{ site.url }}/2018/02/28/go-resource/)
 
-[Mysql 资源汇总]()
+[Python 资源汇总]()
 
-[常用算法]()
+[Mysql 资源汇总]()
 
 ## 画图
 

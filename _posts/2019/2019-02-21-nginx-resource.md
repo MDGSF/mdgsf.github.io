@@ -28,10 +28,12 @@ published: true #default true
 
 ## 第三方模块
 
-https://www.nginx.com/resources/wiki/modules/index.html
-http://blog.codinglabs.org/articles/intro-of-nginx-module-development.html
-https://github.com/wujunze/nginx-http-echo-module
-http://www.evanmiller.org/nginx-modules-guide.html
+[https://www.nginx.com/resources/wiki/modules/index.html](https://www.nginx.com/resources/wiki/modules/index.html)
 
+[http://blog.codinglabs.org/articles/intro-of-nginx-module-development.html](http://blog.codinglabs.org/articles/intro-of-nginx-module-development.html)
+
+[https://github.com/wujunze/nginx-http-echo-module](https://github.com/wujunze/nginx-http-echo-module)
+
+[http://www.evanmiller.org/nginx-modules-guide.html](http://www.evanmiller.org/nginx-modules-guide.html)
 
 

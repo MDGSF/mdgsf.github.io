@@ -37,3 +37,6 @@ published: true #default true
 [http://www.evanmiller.org/nginx-modules-guide.html](http://www.evanmiller.org/nginx-modules-guide.html)
 
 
+## 自动生成配置文件
+
+https://nginxconfig.io/

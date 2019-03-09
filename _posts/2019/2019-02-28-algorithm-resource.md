@@ -25,7 +25,9 @@ published: true
 
 [堆排序]({{ site.url }}/2016/04/08/algorithm-sort-heapSort/)
 
+## 动态规划
 
+[动态规划]({{ site.url }}/2019/01/26/algorithm-dp/)
 
 
 

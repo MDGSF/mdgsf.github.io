@@ -31,3 +31,5 @@ published: true #default true
 [游船费问题]({{ site.url }}/2016/12/21/algorithm-pleasure-boat/)
 
 [三角形的最小路径和]({{ site.url }}/2019/03/09/algorithm-dp-triangle/)
+
+[乘积最大子序列]({{ site.url }}/2019/03/09/algorithm-dp-max-product-subarray/)

@@ -33,3 +33,5 @@ published: true #default true
 [三角形的最小路径和]({{ site.url }}/2019/03/09/algorithm-dp-triangle/)
 
 [乘积最大子序列]({{ site.url }}/2019/03/09/algorithm-dp-max-product-subarray/)
+
+[股票买卖系列]({{ site.url }}/2019/03/09/algorithm-dp-stock/)

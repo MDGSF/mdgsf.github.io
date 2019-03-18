@@ -255,6 +255,8 @@ openssl x509 -req -days 365 -sha256 -extensions v3_req -CA certs/root-ca.cert.pe
 openssl rsa -in private/client-c2-key.pem -out private/arp1.test.mdgsf.xyz.key.pem -passin pass:123456
 ```
 
+**Note:** client 和 server 的时间要一致。
+
 ## Golang 中 HTTPS 实现双向验证
 
 https://github.com/MDGSF/GoPractice/tree/master/HTTPSDemo

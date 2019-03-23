@@ -17,9 +17,9 @@ type: page
 
 [Golang 资源汇总]({{ site.url }}/2018/02/28/go-resource/)
 
-[Python 资源汇总]()
+[Python 资源汇总]({{ site.url }}/2019/03/23/python-resource/)
 
-[Mysql 资源汇总]({{ site.url }}/2019/03/23/python-resource/)
+[Mysql 资源汇总]()
 
 ## 画图
 

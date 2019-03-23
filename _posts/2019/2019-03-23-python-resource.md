@@ -31,9 +31,17 @@ published: true
 
 [廖雪峰 python 教程](https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000)
 
+[Python 入门](http://www.math.pku.edu.cn/teachers/lidf/docs/Python/python-tutorial.html)
+
 ### 官方文档
 
 [https://docs.python.org/3/](https://docs.python.org/3/)
+
+[内建函数](https://docs.python.org/3/library/functions.html)
+
+[运算符优先级](https://docs.python.org/3/reference/expressions.html#operator-precedence)
+
+[标准数据类型](https://docs.python.org/3/library/stdtypes.html)
 
 ### 自学是门手艺
 

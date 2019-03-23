@@ -19,7 +19,7 @@ type: page
 
 [Python 资源汇总]()
 
-[Mysql 资源汇总]()
+[Mysql 资源汇总]({{ site.url }}/2019/03/23/python-resource/)
 
 ## 画图
 

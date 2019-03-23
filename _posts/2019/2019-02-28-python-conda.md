@@ -9,6 +9,13 @@ description:
 published: true
 ---
 
+### 更新
+
+```
+conda update conda
+conda update anaconda
+```
+
 ### 列出所有环境
 
 ```

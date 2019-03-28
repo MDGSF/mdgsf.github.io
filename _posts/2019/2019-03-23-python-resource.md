@@ -45,6 +45,8 @@ published: true
 
 [标准数据类型](https://docs.python.org/3/library/stdtypes.html)
 
+[PEP8 代码风格](https://www.python.org/dev/peps/pep-0008/)
+
 ### 自学是门手艺
 
 [自学是门手艺](https://github.com/selfteaching/the-craft-of-selfteaching)

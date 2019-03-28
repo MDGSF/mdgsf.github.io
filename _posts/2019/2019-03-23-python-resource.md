@@ -25,6 +25,8 @@ published: true
 
 3. vim
 
+[pycharm 使用]({{ site.url }}/2019/03/28/python-pycharm)
+
 ### 教程
 
 [Python 基础教程](http://www.runoob.com/python/python-tutorial.html)

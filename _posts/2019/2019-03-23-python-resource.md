@@ -47,6 +47,10 @@ published: true
 
 [PEP8 代码风格](https://www.python.org/dev/peps/pep-0008/)
 
+[python 代码](https://github.com/python/)
+
+[python 官方 demo](https://github.com/python/cpython/tree/master/Tools/demo)
+
 ### 自学是门手艺
 
 [自学是门手艺](https://github.com/selfteaching/the-craft-of-selfteaching)

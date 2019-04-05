@@ -9,6 +9,10 @@ type: page
 * content
 {:toc}
 
+## 如何使用 Google
+
+[如何使用 Google]({{ site.url }}/2019/03/29/miscellanea-use-google/)
+
 ## 资源
 
 [常用算法]({{ site.url }}/2019/02/28/algorithm-resource/)

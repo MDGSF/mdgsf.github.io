@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Art][leetcode - C++] 21 Merge Two Sorted Lists"
+title: "[Art][leetcode] 21 Merge Two Sorted Lists"
 date: 2016-12-21
 author: mdgsf
 comments: true

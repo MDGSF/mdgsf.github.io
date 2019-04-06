@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Art][leetcode - C++] 1 Two Sum"
+title: "[Art][leetcode] 1 Two Sum"
 date: 2017-07-19
 author: mdgsf
 comments: true

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Art][leetcode - C++] 191 Number of 1 Bits"
+title: "[Art][leetcode] 191 Number of 1 Bits"
 date: 2017-03-03
 author: mdgsf
 comments: true

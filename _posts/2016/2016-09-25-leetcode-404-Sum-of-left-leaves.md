@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Art][leetcode - C++] 404 Sum of Left leaves"
+title: "[Art][leetcode] 404 Sum of Left leaves"
 date: 2016-09-25
 author: mdgsf
 comments: true

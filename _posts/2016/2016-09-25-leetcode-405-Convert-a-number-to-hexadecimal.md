@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Art][leetcode - C++] 405 Convert a Number to Hexadecimal"
+title: "[Art][leetcode] 405 Convert a Number to Hexadecimal"
 date: 2016-09-25
 author: mdgsf
 comments: true

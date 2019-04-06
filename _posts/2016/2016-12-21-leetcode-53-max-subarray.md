@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Art][leetcode - C++] 53 Maximum Subarray"
+title: "[Art][leetcode] 53 Maximum Subarray"
 date: 2016-12-21
 author: mdgsf
 comments: true

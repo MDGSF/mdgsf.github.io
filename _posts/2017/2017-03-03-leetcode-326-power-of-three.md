@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Art][leetcode - C++] 326 Power of Three"
+title: "[Art][leetcode] 326 Power of Three"
 date: 2017-03-03
 author: mdgsf
 comments: true

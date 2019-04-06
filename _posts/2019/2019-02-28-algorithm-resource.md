@@ -29,6 +29,12 @@ published: true
 
 [动态规划]({{ site.url }}/2019/01/26/algorithm-dp/)
 
+## 求和
 
+[两数之和](https://leetcode-cn.com/problems/two-sum/)
 
+[三数之和](https://leetcode-cn.com/problems/3sum/)
 
+[四数之和](https://leetcode-cn.com/problems/4sum/)
+
+## leetcode

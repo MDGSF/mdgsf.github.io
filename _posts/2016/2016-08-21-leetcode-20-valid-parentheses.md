@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Art][leetcode - C++] 20 Valid Parentheses"
+title: "[Art][leetcode] 20 Valid Parentheses"
 date: 2016-08-21
 author: mdgsf
 comments: true

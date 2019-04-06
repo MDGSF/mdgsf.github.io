@@ -38,3 +38,6 @@ published: true
 [四数之和](https://leetcode-cn.com/problems/4sum/)
 
 ## leetcode
+
+[leetcode 汇总]({{ site.url }}/2019/04/06/algorithm-leetcode/)
+

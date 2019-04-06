@@ -10,6 +10,8 @@ description:
 published: true #default true
 ---
 
+[https://leetcode-cn.com/problems/two-sum/](https://leetcode-cn.com/problems/two-sum/)
+
 [https://leetcode.com/problems/two-sum/description/](https://leetcode.com/problems/two-sum/description/)
 
 ## 题目

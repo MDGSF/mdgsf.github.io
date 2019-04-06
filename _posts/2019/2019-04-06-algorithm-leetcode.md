@@ -17,6 +17,10 @@ published: true
 
 [3 Longest Substring without Repeating]({{ site.url }}/2017/07/20/leetcode-3-Longest-Substring-Without-Repeating-Characters/)
 
+[15 三数之和]({{ site.url }}/2019/04/06/leetcode-15-3sum/)
+
+[18 四数之和]({{ site.url }}/2019/04/06/leetcode-18-4sum/)
+
 [19 Remove Nth Node From End of List]({{ site.url }}/2016/12/21/leetcode-19-remove-nth-node-from-end-of-list/)
 
 [20 Valid Parentheses]({{ site.url }}/2016/08/21/leetcode-20-valid-parentheses/)
@@ -45,7 +49,7 @@ published: true
 
 [231 Power of Two]({{ site.url }}/2017/03/03/leetcode-231-power-of-two/)
 
-[237 Delete Node in a Linked List]({{ site.url }}/2016/12/03/leetcode-237-delete-node-in-a-linked-list/
+[237 Delete Node in a Linked List]({{ site.url }}/2016/12/03/leetcode-237-delete-node-in-a-linked-list/)
 
 [242 Valid Anagram]({{ site.url }}/2017/09/05/leetcode-242/)
 

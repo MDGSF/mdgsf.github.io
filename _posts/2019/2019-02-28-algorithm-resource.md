@@ -31,11 +31,11 @@ published: true
 
 ## 求和
 
-[两数之和](https://leetcode-cn.com/problems/two-sum/)
+[两数之和]({{ site.url }}/2017/07/19/leetcode-1-two-sum/)
 
-[三数之和](https://leetcode-cn.com/problems/3sum/)
+[三数之和]({{ site.url }}/2019/04/06/leetcode-15-3sum/)
 
-[四数之和](https://leetcode-cn.com/problems/4sum/)
+[四数之和]({{ site.url }}/2019/04/06/leetcode-18-4sum/)
 
 ## leetcode
 

@@ -10,6 +10,16 @@ description:
 published: true #default true
 ---
 
+## 求和系列题目
+
+[两数之和]({{ site.url }}/2017/07/19/leetcode-1-two-sum/)
+
+[三数之和]({{ site.url }}/2019/04/06/leetcode-15-3sum/)
+
+[四数之和]({{ site.url }}/2019/04/06/leetcode-18-4sum/)
+
+## 链接
+
 [https://leetcode-cn.com/problems/two-sum/](https://leetcode-cn.com/problems/two-sum/)
 
 [https://leetcode.com/problems/two-sum/description/](https://leetcode.com/problems/two-sum/description/)
@@ -43,7 +53,7 @@ return [0, 1].
 
 ## 题目解析
 
-### 方法一
+### 方法一：暴力法
 
 暴力求解，两重循环，遍历所有的可能性。时间复杂度 O(n^2)。
 
@@ -60,7 +70,7 @@ class Solution:
                 j += 1
 ```
 
-### 方法二
+### 方法二：两头逼近法
 
 先排个序，然后从数组的两端向中间逼近。
 
@@ -87,9 +97,9 @@ class Solution:
                 start += 1
 ```
 
-### 方法三
+### 方法三：查找哈希表
 
-遍历一次，在遍历的过程中。
+遍历一次，时间复杂度为 O(n)，分析如下。
 
 nums = [2, 7, 11, 15], target = 9
 
@@ -107,7 +117,9 @@ d[2] = 0
 
 然后在继续遍历，接下来遍历到 7，计算 peer = target - 7 = 2
 
-然后到 d 中去查找 peer=2 是否存在，发现存在。返回结果
+然后到 d 中去查找 peer=2 是否存在，发现存在。返回结果。
+
+参考代码：
 
 ```python
 class Solution:

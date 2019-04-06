@@ -29,7 +29,7 @@ published: true
 
 [动态规划]({{ site.url }}/2019/01/26/algorithm-dp/)
 
-## 求和
+## 求和系列题目
 
 [两数之和]({{ site.url }}/2017/07/19/leetcode-1-two-sum/)
 

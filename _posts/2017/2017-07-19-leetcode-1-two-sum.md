@@ -24,13 +24,102 @@ Example:
 Given nums = [2, 7, 11, 15], target = 9,
 
 Because nums[0] + nums[1] = 2 + 7 = 9,
+
 return [0, 1].
 
 ## 题目翻译
 
+给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
+
+你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。
+
+示例:
+
+给定 nums = [2, 7, 11, 15], target = 9
+
+因为 nums[0] + nums[1] = 2 + 7 = 9
+
+所以返回 [0, 1]
+
 ## 题目解析
 
-## 参考答案
+### 方法一
+
+暴力求解，两重循环，遍历所有的可能性。时间复杂度 O(n^2)。
+
+这个太慢了，会超出时间限制。
+
+```python
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        for i, iv in enumerate(nums):
+            j = i + 1
+            while j < len(nums):
+                if nums[i] + nums[j] == target:
+                    return [i, j]
+                j += 1
+```
+
+### 方法二
+
+先排个序，然后从数组的两端向中间逼近。
+
+排序时间复杂度 O(nlogn)。逼近过程复杂度 O(n)
+
+所以复杂度为 O(nlogn + n) = O(nlogn)
+
+这题目要求返回的是下标，所以这种方法排序的时候下标就改变了。如果在把下标记录下来，就不是很方便了。
+
+如果要求返回的是值的话，可以这么写：
+
+```python
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        nums.sort()
+        start = 0
+        end = len(nums) - 1
+        while start < end:
+            if nums[start] + nums[end] == target:
+                return [nums[start], nums[end]]
+            elif nums[start] + nums[end] > target:
+                end -= 1
+            else:
+                start += 1
+```
+
+### 方法三
+
+遍历一次，在遍历的过程中。
+
+nums = [2, 7, 11, 15], target = 9
+
+先建立一个空的哈希表 d
+
+遍历到 2 的时候，计算 peer = target - 2 = 9 - 2 = 7
+
+然后到 d 中去查找 peer=7 是否存在，很明显不存在，那就执行
+
+```
+d[2] = 0
+```
+
+就是把 2 这个数字对应的下标 0 保存到哈希表 d 中去。
+
+然后在继续遍历，接下来遍历到 7，计算 peer = target - 7 = 2
+
+然后到 d 中去查找 peer=2 是否存在，发现存在。返回结果
+
+```python
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        d = {}
+        for i, v in enumerate(nums):
+            peer = target - v
+            if peer in d:
+                return [i, d[peer]]
+            else:
+                d[v] = i
+```
 
 ```cpp
 #include <iostream>

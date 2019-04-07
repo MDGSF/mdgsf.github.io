@@ -9,6 +9,8 @@ description:
 published: true
 ---
 
+# 算法资源汇总
+
 ## 排序算法
 
 [冒泡排序]({{ site.url }}/2016/04/07/algorithm-sort-bubble/)
@@ -42,4 +44,3 @@ published: true
 ## leetcode
 
 [leetcode 汇总]({{ site.url }}/2019/04/06/algorithm-leetcode/)
-

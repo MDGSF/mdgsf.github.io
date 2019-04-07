@@ -9,6 +9,7 @@ description: ""
 published: true
 ---
 
+# Windows下安装go
 
 ## 配置环境变量
 
@@ -24,7 +25,6 @@ GOARCH：指定系统环境，i386表示x86，amd64表示x64
 
 PATH：需要将%GOBIN%加在PATH变量的最后，方便在命令行下运行Go
 
-
 ## 查看版本
 
 ```go
@@ -38,14 +38,12 @@ go version go1.9 windows/amd64
 package main
 
 import (
-	"fmt"
+    "fmt"
 )
 
 func main() {
-	fmt.Println("Hello World!")
+    fmt.Println("Hello World!")
 }
 ```
 
 执行命令 go run helloworld.go
-
-

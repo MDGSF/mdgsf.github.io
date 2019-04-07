@@ -17,15 +17,15 @@ import "fmt"
 import "strings"
 
 func main() {
-	var data []byte
+    var data []byte
 
-	for i := 'a'; i <= 'z'; i++ {
-		data = append(data, byte(i))
-	}
-	log.Println("data = ", data)
+    for i := 'a'; i <= 'z'; i++ {
+        data = append(data, byte(i))
+    }
+    log.Println("data = ", data)
 
-	msg := fmt.Sprintf("%x", data)
-	log.Println("data = ", msg)
-	log.Println("data = ", strings.ToUpper(msg))
+    msg := fmt.Sprintf("%x", data)
+    log.Println("data = ", msg)
+    log.Println("data = ", strings.ToUpper(msg))
 }
 ```

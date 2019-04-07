@@ -4,7 +4,7 @@ title:  "[GO] tcp 传输文件"
 date:   2017-10-14
 comments: true
 categories: GO
-tags: [Go]
+tags: [GO]
 description: ""
 published: true
 ---

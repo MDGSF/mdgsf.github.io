@@ -4,7 +4,7 @@ title:  "[GO] go get proxy"
 date:   2018-05-11
 comments: true
 categories: GO
-tags: [Go]
+tags: [GO]
 description: ""
 published: true
 ---

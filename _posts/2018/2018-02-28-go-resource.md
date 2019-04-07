@@ -4,7 +4,7 @@ title:  "[GO] 资源汇总"
 date:   2018-02-28
 comments: true
 categories: GO
-tags: [Go]
+tags: [GO]
 description: ""
 published: true
 ---

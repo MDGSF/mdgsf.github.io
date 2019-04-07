@@ -4,7 +4,7 @@ title:  "[GO] fsnotify监控目录"
 date:   2017-10-12
 comments: true
 categories: GO
-tags: [Go]
+tags: [GO]
 description: ""
 published: true
 ---

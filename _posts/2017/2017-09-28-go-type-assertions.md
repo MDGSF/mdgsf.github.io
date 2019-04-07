@@ -4,7 +4,7 @@ title:  "[GO] Type assertions类型断言"
 date:   2017-09-28
 comments: true
 categories: GO
-tags: [Go]
+tags: [GO]
 description: ""
 published: true
 ---

@@ -4,7 +4,7 @@ title:  "[GO] Interface"
 date:   2017-09-19
 comments: true
 categories: GO
-tags: [Go]
+tags: [GO]
 description: ""
 published: true
 ---

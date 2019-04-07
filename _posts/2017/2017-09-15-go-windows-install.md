@@ -4,7 +4,7 @@ title:  "[GO] Windows下安装go"
 date:   2017-09-15
 comments: true
 categories: GO
-tags: [Go]
+tags: [GO]
 description: ""
 published: true
 ---

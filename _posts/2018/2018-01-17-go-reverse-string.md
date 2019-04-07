@@ -4,7 +4,7 @@ title:  "[GO] reverse string"
 date:   2018-01-17
 comments: true
 categories: GO
-tags: [Go]
+tags: [GO]
 description: ""
 published: true
 ---

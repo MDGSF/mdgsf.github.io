@@ -4,7 +4,7 @@ title:  "[GO] A simple load balancer"
 date:   2017-11-16
 comments: true
 categories: GO
-tags: [Go]
+tags: [GO]
 description: ""
 published: true
 ---

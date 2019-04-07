@@ -4,7 +4,7 @@ title:  "[GO] 简单的TCP Server实现"
 date:   2016-12-26
 comments: true
 categories: GO
-tags: [Go]
+tags: [GO]
 description: ""
 published: true
 ---

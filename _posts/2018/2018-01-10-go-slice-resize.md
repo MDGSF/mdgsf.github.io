@@ -4,7 +4,7 @@ title:  "[GO] slice自动分配内存"
 date:   2018-01-10
 comments: true
 categories: GO
-tags: [Go]
+tags: [GO]
 description: ""
 published: true
 ---

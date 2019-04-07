@@ -4,7 +4,7 @@ title:  "[GO] import"
 date:   2017-10-13
 comments: true
 categories: GO
-tags: [Go]
+tags: [GO]
 description: ""
 published: true
 ---

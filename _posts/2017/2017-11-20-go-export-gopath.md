@@ -4,7 +4,7 @@ title:  "[GO] GoPath管理"
 date:   2017-11-20
 comments: true
 categories: GO
-tags: [Go]
+tags: [GO]
 description: ""
 published: true
 ---

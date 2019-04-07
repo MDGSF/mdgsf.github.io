@@ -4,7 +4,7 @@ title:  "[GO] chan 内部实现"
 date:   2018-04-11
 comments: true
 categories: GO
-tags: [Go]
+tags: [GO]
 description: ""
 published: true
 ---

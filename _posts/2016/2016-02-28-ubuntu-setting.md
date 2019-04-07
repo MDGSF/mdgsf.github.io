@@ -10,19 +10,19 @@ description: "After install ubuntu in vbox, do some common setting"
 published: true #default true
 ---
 
+# Ubuntu setting
 
-## 1.Install vBoxAddition 
+## 1.Install vBoxAddition
 
 ### 1.1
 
 <img src="{{ site.url }}/images/201602/28_01.jpg" alt="28_01" />
 
-### 1.2 
+### 1.2
 
 If there is no **VBoxGuestAddition.iso**, go to the vbox installed directory.
 
 <img src="{{ site.url }}/images/201602/28_02.jpg" alt="28_02" />
-
 
 ## 2.Set share directory between local host and vbox
 
@@ -30,7 +30,7 @@ If there is no **VBoxGuestAddition.iso**, go to the vbox installed directory.
 
 <img src="{{ site.url }}/images/201602/28_03.png" alt="28_03" />
 
-### 2.2 
+### 2.2
 
 click the Auto-mount and fixed allocation.
 
@@ -46,13 +46,11 @@ sudo mkdir /mnt/shared
 
 sudo mount -t vboxsf share /mnt/shared
 
-
-
-## 3.Get the root 
+## 3.Get the root
 
 sudo passwd root
 
-Enter new UNIX password: 
+Enter new UNIX password:
 
 Retype new UNIX password:
 
@@ -64,10 +62,9 @@ su root
 
 Password:
 
-
 ## 4.Install vim
-apt-get install vim
 
+apt-get install vim
 
 ## 5.Network setting
 
@@ -75,8 +72,8 @@ apt-get install vim
 
 sudo vim /etc/network/interfaces
 
-```
-auto lo 
+```bash
+auto lo
 iface lo inet loopback
 auto eth0
 iface eht0 inet static
@@ -87,7 +84,7 @@ gateway 172.17.92.110
 
 ### 5.2
 
-```
+```bash
 sudo vim /etc/resolv.conf
 nameserver 114.114.114.114
 nameserver 8.8.8.8
@@ -95,16 +92,15 @@ nameserver 8.8.8.8
 
 ### 5.3 select bridged networking
 
-<img src="{{ site.url }}/images/201602/28_05.jpg" alt="28_05" />
+![28_05]({{ site.url }}/images/201602/28_05.jpg)
 
-### 5.4 
+### 5.4
 
 sudo /etc/init.d/networking restart
 
-
 ## 6.terminal setting
 
-```
+```bash
 vim ~/.bashrc
 alias ls='ls --color=auto'
 alias f='fg'
@@ -114,7 +110,6 @@ alias j='jobs'
 <img src="{{ site.url }}/images/201602/28_06.png" alt="28_06" />
 
 source ~/.bashrc
-
 
 ## 7.Install software
 
@@ -126,7 +121,7 @@ apt-get install g++
 
 apt-get install gdb
 
-```
+```bash
 apt-get install openssh-server
 sudo service ssh start (must use sudo even you are root)
 ps -e | grep sshd
@@ -139,5 +134,3 @@ apt-get install samba
 apt-get install git
 
 apt-get install subversion
-
-

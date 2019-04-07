@@ -9,6 +9,8 @@ description:
 published: true
 ---
 
+# writev and readv
+
 ~~~cpp
 #include <sys/uio.h>
 ssize_t readv(int fd, const struct iovec *iov, int iovcnt);
@@ -24,8 +26,8 @@ The readv() system call reads iovcnt buffers from the file associated with the f
 
 The writev() system call writes iovcnt buffers of data described by iov to the file associated with the file descriptor fd ("gather output").
 
+## Example
 
-## Example:
 ```cpp
 #include <unistd.h>
 #include <sys/uio.h>

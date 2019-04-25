@@ -9,6 +9,8 @@ description: ""
 published: true
 ---
 
+# [GO] 资源汇总
+
 ## 官网
 
 [Go 官网](https://golang.org/)
@@ -29,15 +31,15 @@ published: true
 
 ## 书
 
-#### Go入门指南 / The Way to Go
+### Go入门指南 / The Way to Go
 
 [https://github.com/Unknwon](https://github.com/Unknwon)
 
-#### Go Web 编程 / build-web-application-with-golang
+### Go Web 编程 / build-web-application-with-golang
 
 [https://github.com/astaxie/build-web-application-with-golang](https://github.com/astaxie/build-web-application-with-golang)
 
-#### Go语言圣经 / The Go Programming Language
+### Go语言圣经 / The Go Programming Language
 
 [https://books.studygolang.com/gopl-zh/index.html](https://books.studygolang.com/gopl-zh/index.html)
 
@@ -55,18 +57,17 @@ published: true
 
 [https://docs.hacknode.org/gopl-zh/](https://docs.hacknode.org/gopl-zh/)
 
-
 ## 视频教程
 
 [Go 编程基础 / 无闻](https://github.com/Unknwon/go-fundamental-programming)
 
 ## 其他学习资料
 
-#### Go By Example
+### Go By Example
 
 [https://gobyexample.com](https://gobyexample.com) 这里有很多 Go 基础的例子。
 
-#### A Tour of Go
+### A Tour of Go
 
 [https://tour.golang.org](https://tour.golang.org)
 
@@ -104,4 +105,12 @@ go get golang.org/x/tour/gotour
 
 ## 代码规范
 
-https://github.com/golang/go/wiki/CodeReviewComments
+[https://github.com/golang/go/wiki/CodeReviewComments
+](https://github.com/golang/go/wiki/CodeReviewComments
+)
+
+## GopherChina
+
+这是每年的 GopherChina，不同的公司分享的资料，很值得阅读。
+
+[https://github.com/gopherchina/conference](https://github.com/gopherchina/conference)

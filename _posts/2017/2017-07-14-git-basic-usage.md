@@ -9,15 +9,17 @@ description:
 published: true
 ---
 
-
 ## 一：创建版本库
 
-1. 通过命令 git init 把这个目录变成git可以管理的仓库，如下：
+### 1
+
+通过命令 git init 把这个目录变成git可以管理的仓库，如下：
 
 <img src="{{ site.url }}/images/2017/07/14_0.png" alt="14_0" />
 
+### 2
 
-2. 把文件添加到版本库中。
+把文件添加到版本库中。
 
 第一步：使用命令 git add readme.txt添加到暂存区里面去。如下：
 
@@ -27,11 +29,11 @@ published: true
 
 <img src="{{ site.url }}/images/2017/07/14_2.png" alt="14_2" />
 
+### 3
 
-3. 修改文件内容。
+修改文件内容。
 
 <img src="{{ site.url }}/images/2017/07/14_3.png" alt="14_3" />
-
 
 查看具体修改了哪些内容:
 
@@ -41,11 +43,11 @@ published: true
 
 <img src="{{ site.url }}/images/2017/07/14_5.png" alt="14_5" />
 
+### 4
 
-4. 删除文件。
+删除文件。
 
 <img src="{{ site.url }}/images/2017/07/14_12.png" alt="14_12" />
-
 
 ## 二：版本回退
 
@@ -57,16 +59,13 @@ published: true
 
 <img src="{{ site.url }}/images/2017/07/14_7.png" alt="14_7" />
 
-
 回退到特定的版本:
 
 <img src="{{ site.url }}/images/2017/07/14_8.png" alt="14_8" />
 
-
 返回到刚才的版本：
 
 <img src="{{ site.url }}/images/2017/07/14_9.png" alt="14_9" />
-
 
 ## 三：理解工作区与暂存区的区别？
 
@@ -80,29 +79,21 @@ published: true
 
 第二步：使用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支上。
 
-
-
 ## 四：Git撤销修改
-
 
 <img src="{{ site.url }}/images/2017/07/14_10.png" alt="14_10" />
 
 <img src="{{ site.url }}/images/2017/07/14_11.png" alt="14_11" />
 
-
-
 ## 五：分支
 
 在  版本回填退里，你已经知道，每次提交，Git都把它们串成一条时间线，这条时间线就是一个分支。截止到目前，只有一条时间线，在Git里，这个分支叫主分支，即master分支。
 
-
 <img src="{{ site.url }}/images/2017/07/14_13.png" alt="14_13" />
-
 
 切换到dev分支
 
 <img src="{{ site.url }}/images/2017/07/14_14.png" alt="14_14" />
-
 
 创建testbranch分支，同时切换到testbranch分支上去。
 
@@ -113,7 +104,6 @@ published: true
 <img src="{{ site.url }}/images/2017/07/14_19.png" alt="14_19" />
 
 ### 1.  下面举例说明如何使用 分支 来帮助开发。
-
 
 首先进入master分支，查看readme.txt文件内容，只有aaa,bbb,ccc
 
@@ -127,9 +117,7 @@ published: true
 
 <img src="{{ site.url }}/images/2017/07/14_18.png" alt="14_18" />
 
-
 **分支策略：**首先master主分支应该是非常稳定的，也就是用来发布新版本，一般情况下不允许在上面干活，干活一般情况下在新建的dev分支上干活，干完后，比如上要发布，或者说dev分支代码稳定后可以合并到主分支master上来。
-
 
 ### 2. 合并分支时，如何解决冲突？
 
@@ -153,10 +141,7 @@ published: true
 
 <img src="{{ site.url }}/images/2017/07/14_28.png" alt="14_28" />
 
-
-
 ## 六：远程仓库。
-
 
 那么如何添加远程库？
 
@@ -174,13 +159,11 @@ git push origin master
 
 把本地master分支的最新修改推送到github上了，现在你就拥有了真正的分布式版本库了。
 
-
 ## 七：.gitignore文件
 
 这个文件的作用就是告诉Git哪些文件不需要添加到版本管理中。
 
 在这个文件里面可以写上编译时生成的中间文件，那么在 git status, git add 的时候，就不会被提交了。
-
 
 ## Git基本常用命令如下：
 
@@ -248,14 +231,6 @@ git push origin master
 
    git push origin master  Git会把master分支推送到远程库对应的远程分支上
 
-
-
-
 ## 参考链接
 
 <a href="http://blog.jobbole.com/78960/" target="_blank">http://blog.jobbole.com/78960/</a>
-
-
-
-
-

@@ -10,8 +10,6 @@ description:
 published: true #default true
 ---
 
-
-
 ```cpp
 #include "FreeRTOS.h"
 #include "task.h"
@@ -26,89 +24,86 @@ QueueHandle_t xQueue;
 
 typedef enum
 {
-	eSender1,
-	eSender2
+    eSender1,
+    eSender2
 } DataSource_t;
 
 typedef struct
 {
-	uint8_t ucValue;
-	DataSource_t eDataSource;
+    uint8_t ucValue;
+    DataSource_t eDataSource;
 } Data_t;
 
-static const Data_t xStructToSend[2] = 
+static const Data_t xStructToSend[2] =
 {
-	{100, eSender1},
-	{200, eSender2}
+    {100, eSender1},
+    {200, eSender2}
 };
 
 int main()
 {
-	xQueue = xQueueCreate(3, sizeof(Data_t));
-	if (xQueue != NULL)
-	{
-		xTaskCreate(vSenderTask, "Sender1", 1000, (void*)&(xStructToSend[0]), 2, NULL);
-		xTaskCreate(vSenderTask, "Sender2", 1000, (void*)&(xStructToSend[1]), 2, NULL);
+    xQueue = xQueueCreate(3, sizeof(Data_t));
+    if (xQueue != NULL)
+    {
+        xTaskCreate(vSenderTask, "Sender1", 1000, (void*)&(xStructToSend[0]), 2, NULL);
+        xTaskCreate(vSenderTask, "Sender2", 1000, (void*)&(xStructToSend[1]), 2, NULL);
 
-		xTaskCreate(vReceiverTask, "Receiver", 1000, NULL, 1, NULL);
+        xTaskCreate(vReceiverTask, "Receiver", 1000, NULL, 1, NULL);
 
-		vTaskStartScheduler();
-	}
-	else
-	{
-	}
+        vTaskStartScheduler();
+    }
+    else
+    {
+    }
 
-	for (;;);
+    for (;;);
 
-	return 0;
+    return 0;
 }
 
 static void vSenderTask(void * pvParameters)
 {
-	BaseType_t xStatus;
-	const TickType_t xTicksToWait = pdMS_TO_TICKS(100UL);
+    BaseType_t xStatus;
+    const TickType_t xTicksToWait = pdMS_TO_TICKS(100UL);
 
-	for (;;)
-	{
-		xStatus = xQueueSendToBack(xQueue, pvParameters, xTicksToWait);
-		if (xStatus != pdPASS)
-		{
-			vPrintString("Could not send to the queue.\n");
-		}
-	}
+    for (;;)
+    {
+        xStatus = xQueueSendToBack(xQueue, pvParameters, xTicksToWait);
+        if (xStatus != pdPASS)
+        {
+            vPrintString("Could not send to the queue.\n");
+        }
+    }
 }
 
 static void vReceiverTask(void * pvParameters)
 {
-	Data_t xReceivedStructure;
-	BaseType_t xStatus;
+    Data_t xReceivedStructure;
+    BaseType_t xStatus;
 
-	for (;;)
-	{
-		if (uxQueueMessagesWaiting(xQueue) != 3)
-		{
-			vPrintString("Queue should have been full\n");
-		}
+    for (;;)
+    {
+        if (uxQueueMessagesWaiting(xQueue) != 3)
+        {
+            vPrintString("Queue should have been full\n");
+        }
 
-		xStatus = xQueueReceive(xQueue, &xReceivedStructure, 0);
-		if (xStatus == pdPASS)
-		{
-			if (xReceivedStructure.eDataSource == eSender1)
-			{
-				vPrintStringAndNumber("From Sender 1 = ", xReceivedStructure.ucValue);
-			}
-			else
-			{
-				vPrintStringAndNumber("From Sender 2 = ", xReceivedStructure.ucValue);
-			}
-		}
-		else
-		{
-			vPrintString("Could not receive from the queue.\n");
-		}
-	}
+        xStatus = xQueueReceive(xQueue, &xReceivedStructure, 0);
+        if (xStatus == pdPASS)
+        {
+            if (xReceivedStructure.eDataSource == eSender1)
+            {
+                vPrintStringAndNumber("From Sender 1 = ", xReceivedStructure.ucValue);
+            }
+            else
+            {
+                vPrintStringAndNumber("From Sender 2 = ", xReceivedStructure.ucValue);
+            }
+        }
+        else
+        {
+            vPrintString("Could not receive from the queue.\n");
+        }
+    }
 }
 ```
-
-
-

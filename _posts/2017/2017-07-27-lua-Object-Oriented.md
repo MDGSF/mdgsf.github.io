@@ -10,8 +10,7 @@ description:
 published: true #default true
 ---
 
-读书笔记： Programming in Lua, 4th Edition. 
-
+读书笔记： Programming in Lua, 4th Edition.
 
 ```lua
 Account = {
@@ -49,7 +48,6 @@ setmetatable(A, {__index = B})
 ```
 
 After that, A looks up in B for any operation that it does not have.
-
 
 Let us go back to our example of a bank account. To create other accounts with behavior similar to Account,
 we arrange for these new objects to inherit their operations from Account, using the __index
@@ -110,9 +108,7 @@ Account.__index also equal to Account, and set Account as the metatable for the 
 may seem that we do not gained much with the second change (the colon syntax); the advantage of using
 self will become apparent when we introduce class inheritance, in the next section.
 
-
 ## Inheritance 继承
-
 
 ```lua
 Account = {balance = 0}
@@ -151,5 +147,3 @@ end
 <img src="{{ site.url }}/images/2017/07/29_01.jpg" alt="29_01" />
 
 就像一个链表一样，通过metatable一层一层向上找。
-
-

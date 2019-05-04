@@ -10,7 +10,6 @@ description:
 published: true #default true
 ---
 
-
 比如，我们有两个分数：
 
 ```lua
@@ -65,10 +64,7 @@ __newindex(a, b, c)             对应表达式 a.b = c
 __call(a, ...)                  对应表达式 a(...)
 ```
 
-
-
 ```lua
-
 Set = {}
 Set.mt = {} -- metatable for sets
 
@@ -76,7 +72,7 @@ function Set.new(t)
     t = t or {}
     local set = {}
     setmetatable(set, Set.mt)
-    for _, l in ipairs(t) do 
+    for _, l in ipairs(t) do
         set[l] = true
     end
     return set
@@ -84,7 +80,7 @@ end
 
 function Set.union(a, b)
 
-    if getmetatable(a) ~= Set.mt or 
+    if getmetatable(a) ~= Set.mt or
         getmetatable(b) ~= Set.mt then
         error("Attempt to 'add' a set with a not-set value", 2)
     end
@@ -101,7 +97,7 @@ end
 
 function Set.intersection(a, b)
     local res = Set.new()
-    for k in pairs(a) do 
+    for k in pairs(a) do
         res[k] = b[k]
     end
     return res
@@ -111,8 +107,8 @@ function Set.tostring(set)
     set = set or {}
     local s = "{"
     local sep = ""
-    for e in pairs(set) do 
-        s = s .. sep .. e 
+    for e in pairs(set) do
+        s = s .. sep .. e
         sep = ", "
     end
     return s .. "}"
@@ -150,18 +146,14 @@ print("--------------")
 print(s1)
 print(s2)
 -- print会自动调用__tostring，我们在这里修改了__tostring
-Set.mt.__tostring = Set.tostring 
+Set.mt.__tostring = Set.tostring
 print(s1)
 print(s2)
 
 ```
-
-
-
 
 参考链接：
 
 <a href="http://coolshell.cn/articles/10739.html" target="_blank">http://coolshell.cn/articles/10739.html</a>
 
 <a href="http://book.luaer.cn/" target="_blank">http://book.luaer.cn/</a>
-

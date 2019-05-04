@@ -9,10 +9,9 @@ description:
 published: true
 ---
 
-## 链接 
+## 链接
 
 <a href="http://rapidjson.org/zh-cn/md_doc_pointer_8zh-cn.html" target="_blank">JSON Pointer</a>
-
 
 ```cpp
 #include "rapidjson/document.h"
@@ -84,7 +83,7 @@ void cDemo()
 
     ShowJSON(d);
 
-    CreateValueByPointer(d, "/1/0"); 
+    CreateValueByPointer(d, "/1/0");
     EraseValueByPointer(d, "/1/0");
     SetValueByPointer(d, "/1/-", 123);
     ShowJSON(d);
@@ -96,7 +95,7 @@ void cDemo()
 int main()
 {
     cDemo();
-    
+
     return 0;
 }
 ```

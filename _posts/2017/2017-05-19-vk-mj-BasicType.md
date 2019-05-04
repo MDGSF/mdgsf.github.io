@@ -9,7 +9,6 @@ description:
 published: true
 ---
 
-
 ```cpp
 //最大的游戏玩家数
 #define MAX_GAME_PLAY_USER 4
@@ -42,16 +41,16 @@ published: true
 #define INVALID_CHAIR 0x7F
 
 
-#define NUM_MASK		0x0F
-#define TYPE_MASK		0xF0
+#define NUM_MASK 0x0F
+#define TYPE_MASK 0xF0
 #define CardNum(c) ((c) & NUM_MASK)
 #define CardType(c) (((c) & TYPE_MASK)>>4)
 
-#define MJ_TYPE_WAN 0	//万, 0-8,各4张，共36张
-#define MJ_TYPE_TIAO 1	//条, 0-8,各4张，共36张
-#define MJ_TYPE_BING 2	//饼, 0-8,各4张，共36张
-#define MJ_TYPE_FENG 3	//东南西北各4张，共16张
-#define MJ_TYPE_JIAN 4	//中发白  各4张，共12张
+#define MJ_TYPE_WAN 0 //万, 0-8,各4张，共36张
+#define MJ_TYPE_TIAO 1 //条, 0-8,各4张，共36张
+#define MJ_TYPE_BING 2 //饼, 0-8,各4张，共36张
+#define MJ_TYPE_FENG 3 //东南西北各4张，共16张
+#define MJ_TYPE_JIAN 4 //中发白  各4张，共12张
 #define MJ_TYPE_FLOWER 5 //花
 
 //牌的种类数量(万，条，饼，风，箭）
@@ -65,10 +64,10 @@ published: true
 
 #define MAX_CARD_ARRAY_SIZE (MAX_CARD + 1)
 
-#define WIK_NULL			0x00								//没有类型
-#define WIK_LEFT			0x01								//左吃类型
-#define WIK_CENTER			0x02								//中吃类型
-#define WIK_RIGHT			0x04								//右吃类型
+#define WIK_NULL 0x00 //没有类型
+#define WIK_LEFT 0x01 //左吃类型
+#define WIK_CENTER 0x02 //中吃类型
+#define WIK_RIGHT 0x04 //右吃类型
 
 typedef uint8_t Card;
 
@@ -147,6 +146,4 @@ const Card g_CardGangData[] =
 #define CardZHONG 0x41
 #define CardFA 0x42
 #define CardBAI 0x43
-
-
 ```

@@ -10,9 +10,7 @@ description:
 published: true #default true
 ---
 
-读书笔记： Programming in Lua, 4th Edition. 
-
-
+读书笔记： Programming in Lua, 4th Edition.
 
 ## do-end
 
@@ -29,7 +27,6 @@ do-end 就像是一个花括号，用来构成一个作用域。
 nil
 ```
 
-
 ## if-then-elseif-else-end
 
 ```lua
@@ -45,7 +42,6 @@ else
     error("invalid operation")
 end
 ```
-
 
 ## while
 
@@ -108,16 +104,4 @@ for i = 1, math.huge do
 end
 ```
 
-
 ### Generic for
-
-
-
-
-
-
-
-
-
-
-

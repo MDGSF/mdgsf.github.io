@@ -9,34 +9,31 @@ description:
 published: true
 ---
 
-
 ### wc 显示 行数，字数，字节数
 
 ```
 mdgsf@mdgsf-ThinkPad-X260:~/svn/AStyle$ ls
 build  doc  file  LICENSE.txt  README.txt  src
-mdgsf@mdgsf-ThinkPad-X260:~/svn/AStyle$ wc LICENSE.txt 
+mdgsf@mdgsf-ThinkPad-X260:~/svn/AStyle$ wc LICENSE.txt
   21  173 1100 LICENSE.txt
-mdgsf@mdgsf-ThinkPad-X260:~/svn/AStyle$ wc -l LICENSE.txt 
+mdgsf@mdgsf-ThinkPad-X260:~/svn/AStyle$ wc -l LICENSE.txt
 21 LICENSE.txt
-mdgsf@mdgsf-ThinkPad-X260:~/svn/AStyle$ wc -w LICENSE.txt 
+mdgsf@mdgsf-ThinkPad-X260:~/svn/AStyle$ wc -w LICENSE.txt
 173 LICENSE.txt
-mdgsf@mdgsf-ThinkPad-X260:~/svn/AStyle$ wc -c LICENSE.txt 
+mdgsf@mdgsf-ThinkPad-X260:~/svn/AStyle$ wc -c LICENSE.txt
 1100 LICENSE.txt
-mdgsf@mdgsf-ThinkPad-X260:~/svn/AStyle$ wc -m LICENSE.txt 
+mdgsf@mdgsf-ThinkPad-X260:~/svn/AStyle$ wc -m LICENSE.txt
 1100 LICENSE.txt
 ```
-
 
 ### wc 统计多个文件
 
 ```
-mdgsf@mdgsf-ThinkPad-X260:~/svn/AStyle$ wc LICENSE.txt README.txt 
+mdgsf@mdgsf-ThinkPad-X260:~/svn/AStyle$ wc LICENSE.txt README.txt
   21  173 1100 LICENSE.txt
    9   45  347 README.txt
   30  218 1447 总用量
 ```
-
 
 ### wc 帮助文档
 
@@ -60,10 +57,9 @@ the following order: newline, word, character, byte, maximum line length.
                            If F is - then read names from standard input
   -L, --max-line-length  print the maximum display width
   -w, --words            print the word counts
-      --help		显示此帮助信息并退出
-      --version		显示版本信息并退出
+      --help             显示此帮助信息并退出
+      --version          显示版本信息并退出
 ```
-
 
 ### 统计当前目录下有多少个 h头文件
 
@@ -76,7 +72,6 @@ mdgsf@mdgsf-ThinkPad-X260:~/svn/AStyle$ find . -name "*.h" | wc -l
 3
 ```
 
-
 ### 统计当前目录下所有 h头文件中的代码行数
 
 ```
@@ -84,11 +79,10 @@ mdgsf@mdgsf-ThinkPad-X260:~/svn/AStyle$ find . -name "*.h" | xargs cat | wc -l
 1642
 ```
 
-
 ### 统计当前目录下所有 h头文件中的代码行数，字数，字节数
 
 ```
-mdgsf@mdgsf-ThinkPad-X260:~/svn/AStyle$ find . -name "*.h" | xargs cat | wc 
+mdgsf@mdgsf-ThinkPad-X260:~/svn/AStyle$ find . -name "*.h" | xargs cat | wc
    1642    5511   59833
 mdgsf@mdgsf-ThinkPad-X260:~/svn/AStyle$ find . -name "*.h" | xargs cat | wc | awk '{print $1}'
 1642
@@ -97,7 +91,6 @@ mdgsf@mdgsf-ThinkPad-X260:~/svn/AStyle$ find . -name "*.h" | xargs cat | wc | aw
 mdgsf@mdgsf-ThinkPad-X260:~/svn/AStyle$ find . -name "*.h" | xargs cat | wc | awk '{print $3}'
 59833
 ```
-
 
 ### 统计当前目录下文件的个数
 
@@ -114,8 +107,5 @@ drwxr-xr-x  2 root root 4096 2月  12 14:13 file
 -rw-r--r--  1 root root 1100 2月  12 14:13 LICENSE.txt
 -rw-r--r--  1 root root  347 2月  12 14:13 README.txt
 drwxr-xr-x  2 root root 4096 2月  12 14:13 src
-mdgsf@mdgsf-ThinkPad-X260:~/svn/AStyle$ 
+mdgsf@mdgsf-ThinkPad-X260:~/svn/AStyle$
 ```
-
-
-

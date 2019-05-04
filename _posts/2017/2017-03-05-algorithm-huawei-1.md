@@ -10,9 +10,7 @@ description:
 published: true #default true
 ---
 
-
-<a href="http://blog.csdn.net/Hackbuteer1/article/details/39253767" target="_blank">http://blog.csdn.net/Hackbuteer1/article/details/39253767</a>
-
+[http://blog.csdn.net/Hackbuteer1/article/details/39253767](http://blog.csdn.net/Hackbuteer1/article/details/39253767)
 
 第一题(60分)：
 按要求分解字符串，输入两个数M，N；
@@ -73,13 +71,12 @@ int main()
 }
 ```
 
-
 > 第一题：拼音转数字
 > 输入是一个只包含拼音的字符串，请输出对应的数字序列。转换关系如下：
 > 描述：      拼音        yi  er  san  si  wu  liu  qi  ba  jiu
->       阿拉伯数字        1   2   3      4   5    6    7   8   9
+> 阿拉伯数字        1   2   3      4   5    6    7   8   9
 > 输入字符只包含小写字母，所有字符都可以正好匹配
-> 
+>
 > 运行时间限制：无限制
 > 内存限制：       无限制
 > 输入：              一行字符串，长度小于1000
@@ -232,7 +229,6 @@ int main()
 }
 ```
 
-
 > 第二题：去除重复字符并排序
 > 运行时间限制：无限制
 > 内容限制：       无限制
@@ -290,8 +286,6 @@ int main()
 }
 ```
 
-
-
 > 第三题：等式变换
 > 输入一个正整数X，在下面的等式左边的数字之间添加+号或者-号，使得等式成立。
 > 1 2 3 4 5 6 7 8 9 = X
@@ -304,8 +298,7 @@ int main()
 > 样例输入：5
 > 样例输出：21
 
-
-```
+```cpp
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -485,9 +478,3 @@ int main()
     return 0;
 }
 ```
-
-
-
-
-
-

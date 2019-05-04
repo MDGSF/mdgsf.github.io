@@ -10,7 +10,7 @@ description:
 published: true #default true
 ---
 
-读书笔记： Programming in Lua, 4th Edition. 
+读书笔记： Programming in Lua, 4th Edition.
 
 ## 正常函数调用
 
@@ -31,7 +31,7 @@ function add (a)
 end
 ```
 
-if the function has one single argument and that argument is either a literal string or a table constructor, 
+if the function has one single argument and that argument is either a literal string or a table constructor,
 then the parentheses are optional:
 
 如果函数只有一个参数，并且这个参数是字符串或者是table的话，函数的括号()可以省略。
@@ -45,7 +45,6 @@ f{x=10, y=20}           <-->    f({x=10, y=20})
 type{}                  <-->    type({})
 ```
 
-
 We can call a function with a number of arguments different from its number of parameters. Lua adjusts
 the number of arguments to the number of parameters by throwing away extra arguments and supplying
 nils to extra parameters. For instance, consider the next function:
@@ -53,8 +52,8 @@ nils to extra parameters. For instance, consider the next function:
 函数调用时提供的参数可以和函数定义时的参数个数不同。不足的用nil补全，多余的话会被自动忽略。
 
 ```lua
-function f (a, b) 
-    print(a, b) 
+function f (a, b)
+    print(a, b)
 end
 
 f()           --> nil nil
@@ -86,14 +85,13 @@ end
 print(maximum({8,10,23,12,5})) --> 23 3
 ```
 
-Lua always adjusts the number of results from a function to the circumstances of the call. 
+Lua always adjusts the number of results from a function to the circumstances of the call.
 
-When we call a function as a statement, Lua discards all results from the function. 
+When we call a function as a statement, Lua discards all results from the function.
 
-When we use a call as an expression (e.g., the operand of an addition), Lua keeps only the first result. 
+When we use a call as an expression (e.g., the operand of an addition), Lua keeps only the first result.
 
 We get all results only when the call is the last (or the only) expression in a list of expressions.
-
 
 ```lua
 function foo0 () end                  -- returns no results
@@ -157,7 +155,7 @@ print((foo2())) --> a
 ```lua
 function add(...)
     local s = 0
-    for _, v in ipairs{...} do 
+    for _, v in ipairs{...} do
         s = s + v
     end
     return s
@@ -172,10 +170,10 @@ number of arguments.
 ```lua
 function nonils(...)
     local arg = table.pack(...)
-    for i = 1, arg.n do 
-        if arg[i] == nil then 
+    for i = 1, arg.n do
+        if arg[i] == nil then
             return false
-        end 
+        end
     end
     return true
 end
@@ -222,7 +220,6 @@ As the name implies, table.unpack is the reverse of table.pack. While pack trans
 list into a real Lua list (a table), unpack transforms a real Lua list (a table) into a return list, which
 can be given as the parameter list to another function.
 
-
 ```lua
 function unpack (t, i, n)
     i = i or 1
@@ -233,11 +230,6 @@ function unpack (t, i, n)
 end
 ```
 
-
-
-## Proper Tail Calls 
-
+## Proper Tail Calls
 
 尾调用：也就是在一个函数A的最后调用一个函数B，因为函数A已经执行完了，所以函数B可以重复利用A的栈空间，提高效率。
-
-

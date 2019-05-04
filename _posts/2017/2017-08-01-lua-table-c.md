@@ -43,7 +43,6 @@ lu_byte lsizenode; 如果哈希表的容量为Size，那么lsizenode = log2(Size
 
 其他的成员变量暂时不关心。 等等主要看下 TValue 和 Node 的结构体。
 
-
 ```c
 Table *luaH_new (lua_State *L) {
   GCObject *o = luaC_newobj(L, LUA_TTABLE, sizeof(Table)); //其实就是分配一款内存空间
@@ -69,11 +68,11 @@ static void setnodevector (lua_State *L, Table *t, unsigned int size) {
 ```
 
 ```c
-#define cast(t, exp)	((t)(exp))   //类型转换，把表达式exp转换为t类型。
+#define cast(t, exp) ((t)(exp))   //类型转换，把表达式exp转换为t类型。
 
-#define twoto(x)	(1<<(x)) //计算2^x
+#define twoto(x) (1<<(x)) //计算2^x
 
-#define sizenode(t)	(twoto((t)->lsizenode)) //计算2^(t->lsizenode)的大小
+#define sizenode(t) (twoto((t)->lsizenode)) //计算2^(t->lsizenode)的大小
 
 void luaH_free (lua_State *L, Table *t) {
   if (!isdummy(t))
@@ -126,7 +125,7 @@ typedef union Value {
   lua_Number n;    /* float numbers */
 } Value;
 
-#define TValuefields	Value value_; int tt_
+#define TValuefields Value value_; int tt_
 
 typedef struct lua_TValue {
   TValuefields;
@@ -135,7 +134,7 @@ typedef struct lua_TValue {
 
 其实 TKey 和 TValue 是同一个东西，只不过TKey里面多了一个next，主要是哈希表出现冲突时，用来解决冲突用的。
 
-TKey中tvk是这个key的值，nk中的next则指向key冲突的下一个节点。lua的hash表的hash算法比较特别，一般的hash表都是根据key算出hash(key)，然后把这个key放在hash表的hash(key)位置上，如果有冲突的话，就放在hash(key)位置的链表上。 
+TKey中tvk是这个key的值，nk中的next则指向key冲突的下一个节点。lua的hash表的hash算法比较特别，一般的hash表都是根据key算出hash(key)，然后把这个key放在hash表的hash(key)位置上，如果有冲突的话，就放在hash(key)位置的链表上。
 
 但是lua的hash表中，如果有冲突的话，lua会找hash表中一个空的位置（从后往前找，假设为x），然后把新的key放在这个空的位置x上，并且让hash表中hash(key)处的节点的nk.next指向x。这个意思就是，假如有冲突的话，不用重新分配空间来存储冲突的key，而是利用hash表上未用过的空格来存储。但是这样会引入另外一个问题，本来key是不应该放在x的，假设有另外一个key2，hash(key2)算出来的位置也在x的话，那就表示本来x这个位置应该是给key2的，但是由于x被key占用了，导致key2没地方放了。这时候lua的处理方式是把key放到另外一个空格，然后让key2占回x。当hash表已经没有空格的时候，lua就会resize这个hash表。这样做的好处主要是不用动态申请内存空间，hash表初始化的时候有多少内存空间就用多少，不够就resize这个hash表。
 
@@ -145,12 +144,11 @@ TKey中tvk是这个key的值，nk中的next则指向key冲突的下一个节点�
 
 Lua这里使用的是闭散列。
 
-
 ## 增删查改
 
 ```c
 LUAI_DDEC const TValue luaO_nilobject_;
-#define luaO_nilobject		(&luaO_nilobject_) //这是一个空对象，这样的好处是可以不需要处理NULL指针，在<<代码整洁之道>>里面有说。
+#define luaO_nilobject (&luaO_nilobject_) //这是一个空对象，这样的好处是可以不需要处理NULL指针，在<<代码整洁之道>>里面有说。
 
 TValue *luaH_set (lua_State *L, Table *t, const TValue *key) {
   const TValue *p = luaH_get(t, key); //应该是到Table中去查找key是不是存在。
@@ -166,9 +164,7 @@ luaH_newkey 应该就是插入函数了，向Table内插入一个新的值。
 
 luaH_get 则是查找函数，在Table中查找对应的key是不是存在。
 
-
 ### luaH_newkey
-
 
 ```c
 /*
@@ -250,25 +246,24 @@ TValue *luaH_newkey (lua_State *L, Table *t, const TValue *key) {
 }
 
 //这里是上面用到的一些宏
-#define gnode(t,i)	(&(t)->node[i])
-#define gnext(n)	((n)->i_key.nk.next)
-#define gkey(n)		cast(const TValue*, (&(n)->i_key.tvk))  //获取Node的key
-#define gval(n)		(&(n)->i_val)  //获取Node的value
+#define gnode(t,i) (&(t)->node[i])
+#define gnext(n) ((n)->i_key.nk.next)
+#define gkey(n) cast(const TValue*, (&(n)->i_key.tvk))  //获取Node的key
+#define gval(n) (&(n)->i_val)  //获取Node的value
 
 /* type casts (a macro highlights casts in the code) */
-#define cast(t, exp)	((t)(exp))
-#define cast_int(i)	cast(int, (i)) //转换为整形
+#define cast(t, exp) ((t)(exp))
+#define cast_int(i) cast(int, (i)) //转换为整形
 
-#define isdummy(t)		((t)->lastfree == NULL)
+#define isdummy(t) ((t)->lastfree == NULL)
 
-#define LUA_TNIL		0
-#define rttype(o)	((o)->tt_)
-#define checktag(o,t)		(rttype(o) == (t))
-#define ttisnil(o)		checktag((o), LUA_TNIL)
+#define LUA_TNIL 0
+#define rttype(o) ((o)->tt_)
+#define checktag(o,t) (rttype(o) == (t))
+#define ttisnil(o) checktag((o), LUA_TNIL)
 ```
 
 在这个函数里面，用到了3个函数：getfreepos，mainposition，rehash。我们需要看看到底是怎么实现的。
-
 
 getfreepos: 获取一个空的位置。
 
@@ -292,7 +287,6 @@ static Node *getfreepos (Table *t) {
 ```
 
 看来Table 中的 lastfree 这个变量是用来保存最后一个空闲位置的指针。
-
 
 ### rehash
 
@@ -423,7 +417,7 @@ static unsigned int computesizes (unsigned int nums[], unsigned int *pna) {
 }
 ```
 
-对于存放在数组有一个规则，每插入一个整数key时，都要判断包含当前key的区间[1, 2^n]里，是否满足table里所有整数类型key的数量大于2^(n - 1)，如果不成立则需要把这个key放在hash表里。这样设计，可以减少空间上的浪费，并可以进行空间的动态扩展。例如： 
+对于存放在数组有一个规则，每插入一个整数key时，都要判断包含当前key的区间[1, 2^n]里，是否满足table里所有整数类型key的数量大于2^(n - 1)，如果不成立则需要把这个key放在hash表里。这样设计，可以减少空间上的浪费，并可以进行空间的动态扩展。例如：
 
 就是说数组的大小是：1,2,4,8,16,32,64,128,256....
 
@@ -447,34 +441,16 @@ static unsigned int computesizes (unsigned int nums[], unsigned int *pna) {
 
 也就是数组的利用率要超过50%。
 
-a［0］ = 1, a［1］ = 1, a［5］= 1 
+a［0］ = 1, a［1］ = 1, a［5］= 1
 
 结果分析：数组大小4, hash大小1，a［5］本来是在8这个区间里的，但是有用个数3 < 8 / 2，所以a［5］放在了hash表里。
 
-a［0］ = 1, a［1］ = 1, a［5］ = 1, a［6］ = 1, 
+a［0］ = 1, a［1］ = 1, a［5］ = 1, a［6］ = 1,
 
 结果分析：数组大小4，hash大小2,有用个数4 < 8 / 2，所以a［5］,a［6］放在hash表里。
 
-a［0］ = 1, a［1］ = 1, a［5］ = 1, a［6］ = 1, a［7］ = 1 
+a［0］ = 1, a［1］ = 1, a［5］ = 1, a［6］ = 1, a［7］ = 1
 
 结果分析：数组大小8，hash大小0, 有用个数5 > 8 / 2。
 
 <a href="http://blog.csdn.net/zr339361504/article/details/52432163" target="_blank">http://blog.csdn.net/zr339361504/article/details/52432163</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

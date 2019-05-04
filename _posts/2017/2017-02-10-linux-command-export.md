@@ -9,11 +9,9 @@ description:
 published: true
 ---
 
-
-### 1 
+### 1
 
 <img src="{{ site.url }}/images/2017/02/10_15.png" alt="2017_02_10_15" />
-
 
 ### 2 永久生效
 
@@ -22,5 +20,5 @@ vim ~/.bashrc
 :wq
 source .bashrc
 ```
-<img src="{{ site.url }}/images/2017/02/10_16.png" alt="2017_02_10_16" />
 
+<img src="{{ site.url }}/images/2017/02/10_16.png" alt="2017_02_10_16" />

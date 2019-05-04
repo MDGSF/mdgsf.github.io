@@ -10,7 +10,6 @@ description:
 published: true #default true
 ---
 
-
 ### 结构体定义
 
 ```c
@@ -31,7 +30,6 @@ typedef struct {
     ngx_pool_t  *pool;
 } ngx_array_t;
 ```
-
 
 ### ngx_array_create
 
@@ -89,7 +87,6 @@ ngx_array_init(ngx_array_t *array, ngx_pool_t *pool, ngx_uint_t n, size_t size)
     return NGX_OK;
 }
 ```
-
 
 ### ngx_array_push
 
@@ -149,7 +146,6 @@ ngx_array_push(ngx_array_t *a)
 }
 ```
 
-
 ```c
 /*
 @brief: 和ngx_array_push一样，只不过从一个元素变成了n个元素。
@@ -203,7 +199,3 @@ ngx_array_push_n(ngx_array_t *a, ngx_uint_t n)
     return elt;
 }
 ```
-
-
-
-

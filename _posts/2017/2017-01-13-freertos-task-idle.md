@@ -10,7 +10,6 @@ description:
 published: true #default true
 ---
 
-
 ```cpp
 #include "FreeRTOS.h"
 #include "task.h"
@@ -27,33 +26,33 @@ const char * pcTextForTask2 = "Task 2 is running\n";
 
 int main()
 {
-	xTaskCreate(vTaskFunction, "Task 1", 1000, (void*)pcTextForTask1, 1, NULL);
+    xTaskCreate(vTaskFunction, "Task 1", 1000, (void*)pcTextForTask1, 1, NULL);
 
-	xTaskCreate(vTaskFunction, "Task 2", 1000, (void*)pcTextForTask2, 2, NULL);
+    xTaskCreate(vTaskFunction, "Task 2", 1000, (void*)pcTextForTask2, 2, NULL);
 
-	vTaskStartScheduler();
+    vTaskStartScheduler();
 
-	for (;;);
+    for (;;);
 
-	return 0;
+    return 0;
 }
 
 void vTaskFunction(void * pvParameters)
 {
-	char * pcTaskName = (char*)pvParameters;
-	const TickType_t xDelay250ms = pdMS_TO_TICKS(250UL);
+    char * pcTaskName = (char*)pvParameters;
+    const TickType_t xDelay250ms = pdMS_TO_TICKS(250UL);
 
-	for (;;)
-	{
-		vPrintStringAndNumber(pcTaskName, ulIdleCycleCount);
+    for (;;)
+    {
+        vPrintStringAndNumber(pcTaskName, ulIdleCycleCount);
 
-		vTaskDelay(xDelay250ms);
-	}
+        vTaskDelay(xDelay250ms);
+    }
 }
 
 void vApplicationIdleHook(void)
 {
-	ulIdleCycleCount++;
+    ulIdleCycleCount++;
 }
 ```
 

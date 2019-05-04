@@ -9,8 +9,6 @@ description:
 published: true
 ---
 
-
-
 ### -b  ：指定行号指定的方式，主要有两种：
 
 -b a ：表示不论是否为空行，也同样列出行号(类似 cat -n)；
@@ -27,49 +25,44 @@ published: true
 
 -w  ：行号栏位的占用的位数。
 
-
 ```
 root@jian-VirtualBox:# nl aa
-     1	fdsaf
-       
-     2	f
+     1 fdsaf
+
+     2 f
 ```
 
 ```
 root@jian-VirtualBox:# nl -b a aa
-     1	fdsaf
-     2	
-     3	f
+     1 fdsaf
+     2
+     3 f
 ```
 
 ```
 root@jian-VirtualBox:# nl -n ln aa
-1     	fdsaf
-       
-2     	f
+1     fdsaf
+
+2     f
 ```
 
 ```
 root@jian-VirtualBox:# nl -n rn aa
-     1	fdsaf
-       
-     2	f
+     1 fdsaf
+
+     2 f
 ```
 
 ```
 root@jian-VirtualBox:# nl -n rz aa
-000001	fdsaf
-       
-000002	f
+000001 fdsaf
+
+000002 f
 ```
 
 ```
 root@jian-VirtualBox:# nl -w 3 -n rz aa
-001	fdsaf
-    
-002	f
+001 fdsaf
+
+002 f
 ```
-
-
-
-

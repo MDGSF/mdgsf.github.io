@@ -10,8 +10,6 @@ description:
 published: true #default true
 ---
 
-
-
 ### 用二维数组
 
 ```cpp
@@ -89,7 +87,6 @@ int main()
 }
 ```
 
-
 ### 用一维数组
 
 ```cpp
@@ -161,5 +158,3 @@ int main()
     return 0;
 }
 ```
-
-

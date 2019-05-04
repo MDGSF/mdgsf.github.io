@@ -10,9 +10,7 @@ description:
 published: true #default true
 ---
 
-
 ```lua
-
 package.path = package.path .. ";E:\\Lua\\lualogging\\src\\?.lua"
 require("logging")
 require("logging.file")
@@ -34,7 +32,7 @@ function love.load()
 
     -- Init images
     images = {}
-    for idx, image in ipairs({'blank', 'body'}) do 
+    for idx, image in ipairs({'blank', 'body'}) do
         images[image] = love.graphics.newImage('images/' .. image .. '.png')
     end
 
@@ -56,7 +54,7 @@ function love.load()
     SnakeSpeed = 200
     LastTime = GetMicroTime()
 
-    
+
     function GetOneBlankPosition()
         local BlankPosition = {}
         for x = 1, gridXCount do
@@ -85,7 +83,7 @@ function love.load()
         logger:info("reset")
 
         grid = {}
-        for x = 1, gridXCount do 
+        for x = 1, gridXCount do
             grid[x] = {}
             for y = 1, gridYCount do
                 grid[x][y] = {
@@ -138,7 +136,7 @@ function love.update()
         return
     end
     LastTime = currentTime
-    
+
     local tail = SnakeList[1]
     local tailX = tail[1]
     local tailY = tail[2]

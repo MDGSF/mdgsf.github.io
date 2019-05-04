@@ -14,7 +14,7 @@ published: true #default true
 
 ## 题目
 
-Given an integer, write a function to determine if it is a power of two. 
+Given an integer, write a function to determine if it is a power of two.
 
 ## 题目翻译
 
@@ -32,7 +32,7 @@ public:
         {
             return false;
         }
-        
+
         return (n&(n-1)) == 0;
     }
 };

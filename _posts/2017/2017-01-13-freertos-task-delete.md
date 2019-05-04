@@ -10,7 +10,6 @@ description:
 published: true #default true
 ---
 
-
 ```cpp
 #include "FreeRTOS.h"
 #include "task.h"
@@ -25,34 +24,32 @@ TaskHandle_t xTask2Handle;
 
 int main()
 {
-	xTaskCreate(vTask1, "Task 1", 1000, NULL, 1, NULL);
+    xTaskCreate(vTask1, "Task 1", 1000, NULL, 1, NULL);
 
-	vTaskStartScheduler();
+    vTaskStartScheduler();
 
-	for (;;);
+    for (;;);
 
-	return 0;
+    return 0;
 }
 
 void vTask1(void * pvParameters)
 {
-	const TickType_t xDelay1000ms = pdMS_TO_TICKS(1000UL);
-	for (;;)
-	{
-		vPrintString("Task1 is running\n");
+    const TickType_t xDelay1000ms = pdMS_TO_TICKS(1000UL);
+    for (;;)
+    {
+        vPrintString("Task1 is running\n");
 
-		xTaskCreate(vTask2, "Task 2", 1000, NULL, 1, &xTask2Handle);
+        xTaskCreate(vTask2, "Task 2", 1000, NULL, 1, &xTask2Handle);
 
-		vTaskDelay(xDelay1000ms);
-	}
+        vTaskDelay(xDelay1000ms);
+    }
 }
 
 void vTask2(void * pvParameters)
 {
-	vPrintString("Task2 is running and about to delete itself\n");
+    vPrintString("Task2 is running and about to delete itself\n");
 
-	vTaskDelete(xTask2Handle);
+    vTaskDelete(xTask2Handle);
 }
 ```
-
-

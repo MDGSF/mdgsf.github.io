@@ -10,7 +10,6 @@ description:
 published: true #default true
 ---
 
-
 ### Block read
 
 ```cpp
@@ -102,7 +101,7 @@ int main()
     } else {
         printf("SSL_read success, acBuf = %s\n", acBuf);
     }
-    
+
     memset(acBuf, 0, sizeof(acBuf));
     strcpy(acBuf, "from client->server");
     iLen = SSL_write(ssl, acBuf, strlen(acBuf));
@@ -122,11 +121,7 @@ finish:
 }
 ```
 
-
-
 ### Non-block read
-
-
 
 ```cpp
 #include <stdio.h>
@@ -207,9 +202,9 @@ void vTcpSetNonBlock(int iSocket)
 }
 
 int iReadTimeout(
-    SSL * ssl, 
-    int iSocket, 
-    char * pcBuf, 
+    SSL * ssl,
+    int iSocket,
+    char * pcBuf,
     int * piBufLen,
     int iTimeout)
 {
@@ -368,7 +363,7 @@ int main()
     }
     printf("read success, acBuf = %s\n", acBuf);
 
-    
+
     memset(acBuf, 0, sizeof(acBuf));
     strcpy(acBuf, "from client->server");
     iLen = SSL_write(ssl, acBuf, strlen(acBuf));
@@ -387,4 +382,3 @@ int main()
     return 0;
 }
 ```
-

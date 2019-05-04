@@ -10,7 +10,7 @@ description:
 published: true #default true
 ---
 
-读书笔记： Programming in Lua, 4th Edition. 
+读书笔记： Programming in Lua, 4th Edition.
 
 ## Bitwise Operators
 
@@ -34,11 +34,3 @@ Lua, 32 in Small Lua), the result is zero, as all bits are shifted out of the re
 ```lua
 > string.format("%x", -1 << 80) --> 0
 ```
-
-
-
-
-
-
-
-

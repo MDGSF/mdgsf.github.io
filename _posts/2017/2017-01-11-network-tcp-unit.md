@@ -10,9 +10,6 @@ description:
 published: true #default true
 ---
 
-
-
-
 ### tcpunit.h
 
 ```cpp
@@ -56,7 +53,7 @@ published: true #default true
 #include "utility.h"
 
 /*
- *  @return 
+ *  @return
  *      EXIT_SUCCESS: success.
  *      EXIT_FAILURE: failed.
  *      TCP_TIMEOUT: read or write timeout.
@@ -90,7 +87,7 @@ int tcp_iRecvMsg(int iSocket, char * pcBuf, int * piBufLen);
 /*
  *  @param iSocket[in]: socket descriptor.
  *  @param pcBuf[out]: buffer used to recv data.
- *  @param piBufLen[in|out]: 
+ *  @param piBufLen[in|out]:
  *                  input the size of data want to read.
  *                  if return EXIT_SUCCESS, it means read success,
  *                  if return TCP_TIMEOUT, piBufLen output the size had already read.
@@ -101,7 +98,7 @@ int tcp_iRecvMsgTimeout(int iSocket, char * pcBuf, int * piBufLen, int iTimeout)
 
 /*
  *  @param iSocket[in]: socket descriptor.
- *  @param pcBuf[in]: 
+ *  @param pcBuf[in]:
  *  @param piBufLen[in|out]: input the size of data ready to send, output the really size of data send success.
  */
 int tcp_iSendMsg(int iSocket, const char * pcBuf, int * piBufLen);
@@ -109,7 +106,7 @@ int tcp_iSendMsg(int iSocket, const char * pcBuf, int * piBufLen);
 
 /*
  *  @param iSocket[in]: socket descriptor.
- *  @param pcBuf[in]: 
+ *  @param pcBuf[in]:
  *  @param iBufLen[in]: the size of data ready to send.
  */
 int tcp_iSendAllMsg(int iSocket, const char * pcBuf, int iBufLen);
@@ -117,7 +114,7 @@ int tcp_iSendAllMsg(int iSocket, const char * pcBuf, int iBufLen);
 
 /*
  *  @param iSocket[in]: socket descriptor.
- *  @param pcBuf[in]: 
+ *  @param pcBuf[in]:
  *  @param iSize[in]: the size of data ready to send.
  *  @param iTimeout[in]: Millisecond. if your input <=0, it default use 100 milliseconds.
  */
@@ -127,13 +124,9 @@ int tcp_iSendMsgTimeout(int iSocket, const char * pcBuf, int iSize, int iTimeout
 #endif
 ```
 
-
-
 <br />
 <br />
 <br />
-
-
 
 ### tcpunit_win.cpp
 
@@ -162,7 +155,7 @@ void tcp_vCloseSocket(int & riSocket)
     }
 }
 
-int 
+int
 tcp_iConnect(int *piSocket, const char * pcAddr, unsigned short usPort, int iTimeout)
 {
     int iRet;
@@ -208,7 +201,7 @@ tcp_iConnect(int *piSocket, const char * pcAddr, unsigned short usPort, int iTim
     memset(stAddr.sin_zero, 0x00, 8);
 
     iRet = ::connect(iSocket, (struct sockaddr*)&stAddr, sizeof(stAddr));
-    if(iRet < 0) 
+    if(iRet < 0)
     {
         DWORD dwError = GetLastError();
         if(dwError != WSAEINPROGRESS && dwError != WSAEWOULDBLOCK) {
@@ -217,7 +210,7 @@ tcp_iConnect(int *piSocket, const char * pcAddr, unsigned short usPort, int iTim
             return EXIT_FAILURE;
         }
     }
-    else if(iRet == 0) 
+    else if(iRet == 0)
     {
         tcp_Setblock(iSocket);
         return EXIT_SUCCESS;
@@ -234,7 +227,7 @@ tcp_iConnect(int *piSocket, const char * pcAddr, unsigned short usPort, int iTim
     stTimeInterval.tv_usec = (iTimeout % 1000) * 1000;
 
     iRet = select(0, &stReadSet , &stWriteSet, NULL, &stTimeInterval);
-    if(iRet <= 0) 
+    if(iRet <= 0)
     {
         printf("tcp_iConnect select iRet=%d\n", iRet);
         tcp_vCloseSocket(iSocket);
@@ -291,7 +284,7 @@ tcp_iRecvMsgTimeout(int iSocket, char * pcBuf, int * piBufLen, int iTimeout)
     if(iSocket <=0 || NULL == pcBuf || NULL == piBufLen || (*piBufLen <= 0)) {
         printf("tcp_iRecvMsgTimeout input error!\n");
         return EXIT_FAILURE;
-    }  
+    }
 
     struct timeval stTimeInterval;
     struct timeval stTimeIntervalTemp;
@@ -347,7 +340,7 @@ tcp_iRecvMsgTimeout(int iSocket, char * pcBuf, int * piBufLen, int iTimeout)
 }
 
 
-int 
+int
 tcp_iSendMsg(int iSocket, const char *pcBuf, int * piBufLen)
 {
     if(iSocket <= 0 || NULL == pcBuf || NULL == piBufLen || (*piBufLen <= 0)) {
@@ -365,7 +358,7 @@ tcp_iSendMsg(int iSocket, const char *pcBuf, int * piBufLen)
     return EXIT_SUCCESS;
 }
 
-int 
+int
 tcp_iSendAllMsg(int iSocket, const char *pcBuf, int iBufLen)
 {
     if(iSocket <= 0 || NULL == pcBuf || 0 == iBufLen) {
@@ -389,7 +382,7 @@ tcp_iSendAllMsg(int iSocket, const char *pcBuf, int iBufLen)
 }
 
 
-int 
+int
 tcp_iSendMsgTimeout(int iSocket, const char *pcBuf, int iSize, int iTimeout)
 {
     if(iSocket <= 0 || NULL == pcBuf || iSize <= 0) {
@@ -440,7 +433,7 @@ tcp_iSendMsgTimeout(int iSocket, const char *pcBuf, int iSize, int iTimeout)
         }
         else if(0 == iOnce)
         {
-            continue; // select timeout 
+            continue; // select timeout
         }
         else
         {
@@ -448,7 +441,7 @@ tcp_iSendMsgTimeout(int iSocket, const char *pcBuf, int iSize, int iTimeout)
             return EXIT_FAILURE;
         }
     }
-    return TCP_TIMEOUT; 
+    return TCP_TIMEOUT;
 }
 
 
@@ -456,15 +449,11 @@ tcp_iSendMsgTimeout(int iSocket, const char *pcBuf, int iSize, int iTimeout)
 #endif
 ```
 
-
 <br />
 <br />
 <br />
-
-
 
 ### tcpunit_linux.cpp
-
 
 ```cpp
 #include "tcpunit.h"
@@ -500,7 +489,7 @@ void tcp_vCloseSocket(int & riSocket)
     }
 }
 
-int 
+int
 tcp_iConnect(int * piSocket, const char * pcAddr, unsigned short usPort, int iTimeout)
 {
     //TODO
@@ -549,7 +538,7 @@ tcp_iRecvMsgTimeout(int iSocket, char * pcBuf, int * piBufLen, int iTimeout)
     if(iSocket <= 0 || NULL == pcBuf || NULL == piBufLen || (*piBufLen <= 0)) {
         printf("tcp_iRecvMsgTimeout input error!\n");
         return EXIT_FAILURE;
-    }  
+    }
 
     struct timeval stTimeInterval;
     struct timeval stTimeIntervalTemp;
@@ -605,7 +594,7 @@ tcp_iRecvMsgTimeout(int iSocket, char * pcBuf, int * piBufLen, int iTimeout)
 }
 
 
-int 
+int
 tcp_iSendMsg(int iSocket, const char * pcBuf, int * piBufLen)
 {
     if(iSocket <= 0 || NULL == pcBuf || NULL == piBufLen || (*piBufLen <= 0)) {
@@ -623,7 +612,7 @@ tcp_iSendMsg(int iSocket, const char * pcBuf, int * piBufLen)
     return EXIT_SUCCESS;
 }
 
-int 
+int
 tcp_iSendAllMsg(int iSocket, const char * pcBuf, int iBufLen)
 {
     if(iSocket <= 0 || NULL == pcBuf || 0 == iBufLen) {
@@ -647,7 +636,7 @@ tcp_iSendAllMsg(int iSocket, const char * pcBuf, int iBufLen)
 }
 
 
-int 
+int
 tcp_iSendMsgTimeout(int iSocket, const char * pcBuf, int iSize, int iTimeout)
 {
     if(iSocket <= 0 || NULL == pcBuf || iSize <= 0) {
@@ -698,7 +687,7 @@ tcp_iSendMsgTimeout(int iSocket, const char * pcBuf, int iSize, int iTimeout)
         }
         else if(0 == iOnce)
         {
-            continue; // select timeout 
+            continue; // select timeout
         }
         else
         {
@@ -706,14 +695,11 @@ tcp_iSendMsgTimeout(int iSocket, const char * pcBuf, int iSize, int iTimeout)
             return EXIT_FAILURE;
         }
     }
-    return TCP_TIMEOUT; 
+    return TCP_TIMEOUT;
 }
 ```
 
-
 > 下面的 iclock() 代码来自 kcp, 如果我没有记错的话。
-
-
 
 ### utility.h
 
@@ -732,7 +718,6 @@ void isleep(unsigned long millisecond);
 
 #endif
 ```
-
 
 ### utility.cpp
 
@@ -806,7 +791,7 @@ unsigned int iclock()
 void isleep(unsigned long millisecond)
 {
     #ifdef __unix   /* usleep( time * 1000 ); */
-    /* struct timespec ts; 
+    /* struct timespec ts;
     ts.tv_sec = (time_t)(millisecond / 1000);
     ts.tv_nsec = (long)((millisecond % 1000) * 1000000);
     nanosleep(&ts, NULL);*/
@@ -816,6 +801,3 @@ void isleep(unsigned long millisecond)
     #endif
 }
 ```
-
-
-

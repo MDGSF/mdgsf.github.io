@@ -9,7 +9,6 @@ description: ""
 published: true
 ---
 
-
 ```cpp
 #include "dcclientcache.h"
 
@@ -43,8 +42,8 @@ uint32_t uiRingPut(char * pcBuf, uint32_t uiLen)
     }
 
     uint32_t uil;
-    uiLen = min(uiLen, xDCRing.size - xDCRing.in + xDCRing.out); 
-    uil = min(uiLen, xDCRing.size - (xDCRing.in & (xDCRing.size - 1))); 
+    uiLen = min(uiLen, xDCRing.size - xDCRing.in + xDCRing.out);
+    uil = min(uiLen, xDCRing.size - (xDCRing.in & (xDCRing.size - 1)));
     memcpy(xDCRing.buf + (xDCRing.in & (xDCRing.size - 1)), pcBuf, uil);
     memcpy(xDCRing.buf, pcBuf + uil, uiLen - uil);
     xDCRing.in += uiLen;
@@ -85,8 +84,3 @@ void vRingInitSend()
 }
 
 ```
-
-
-
-
-

@@ -28,32 +28,32 @@ published: true
  */
 
 struct list_head {
-	struct list_head *next, *prev;
+    struct list_head *next, *prev;
 };
 
 #define LIST_HEAD_INIT(name) { &(name), &(name) }
 
 #define LIST_HEAD(name) \
-	struct list_head name = LIST_HEAD_INIT(name)
+    struct list_head name = LIST_HEAD_INIT(name)
 
 #define INIT_LIST_HEAD(ptr) do { \
-	(ptr)->next = (ptr); (ptr)->prev = (ptr); \
+    (ptr)->next = (ptr); (ptr)->prev = (ptr); \
 } while (0)
 
 /*
- * Insert a new entry between two known consecutive entries. 
+ * Insert a new entry between two known consecutive entries.
  *
  * This is only for internal list manipulation where we know
  * the prev/next entries already!
  */
 static __inline__ void __list_add(struct list_head * new,
-	struct list_head * prev,
-	struct list_head * next)
+    struct list_head * prev,
+    struct list_head * next)
 {
-	next->prev = new;
-	new->next = next;
-	new->prev = prev;
-	prev->next = new;
+    next->prev = new;
+    new->next = next;
+    new->prev = prev;
+    prev->next = new;
 }
 
 /**
@@ -66,7 +66,7 @@ static __inline__ void __list_add(struct list_head * new,
  */
 static __inline__ void list_add(struct list_head *new, struct list_head *head)
 {
-	__list_add(new, head, head->next);
+    __list_add(new, head, head->next);
 }
 
 /**
@@ -79,7 +79,7 @@ static __inline__ void list_add(struct list_head *new, struct list_head *head)
  */
 static __inline__ void list_add_tail(struct list_head *new, struct list_head *head)
 {
-	__list_add(new, head->prev, head);
+    __list_add(new, head->prev, head);
 }
 
 /*
@@ -90,10 +90,10 @@ static __inline__ void list_add_tail(struct list_head *new, struct list_head *he
  * the prev/next entries already!
  */
 static __inline__ void __list_del(struct list_head * prev,
-				  struct list_head * next)
+                  struct list_head * next)
 {
-	next->prev = prev;
-	prev->next = next;
+    next->prev = prev;
+    prev->next = next;
 }
 
 /**
@@ -103,7 +103,7 @@ static __inline__ void __list_del(struct list_head * prev,
  */
 static __inline__ void list_del(struct list_head *entry)
 {
-	__list_del(entry->prev, entry->next);
+    __list_del(entry->prev, entry->next);
 }
 
 /**
@@ -112,8 +112,8 @@ static __inline__ void list_del(struct list_head *entry)
  */
 static __inline__ void list_del_init(struct list_head *entry)
 {
-	__list_del(entry->prev, entry->next);
-	INIT_LIST_HEAD(entry); 
+    __list_del(entry->prev, entry->next);
+    INIT_LIST_HEAD(entry);
 }
 
 /**
@@ -122,7 +122,7 @@ static __inline__ void list_del_init(struct list_head *entry)
  */
 static __inline__ int list_empty(struct list_head *head)
 {
-	return head->next == head;
+    return head->next == head;
 }
 
 /**
@@ -132,71 +132,68 @@ static __inline__ int list_empty(struct list_head *head)
  */
 static __inline__ void list_splice(struct list_head *list, struct list_head *head)
 {
-	struct list_head *first = list->next;
+    struct list_head *first = list->next;
 
-	if (first != list) {
-		struct list_head *last = list->prev;
-		struct list_head *at = head->next;
+    if (first != list) {
+        struct list_head *last = list->prev;
+        struct list_head *at = head->next;
 
-		first->prev = head;
-		head->next = first;
+        first->prev = head;
+        head->next = first;
 
-		last->next = at;
-		at->prev = last;
-	}
+        last->next = at;
+        at->prev = last;
+    }
 }
 
 /**
  * list_entry - get the struct for this entry
- * @ptr:	the &struct list_head pointer.
- * @type:	the type of the struct this is embedded in.
- * @member:	the name of the list_struct within the struct.
+ * @ptr: the &struct list_head pointer.
+ * @type: the type of the struct this is embedded in.
+ * @member: the name of the list_struct within the struct.
  */
 #define list_entry(ptr, type, member) \
-	((type *)((char *)(ptr)-(unsigned long)(&((type *)0)->member)))
+    ((type *)((char *)(ptr)-(unsigned long)(&((type *)0)->member)))
 
 /**
- * list_for_each	-	iterate over a list
- * @pos:	the &struct list_head to use as a loop counter.
- * @head:	the head for your list.
+ * list_for_each - iterate over a list
+ * @pos: the &struct list_head to use as a loop counter.
+ * @head: the head for your list.
  */
 #define list_for_each(pos, head) \
-	for (pos = (head)->next; pos != (head); pos = pos->next)
+    for (pos = (head)->next; pos != (head); pos = pos->next)
 
 #endif /* __KERNEL__ */
 
 #endif
 ```
 
-
-
 ## list_entry 解析
-
 
 ```cpp
 #include <stdio.h>
 
 struct Node {
-	int i;
-	int j;
-	int k;
+    int i;
+    int j;
+    int k;
 };
 
 #define list_entry(ptr, type, member) \
-	((type *)((char *)(ptr)-(unsigned long)(&((type *)0)->member)))
+    ((type *)((char *)(ptr)-(unsigned long)(&((type *)0)->member)))
 
 int main()
 {
-	struct Node stNode;
+    struct Node stNode;
 
-	//使用场景：现在我有一个指向结构体内部成员的指针，这个时候我想要知道结构体的地址。
-	int * ptr = &stNode.j;
-	
-	struct Node * pstNode = list_entry(ptr, struct Node, j);
+    //使用场景：现在我有一个指向结构体内部成员的指针，这个时候我想要知道结构体的地址。
+    int * ptr = &stNode.j;
 
-	printf("&stNode = %p.\n", &stNode);
-	printf("pstNode = %p.\n", pstNode);
+    struct Node * pstNode = list_entry(ptr, struct Node, j);
 
-	return 0;
+    printf("&stNode = %p.\n", &stNode);
+    printf("pstNode = %p.\n", pstNode);
+
+    return 0;
 }
 ```

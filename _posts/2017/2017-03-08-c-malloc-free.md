@@ -11,7 +11,6 @@ published: true
 
 摘自 FreeRTOS 的 heap5.c
 
-
 ```cpp
 #ifndef HEAP_HJ
 #define HEAP_HJ
@@ -68,11 +67,7 @@ void dump_mem_block_list();
 #endif
 ```
 
-
-
-
 ```cpp
-
 #include "heap.h"
 
 
@@ -163,7 +158,7 @@ void vPortDefineHeapRegions(const SHeapRegion * const pxHeapRegions)
         /* Remember the location of the end marker in the previous region, if any. */
         pxPreviousFreeBlock = pxEnd;
 
-        /* pxEnd is used to mark the end of the list of free blocks and is 
+        /* pxEnd is used to mark the end of the list of free blocks and is
          * inserted at the end of the region space. */
         uiAddress = ( (uint32_t) pucAlignedHeap ) + xTotalRegionSize;
         uiAddress -= uxHeapStructSize;
@@ -247,7 +242,7 @@ void * pvPortMalloc(size_t xWantedSize)
 
             if(pxBlock != pxEnd)
             {
-                /* Return the memory space pointed to - jumping over the 
+                /* Return the memory space pointed to - jumping over the
                  * SBlock structure at its start. */
                 pvReturn = (void*) (((uint8_t*)pxPreviousBlock->pxNextFreeBlock) + uxHeapStructSize);
 
@@ -333,8 +328,8 @@ s_vInsertBlockIntoFreeList(SBlock * pxBlockToInsert)
 
     /* Iterate through the list until a block is found that has a higher address
      * than the block being inserted. */
-    for (pxIterator = &xStart; 
-        pxIterator->pxNextFreeBlock < pxBlockToInsert; 
+    for (pxIterator = &xStart;
+        pxIterator->pxNextFreeBlock < pxBlockToInsert;
         pxIterator = pxIterator->pxNextFreeBlock)
     {
         /* Nothing to do here, just iterate to the right position. */
@@ -402,7 +397,4 @@ void dump_mem_block_list()
     printf("\n");
 }
 #endif
-
 ```
-
-

@@ -13,15 +13,15 @@ published: true
 
 ```cpp
 struct book {
-	char title[MAXTITLE];
-	char author[MAXAUTL];
-	float value;
+    char title[MAXTITLE];
+    char author[MAXAUTL];
+    float value;
 } library;
 
 struct book mybook = {
-	"The Private and the Pamsel",
-	"Renee Vivotte",
-	1.95
+    "The Private and the Pamsel",
+    "Renee Vivotte",
+    1.95
 };
 ```
 
@@ -29,13 +29,11 @@ struct book mybook = {
 
 如果存储时期是自动的，列表中的值就不必是常量了。
 
-
-### 2 
+### 2
 
 &mybook.float
 
 因为点拥有比&更高的优先级，因此这个表达式和 &(mybook.float) 一样。
-
 
 ### 3. 向一个函数传递结构信息
 
@@ -45,11 +43,8 @@ struct book mybook = {
 
 3. 还可以将结构体成员作为参数传递给函数。
 
-
-### 4. 
+### 4
 
 C 允许把一个结构赋值给另一个结构，即使有一个成员是数组也一样可以。
 
 只要结构体中没有指针，就可以直接用等号赋值。
-
-

@@ -14,7 +14,6 @@ published: true #default true
 
 NTP（Network Time Protocol）从1985年诞生来，目前仍在在大部分的计算机网络中起着同步系统时间的作用。
 
-
 ### 基本原理
 
 服务器和客户端之间通过二次报文交换，确定主从时间误差，客户端校准本地计算机时间，完成时间同步，有条件的话进一步校准本地时钟频率。
@@ -25,7 +24,6 @@ NTP（Network Time Protocol）从1985年诞生来，目前仍在在大部分的�
 服务器在该报文上添加到达时刻T2和响应报文发送时刻T3，客户端记录响应报到达时刻T4。
 
 <img src="{{ site.url }}/images/2017/01/03_00.png" alt="03_00" />
-
 
 ### 时差计算
 
@@ -38,7 +36,6 @@ Sigma = (t4-t1)-(t3-t2)
 Delta = t2-t1-Sigma/2=((t2-t1)+(t3-t4))/2
 
 客户端调整自身的时间Delta，即可完成一次时间同步。
-
 
 > 其实很好理解，你只要想一下，如果client和server的时间本来就是同步好的。
 > 那么 t1 + Sigma/2 == t2，这个式子的意思是，
@@ -61,8 +58,6 @@ Sigma/2 : 就是数据包从client到server的时间，或者说是从server到c
 
 Delta : 就是client和server的时间差值。是个负数，说明client的时间快了。是正数，说明client时间慢了。等于零，说明client和server的时间已经是同步的了。
 
-
-
 ### 误差分析
 
 局域网内计算机利用NTP协议进行时间同步，时间同步精度在5ms左右，主要误差包括：
@@ -71,13 +66,6 @@ Delta : 就是client和server的时间差值。是个负数，说明client的时
 
 2）各种中间网络传输设备带来的传输时延不确定性以及链路的不对称性，将进一步降低NTP时间同步精度。
 
-
-
 ### 参考链接
 
 [https://segmentfault.com/a/1190000005337116](https://segmentfault.com/a/1190000005337116)
-
-
-
-
-

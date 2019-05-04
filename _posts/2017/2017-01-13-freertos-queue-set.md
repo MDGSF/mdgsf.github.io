@@ -10,7 +10,6 @@ description:
 published: true #default true
 ---
 
-
 ```cpp
 #include "FreeRTOS.h"
 #include "task.h"
@@ -28,61 +27,60 @@ static QueueSetHandle_t xQueueSet = NULL;
 
 int main()
 {
-	xQueue1 = xQueueCreate(1, sizeof(char*));
-	xQueue2 = xQueueCreate(1, sizeof(char*));
+    xQueue1 = xQueueCreate(1, sizeof(char*));
+    xQueue2 = xQueueCreate(1, sizeof(char*));
 
-	xQueueSet = xQueueCreateSet(1 * 2);
+    xQueueSet = xQueueCreateSet(1 * 2);
 
-	xQueueAddToSet(xQueue1, xQueueSet);
-	xQueueAddToSet(xQueue2, xQueueSet);
+    xQueueAddToSet(xQueue1, xQueueSet);
+    xQueueAddToSet(xQueue2, xQueueSet);
 
-	xTaskCreate(vSenderTask1, "Sender1", 1000, NULL, 1, NULL);
-	xTaskCreate(vSenderTask1, "Sender2", 1000, NULL, 1, NULL);
+    xTaskCreate(vSenderTask1, "Sender1", 1000, NULL, 1, NULL);
+    xTaskCreate(vSenderTask1, "Sender2", 1000, NULL, 1, NULL);
 
-	xTaskCreate(vReceiverTask, "Receiver", 1000, NULL, 2, NULL);
+    xTaskCreate(vReceiverTask, "Receiver", 1000, NULL, 2, NULL);
 
-	vTaskStartScheduler();
+    vTaskStartScheduler();
 
-	for (;;);
+    for (;;);
 
-	return 0;
+    return 0;
 }
 
 void vSenderTask1(void *pvParameters)
 {
-	const TickType_t xBlockTime = pdMS_TO_TICKS(1000);
-	const char * const pcMessage = "Message from vSenderTask1\n";
+    const TickType_t xBlockTime = pdMS_TO_TICKS(1000);
+    const char * const pcMessage = "Message from vSenderTask1\n";
 
-	for (;;)
-	{
-		vTaskDelay(xBlockTime);
-		xQueueSend(xQueue1, &pcMessage, 0);
-	}
+    for (;;)
+    {
+        vTaskDelay(xBlockTime);
+        xQueueSend(xQueue1, &pcMessage, 0);
+    }
 }
 void vSenderTask2(void *pvParameters)
 {
-	const TickType_t xBlockTime = pdMS_TO_TICKS(2000);
-	const char * const pcMessage = "Message from vSenderTask2\n";
+    const TickType_t xBlockTime = pdMS_TO_TICKS(2000);
+    const char * const pcMessage = "Message from vSenderTask2\n";
 
-	for (;;)
-	{
-		vTaskDelay(xBlockTime);
-		xQueueSend(xQueue2, &pcMessage, 0);
-	}
+    for (;;)
+    {
+        vTaskDelay(xBlockTime);
+        xQueueSend(xQueue2, &pcMessage, 0);
+    }
 }
 void vReceiverTask(void *pvParameters)
 {
-	QueueHandle_t xQueueThatContainsData;
-	char * pcReceivedString;
+    QueueHandle_t xQueueThatContainsData;
+    char * pcReceivedString;
 
-	for (;;)
-	{
-		xQueueThatContainsData = (QueueHandle_t)xQueueSelectFromSet(xQueueSet, portMAX_DELAY);
+    for (;;)
+    {
+        xQueueThatContainsData = (QueueHandle_t)xQueueSelectFromSet(xQueueSet, portMAX_DELAY);
 
-		xQueueReceive(xQueueThatContainsData, &pcReceivedString, 0);
+        xQueueReceive(xQueueThatContainsData, &pcReceivedString, 0);
 
-		vPrintString(pcReceivedString);
-	}
+        vPrintString(pcReceivedString);
+    }
 }
 ```
-

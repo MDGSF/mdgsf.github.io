@@ -9,11 +9,6 @@ description:
 published: true
 ---
 
-
 split -b 45000000 test.log
 
 将文件切割为45M的大小。
-
-
-
-

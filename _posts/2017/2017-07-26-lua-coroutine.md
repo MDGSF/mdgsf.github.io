@@ -10,9 +10,7 @@ description:
 published: true #default true
 ---
 
-
 ## Coroutine Manipulation
-
 
 ### coroutine.create (f)
 
@@ -54,8 +52,6 @@ Suspends the execution of the calling coroutine. Any arguments to yield are pass
 
 挂起调用这个函数的协程。参数会传递给resume，作为resume的返回值。
 
-
-
 ## 例子
 
 ### 例子1
@@ -83,7 +79,7 @@ co(2)
 
 print("---------------")
 
-co2 = coroutine.create( 
+co2 = coroutine.create(
     function()
         for i = 1, 10 do
             print(i)
@@ -125,13 +121,12 @@ thread: 0000000000456638        true
 ### 例子2
 
 ```lua
-
 function foo(a)
     print("foo a = ", a)
     return coroutine.yield(2 * a)
 end
 
-co = coroutine.create( 
+co = coroutine.create(
     function(a, b)
         print("1==== ", a, b)
         local r = foo( a + 1 )
@@ -174,9 +169,6 @@ main    false   cannot resume dead coroutine
 --------------
 ```
 
-
-
-
 ### 例子3：生产者，消费者
 
 ```lua
@@ -185,7 +177,7 @@ local newProductor
 
 function productor()
     local i = 0
-    while true do 
+    while true do
         i = i + 1
         if i > 10 then
             break;
@@ -195,7 +187,7 @@ function productor()
 end
 
 function consumer()
-    while true do 
+    while true do
         local s, i = receive()
         if s == false then
             break;
@@ -233,6 +225,3 @@ consumer()
 10
 nil
 ```
-
-
-

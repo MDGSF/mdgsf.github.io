@@ -9,7 +9,7 @@ description:
 published: true
 ---
 
-## 链接 
+## 链接
 
 <a href="http://json.org/" target="_blank">Introducing JSON</a>
 
@@ -18,7 +18,6 @@ published: true
 <a href="https://github.com/miloyip/rapidjson" target="_blank">rapidjson Github</a>
 
 <a href="http://rapidjson.org/zh-cn/index.html" target="_blank">rapidjson 教程</a>
-
 
 ## Introduction
 
@@ -40,7 +39,6 @@ published: true
    boolean, null, object, or array.
 
    An array is an ordered sequence of zero or more values.
-
 
 ## 使用
 
@@ -160,7 +158,7 @@ int main()
         // Shorter but slower version:
         // document["hello"].SetString(buffer, document.GetAllocator());
 
-        // Constructor version: 
+        // Constructor version:
         // Value author(buffer, len, document.GetAllocator());
         // Value author(buffer, document.GetAllocator());
         memset(buffer2, 0, sizeof(buffer2)); // For demonstration purpose.
@@ -181,6 +179,3 @@ int main()
     return 0;
 }
 ```
-
-
-

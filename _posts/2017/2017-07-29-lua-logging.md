@@ -10,9 +10,7 @@ description:
 published: true #default true
 ---
 
-
 <a href="https://github.com/Neopallium/lualogging" target="_blank">https://github.com/Neopallium/lualogging</a>
-
 
 ## 实例1
 
@@ -44,7 +42,6 @@ logger:debug(tab)
 logger:info("val1 = '%s', val2 = %d", "string value", 1234)
 ```
 
-
 ## 实例2 输出日志到文件中
 
 ```lua
@@ -58,5 +55,3 @@ logger:info("logging.file test")
 logger:debug("debug...")
 logger:error("error!")
 ```
-
-

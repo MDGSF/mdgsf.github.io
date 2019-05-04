@@ -56,7 +56,7 @@ public:
             char c = s[i];
             if(setCurSubCharacter.size() == 0)
             {
-                setCurSubCharacter.insert(c); 
+                setCurSubCharacter.insert(c);
                 iSubStart = i;
                 iSubEnd = i;
                 iSubLen = 1;

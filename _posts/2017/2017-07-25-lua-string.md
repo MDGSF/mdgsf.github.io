@@ -10,8 +10,7 @@ description:
 published: true #default true
 ---
 
-读书笔记： Programming in Lua, 4th Edition. 
-
+读书笔记： Programming in Lua, 4th Edition.
 
 ### 替换字符串
 
@@ -57,7 +56,6 @@ b = 'another line'
 
 They are equivalent; the only difference is that inside each kind of quote we can use the other quote without
 escapes.
-
 
 ### 多行字符串
 
@@ -123,7 +121,6 @@ nil
 true
 ```
 
-
 ## string 库
 
 ```lua
@@ -153,7 +150,6 @@ the end of the string: index -1 refers to the last character, -2 to the previous
 call string.sub(s, 1, j) gets a prefix of the string s with length j; string.sub(s, j, -1)
 gets a suffix of the string, starting at the j-th character; and string.sub(s, 2, -2) returns a copy
 of the string s with the first and last characters removed:
-
 
 ```lua
 > s = "[in brackets]"
@@ -197,8 +193,7 @@ characters between indices i and j (inclusive):
 
 A nice idiom is {string.byte(s, 1, -1)}, which creates a list with the codes of all characters in s.
 
-
-### string.format 
+### string.format
 
 和C语言的printf是一样的。
 
@@ -221,7 +216,6 @@ pi = 3.1416
 05/11/1990
 ```
 
-
 ### 字符串查找
 
 ```lua
@@ -230,7 +224,6 @@ pi = 3.1416
 > string.find("hello world", "war")
 nil
 ```
-
 
 ### 字符串替换
 
@@ -242,8 +235,3 @@ he..o world     1
 > string.gsub("hello world", "a", ".")
 hello world     0
 ```
-
-
-
-
-

@@ -10,7 +10,6 @@ description:
 published: true #default true
 ---
 
-
 ```cpp
 #include <stdio.h>
 #include <stdlib.h>
@@ -39,4 +38,3 @@ int main()
     return 0;
 }
 ```
-

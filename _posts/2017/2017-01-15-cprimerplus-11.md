@@ -28,7 +28,6 @@ char greeting[50] = "Hello, and how are you today!";
 即使是多次调用了这个函数，该字符串在程序的整个运行过程中只存储一份。
 整个引号中的内容作为指向该字符串存储位置的指针。
 
-
 ### 4
 
 const char m1[40] = "Limit yourself";
@@ -40,7 +39,6 @@ m1 == &m1[0]
 *m1 == 'L'
 
 *(m1+1) == m1[1] == 'i'
-
 
 ### 5. 数组与指针
 
@@ -59,16 +57,3 @@ char * head = "I Love you";
 ### 6. 字符串数组
 
 const char * mytal[5] = {"Adding numbers", "huang jian"};
-
-
-
-
-
-
-
-
-
-
-
-
-

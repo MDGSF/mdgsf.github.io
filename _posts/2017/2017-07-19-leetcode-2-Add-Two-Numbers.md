@@ -87,7 +87,7 @@ class Solution
 
         while(l1 != NULL)
         {
-            int iNum = l1->val; 
+            int iNum = l1->val;
             iNum += iFlag;
 
             if (iNum >= 10)
@@ -117,7 +117,7 @@ class Solution
 
         while(l2 != NULL)
         {
-            int iNum = l2->val; 
+            int iNum = l2->val;
             iNum += iFlag;
 
             if (iNum >= 10)

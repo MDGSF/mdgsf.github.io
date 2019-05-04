@@ -10,28 +10,26 @@ description:
 published: true #default true
 ---
 
-
 ### Generate private key and cacert.pem
 
 > To generate RSA private key, 2048 bit.
 > **openssl genrsa -out privatekey.pem**
-> 
+>
 > To generate RSA public key
 > **openssl rsa -in privatekey.pem -pubout -out publickey.pem**
-> 
+>
 > chage private key to pkcs8 format:
 > **openssl pkcs8 -topk8 -inform PEM -in privatekey.pem -outform PEM -nocrypt**
-> 
-> 
+>
+>
 > To create a hex-encoded message digest of a file:
 > **openssl dgst -md5 -hex file.txt**
-> 
+>
 > To sign a file using SHA-256 with binary file output:
 > **openssl dgst -sha256 -sign privatekey.pem -out signature.sign file.txt**
-> 
+>
 > To verify a signature:
 > **openssl dgst -sha256 -verify publickey.pem -signature signature.sign file.txt**
-
 
 ### Code
 
@@ -104,7 +102,7 @@ int main()
         exit(1);
     }
 
-    while (1) 
+    while (1)
     {
         socklen_t iLen = sizeof(struct sockaddr);
         struct sockaddr_in stClientAddr;
@@ -113,8 +111,8 @@ int main()
             perror("accept");
             exit(1);
         }
-        printf("%s:%d, socket %d\n", 
-                inet_ntoa(stClientAddr.sin_addr), 
+        printf("%s:%d, socket %d\n",
+                inet_ntoa(stClientAddr.sin_addr),
                 ntohs(stClientAddr.sin_port),
                 iNewFD);
 
@@ -144,7 +142,7 @@ int main()
         } else {
             printf("SSL_read success, acBuf = %s\n", acBuf);
         }
-                
+
 
 finish:
         SSL_shutdown(ssl);
@@ -158,6 +156,3 @@ finish:
     return 0;
 }
 ```
-
-
-

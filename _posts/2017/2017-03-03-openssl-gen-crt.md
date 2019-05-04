@@ -10,8 +10,6 @@ description:
 published: true #default true
 ---
 
-
-
 ### openssl中有如下后缀名的文件
 
 .key格式：私有的密钥
@@ -24,55 +22,48 @@ published: true #default true
 
 .pem格式：用于导出，导入证书时候的证书的格式，有证书开头，结尾的格式
 
-
-
-
 ### CA根证书的生成步骤
 
 生成CA私钥（.key）-->生成CA证书请求（.csr）-->自签名得到根证书（.crt）（CA给自已颁发的证书）。
 
 ```
-# Generate CA private key   
-openssl genrsa -out ca.key 2048   
-# Generate CSR   
-openssl req -new -key ca.key -out ca.csr  
-# Generate Self Signed certificate（CA 根证书）  
-openssl x509 -req -days 365 -in ca.csr -signkey ca.key -out ca.crt  
+# Generate CA private key
+openssl genrsa -out ca.key 2048
+# Generate CSR
+openssl req -new -key ca.key -out ca.csr
+# Generate Self Signed certificate（CA 根证书）
+openssl x509 -req -days 365 -in ca.csr -signkey ca.key -out ca.crt
 ```
 
 在实际的软件开发工作中，往往服务器就采用这种自签名的方式，因为毕竟找第三方签名机构是要给钱的，也是需要花时间的。
-
 
 ### 用户证书的生成步骤
 
 生成私钥（.key）-->生成证书请求（.csr）-->用CA根证书签名得到证书（.crt）
 
 ```
-# private key  
-$openssl genrsa -des3 -out server.key 1024   
-# generate csr  
-$openssl req -new -key server.key -out server.csr  
-# generate certificate  
-$openssl ca -in server.csr -out server.crt -cert ca.crt -keyfile ca.key 
+# private key
+$openssl genrsa -des3 -out server.key 1024
+# generate csr
+$openssl req -new -key server.key -out server.csr
+# generate certificate
+$openssl ca -in server.csr -out server.crt -cert ca.crt -keyfile ca.key
 ```
-
 
 ### 注意点
 
 在执行$openssl ca -in server.csr -out server.crt -cert ca.crt -keyfile ca.key时可能会出错：
- 
-Using configuration from /usr/share/ssl/openssl.cfg I am unable to access the ./demoCA/newcerts directory ./demoCA/newcerts: No such file or directory 
+
+Using configuration from /usr/share/ssl/openssl.cfg I am unable to access the ./demoCA/newcerts directory ./demoCA/newcerts: No such file or directory
 
 解决方法：
 
 ```
-1)mkdir -p ./demoCA/newcerts 
-2)touch demoCA/index.txt 
-3)touch demoCA/serial 
+1)mkdir -p ./demoCA/newcerts
+2)touch demoCA/index.txt
+3)touch demoCA/serial
 4)echo 01 > demoCA/serial
 ```
-
-
 
 ### 命令行：数字签名
 
@@ -98,5 +89,3 @@ openssl dgst -sha256 -verify publickey.pem \
  -signature signature.sign \
  file.txt
 ```
-
-

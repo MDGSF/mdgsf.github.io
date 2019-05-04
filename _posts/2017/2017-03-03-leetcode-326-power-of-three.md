@@ -17,7 +17,7 @@ published: true #default true
  Given an integer, write a function to determine if it is a power of three.
 
 **Follow up:**
-Could you do it without using any loop / recursion? 
+Could you do it without using any loop / recursion?
 
 ## 题目翻译
 
@@ -32,7 +32,7 @@ class Solution {
 public:
     bool isPowerOfThree(int n) {
         if(n <= 0) return false;
-        
+
         //3 9 27 81
         //big3 % n == 0
         //big3 = 3^k
@@ -40,7 +40,7 @@ public:
         const int maxint = 0x7fffffff;
         int k = log(maxint)/log(3);
         int big3 = pow(3, k);
-        
+
         return big3 % n == 0;
     }
 };

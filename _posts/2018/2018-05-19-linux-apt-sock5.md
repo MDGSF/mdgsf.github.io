@@ -12,4 +12,3 @@ published: true
 /etc/apt/apt.conf
 
 Acquire::socks::proxy "socks5://127.0.0.1:1080";
-

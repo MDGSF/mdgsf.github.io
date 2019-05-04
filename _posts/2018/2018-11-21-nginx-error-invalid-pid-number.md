@@ -11,7 +11,7 @@ published: true #default true
 ---
 
 ```
-ps -ef | grep nginx 
+ps -ef | grep nginx
 ```
 
 会看到 nginx 的 master 进程不见了，就只有 worker 进程了。

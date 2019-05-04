@@ -9,8 +9,6 @@ description:
 published: true
 ---
 
-
-
 ----------------
 
 via: https://github.com/golang/go/wiki/CodeReviewComments

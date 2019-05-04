@@ -12,5 +12,3 @@ published: true
 ## ProGit
 
 <img src="{{ site.url }}/images/Book/git/ProGit_ScottChaconAndBenStraub.png" alt="progit" />
-
-

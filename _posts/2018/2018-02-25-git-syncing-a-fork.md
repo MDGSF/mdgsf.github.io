@@ -15,11 +15,11 @@ published: true
 
 在将你的 fork 与上游存储库同步之前，必须[先配置一个指向 Git 中上游存储库的远程存储库](https://help.github.com/articles/configuring-a-remote-for-a-fork)。
 
-### 1. 打开 Git Bash。
+## 1. 打开 Git Bash
 
-### 2. 将当前工作目录切换到本地项目。
+## 2. 将当前工作目录切换到本地项目。
 
-### 3. 从上游存储库中获取分支和它们各自的 commits。提交到 `master` 的 commits 将会被存储在本地分支中，`upstream/master`。
+## 3. 从上游存储库中获取分支和它们各自的 commits。提交到 `master` 的 commits 将会被存储在本地分支中，`upstream/master`。
 
 ```
 $ git fetch upstream
@@ -31,7 +31,7 @@ From https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY
  * [new branch]      master     -> upstream/master
 ```
 
-### 4. 把你的 fork 切换到 `master` 主分支。
+## 4. 把你的 fork 切换到 `master` 主分支。
 
 ```
 $ git checkout master

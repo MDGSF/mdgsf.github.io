@@ -179,7 +179,7 @@ Go 也可以总结为“应该只有一个方法来完成一件事情”。
 
 如果你喜欢这篇文章，请考虑关注我的更多内容，并点击这些文本下面的那些有趣的绿色小手来分享。👏👏👏
 
-----------------
+* * *
 
 via: https://medium.freecodecamp.org/here-are-some-amazing-advantages-of-go-that-you-dont-hear-much-about-1af99de3b23a
 

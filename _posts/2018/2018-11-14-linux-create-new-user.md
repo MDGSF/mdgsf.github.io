@@ -12,7 +12,7 @@ published: true
 删除用户
 
 ```
-userdel huangjian 
+userdel huangjian
 ```
 
 添加用户
@@ -50,4 +50,3 @@ su lyy
 ```
 sudo su
 ```
-

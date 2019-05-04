@@ -28,7 +28,6 @@ SIGKILL 和 SIGSTOP
 
 SIGKILL 和 SIGSTOP
 
-
 # 常用信号
 
 ## SIGABRT
@@ -45,7 +44,7 @@ SIGKILL 和 SIGSTOP
 
 当出现某些类型的内存故障时，实现常常产生此种信号。
 
-## SIGCHLD 
+## SIGCHLD
 
 在一个进程终止或停止时，SIGCHLD 信号被送给其父进程。按系统默认，将忽略此信号。如果父进程希望被告知其子进程的这种状态改变，则应捕捉此信号。信号捕捉函数中通常要调用一种 wait 函数以取得子进程 ID 和其终止状态。
 
@@ -53,7 +52,7 @@ SIGKILL 和 SIGSTOP
 
 指示一个实现定义的硬件故障。
 
-## SIGFPE 
+## SIGFPE
 
 此信号表示一个算术运算异常，如除以 0、浮点溢出等。
 
@@ -144,4 +143,3 @@ SIGKILL 和 SIGSTOP
 ## SIGXFSZ
 
 如果进程超过了其软文件长度限制，则产生此信号。
-

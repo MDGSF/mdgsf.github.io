@@ -12,7 +12,7 @@ published: true #default true
 
 openssl 命令主要分为 3 大类：
 
-1. Standard commands 
+1. Standard commands
 2. Message Digest commands
 3. Cipher commands
 
@@ -26,49 +26,49 @@ man openssl
 ```
 root@jian-VirtualBox:~# openssl help
 Standard commands
-asn1parse         ca                ciphers           cms               
-crl               crl2pkcs7         dgst              dhparam           
-dsa               dsaparam          ec                ecparam           
-enc               engine            errstr            gendsa            
-genpkey           genrsa            help              list              
-nseq              ocsp              passwd            pkcs12            
-pkcs7             pkcs8             pkey              pkeyparam         
-pkeyutl           prime             rand              rehash            
-req               rsa               rsautl            s_client          
-s_server          s_time            sess_id           smime             
-speed             spkac             srp               storeutl          
-ts                verify            version           x509              
+asn1parse         ca                ciphers           cms
+crl               crl2pkcs7         dgst              dhparam
+dsa               dsaparam          ec                ecparam
+enc               engine            errstr            gendsa
+genpkey           genrsa            help              list
+nseq              ocsp              passwd            pkcs12
+pkcs7             pkcs8             pkey              pkeyparam
+pkeyutl           prime             rand              rehash
+req               rsa               rsautl            s_client
+s_server          s_time            sess_id           smime
+speed             spkac             srp               storeutl
+ts                verify            version           x509
 
 Message Digest commands (see the `dgst' command for more details)
-blake2b512        blake2s256        gost              md4               
-md5               mdc2              rmd160            sha1              
-sha224            sha256            sha3-224          sha3-256          
-sha3-384          sha3-512          sha384            sha512            
-sha512-224        sha512-256        shake128          shake256          
-sm3               
+blake2b512        blake2s256        gost              md4
+md5               mdc2              rmd160            sha1
+sha224            sha256            sha3-224          sha3-256
+sha3-384          sha3-512          sha384            sha512
+sha512-224        sha512-256        shake128          shake256
+sm3
 
 Cipher commands (see the `enc' command for more details)
-aes-128-cbc       aes-128-ecb       aes-192-cbc       aes-192-ecb       
-aes-256-cbc       aes-256-ecb       aria-128-cbc      aria-128-cfb      
-aria-128-cfb1     aria-128-cfb8     aria-128-ctr      aria-128-ecb      
-aria-128-ofb      aria-192-cbc      aria-192-cfb      aria-192-cfb1     
-aria-192-cfb8     aria-192-ctr      aria-192-ecb      aria-192-ofb      
-aria-256-cbc      aria-256-cfb      aria-256-cfb1     aria-256-cfb8     
-aria-256-ctr      aria-256-ecb      aria-256-ofb      base64            
-bf                bf-cbc            bf-cfb            bf-ecb            
-bf-ofb            camellia-128-cbc  camellia-128-ecb  camellia-192-cbc  
-camellia-192-ecb  camellia-256-cbc  camellia-256-ecb  cast              
-cast-cbc          cast5-cbc         cast5-cfb         cast5-ecb         
-cast5-ofb         des               des-cbc           des-cfb           
-des-ecb           des-ede           des-ede-cbc       des-ede-cfb       
-des-ede-ofb       des-ede3          des-ede3-cbc      des-ede3-cfb      
-des-ede3-ofb      des-ofb           des3              desx              
-idea              idea-cbc          idea-cfb          idea-ecb          
-idea-ofb          rc2               rc2-40-cbc        rc2-64-cbc        
-rc2-cbc           rc2-cfb           rc2-ecb           rc2-ofb           
-rc4               rc4-40            seed              seed-cbc          
-seed-cfb          seed-ecb          seed-ofb          sm4-cbc           
-sm4-cfb           sm4-ctr           sm4-ecb           sm4-ofb     
+aes-128-cbc       aes-128-ecb       aes-192-cbc       aes-192-ecb
+aes-256-cbc       aes-256-ecb       aria-128-cbc      aria-128-cfb
+aria-128-cfb1     aria-128-cfb8     aria-128-ctr      aria-128-ecb
+aria-128-ofb      aria-192-cbc      aria-192-cfb      aria-192-cfb1
+aria-192-cfb8     aria-192-ctr      aria-192-ecb      aria-192-ofb
+aria-256-cbc      aria-256-cfb      aria-256-cfb1     aria-256-cfb8
+aria-256-ctr      aria-256-ecb      aria-256-ofb      base64
+bf                bf-cbc            bf-cfb            bf-ecb
+bf-ofb            camellia-128-cbc  camellia-128-ecb  camellia-192-cbc
+camellia-192-ecb  camellia-256-cbc  camellia-256-ecb  cast
+cast-cbc          cast5-cbc         cast5-cfb         cast5-ecb
+cast5-ofb         des               des-cbc           des-cfb
+des-ecb           des-ede           des-ede-cbc       des-ede-cfb
+des-ede-ofb       des-ede3          des-ede3-cbc      des-ede3-cfb
+des-ede3-ofb      des-ofb           des3              desx
+idea              idea-cbc          idea-cfb          idea-ecb
+idea-ofb          rc2               rc2-40-cbc        rc2-64-cbc
+rc2-cbc           rc2-cfb           rc2-ecb           rc2-ofb
+rc4               rc4-40            seed              seed-cbc
+seed-cfb          seed-ecb          seed-ofb          sm4-cbc
+sm4-cfb           sm4-ctr           sm4-ecb           sm4-ofb
 ```
 
 ### openssl rand 生成随机数
@@ -110,7 +110,7 @@ man openssl 的最底部有介绍
 -pass env:var  //从环境变量读
 -pass file:pathname  //从文件中读取
 -pass fd:number  //从文件描述符读取
--pass stdin 
+-pass stdin
 ```
 
 ### openssl genrsa 生成 RSA 私钥
@@ -162,9 +162,9 @@ openssl dgst -sha256 -verify pubkey.pem -signature signature.sin record.txt  //�
 
 ```
 生成 record.txt 文件的消息摘要
-root@jian-VirtualBox:~/opensslDemo# openssl dgst -md5 -hex record.txt 
+root@jian-VirtualBox:~/opensslDemo# openssl dgst -md5 -hex record.txt
 MD5(record.txt)= bb6b962338f9d1c0dbcdb6e2b376d9db
-root@jian-VirtualBox:~/opensslDemo# openssl dgst -sha256 -hex record.txt 
+root@jian-VirtualBox:~/opensslDemo# openssl dgst -sha256 -hex record.txt
 SHA256(record.txt)= 02ba968cbe7576ed5c41a98f508d4d2dce24873a4d1f0045e2567731bf4a5d30
 ```
 
@@ -261,10 +261,9 @@ openssl rsa -in private/client-c2-key.pem -out private/arp1.test.mdgsf.xyz.key.p
 
 https://github.com/MDGSF/GoPractice/tree/master/HTTPSDemo
 
-
 ## 参考链接
 
-https://www.openssl.org/ 
+https://www.openssl.org/
 https://www.openssl.org/docs/manmaster/man1/
 https://github.com/openssl/openssl
 
@@ -277,4 +276,3 @@ https://timnash.co.uk/guessing-ssl-questions/
 https://zhuanlan.zhihu.com/p/26646377
 https://www.jianshu.com/p/79c284e826fa
 https://github.com/openssl/openssl/blob/master/apps/openssl.cnf
-

@@ -10,4 +10,3 @@ published: true
 ---
 
 <img src="{{ site.url }}/images/2018/golang/201808/08_01.jpg" alt="golang learning" />
-

@@ -14,7 +14,7 @@ published: true
 ```
 #
 # ~/.tmux.conf
-# 
+#
 # server | 服务器| 输入tmux命令时就开启了一个服务器
 # session | 会话 | 一个服务器可以包含多个会话
 # window | 窗口 | 一个会话可以包含多个窗口
@@ -24,7 +24,7 @@ published: true
 # 在正常 console 下，执行 tmux source-file ~/.tmux.conf
 #
 # tmux kill-server 关闭 tmux
-# 
+#
 ###### 会话
 #
 # tmux 进入tmux, 这个时候应该是创建了一个新的会话
@@ -45,10 +45,10 @@ published: true
 # ctrl+b w 打开窗口列表，用方向键,hjkl切换窗口。
 # ctrl+b , 重命名当前窗口。
 # ctrl+b . 修改当前窗口的编号。
-# 
+#
 #
 ###### 面板
-# 
+#
 # ctrl+b " 水平分割面板
 # ctrl+b % 竖直分割面板
 # ctrl+b x 关闭当前面板
@@ -63,7 +63,7 @@ published: true
 # ctrl+b alt+方向键 调整面板大小
 # ctrl+b space 在内置的几种面板之间切换
 #
-# ctrl+b z : make a pane go full screen. Hit again to shink it back to its 
+# ctrl+b z : make a pane go full screen. Hit again to shink it back to its
 #
 #
 ###### 查看历史消息
@@ -112,4 +112,3 @@ set -g mouse on
 [https://github.com/tmux/tmux](https://github.com/tmux/tmux)
 
 [https://blog.csdn.net/gatieme/article/details/49301037](https://blog.csdn.net/gatieme/article/details/49301037)
-

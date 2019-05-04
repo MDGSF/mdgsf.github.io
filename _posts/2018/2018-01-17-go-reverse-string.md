@@ -15,21 +15,21 @@ package main
 import "fmt"
 
 func main() {
-	str := "abcdef"
-	rstr := reverse(str)
-	fmt.Println(rstr)
+    str := "abcdef"
+    rstr := reverse(str)
+    fmt.Println(rstr)
 }
 
 func reverse(str string) string {
-	runes := []rune(str)
-	l := 0
-	r := len(runes) - 1
-	for l <= r {
-		runes[l], runes[r] = runes[r], runes[l]
-		l++
-		r--
-	}
-	return string(runes)
+    runes := []rune(str)
+    l := 0
+    r := len(runes) - 1
+    for l <= r {
+        runes[l], runes[r] = runes[r], runes[l]
+        l++
+        r--
+    }
+    return string(runes)
 }
 ```
 

@@ -10,5 +10,3 @@ published: true
 ---
 
 在 /etc/rc.local 这里面加入的命令，就会在系统开机的时候自动被执行。
-
-

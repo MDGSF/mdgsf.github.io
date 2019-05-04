@@ -10,6 +10,7 @@ published: true
 ---
 
 # 第17部分：方法
+
 欢迎来到 [Golang 系列教程](https://golangbot.com/learn-golang-series/) 的第 17 个教程。
 
 ### 什么是方法？
@@ -68,6 +69,7 @@ func main() {
 程序输出：`Salary of Sam Adolf is $5000`。
 
 ### 为什么我们已经有函数了还需要方法呢？
+
 上面的程序已经被重写为只使用函数，没有方法。
 
 ```go
@@ -106,7 +108,7 @@ func main() {
 
 既然我们可以使用函数写出相同的程序，那么为什么我们需要方法？这有着几个原因，让我们一个个的看看。
 
-- [ Go 不是纯粹的面向对象编程语言](https://golang.org/doc/faq#Is_Go_an_object-oriented_language)，而且Go不支持类。因此，基于类型的方法是一种实现和类相似行为的途径。
+- [Go 不是纯粹的面向对象编程语言](https://golang.org/doc/faq#Is_Go_an_object-oriented_language)，而且Go不支持类。因此，基于类型的方法是一种实现和类相似行为的途径。
 
 - 相同的名字的方法可以定义在不同的类型上，而相同名字的函数是不被允许的。假设我们有一个 `Square` 和 `Circle` 结构体。可以在 `Square` 和 `Circle` 上分别定义一个 `Area` 方法。见下面的程序。
 
@@ -496,7 +498,6 @@ func main() {
 这就是Go中的方法。祝你有美好的一天。
 
 下一章 [接口 - I](https://golangbot.com/interfaces-part-1/)
-
 
 ----------------
 

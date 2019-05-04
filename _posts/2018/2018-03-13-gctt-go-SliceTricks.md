@@ -58,7 +58,7 @@ a = a[:len(a)-1]
 ```go
 copy(a[i:], a[j:])
 for k, n := len(a)-j+i, len(a); k < n; k++ {
-	a[k] = nil // or the zero value of T
+    a[k] = nil // or the zero value of T
 }
 a = a[:len(a)-j+i]
 ```
@@ -146,20 +146,20 @@ a = append([]T{x}, a...)
 ```go
 b := a[:0]
 for _, x := range a {
-	if f(x) {
-		b = append(b, x)
-	}
+    if f(x) {
+        b = append(b, x)
+    }
 }
 ```
 
 **反转数组**
- 
+
 用相同的元素替换切片的内容，但以相反的顺序替换：
 
 ```go
 for i := len(a)/2-1; i >= 0; i-- {
-	opp := len(a)-1-i
-	a[i], a[opp] = a[opp], a[i]
+    opp := len(a)-1-i
+    a[i], a[opp] = a[opp], a[i]
 }
 ```
 
@@ -167,7 +167,7 @@ for i := len(a)/2-1; i >= 0; i-- {
 
 ```go
 for left, right := 0, len(a)-1; left < right; left, right = left+1, right-1 {
-	a[left], a[right] = a[right], a[left]
+    a[left], a[right] = a[right], a[left]
 }
 ```
 
@@ -177,12 +177,11 @@ Fisher–Yates 算法
 
 ```go
 for i := len(a) - 1; i > 0; i-- {
-	j := rand.Intn(i + 1)
-	a[i], a[j] = a[j], a[i]
+    j := rand.Intn(i + 1)
+    a[i], a[j] = a[j], a[i]
 }
 ```
 
 ----------------
 
 via: https://github.com/golang/go/wiki/SliceTricks
-

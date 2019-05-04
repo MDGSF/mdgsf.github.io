@@ -10,7 +10,6 @@ description:
 published: true #default true
 ---
 
-
 ```
 location /api {
     proxy_set_header X-Real-IP $remote_addr;
@@ -34,13 +33,12 @@ application_server_addr 那里会收到 /api/v1/xxx
 proxy_pass http://application_server_addr;
 ```
 
-修改为 
+修改为
 
 ```
 proxy_pass http://application_server_addr/;
-``` 
+```
 
 的话（就是在末尾加个斜杠）。
 
 那 application_server_addr 那里会收到 /v1/xxx 。
-

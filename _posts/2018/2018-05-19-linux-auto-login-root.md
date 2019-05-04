@@ -9,7 +9,6 @@ description:
 published: true
 ---
 
-
 ### 1.设置 root 用户密码
 
 sudo passwd root

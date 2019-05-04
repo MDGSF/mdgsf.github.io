@@ -10,6 +10,7 @@ published: true
 ---
 
 # Go 函数 -- Go 语言新手的带图教程
+
 简单易懂的 Go 函数带图教程
 
 **注意：**该教程仅介绍 Go 函数，不包括：可变参数、延迟函数、外部函数、方法、HTTP、封包编码等。
@@ -17,6 +18,7 @@ published: true
 * * *
 
 ### 什么是函数？
+
 函数是一个独立的，可以被重用的，可以一次又一次运行的代码块。函数可以有输入参数，也可以有返回值输出。
 
 ### 为什么我们需要函数？
@@ -658,8 +660,7 @@ func SetName(name string)
 
 ![]({{ site.url }}/images/2018/gctt/201801/funcs/10.png)
 
-
-----------------
+* * *
 
 via: https://blog.learngoprogramming.com/golang-funcs-params-named-result-values-types-pass-by-value-67f4374d9c0a
 

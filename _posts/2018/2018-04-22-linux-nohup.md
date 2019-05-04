@@ -42,13 +42,13 @@ nohup ./a.out &
 
 int main()
 {
-	int x = 0;
-	while (1)
-	{
-		printf("hello x = %d, pid = %u, ppid = %u\n", x++, getpid(), getppid());
-		sleep(1);
-	}
-	return 0;
+    int x = 0;
+    while (1)
+    {
+        printf("hello x = %d, pid = %u, ppid = %u\n", x++, getpid(), getppid());
+        sleep(1);
+    }
+    return 0;
 }
 ```
 

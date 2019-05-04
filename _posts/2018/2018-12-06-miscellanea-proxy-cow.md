@@ -32,4 +32,3 @@ nohup cow &
 proxy2
 run shadowsocks server
 ```
-

@@ -10,20 +10,19 @@ published: true
 ---
 
 ```
-watch nvidia-smi 
+watch nvidia-smi
 ```
 
 每隔两秒执行一次 nvidia-smi 命令
 
 ```
-watch -d nvidia-smi 
+watch -d nvidia-smi
 ```
 
 每隔两秒执行一次 nvidia-smi 命令，高亮与上一次结果不同的地方
 
 ```
-watch -d -n 1 nvidia-smi 
+watch -d -n 1 nvidia-smi
 ```
 
 每隔一秒执行一次 nvidia-smi 命令，高亮与上一次结果不同的地方
-

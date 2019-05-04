@@ -9,9 +9,6 @@ description:
 published: true
 ---
 
-
 ----------------
 
 via: https://www.calhoun.io/6-tips-for-using-strings-in-go/
-
-

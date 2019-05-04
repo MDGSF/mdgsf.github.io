@@ -10,7 +10,7 @@ description: ""
 published: true #default true
 ---
 
-npm install 
+npm install
 gyp WARN EACCES user "root" does not have permission to access the dev dir "/root/test/s5_repo/node_modules/msgpack/.node-gyp/8.11.1"
 gyp WARN EACCES attempting to reinstall using temporary dev dir "/root/test/s5_repo/node_modules/msgpack/.node-gyp"
 ....

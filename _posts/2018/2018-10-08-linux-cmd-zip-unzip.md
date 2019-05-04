@@ -27,7 +27,7 @@ zip -r xxx.zip ./*
 unzip filename.zip
 ```
 
-### 解压 zip 文件到指定目录 
+### 解压 zip 文件到指定目录
 
 ```
 unzip -d /home/sunny myfile.zip

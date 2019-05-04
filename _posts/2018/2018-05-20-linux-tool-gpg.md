@@ -13,8 +13,4 @@ gpg -c main.go 加密 main.go
 
 然后会生成一个 main.go.gpg
 
-
 解密: gpg main.go.gpg
-
-
-

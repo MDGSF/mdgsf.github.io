@@ -10,5 +10,3 @@ published: true
 ---
 
 https://github.com/MDGSF/2017-talks/tree/master/KavyaJoshi-UnderstandingChannels
-
-

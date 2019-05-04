@@ -16,6 +16,3 @@ published: true
 ### 简述go中的channel 、goroutine和interface，要求熟悉底层源码
 
 ### 了解一些微服务
-
-
-

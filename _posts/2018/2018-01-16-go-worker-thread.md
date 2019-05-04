@@ -9,38 +9,37 @@ description: ""
 published: true
 ---
 
-
 ```go
 package main
 
 import (
-	"fmt"
-	"math/rand"
-	"time"
+    "fmt"
+    "math/rand"
+    "time"
 )
 
 func main() {
-	c := make(chan int)
-	for i := 0; i < 5; i++ {
-		worker := &Worker{id: i}
-		go worker.process(c)
-	}
+    c := make(chan int)
+    for i := 0; i < 5; i++ {
+        worker := &Worker{id: i}
+        go worker.process(c)
+    }
 
-	for {
-		c <- rand.Int()
-		time.Sleep(time.Millisecond * 500)
-	}
+    for {
+        c <- rand.Int()
+        time.Sleep(time.Millisecond * 500)
+    }
 }
 
 type Worker struct {
-	id int
+    id int
 }
 
 func (w *Worker) process(c chan int) {
-	for {
-		data := <-c
-		fmt.Printf("worker %d got %d\n", w.id, data)
-	}
+    for {
+        data := <-c
+        fmt.Printf("worker %d got %d\n", w.id, data)
+    }
 }
 ```
 
@@ -62,45 +61,44 @@ worker 1 got 605394647632969758
 
 **注意：**通道是唯一共享的状态，通过通道，可以安全的，并发发送和接收数据。通道提供了我们需要的所有同步代码，并且也确保，在任意的特定时刻，只有一个 Go 协程，可以访问数据的特定部分。
 
-
 ### 使用 select
 
 ```go
 package main
 
 import (
-	"fmt"
-	"math/rand"
-	"time"
+    "fmt"
+    "math/rand"
+    "time"
 )
 
 func main() {
-	c := make(chan int)
-	for i := 0; i < 5; i++ {
-		worker := &Worker{id: i}
-		go worker.process(c)
-	}
+    c := make(chan int)
+    for i := 0; i < 5; i++ {
+        worker := &Worker{id: i}
+        go worker.process(c)
+    }
 
-	for {
-		select {
-		case c <- rand.Int():
-		case <-time.After(time.Millisecond * 100):
-			fmt.Println("timed out")
-		}
-		time.Sleep(time.Millisecond * 50)
-	}
+    for {
+        select {
+        case c <- rand.Int():
+        case <-time.After(time.Millisecond * 100):
+            fmt.Println("timed out")
+        }
+        time.Sleep(time.Millisecond * 50)
+    }
 }
 
 type Worker struct {
-	id int
+    id int
 }
 
 func (w *Worker) process(c chan int) {
-	for {
-		data := <-c
-		fmt.Printf("worker %d got %d\n", w.id, data)
-		time.Sleep(time.Second * 2)
-	}
+    for {
+        data := <-c
+        fmt.Printf("worker %d got %d\n", w.id, data)
+        time.Sleep(time.Second * 2)
+    }
 }
 ```
 
@@ -110,4 +108,3 @@ func (w *Worker) process(c chan int) {
 - 如果多个通道可用，随机选中一个通道
 - 如果没有通道可用，`default` 分之被执行
 - 如果没有 `default` 分支，`select` 将阻塞
-

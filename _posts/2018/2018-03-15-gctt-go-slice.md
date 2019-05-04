@@ -9,9 +9,6 @@ description:
 published: true
 ---
 
-
-
 ----------------
 
 via: https://blog.golang.org/slices
-

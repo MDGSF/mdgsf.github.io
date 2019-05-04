@@ -51,7 +51,7 @@ Windows 系统
 
 数据库， MySQL， Oracle， postgreSQL， SQLServer
 
-No-sql， redis， 
+No-sql， redis，
 
 算法
 
@@ -66,4 +66,3 @@ No-sql， redis，
 版本控制， git， svn
 
 人的精力是有限的，只能从这么多的东西中选择一个深入研究。
-

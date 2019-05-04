@@ -179,7 +179,6 @@ func main() {
 }
 ```
 
-
 <img src="{{ site.url }}/images/2018/nginx/2018-03-19_101019.png" alt="2018-03-19_101019.png" />
 
 <img src="{{ site.url }}/images/2018/nginx/2018-03-19_101047.png" alt="2018-03-19_101047.png" />

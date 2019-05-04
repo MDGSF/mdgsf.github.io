@@ -12,7 +12,6 @@ published: true #default true
 
 [https://bash.cyberciti.biz/guide/Sending_signal_to_Processes](https://bash.cyberciti.biz/guide/Sending_signal_to_Processes)
 
-
 ### kill - send a signal to a process
 
 The default signal for kill is TERM. To list available signals, enter:
@@ -39,7 +38,7 @@ Sample outputs:
 51) SIGRTMAX-13	52) SIGRTMAX-12	53) SIGRTMAX-11	54) SIGRTMAX-10
 55) SIGRTMAX-9	56) SIGRTMAX-8	57) SIGRTMAX-7	58) SIGRTMAX-6
 59) SIGRTMAX-5	60) SIGRTMAX-4	61) SIGRTMAX-3	62) SIGRTMAX-2
-63) SIGRTMAX-1	64) SIGRTMAX	
+63) SIGRTMAX-1	64) SIGRTMAX
 ```
 
 ### kill command Examples
@@ -104,4 +103,3 @@ Make sshd reread its configuration file, enter:
 ```
 pkill -HUP sshd
 ```
-

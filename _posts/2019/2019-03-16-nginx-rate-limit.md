@@ -15,4 +15,3 @@ https://www.nginx.com/blog/rate-limiting-nginx/
 http://nginx.org/en/docs/http/ngx_http_limit_req_module.html
 
 https://www.nginx.com/blog/mitigating-ddos-attacks-with-nginx-and-nginx-plus/
-

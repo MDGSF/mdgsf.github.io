@@ -23,4 +23,3 @@ Given a string, find the longest substring which is palindrome.
 
 [https://www.geeksforgeeks.org/manachers-algorithm-linear-time-longest-palindromic-substring-part-3-2/
 ](https://www.geeksforgeeks.org/manachers-algorithm-linear-time-longest-palindromic-substring-part-3-2/)
-

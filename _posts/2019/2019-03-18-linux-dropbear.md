@@ -33,5 +33,3 @@ dbcp -i id_rsa.db ~/test.txt root@192.168.0.100:~
 ```
 dbcp -i id_rsa.db root@192.168.0.233:/home/root/test.txt .
 ```
-
-

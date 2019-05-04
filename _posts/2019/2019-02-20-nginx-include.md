@@ -10,7 +10,6 @@ description:
 published: true #default true
 ---
 
-
 ```
 http {
     include /etc/nginx/conf.d/*.conf;

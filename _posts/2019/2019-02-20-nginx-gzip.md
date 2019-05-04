@@ -11,6 +11,3 @@ published: true #default true
 ---
 
 [https://nginx.org/en/docs/http/ngx_http_gzip_module.html](https://nginx.org/en/docs/http/ngx_http_gzip_module.html)
-
-
-

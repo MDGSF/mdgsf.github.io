@@ -37,4 +37,3 @@ location ^~ /b/ {
 ```
 
 如果一个请求的 URI 是 /b/index.html 时，web 服务器将会返回服务器上的 /home/huangjian/local/nginx/www/html/alias_dir/index.html 的文件。
-

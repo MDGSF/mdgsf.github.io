@@ -107,4 +107,3 @@ $ echo "world" > foo.txt.bar
 $ cat foo.txt.hardlink
 world
 ```
-

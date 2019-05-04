@@ -43,7 +43,7 @@ func maxProfit(prices []int) int {
     if len(prices) == 0 {
         return 0
     }
-    
+
     min := prices[0]
     res := 0
     for i := 1; i < len(prices); i++ {
@@ -104,7 +104,7 @@ DP[i] = DP[i-1] + (-a[i]) //买入股票
 再次尝试定义状态：
 
 ```
-DP[i][j] 
+DP[i][j]
 i 表示数组的下标，表示第 i 天
 j 可以为 0 或者 1。
 j = 0 表示手上没有股票。
@@ -235,7 +235,7 @@ func maxProfit(k int, prices []int) int {
 	if n == 0 {
 		return 0
 	}
-    
+
     if k > len(prices)/2 { //当 k 特别大的时候，做特殊处理
         max := 0
         for i := 1; i < len(prices); i++ {
@@ -293,4 +293,3 @@ func max(a, b int) int {
 ## 309 最佳买卖股票时机含冷冻期
 
 ## 714 买卖股票的最佳时机含手续费
-

@@ -39,9 +39,9 @@ DP[i][0] = if (nums[i] >= 0)       //当 nums[i] 是正数
                DP[i-1][0]*nums[i]  //乘以上一个状态的正数
            else                    //当 nums[i] 是负数
                DP[i-1][1]*nums[i]  //乘以上一个状态的负数
-DP[i][1] = if (nums[i] >= 0) 
+DP[i][1] = if (nums[i] >= 0)
                DP[i-1][1]*nums[i]
-           else 
+           else
                DP[i-1][0]*nums[1]
 ```
 
@@ -73,12 +73,12 @@ func maxProduct(nums []int) int {
     if len(nums) == 0 {
         return 0
     }
-    
+
     DP := make([][]int, len(nums))
     for k := range DP {
         DP[k] = make([]int, 2)
     }
-    
+
     DP[0][0], DP[0][1] = nums[0], nums[0]
     res := DP[0][0]
     for i := 1; i < len(nums); i++ {
@@ -119,7 +119,7 @@ func maxProduct(nums []int) int {
     if len(nums) == 0 {
         return 0
     }
-    
+
     var DP [2][2]int
     DP[0][0], DP[0][1] = nums[0], nums[0]
     res := DP[0][0]

@@ -14,7 +14,6 @@ published: true #default true
 
 [https://github.com/allinurl/goaccess](https://github.com/allinurl/goaccess)
 
-
 ## 安装
 
 ```
@@ -66,4 +65,3 @@ server {
 打开浏览器访问：localhost:7070/report.html
 
 如果是在服务器上，可以用 ssh 把端口 7070 映射到本地电脑。
-

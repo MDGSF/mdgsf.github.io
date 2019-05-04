@@ -25,5 +25,3 @@ published: true #default true
 [https://facebook.github.io/graphql/](https://facebook.github.io/graphql/)
 
 [https://developer.github.com/](https://developer.github.com/)
-
-

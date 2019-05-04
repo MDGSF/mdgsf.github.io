@@ -57,5 +57,3 @@ if __name__ == "__main__":
 右键 ---> New ---> Python File
 
 然后生成的 python 文件，就会用上面的那个模板填充。
-
-

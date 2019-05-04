@@ -15,14 +15,11 @@ published: true
 
 [http://www.oldlinux.org/](http://www.oldlinux.org/)
 
-
-
 ### 内核源码下载
 
 [linux-0.11-060618-gcc4.tar.gz](http://oldlinux.org/Linux.old/kernel/0.1x/)
 
 我们选择使用 linux-0.11-060618-gcc4.tar.gz 这个版本。
-
 
 ### 编译内核
 
@@ -36,8 +33,7 @@ tar -zxvf linux-0.11-060618-gcc4.tar.gz
 
 将**所有** Makefile 中的CFLAGS后面加上了-fno-stack-protector
 
-**记住：make之前要记得执行 make clean**
-
+Note：记住 make 之前要记得执行 make clean
 
 make
 
@@ -60,6 +56,5 @@ Ubuntu的软件包格式为deb,而RPM格式的包则是Red Hat。解决方法：
     $sudo dpkg -i xxxx.deb ##这样xxxx软件就可以安装完成了
 
 注意，用alien转换deb包并不能保证完全顺利安装，所以如果能找到deb包，还是用deb包为好。
-
 
 安装完 as86 汇编器之后，重新执行 make

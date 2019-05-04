@@ -37,7 +37,6 @@ published: true
 
 判断出两个链表相交后就是判断他们的交点了。假设第一个链表长度为len1，第二个问len2，然后找出长度较长的，让长度较长的链表指针向后移动**(len1 - len2)** (len1-len2的绝对值)，然后在开始遍历两个链表，两个链表每次移动一步，判断节点是否相同即可。
 
-
 ```cpp
 /*
  *  if head1, head2 has intersection, return intersection point,
@@ -90,7 +89,6 @@ PList pFindIntersectionPoint(PList head1, PList head2)
 }
 ```
 
-
 ### 链接
 
-[判断两个链表是否相交并找出交点 ](http://blog.csdn.net/jiqiren007/article/details/6572685)
+[判断两个链表是否相交并找出交点](http://blog.csdn.net/jiqiren007/article/details/6572685)

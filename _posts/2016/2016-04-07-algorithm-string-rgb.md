@@ -10,7 +10,6 @@ description:
 published: true #default true
 ---
 
-
 题目：一个字符串只有‘R’、‘G’、‘B’组成，如何让所有的‘R’出现在前面，所有的‘G’在中间，所有的‘B’在最后。
 
 要求：要求空间复杂度为O(1),只许遍历一遍字符串数组
@@ -25,7 +24,7 @@ k 用于遍历，当发现是R时，与前面的 i 指的对象交换，i 后移
 
 当 k与j相遇后停止
 
-**Code**
+## Code
 
 ```cpp
 #include <iostream>

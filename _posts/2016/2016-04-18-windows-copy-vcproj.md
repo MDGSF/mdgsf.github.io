@@ -9,7 +9,6 @@ description:
 published: true
 ---
 
-
 在vs2008下，工程的名字叫 pro1.vcproj
 
 将pro1.vcproj 复制为 pro2.vcproj
@@ -18,7 +17,7 @@ published: true
 
 用vs2008打开 pro2.vcproj ，build，有可能会出现下面的错误。按照方法修改了就可以了。
 
-**error C2471: cannot update program database vc90.pdb**
+**error C2471：** cannot update program database vc90.pdb
 
 这个vs2008一个著名的bug。详情可以参见[https://connect.microsoft.com/VisualStudio/feedback/ViewFeedback.aspx?FeedbackID=309462](https://connect.microsoft.com/VisualStudio/feedback/ViewFeedback.aspx?FeedbackID=309462)
 
@@ -59,7 +58,6 @@ Linker |Debuging |General Debug Info | Yes (/DEBUG)
 
 在这两个目录下都建立一个 type.h 的文件
 
-
 ```
 //type\pro1\type.h
 #ifndef PRO1
@@ -78,6 +76,6 @@ Linker |Debuging |General Debug Info | Yes (/DEBUG)
 
 在 pro2.vcproj 中将 type\pro2\type.h 包含进去。
 
-**怎么包含进去？**
+怎么包含进去？
 
 在工程的属性--> C/C++ --> Additional Include Directories

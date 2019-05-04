@@ -58,17 +58,13 @@ M: a b c d a b c d a b c d e
 N:                 a b c d e // 匹配成功
 ```
 
-
-
 ## KMP
 
 目标字符串记为：Target, 长度记为：n。
 
 搜索字符串记为：Pattern, 长度记为：m。
 
-
 KMP字符串模式匹配通俗点说就是一种在一个字符串中定位另一个串的高效算法。简单匹配算法的时间复杂度为O((n-m+1)m);KMP匹配算法。可以证明它的时间复杂度为O(n+m)。
-
 
 ### The Partial Match Table
 
@@ -104,7 +100,6 @@ Let’s skip ahead to cell seven (the second-to-last cell), which is concerned w
 
 Finally, let’s look at cell eight, which is concerned with the entire pattern (“abababca”). Since they both start and end with “a”, we know the value will be at least 1. However, that’s where it ends; at lengths two and up, all the suffixes contain a c, while only the last prefix (“abababc”) does. This seven-character prefix does not match the seven-character suffix (“bababca”), so cell eight gets 1.
 
-
 ### How to use the Partial Match Table
 
 We can use the values in the partial match table to skip ahead (rather than redoing unnecessary old comparisons) when we find partial matches. The formula works like this:
@@ -137,7 +132,6 @@ bacbababaabcbab
 
 This is a partial_match_length of 5. The value at `table[partial_match_length - 1]` (or `table[4]`) is 3. That means we get to skip ahead `partial_match_length - table[partial_match_length - 1]` (or `5 - table[4]` or `5 - 3` or `2`) characters:
 
-
 ```
 // x denotes a skip
 
@@ -158,7 +152,6 @@ bacbababaabcbab
 
 At this point, our pattern is longer than the remaining characters in the text, so we know there’s no match.
 
-
 ### 如何快速预处理Pattern字符串，得到table数组。
 
 这里，我们将 Pattern字符串记为B[]， table 数组记为P[]。
@@ -174,7 +167,7 @@ At this point, our pattern is longer than the remaining characters in the text, 
   即B[0]=B[2]='a'
     B[1]=B[3]='b'
 
-现在又有 B[ P[3] ]==B[4]   
+现在又有 B[ P[3] ]==B[4]
 ==> 即  B[2]==B[4]
 ==> 所以P[4]=P[3]+1
 ```
@@ -196,7 +189,6 @@ P[4]=3是因为B[0..2]和B[2..4]都是"aba"；而P[2]=1则告诉我们，B[0]、
 ==>即**B[0]和B[4]相等**。
 
 既然P[5]不能由P[4]得到，或许可以由P[2]得到（如果B[1]恰好和B[5]相等的话，P[5]就等于P[2]+1了）。显然，P[5]也不能通过P[2]得到，因为B[1]<>B[5]。事实上，这样一直推到P[0]也不行，最后，我们得到，P[5]=0。
-
 
 ### Code
 

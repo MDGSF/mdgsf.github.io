@@ -9,8 +9,6 @@ description: ""
 published: true
 ---
 
-
-
 ### CMaxStack.h
 
 ```cpp
@@ -26,24 +24,23 @@ using namespace std;
 class CMaxStack
 {
 public:
-	CMaxStack();
-	~CMaxStack();
+    CMaxStack();
+    ~CMaxStack();
 
-	void m_vPush(int i);
-	void m_vPop();
-	int m_iMaxElement();
-	bool m_bEmpty();
-	int m_iTop();
+    void m_vPush(int i);
+    void m_vPop();
+    int m_iMaxElement();
+    bool m_bEmpty();
+    int m_iTop();
 
 private:
-	stack<int> m_oStack;
-	stack<int> m_MaxValueStack;
+    stack<int> m_oStack;
+    stack<int> m_MaxValueStack;
 };
 
 
 #endif
 ```
-
 
 ### CMaxStack.cpp
 
@@ -58,45 +55,44 @@ CMaxStack::~CMaxStack()
 {
 }
 
-void 
+void
 CMaxStack::m_vPush(int i)
 {
-	m_oStack.push(i);
+    m_oStack.push(i);
 
-	if(m_MaxValueStack.empty() || i >= m_MaxValueStack.top())
-	{
-		m_MaxValueStack.push(i);
-	}
+    if(m_MaxValueStack.empty() || i >= m_MaxValueStack.top())
+    {
+        m_MaxValueStack.push(i);
+    }
 }
 
 void
 CMaxStack::m_vPop()
 {
-	if(m_MaxValueStack.top() == m_oStack.top())
-	{
-		m_MaxValueStack.pop();
-	}
+    if(m_MaxValueStack.top() == m_oStack.top())
+    {
+        m_MaxValueStack.pop();
+    }
 
-	m_oStack.pop();
+    m_oStack.pop();
 }
 
-int 
+int
 CMaxStack::m_iMaxElement()
 {
-	return m_MaxValueStack.top();
+    return m_MaxValueStack.top();
 }
 
 bool CMaxStack::m_bEmpty()
 {
-	return m_oStack.empty() ? true : false;
+    return m_oStack.empty() ? true : false;
 }
 
 int CMaxStack::m_iTop()
 {
-	return m_oStack.top();
+    return m_oStack.top();
 }
 ```
-
 
 ### CMaxQueue.h
 
@@ -109,22 +105,21 @@ int CMaxStack::m_iTop()
 class CMaxQueue
 {
 public:
-	CMaxQueue();
-	~CMaxQueue();
+    CMaxQueue();
+    ~CMaxQueue();
 
-	void m_vPush(int i);
-	void m_vPop();
-	int m_iMaxElement();
-	bool m_bEmpty();
+    void m_vPush(int i);
+    void m_vPop();
+    int m_iMaxElement();
+    bool m_bEmpty();
 
 private:
-	CMaxStack m_oPushStack;
-	CMaxStack m_oPopStack;
+    CMaxStack m_oPushStack;
+    CMaxStack m_oPopStack;
 };
 
 #endif
 ```
-
 
 ### CMaxQueue.cpp
 
@@ -139,58 +134,56 @@ CMaxQueue::~CMaxQueue()
 {
 }
 
-void 
+void
 CMaxQueue::m_vPush(int i)
 {
-	m_oPushStack.m_vPush( i );
+    m_oPushStack.m_vPush( i );
 }
 
 void
 CMaxQueue::m_vPop()
 {
-	if( m_oPopStack.m_bEmpty() )
-	{
-		while ( ! m_oPushStack.m_bEmpty() )
-		{
-			m_oPopStack.m_vPush( m_oPushStack.m_iTop() );
-			m_oPushStack.m_vPop();
-		}
-		if( m_oPopStack.m_bEmpty() )
-		{
-			return ;
-		}
-	}
+    if( m_oPopStack.m_bEmpty() )
+    {
+        while ( ! m_oPushStack.m_bEmpty() )
+        {
+            m_oPopStack.m_vPush( m_oPushStack.m_iTop() );
+            m_oPushStack.m_vPop();
+        }
+        if( m_oPopStack.m_bEmpty() )
+        {
+            return ;
+        }
+    }
 
-	m_oPopStack.m_vPop();
+    m_oPopStack.m_vPop();
 }
 
-int 
+int
 CMaxQueue::m_iMaxElement()
 {
-	if(!m_oPushStack.m_bEmpty() && !m_oPopStack.m_bEmpty())
-	{
-		int iPushMax = m_oPushStack.m_iMaxElement();
-		int iPopMax = m_oPopStack.m_iMaxElement();
-		return iPushMax > iPopMax ? iPushMax : iPopMax;
-	}
-	else if(m_oPushStack.m_bEmpty() && !m_oPopStack.m_bEmpty())
-	{
-		return m_oPopStack.m_iMaxElement();
-	}
-	else if(!m_oPushStack.m_bEmpty() && m_oPopStack.m_bEmpty())
-	{
-		return m_oPushStack.m_iMaxElement();
-	}
+    if(!m_oPushStack.m_bEmpty() && !m_oPopStack.m_bEmpty())
+    {
+        int iPushMax = m_oPushStack.m_iMaxElement();
+        int iPopMax = m_oPopStack.m_iMaxElement();
+        return iPushMax > iPopMax ? iPushMax : iPopMax;
+    }
+    else if(m_oPushStack.m_bEmpty() && !m_oPopStack.m_bEmpty())
+    {
+        return m_oPopStack.m_iMaxElement();
+    }
+    else if(!m_oPushStack.m_bEmpty() && m_oPopStack.m_bEmpty())
+    {
+        return m_oPushStack.m_iMaxElement();
+    }
 }
 
-bool 
+bool
 CMaxQueue::m_bEmpty()
 {
-	return (m_oPushStack.m_bEmpty() && m_oPopStack.m_bEmpty()) ? true : false;
+    return (m_oPushStack.m_bEmpty() && m_oPopStack.m_bEmpty()) ? true : false;
 }
-
 ```
-
 
 ### main.cpp
 
@@ -199,36 +192,33 @@ CMaxQueue::m_bEmpty()
 
 int main()
 {
-	printf("Hello World!\n");
+    printf("Hello World!\n");
 
-	CMaxQueue oQueue;
+    CMaxQueue oQueue;
 
-	int i;
-	for (i = 0; i < 10; i++)
-	{
-		oQueue.m_vPush( i );
-	}
-	for (i = 10; i > 0; i--)
-	{
-		oQueue.m_vPush( i );
-	}
+    int i;
+    for (i = 0; i < 10; i++)
+    {
+        oQueue.m_vPush( i );
+    }
+    for (i = 10; i > 0; i--)
+    {
+        oQueue.m_vPush( i );
+    }
 
-	if(!oQueue.m_bEmpty()) {
-		printf("oQueue.m_iMaxElement() = %d\n", oQueue.m_iMaxElement());
-	}
+    if(!oQueue.m_bEmpty()) {
+        printf("oQueue.m_iMaxElement() = %d\n", oQueue.m_iMaxElement());
+    }
 
-	for (i = 0; i < 11; i++)
-	{
-		oQueue.m_vPop();
-	}
+    for (i = 0; i < 11; i++)
+    {
+        oQueue.m_vPop();
+    }
 
-	if(!oQueue.m_bEmpty()) {
-		printf("oQueue.m_iMaxElement() = %d\n", oQueue.m_iMaxElement());
-	}
+    if(!oQueue.m_bEmpty()) {
+        printf("oQueue.m_iMaxElement() = %d\n", oQueue.m_iMaxElement());
+    }
 
-	return 0;
+    return 0;
 }
 ```
-
-
-

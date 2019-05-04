@@ -10,7 +10,6 @@ description:
 published: true #default true
 ---
 
-
 ### Question
 
 在n个数中找出最小的k个数.
@@ -99,5 +98,3 @@ int main()
     return 0;
 }
 ```
-
-

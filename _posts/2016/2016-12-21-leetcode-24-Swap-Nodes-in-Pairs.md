@@ -40,11 +40,11 @@ struct ListNode* swapPairs(struct ListNode* head) {
     if (NULL == head || NULL == head->next) {
         return head;
     }
-    
+
     struct ListNode * pCur;
     struct ListNode * pNext;
     struct ListNode * pLastTail;
-    
+
     pLastTail = head;
     pCur = head;
     pNext = pCur->next;
@@ -52,7 +52,7 @@ struct ListNode* swapPairs(struct ListNode* head) {
     {
         pCur->next = pNext->next;
         pNext->next = pCur;
-        
+
         if(pCur == head)
         {
             head = pNext;
@@ -66,7 +66,7 @@ struct ListNode* swapPairs(struct ListNode* head) {
         pCur = pCur->next;
         pNext = pCur != NULL ? pCur->next : NULL;
     }
-    
+
     return head;
 }
 ```

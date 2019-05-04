@@ -14,7 +14,7 @@ published: true #default true
 
 ## 题目
 
-Given a binary tree 
+Given a binary tree
 
 ```
 struct TreeLinkNode {
@@ -27,7 +27,6 @@ struct TreeLinkNode {
 Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL.
 
 Initially, all next pointers are set to NULL.
-
 
 **Note:**
 
@@ -78,18 +77,18 @@ public:
         if(NULL == root) {
             return ;
         }
-        
+
         queue<TreeLinkNode *> nodeQueue;
         nodeQueue.push(root);
         m_vConnect(nodeQueue);
     }
-    
+
     void m_vConnect(queue<TreeLinkNode *> & nodeQueue)
     {
         if(nodeQueue.empty()) {
             return ;
         }
-        
+
         TreeLinkNode * pTail = NULL;
         int iCurSize = nodeQueue.size();
         for (int i = 0; i < iCurSize; i++)
@@ -101,7 +100,7 @@ public:
                 nodeQueue.push(pNode->left);
                 nodeQueue.push(pNode->right);
             }
-            
+
             if(i == 0)
             {
                 pTail = pNode;
@@ -111,9 +110,9 @@ public:
                 pTail->next = pNode;
                 pTail = pNode;
             }
-            
+
         }
-        
+
         m_vConnect(nodeQueue);
     }
 };

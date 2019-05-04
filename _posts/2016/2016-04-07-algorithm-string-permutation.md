@@ -12,7 +12,6 @@ published: true #default true
 
 ## 一、字符串的排列
 
-
 ### Question
 
 用C++写一个函数, 如 Foo(const char *str), 打印出 str 的全排列,
@@ -47,8 +46,7 @@ abcd: abcd a(...) => 6      6*4=24
 abcde: ...                  24*5= 120
 ```
 
-
-**递归代码**
+## 递归代码
 
 ```cpp
 #include <iostream>
@@ -99,19 +97,16 @@ int main()
 }
 ```
 
-
-
 如果字符串中有重复字符的话，上面的那个方法肯定不会符合要求的，因此现在要想办法来去掉重复的数列。
 
-**二、去掉重复的全排列的递归实现**
+## 二、去掉重复的全排列的递归实现
 
 由于全排列就是从第一个数字起每个数分别与它后面的数字交换。我们先尝试加个这样的判断——如果一个数与后面的数字相同那么这二个数就不交换了。如122，第一个数与后面交换得212、221。然后122中第二数就不用与第三个数交换了，但对212，它第二个数与第三个数是不相同的，交换之后得到221。与由122中第一个数与第三个数交换所得的221重复了。所以这个方法不行。
 
 换种思维，对122，第一个数1与第二个数2交换得到212，然后考虑第一个数1与第三个数2交换，此时由于第三个数等于第二个数，所以第一个数不再与第三个数交换。再考虑212，它的第二个数与第三个数交换可以得到解决221。此时全排列生成完毕。
 这样我们也得到了在全排列中去掉重复的规则——去重的全排列就是从第一个数字起每个数分别与它后面非重复出现的数字交换。下面给出完整代码：
 
-
-**Code**
+## Code
 
 ```cpp
 #include <iostream>
@@ -120,7 +115,7 @@ int main()
 #include <string.h>
 using namespace std;
 
-//在[nBegin,nEnd)区间中是否有字符与下标为pEnd的字符相等  
+//在[nBegin,nEnd)区间中是否有字符与下标为pEnd的字符相等
 bool IsSwap(char * pBegin, char * pEnd)
 {
     for (char * p = pBegin; p < pEnd; p++)
@@ -139,7 +134,7 @@ void Permutation(char * pStr, char * pBegin)
         static int num = 0;
         printf("num=%d, %s\n", ++num, pStr);
     } else {
-        for (char * pCh = pBegin; *pCh != '\0'; pCh++)//第pBegin个数分别与它后面的数字交换就能得到新的排列     
+        for (char * pCh = pBegin; *pCh != '\0'; pCh++)//第pBegin个数分别与它后面的数字交换就能得到新的排列
         {
             if(IsSwap(pBegin, pCh)) {
                 swap(*pBegin, *pCh);
@@ -157,7 +152,6 @@ int main()
     return 0;
 }
 ```
-
 
 ### 三、全排列的非递归实现
 
@@ -202,18 +196,18 @@ bool Next_permutation(char a[])
     {
         q = p;
         p--;
-        if(*p < *q) //找降序的相邻2数,前一个数即替换数   
+        if(*p < *q) //找降序的相邻2数,前一个数即替换数
         {
-            pFind = pEnd; //从后向前找比替换点大的第一个数  
+            pFind = pEnd; //从后向前找比替换点大的第一个数
             while (*pFind < *p) {
                 --pFind;
             }
             swap(*p, *pFind);
-            Reverse(q, pEnd); //替换点后的数全部反转  
+            Reverse(q, pEnd); //替换点后的数全部反转
             return true;
         }
     }
-    Reverse(a, pEnd); //如果没有下一个排列,全部反转后返回false    
+    Reverse(a, pEnd); //如果没有下一个排列,全部反转后返回false
     return false;
 }
 
@@ -234,8 +228,6 @@ int main()
 1. 全排列就是从第一个数字起每个数分别与它后面的数字交换。
 2. 去重的全排列就是从第一个数字起每个数分别与它后面非重复出现的数字交换。
 3. 全排列的非递归就是由后向前找替换数和替换点，然后由后向前找第一个比替换数大的数与替换数交换，最后颠倒替换点后的所有数据。
-
-
 
 ## 二、字符串的组合
 
@@ -295,39 +287,39 @@ int main()
 }
 ```
 
-**位运算解法**
+## 位运算解法
 
 ```cpp
-#include<iostream>  
-using namespace std;  
+#include<iostream>
+using namespace std;
 
-int a[] = {1,3,5,4,6};  
-char str[] = "abcde";  
+int a[] = {1,3,5,4,6};
+char str[] = "abcde";
 
-void print_subset(int n , int s)  
-{  
-    printf("{");  
-    for(int i = 0 ; i < n ; ++i)  
-    {  
-        if( s&(1<<i) )         
-            printf("%c ",str[i]);  
-    }  
-    printf("}\n");  
-}  
+void print_subset(int n , int s)
+{
+    printf("{");
+    for(int i = 0 ; i < n ; ++i)
+    {
+        if( s&(1<<i) )
+            printf("%c ",str[i]);
+    }
+    printf("}\n");
+}
 
-void subset(int n)  
-{  
-    for(int i= 0 ; i < (1<<n) ; ++i)  
-    {  
-        print_subset(n,i);  
-    }  
-}  
+void subset(int n)
+{
+    for(int i= 0 ; i < (1<<n) ; ++i)
+    {
+        print_subset(n,i);
+    }
+}
 
-int main(void)  
-{  
-    subset(5);  
-    return 0;  
-}  
+int main(void)
+{
+    subset(5);
+    return 0;
+}
 ```
 
 ### 字符串全排列扩展----八皇后问题
@@ -336,9 +328,7 @@ int main(void)
 
 <img src="{{ site.url }}/images/201604/07_04.png" alt="07_04" />
 
-
 由于八个皇后的任意两个不能处在同一行，那么这肯定是每一个皇后占据一行。于是我们可以定义一个数组ColumnIndex[8]，数组中第i个数字表示位于第i行的皇后的列号。先把ColumnIndex的八个数字分别用0-7初始化，接下来我们要做的事情就是对数组ColumnIndex做全排列。由于我们是用不同的数字初始化数组中的数字，因此任意两个皇后肯定不同列。我们只需要判断得到的每一个排列对应的八个皇后是不是在同一对角斜线上，也就是数组的两个下标i和j，是不是i-j==ColumnIndex[i]-ColumnIndex[j]或者j-i==ColumnIndex[i]-ColumnIndex[j]。
-
 
 ```cpp
 #include <stdio.h>
@@ -405,7 +395,6 @@ int main()
 }
 ```
 
-
 ### 题目：输入两个整数n和m，从数列1,2,3...n中随意取几个数，使其和等于m，要求列出所有的组合。
 
 ```cpp
@@ -422,7 +411,7 @@ void find_factor(int sum, int n)
         return ;
     }
 
-    if(sum == n) //输出找到的数 
+    if(sum == n) //输出找到的数
     {
         list1.reverse();
         for (list<int>::iterator it=list1.begin();

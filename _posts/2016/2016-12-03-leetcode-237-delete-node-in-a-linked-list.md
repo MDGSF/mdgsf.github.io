@@ -16,7 +16,7 @@ published: true #default true
 
 Write a function to delete a node (except the tail) in a singly linked list, given only access to that node.
 
-Supposed the linked list is 1 -> 2 -> 3 -> 4 and you are given the third node with value 3, 
+Supposed the linked list is 1 -> 2 -> 3 -> 4 and you are given the third node with value 3,
 the linked list should become 1 -> 2 -> 4 after calling your function.
 
 ## 题目翻译
@@ -37,7 +37,7 @@ void deleteNode(struct ListNode* node) {
     if(NULL == node) {
         return;
     }
-    
+
     struct ListNode * pNextNode = node->next;
     node->val = pNextNode->val;
     node->next = pNextNode->next;

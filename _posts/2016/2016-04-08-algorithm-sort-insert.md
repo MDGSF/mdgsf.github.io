@@ -16,8 +16,6 @@ published: true #default true
 2. 将a[i]并入当前的有序区a[0…i-1]中形成a[0…i]的有序区间。
 3. i++并重复第二步直到i==n-1。排序完成。
 
-
-
 ```cpp
 //ai[10] = {1,2,3...,8,9,10}; iStart=0, iEnd=10;
 void vInsertionSort(int ai[], int iStart, int iEnd)
@@ -89,9 +87,7 @@ int main()
 }
 ```
 
-
 int a[] = {5,1,3,4,9,7,6,10,2,8};
-
 
 vInsertSortWithGap(a, 10, 1, 0);
 
@@ -99,13 +95,11 @@ vInsertSortWithGap(a, 10, 1, 0);
 
 <hr />
 
-
 vInsertSortWithGap(a, 10, 2, 0);
 
 输出：`2` 1 `3` 4 `5` 7 `6` 10 `9` 8
 
 <hr />
-
 
 vInsertSortWithGap(a, 10, 2, 1);
 
@@ -113,12 +107,10 @@ vInsertSortWithGap(a, 10, 2, 1);
 
 <hr />
 
-
 vInsertSortWithGap(a, 10, 3, 0);
 
 输出：`4` 1 3 `5` 9 7 `6` 10 2 `8`
 
 <hr />
-
 
 看懂上面的程序之后，就可以学[希尔排序](http://mdgsf.github.io/ai/2016/04/08/ai-sort-shellSort.html)了。

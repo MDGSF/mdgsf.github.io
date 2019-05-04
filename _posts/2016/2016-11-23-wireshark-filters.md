@@ -9,7 +9,6 @@ description:
 published: true
 ---
 
-
 ### Capture filters
 
 ```
@@ -39,7 +38,7 @@ IPV6 only.
 
 
 6.
-tcp 
+tcp
 TCP only.
 
 
@@ -62,7 +61,7 @@ TCP or UDP port 80 (HTTP)
 capture packet except port 80.
 
 10.
-tcp port http 
+tcp port http
 HTTP TCP port(80)
 
 11.
@@ -139,7 +138,6 @@ not broadcast and not multicast
 
 ```
 
-
 ### Display filters
 
 ```
@@ -180,10 +178,4 @@ display the packet len is less than 128 byte.
 
 11.
 [smtp||pop||imap]
-
-
 ```
-
-
-
-

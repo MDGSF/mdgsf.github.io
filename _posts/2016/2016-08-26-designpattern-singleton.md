@@ -10,7 +10,6 @@ description:
 published: true #default true
 ---
 
-
 ### CLocker.h
 
 ```
@@ -33,9 +32,7 @@ private:
 #endif
 ```
 
-
 ## 懒汉模式
-
 
 ### CLazySingleton.h
 
@@ -73,7 +70,6 @@ private:
 #endif
 ```
 
-
 ### CLazySingleton.cpp
 
 ```
@@ -108,7 +104,6 @@ CLazySingleton::~CLazySingleton()
 }
 ```
 
-
 ## 饿汉模式
 
 ### CHungrySingleton.h
@@ -129,7 +124,6 @@ private:
 
 #endif
 ```
-
 
 ### CHungrySingleton.cpp
 
@@ -154,8 +148,6 @@ CHungrySingleton::~CHungrySingleton()
     printf("CHungrySingleton::~CHungrySingleton()\n");
 }
 ```
-
-
 
 ### main.cpp
 
@@ -183,7 +175,6 @@ int main()
 }
 ```
 
-
 ### Makefile
 
 ```
@@ -202,13 +193,8 @@ OBJS= \
 
 
 $(TARGET): $(OBJS)
-    $(CXX) $(CFLAGS) -o $@ $(OBJS) 
+    $(CXX) $(CFLAGS) -o $@ $(OBJS)
 
 clean:
     rm -rf *.o $(TARGET)
 ```
-
-
-
-
-

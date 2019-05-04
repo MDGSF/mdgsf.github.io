@@ -67,7 +67,7 @@ bool stack_isEmpty(SStack * pStack) {
 
 bool isValid(char * s) {
     int iLen = strlen(s);
-    
+
     SStack * pStack = stack_init(iLen);
     for (int i = 0; i < iLen; i++)
     {

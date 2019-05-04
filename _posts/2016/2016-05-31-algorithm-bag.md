@@ -13,13 +13,11 @@ published: true
 
 [http://blog.csdn.net/dapengbusi/article/details/7463968](http://blog.csdn.net/dapengbusi/article/details/7463968)
 
-
 ### 问题描述
 
 给定n种物品和一背包。物品i的重量是wi，其价值为vi，背包的容量为C。问应如何选择装入背包的物品，使得装入背包中物品的总价值最大?
 
 对于一种物品，要么装入背包，要么不装。所以对于一种物品的装入状态可以取0和1.我们设物品i的装入状态为xi,xi∈ (0,1)，此问题称为0-1背包问题。
-
 
 ### 举例分析
 
@@ -38,8 +36,6 @@ published: true
 Ø背包的最大容量为10，那么在设置数组m大小时，可以设行列值为6和11，
 
 那么，对于m(i,j)就表示可选物品为i…n背包容量为j(总重量)时背包中所放物品的最大价值。
-
-
 
 <img src="{{ site.url }}/images/201605/31_01.png" alt="31_01" />
 
@@ -70,7 +66,6 @@ published: true
 <img src="{{ site.url }}/images/201605/31_14.png" alt="31_14" />
 
 <img src="{{ site.url }}/images/201605/31_15.png" alt="31_15" />
-
 
 ```cpp
 #include <iostream>

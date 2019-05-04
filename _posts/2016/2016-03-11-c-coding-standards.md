@@ -9,7 +9,6 @@ description:
 published: true
 ---
 
-
 ### 1. #defines and  const
 
 test.h
@@ -41,7 +40,7 @@ i  : returns a int
 ```cpp
 long m_lGetValues();
 m_ : a member of a class
-l  : returns a long 
+l  : returns a long
 ```
 
 ```cpp
@@ -65,7 +64,7 @@ uc : This returns unsigned char
 
 ```cpp
 bool bIsRunning();
-b : returns a bool 
+b : returns a bool
 ```
 
 ```cpp
@@ -79,7 +78,7 @@ If the function is not a member of a class, then 'm_' prefix is not used.Example
 ```cpp
 //global function
 int g_iGetValues();
-g_ : a global functions 
+g_ : a global functions
 i  : returns a int
 ```
 

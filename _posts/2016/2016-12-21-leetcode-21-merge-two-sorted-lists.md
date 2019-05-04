@@ -14,7 +14,7 @@ published: true #default true
 
 ## 题目
 
-Merge two sorted linked lists and return it as a new list. 
+Merge two sorted linked lists and return it as a new list.
 The new list should be made by splicing together the nodes of the first two lists.
 
 ## 题目翻译
@@ -41,7 +41,7 @@ struct ListNode* mergeTwoLists(struct ListNode* l1, struct ListNode* l2) {
     if(NULL == l2) {
         return l1;
     }
-    
+
     struct ListNode stDump;
     struct ListNode * pNewHead;
     pNewHead = &stDump;
@@ -59,18 +59,18 @@ struct ListNode* mergeTwoLists(struct ListNode* l1, struct ListNode* l2) {
         }
         pNewHead = pNewHead->next;
     }
-    
-    
+
+
     if (l1 != NULL)
     {
         pNewHead->next = l1;
     }
-    
+
     if(l2 != NULL)
     {
         pNewHead->next = l2;
     }
-    
+
     return stDump.next;
 }
 ```

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[位运算] 数组中只出现1次的两个数字"
+title:  "[位运算] 数组中只出现 1 次的两个数字"
 date:   2016-04-10
 comments: true
 categories: Art
@@ -8,7 +8,6 @@ tags: [C]
 description:
 published: true
 ---
-
 
 首先来看题目要求：
 
@@ -41,7 +40,6 @@ a[5] =2  0x00`1`0  第二组
 第一组有{1, 1, 5}，第二组有{3, 2, 3}，明显对这二组分别执行“异或”解法就可以得到5和3了。
 
 分析至些，相信代码不难写出，下面给出完整的源代码：
-
 
 ```cpp
 #include <stdio.h>

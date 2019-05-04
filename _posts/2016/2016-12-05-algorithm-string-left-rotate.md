@@ -18,7 +18,6 @@ published: true #default true
 
 将字符串"abcdef"的前面3个字符移动到尾部，那么原字符串变成"defabc"。
 
-
 ```cpp
 #include <stdio.h>
 #include <string.h>
@@ -88,6 +87,3 @@ int main()
     return 0;
 }
 ```
-
-
-

@@ -11,9 +11,10 @@ published: true #default true
 ---
 
 电脑A： 192.168.10.105
+
 电脑B： 192.168.10.100
 
-mysql安装在 电脑A 上，在电脑A上可以用localhost访问mysqli
+mysql 安装在 电脑A 上，在电脑A上可以用localhost访问mysqli
 
 但是在 电脑B 上，通过连接到电脑A的ip却无法访问。
 
@@ -21,8 +22,8 @@ mysql安装在 电脑A 上，在电脑A上可以用localhost访问mysqli
 
 在电脑A上，用localhost进入数据库
 
-需更改 mysql 数据库里的 user表里的 host项
+需更改 mysql 数据库里的 user表里的 host 项
 
-把localhost改称%
+把 localhost 改称 %
 
-然后重启mysql就可以了。
+然后重启 mysql 就可以了。

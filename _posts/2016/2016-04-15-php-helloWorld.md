@@ -37,7 +37,6 @@ File --> Settings --> Editor --> Colors & Fonts --> Font
 
 先点击 `Save As...` 按钮，随便保存一个，不然不能修改字体大小。
 
-
 2.**显示行号**
 
 File --> Settings --> Editor --> General --> Appearance
@@ -58,27 +57,23 @@ change all others file encodings to utf-8.
 
 this setting must be restart PhpStorm to take effect.
 
-
 改个bug：
 
 File --> **Default Settings** --> Editor --> File Encodings
 
 这里要用 **Default Settings** ，不然每次新建一个项目的时候，字符编码就又会变成 GBK。
 
-
 5.**给.ctp结尾的文件设置为HTML着色**
 
 File --> Settings --> Editor --> File Types
 
-
-###  wnmp 安装
+### wnmp 安装
 
 一直点击下一步就可以了。
 
 这是安装成功之后的图片：
 
 <img src="{{ site.url }}/images/201604/15_01.png" alt="15_01" />
-
 
 ### 建立第一个PHP程序 Hello World
 
@@ -102,7 +97,7 @@ echo "hello world";
 ?>
 ```
 
-**开启 wnmp**
+开启 wnmp
 
 修改 nginx.conf 配置文件
 
@@ -141,13 +136,14 @@ server {
 
 最后，在浏览器中输入
 
+```
 http://localhost/hello.php
+```
 
 在界面上看到 hello world 了，就说明成功了。
 
-
-**注意：**
+注意：
 
 如果改为 `root E:\PHP\Code;`
 
-浏览器中输入  http://localhost/HelloWorld/hello.php 也是可以的，但是不要这么使用，有的时候会有问题。
+浏览器中输入  `http://localhost/HelloWorld/hello.php` 也是可以的，但是不要这么使用，有的时候会有问题。

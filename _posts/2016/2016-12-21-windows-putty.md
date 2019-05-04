@@ -9,7 +9,6 @@ description:
 published: true
 ---
 
-
 <img src="{{ site.url }}/images/201612/21_05.png" alt="21_05" />
 
 <img src="{{ site.url }}/images/201612/21_06.png" alt="21_06" />
@@ -29,6 +28,3 @@ published: true
 <img src="{{ site.url }}/images/201612/21_13.png" alt="21_13" />
 
 <img src="{{ site.url }}/images/201612/21_14.png" alt="21_14" />
-
-
-

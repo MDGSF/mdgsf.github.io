@@ -9,13 +9,6 @@ description:
 published: true
 ---
 
-
 ```
 netstat -ano | findstr "12581"
 ```
-
-
-
-
-
-

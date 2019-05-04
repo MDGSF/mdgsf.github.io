@@ -9,7 +9,6 @@ description: "vim syntax for c++"
 published: true
 ---
 
-
 ### c++ syntax 文件下载
 
 <a href="http://pan.baidu.com/s/1qWQO7q0" target="_blank">百度云</a>

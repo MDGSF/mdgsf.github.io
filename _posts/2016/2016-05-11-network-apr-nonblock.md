@@ -10,7 +10,6 @@ description:
 published: true #default true
 ---
 
-
 ### Unix
 
 | APR_SO_NONBLOCK | timeout value to apr_socket_timeout_set() | mode           |
@@ -35,7 +34,6 @@ published: true #default true
 |  off(==1)       |  t < 0      | non-blocking                                 |
 |  off(==1)       |  t > 0      | non-blocking                                 |
 
-
 The default mode is APR_SO_NONBLOCK==0(off) and APR_SO_TIMEOUT==-1.
 
 Namely, default socket is blocking-forever on both Unix and Windows.
@@ -47,7 +45,6 @@ Namely, default socket is blocking-forever on both Unix and Windows.
 [b] When you want a **blocking-with-timeout** socket, set it to 'APR_SO_NONBLOCK==0(off) and timeout>0'. Note that you must keep the order of calling the APIs. You must call apr_socket_opt_set(sock, APR_SO_NONBLOCK, 1) and then call apr_socket_timeout_set(sock, timeout). Otherwise, on Unix the socket becomes blocking-forever.
 
 [c] When you want a **blocking-forever** socket, set it to 'APR_SO_NONBLOCK==0(off) and timeout<0'. In my opinion, we merely need blocking-forever sockets for real application.
-
 
 ### Functions
 
@@ -94,10 +91,6 @@ apr_socket_recv(sock, ...);
 ```
 
 Blocking-with-timeout apr_socket_connect() returns APR_SUCCESS if the connection has been established successfully. Otherwise, it returns an error value. For example, APR_TIMEUP, APR_ECONNREFUSED, or APR_EHOSTUNREACH. If error value is APR_ECONNREFUSED, the server process's listen(2) backlog is beyond the limit. Please see apr_socket_listen() description above.
-
-
-
-
 
 ### 链接
 

@@ -10,13 +10,11 @@ description: ""
 published: true #default true
 ---
 
-
 double fork 一共有两个作用。
 
 1. 生成 daemon 进程。
 
 2. 防止产生僵尸进程。
-
 
 ## 生成 daemon 进程
 
@@ -81,8 +79,6 @@ setsid 函数用于创建一个新的会话，并担任该会话组的组长。�
 同文件权限码一样，用 fork 函数新建的子进程会从父进程那里继承一些已经打开了的文件。这些被打开的文件可能永远不会被守护进程读写，
 但它们一样消耗系统资源，而且可能导致所在的文件系统无法卸下。在上面的第二步之后，守护进程已经与所属的控制终端失去了联系。因此从终端输入的字符不可能达到守护进程，守护进程中用常规方法（如printf）输出的字符也不可能在终端上显示出来。所以，文件描述符为0、1和2 的3个文件（常说的输入、输出和报错）已经失去了存在的价值，也应被关闭。
 
-
-
 程序首先调用 fork，并让父进程退出，子进程继续运行。由于子进程是由父进程通过 fork 系统调用派生的，因此子进程继承父进程的进程组号，但它拥有自己的进程号；然后调用 setsid 创建一个新的 session[3]，子进程是该 session 中唯一的进程，并且是该 session 的 leader（或者说是 creator），同时也是新创建的进程组的 leader。在调用 setsid 以后，调用进程将不再拥有控制终端。第二次 fork 的目的在于，确保当进程打开终端设备时，也无法获得控制终端，这是因为由 session leader 派生的子进程一定不是session leader，也就无法获得控制终端；接下来的 chdir 系统调用是更改守护进程的工作目录，假设守护进程是在 vfat 文件系统中启动的，如果没有使用 chdir 来更改守护进程的工作目录，那么在守护进程进入后台运行后，此 vfat 文件系统就有可能无法卸载（unmount）。事实上，在 Linux 系统中，即使使用了 chdir 来更改守护进程的工作目录，启动该守护进程的文件系统仍然无法卸载。在实际使用中，chdir 更多地用于满足服务器本身的处理需求；最后的 umask(0) 是为了在守护进程创建自己的文件时，文件权限位不受原有文件创建掩码的权限位的影响。
 
 ```
@@ -145,13 +141,12 @@ if(g_global.m_bDaemon)
         close(fd);
     }
 
-    //redirect to stdout ot file, because of buffer exists, if you want to 
+    //redirect to stdout ot file, because of buffer exists, if you want to
     //see result immediately, just call fflush(NULL);
     printf("STDIN_FILENO=%d, STDOUT_FILENO=%d, STDERR_FILENO=%d\n", STDIN_FILENO, STDOUT_FILENO, STDERR_FILENO);
     fflush(NULL);
 }
 ```
-
 
 ## 防止产生僵尸进程
 
@@ -166,7 +161,6 @@ if(g_global.m_bDaemon)
 
 但是孤儿进程并不会像上面画的那样持续很长时间，当系统发现孤儿进程时，init 进程就收养孤儿进程，
 成为它的父亲，child 进程 exit 后的资源回收就都由 init 进程来完成。
-
 
 ### 僵尸进程
 
@@ -207,32 +201,32 @@ int main()
         printf("fork 1 failed\n");
         return -1;
     }
-    if(pid == 0) 
+    if(pid == 0)
     {
         //first child
-        
+
         pid = fork();
         if(pid < 0) {
             printf("fork 2 failed\n");
             return -1;
         }
         if(pid > 0) {
-            exit(0); //parent from the second fork == first child 
+            exit(0); //parent from the second fork == first child
         }
-        
+
         //we are the second child.
         sleep(2);
         printf("second child, parent id = %d\n", getppid());
         exit(0);
     }
-    
+
     //we are the parent.
 
     //wait for first child
     if(waitpid(pid, NULL, 0) != pid) {
         printf("waitpid error\n");
     }
-    
+
     return 0;
 }
 ```

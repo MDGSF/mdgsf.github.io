@@ -9,8 +9,6 @@ description:
 published: true
 ---
 
-
-
 ```
 #include <stdio.h>
 #include <stdlib.h>
@@ -40,7 +38,7 @@ sys_arch_protect(void)
     return 0;
 }
 
-void 
+void
 sys_arch_unprotect(sys_prot_t pval)
 {
     LWIP_UNUSED_ARG(pval);
@@ -89,5 +87,3 @@ int main()
 ```
 
 g++ main.cpp -pthread
-
-

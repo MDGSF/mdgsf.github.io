@@ -58,7 +58,6 @@ private:
 #endif // CCHECKBOX_H
 ```
 
-
 <strong>checkbox.cpp</strong>
 
 ```cpp

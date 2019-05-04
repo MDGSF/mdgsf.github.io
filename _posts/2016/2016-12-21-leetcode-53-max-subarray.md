@@ -38,13 +38,13 @@ int maxSubArray(int* nums, int numsSize) {
         {
             iAns = iSum;
         }
-        
+
         if(iSum < 0)
         {
             iSum = 0;
         }
     }
-    
+
     return iAns;
 }
 ```
@@ -60,7 +60,6 @@ iAns 用来保存最大的子数组的和
 <img src="{{ site.url }}/images/201612/21_01.png" alt="21_01" />
 
 上图这种情况，B作为A的前缀，则B一定被**先计算过**。当A被抛弃时，B的结果已经被保存到iAns中过了。
-
 
 <img src="{{ site.url }}/images/201612/21_02.png" alt="21_02" />
 

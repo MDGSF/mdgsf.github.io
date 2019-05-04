@@ -9,9 +9,7 @@ description:
 published: true
 ---
 
-
-
-```
+```cpp
 #include <stdio.h>
 
 int a = 1;

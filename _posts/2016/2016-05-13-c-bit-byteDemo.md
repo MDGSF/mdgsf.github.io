@@ -9,8 +9,6 @@ description:
 published: true
 ---
 
-
-
 ```cpp
 #include <stdio.h>
 

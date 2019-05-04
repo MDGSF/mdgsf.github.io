@@ -55,8 +55,7 @@ published: true
 　　对于前 60% 的测试用例，需要正规化的路径都是绝对路径。
 ```
 
-
-```
+```cpp
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -70,7 +69,7 @@ published: true
 #define LOG(format, ...) \
     printf("<"__FILE__">(%05d): "format"", __LINE__, ##__VA_ARGS__)
 #else
-#define LOG(format, ...) 
+#define LOG(format, ...)
 #endif
 /***    log end    ***/
 

@@ -9,7 +9,6 @@ description:
 published: true
 ---
 
-
 ```cpp
 PList pReverseList(PList head)
 {

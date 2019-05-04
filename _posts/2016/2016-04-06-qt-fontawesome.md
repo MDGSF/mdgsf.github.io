@@ -57,6 +57,7 @@ private:
 
 #endif // ICONHELPER_H
 ```
+
 <strong>iconhelper.cpp</strong>
 
 ```cpp

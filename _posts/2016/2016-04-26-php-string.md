@@ -10,9 +10,6 @@ description:
 published: true #default true
 ---
 
-
-
-
 ```php
 <html>
 <head>

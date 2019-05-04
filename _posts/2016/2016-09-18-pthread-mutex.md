@@ -9,9 +9,7 @@ description:
 published: true
 ---
 
-
-
-```
+```cpp
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
@@ -49,7 +47,7 @@ void * dotprod(void * arg)
         g_dotstr.sum += (x[i] * y[i]);
         pthread_mutex_unlock(&mutex);
     }
-    
+
     pthread_exit((void*)0);
 }
 

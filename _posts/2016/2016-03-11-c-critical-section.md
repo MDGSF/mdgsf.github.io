@@ -9,7 +9,6 @@ description:
 published: true
 ---
 
-
 ```cpp
 CRITICAL_SECTION g_cs;
 InitializeCriticalSectionAndSpinCount(&g_cs, 400);
@@ -49,5 +48,3 @@ int main()
     return 0;
 }
 ```
-
-

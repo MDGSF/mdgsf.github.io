@@ -9,8 +9,6 @@ description:
 published: true
 ---
 
-
-
 ### 参考链接：
 
 [http://blog.csdn.net/zpxili/article/details/11542041](http://blog.csdn.net/zpxili/article/details/11542041)
@@ -23,7 +21,6 @@ published: true
 
 用wireshark抓包又能够抓到正确的reply包。调试了好久，修改如下。
 
-
 ### CPing.h
 
 ```cpp
@@ -34,7 +31,7 @@ published: true
 typedef struct _SICMPHDR        //icmp
 {
     unsigned char    icmp_type;
-    unsigned char    icmp_code;    
+    unsigned char    icmp_code;
     unsigned short    icmp_checksum;
     unsigned short    icmp_id;
     unsigned short    icmp_sequence;
@@ -111,7 +108,7 @@ CPing::~CPing()
     }
     WSACleanup();
 }
-void 
+void
 CPing::m_vPing()
 {
     char acName[] = "www.vidagrid.com";
@@ -173,8 +170,8 @@ CPing::m_vPing()
         }
         int iCurUsedTime = GetTickCount() - icmpRecv->icmp_timestamp;
         printf("Reply from %s: bytes=%d time=%ums TTL=%d\n",
-            inet_ntoa(stRcvAddr.sin_addr), 
-            DATA_SIZE, 
+            inet_ntoa(stRcvAddr.sin_addr),
+            DATA_SIZE,
             iCurUsedTime,
             ipHead->ip_TTL);
         iSumTime += iCurUsedTime;
@@ -192,15 +189,15 @@ CPing::m_vPing()
     }
     //show statistics
     printf("\nPing statistics for %s:\n", acIPAddr);
-    printf("\tPackets: Sent = %d, Received = %d, Lost = %d (%.2lf%% loss),\n", 
+    printf("\tPackets: Sent = %d, Received = %d, Lost = %d (%.2lf%% loss),\n",
         SEND_PACKAGE_SIZE, iCount, SEND_PACKAGE_SIZE-iCount, ((double)(SEND_PACKAGE_SIZE-iCount))/SEND_PACKAGE_SIZE*100 );
     printf("Approximate round trip times in milli-seconds:\n");
-    printf("\tMinimum = %dms, Maximum = %dms, Average = %dms\n", 
+    printf("\tMinimum = %dms, Maximum = %dms, Average = %dms\n",
         iMinimum, iMaximum, iSumTime/iCount);
     delete pcIcmp;
     getchar();
 }
-bool 
+bool
 CPing::m_bSendData(char* pcBuf,int iBufLen,sockaddr_in* pstAddr)
 {
     printf("CPing::m_bSendData() \n");
@@ -232,7 +229,7 @@ CPing::m_bSendData(char* pcBuf,int iBufLen,sockaddr_in* pstAddr)
     }
     return true;
 }
-bool 
+bool
 CPing::m_bRecvData(char* pcBuf,int iBufLen,sockaddr_in* pstRecvAddr,int &riRecvLen)
 {
     printf("CPing::m_bRecvData() \n");
@@ -266,7 +263,7 @@ CPing::m_bRecvData(char* pcBuf,int iBufLen,sockaddr_in* pstRecvAddr,int &riRecvL
     riRecvLen = iRet;
     return true;
 }
-void 
+void
 CPing::m_vInitICMP(PICMPHDR pstICMPHDR,int iSequence)
 {
     if( pstICMPHDR == NULL )
@@ -278,7 +275,7 @@ CPing::m_vInitICMP(PICMPHDR pstICMPHDR,int iSequence)
     pstICMPHDR->icmp_timestamp = GetTickCount();
     pstICMPHDR->icmp_checksum = 0; //校验值
 }
-unsigned short 
+unsigned short
 CPing::m_usCheckSum(unsigned short *pusBuf,int iLen)
 {
     USHORT cksum=0;
@@ -315,13 +312,6 @@ int main()
 }
 ```
 
+当 icmp_type==8 时，这是一个请求包（ECHO包）。
 
-当icmp_type==8时，这是一个请求包（ECHO包）。
-
-当icmp_type==0时，这是一个响应消息报（ECHO REPLY包），就是对请求包的回应。
-
-
-
-
-
-
+当 icmp_type==0 时，这是一个响应消息报（ECHO REPLY包），就是对请求包的回应。

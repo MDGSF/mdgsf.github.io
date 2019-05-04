@@ -9,7 +9,6 @@ description:
 published: true
 ---
 
-
 ```
 QGraphicsDropShadowEffect *wndShadow = new QGraphicsDropShadowEffect;
 wndShadow->setBlurRadius(9.0);

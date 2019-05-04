@@ -9,7 +9,6 @@ description:
 published: true
 ---
 
-
 ## UAC.manifest 文件
 
 把这个文件放在工程目录下
@@ -32,7 +31,6 @@ published: true
     </trustInfo>
 </assembly>
 ```
-
 
 <img src="{{ site.url }}/images/201603/24_01.png" alt="24_01" />
 

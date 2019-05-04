@@ -10,16 +10,15 @@ description:
 published: true #default true
 ---
 
-
 ### CSingleCore.h
 
 ```
 #ifndef CSINGLE_CORE_H
 #define CSINGLE_CORE_H
 
-enum CTYPE 
+enum CTYPE
 {
-    COREA, 
+    COREA,
     COREB
 };
 
@@ -68,9 +67,7 @@ public:
 };
 
 #endif
-
 ```
-
 
 ### CSingleCore.cpp
 
@@ -115,20 +112,19 @@ void CSingleCoreB::Show()
     printf("CSingleCoreB\n");
 }
 
-CSingleCoreA* 
+CSingleCoreA*
 CFactoryA::CreateSingleCore()
 {
     return new CSingleCoreA();
 }
 
-CSingleCoreB* 
+CSingleCoreB*
 CFactoryB::CreateSingleCore()
 {
     return new CSingleCoreB();
 }
 
 ```
-
 
 ### main.cpp
 
@@ -150,9 +146,7 @@ int main()
 
     return 0;
 }
-
 ```
-
 
 ### Makefile
 
@@ -164,24 +158,15 @@ TARGET=main
 
 OBJS= \
       main.o \
-      CSingleCore.o 
+      CSingleCore.o
 
 %.o : %.cpp
     $(CXX) -c $(CFLAGS) -fno-strict-aliasing $< -o $@
 
 
 $(TARGET): $(OBJS)
-    $(CXX) $(CFLAGS) -o $@ $(OBJS) 
+    $(CXX) $(CFLAGS) -o $@ $(OBJS)
 
 clean:
     rm -rf *.o $(TARGET)
-
 ```
-
-
-
-
-
-
-
-

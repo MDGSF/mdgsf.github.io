@@ -9,7 +9,6 @@ description:
 published: true
 ---
 
-
 ### 计算每个字符出现的次数
 
 ```cpp
@@ -17,32 +16,27 @@ published: true
 
 int main()
 {
-	int i;
-	int c;
-	unsigned char ucAscii[256] = {0};
+    int i;
+    int c;
+    unsigned char ucAscii[256] = {0};
 
-	while ( (c = getchar()) != EOF )
-	{
-		if(c >= 0 && c < 256)
-		{
-			ucAscii[c]++;
-		}
-	}
+    while ( (c = getchar()) != EOF )
+    {
+        if(c >= 0 && c < 256)
+        {
+            ucAscii[c]++;
+        }
+    }
 
-	for (i = 0; i < 256; i++)
-	{
-		printf("(%d|%c):[%d]\n", i, (unsigned char)i, ucAscii[i]);
-	}
-	return 0;
+    for (i = 0; i < 256; i++)
+    {
+        printf("(%d|%c):[%d]\n", i, (unsigned char)i, ucAscii[i]);
+    }
+    return 0;
 }
 ```
 
-
-
-
-
 ### 计算每个单词出现的次数
-
 
 ```cpp
 #include <stdio.h>
@@ -53,8 +47,8 @@ int main()
 
 typedef struct _SWord
 {
-	char m_acWord[BUFSIZ];
-	int m_iCount;
+    char m_acWord[BUFSIZ];
+    int m_iCount;
 }SWord;
 
 SWord g_acWord[MAX_WORD_NUM] = {0};
@@ -62,35 +56,35 @@ int g_iWordIndex = 0;
 
 int main()
 {
-	int i;
-	int bExists;
-	char acWord[BUFSIZ] = {0};
-	while (scanf("%s", acWord) != EOF)
-	{
-		bExists = 0;
-		for (i = 0; i < g_iWordIndex; i++)
-		{
-			if(strcmp(g_acWord[i].m_acWord, acWord) == 0)
-			{
-				bExists = 1;
-				g_acWord[i].m_iCount++;
-				break;
-			}
-		}
+    int i;
+    int bExists;
+    char acWord[BUFSIZ] = {0};
+    while (scanf("%s", acWord) != EOF)
+    {
+        bExists = 0;
+        for (i = 0; i < g_iWordIndex; i++)
+        {
+            if(strcmp(g_acWord[i].m_acWord, acWord) == 0)
+            {
+                bExists = 1;
+                g_acWord[i].m_iCount++;
+                break;
+            }
+        }
 
-		if(!bExists)
-		{
-			strncpy(g_acWord[g_iWordIndex].m_acWord, acWord, BUFSIZ);
-			g_acWord[g_iWordIndex].m_iCount = 1;
-			g_iWordIndex++;
-		}
-	}
+        if(!bExists)
+        {
+            strncpy(g_acWord[g_iWordIndex].m_acWord, acWord, BUFSIZ);
+            g_acWord[g_iWordIndex].m_iCount = 1;
+            g_iWordIndex++;
+        }
+    }
 
-	for (i = 0; i < g_iWordIndex; i++)
-	{
-		printf("%s:[%d]\n", g_acWord[i].m_acWord, g_acWord[i].m_iCount);
-	}
-	return 0;
+    for (i = 0; i < g_iWordIndex; i++)
+    {
+        printf("%s:[%d]\n", g_acWord[i].m_acWord, g_acWord[i].m_iCount);
+    }
+    return 0;
 }
 
 ```
@@ -100,7 +94,6 @@ int main()
 换成 **hash表** 或者 **红黑树** 可以提高效率。
 
 最后给一个C++的实现。
-
 
 ```cpp
 #include <iostream>
@@ -112,39 +105,30 @@ using namespace std;
 
 int main()
 {
-	char acWord[BUFSIZ] = {0};
-	map<string, int> wordmap;
-	while (scanf("%s", acWord) != EOF)
-	{
-		string strWord = acWord;
-		map<string, int>::iterator iter = wordmap.find(strWord);
-		if(iter == wordmap.end())
-		{
-			wordmap.insert( std::pair<string, int>(strWord, 1) );
-		}
-		else
-		{
-			iter->second++;
-		}
-	}
+    char acWord[BUFSIZ] = {0};
+    map<string, int> wordmap;
+    while (scanf("%s", acWord) != EOF)
+    {
+        string strWord = acWord;
+        map<string, int>::iterator iter = wordmap.find(strWord);
+        if(iter == wordmap.end())
+        {
+            wordmap.insert( std::pair<string, int>(strWord, 1) );
+        }
+        else
+        {
+            iter->second++;
+        }
+    }
 
 
-	map<string, int>::iterator iter = wordmap.begin();
-	while (iter != wordmap.end())
-	{
-		printf("%s[%d]\n", const_cast<char*>(iter->first.c_str()), iter->second);
-		++iter;
-	}
+    map<string, int>::iterator iter = wordmap.begin();
+    while (iter != wordmap.end())
+    {
+        printf("%s[%d]\n", const_cast<char*>(iter->first.c_str()), iter->second);
+        ++iter;
+    }
 
-	return 0;
+    return 0;
 }
 ```
-
-
-
-
-
-
-
-
-

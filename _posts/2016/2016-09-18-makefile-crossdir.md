@@ -33,8 +33,8 @@ CXXFLAGS = -Wall $(CROSSCFLAGS) -fsigned-char
 COMMONFLAGS = -Wall $(CROSSCFLAGS) -fsigned-char
 ARFLAGS = rs
 LINKFLAGS=
-DYLINKFLAGS = -Wl,--retain-symbols-file=ExportedFunctions -fPIC --share 
-DEBUGFLAGS = $(COMMONFLAGS) -g -D_DEBUG -Werror 
+DYLINKFLAGS = -Wl,--retain-symbols-file=ExportedFunctions -fPIC --share
+DEBUGFLAGS = $(COMMONFLAGS) -g -D_DEBUG -Werror
 RELEASEFLAGS = $(COMMONFLAGS) -O2 -fno-strict-aliasing
 UTFLAGS = -Dprivate=public -Dprotected=public
 COVERAGE = -fprofile-arcs -ftest-coverage
@@ -55,7 +55,7 @@ CRYPTO_INC = -I$(ROOTDIR)/cryptoPlusPlus/cryptoPlusPlus_5.6.3/ubuntu/x86/include
 
 CURRENT_PATH = .
 PUBLIC_PATH = ../../public
-CFILES = $(wildcard *.c) $(wildcard $(PUBLIC_PATH)/*.c) 
+CFILES = $(wildcard *.c) $(wildcard $(PUBLIC_PATH)/*.c)
 CXXFILES = $(wildcard *.cpp) $(wildcard $(PUBLIC_PATH)/*.cpp)
 CSOURCES = $(notdir $(CFILES))
 CXXSOURCES = $(notdir $(CXXFILES))
@@ -100,6 +100,3 @@ output:
     echo $(SOURCES)
     echo $(OBJS)
 ```
-
-
-

@@ -32,8 +32,6 @@ published: true
 通过以上1和6,2和5，3和4的结合操作，最后两个字符串每个对应的字符会相同，但是这三种操作产生的最终的两个字符串是不一样的。我们不知道通过上述的三种结合那种使用的操作次数是最少的。所以我们要比较操作次数来求得最小值。
 ```
 
-
-
 ```cpp
 #include <stdio.h>
 #include <stdlib.h>
@@ -41,83 +39,81 @@ published: true
 
 int iMin(int a, int b, int c)
 {
-	int min = a < b ? a : b;
-	if(c < min)
-	{
-		min = c;
-	}
-	return min;
+    int min = a < b ? a : b;
+    if(c < min)
+    {
+        min = c;
+    }
+    return min;
 }
 
 int iDistance(
-		const char * pcStrA, int iAStart, int iAEnd,
-		const char * pcStrB, int iBStart, int iBEnd,
-		int ** ppiResult)
+        const char * pcStrA, int iAStart, int iAEnd,
+        const char * pcStrB, int iBStart, int iBEnd,
+        int ** ppiResult)
 {
-	printf("iAStart=%d,iAEnd=%d, iBStart=%d, iBEnd=%d\n", iAStart, iAEnd, iBStart, iBEnd);
-	if(iAStart > iAEnd && iBStart > iBEnd) {
-		return 0;
-	} 
-	if(iAStart > iAEnd) {
-		return iBEnd - iBStart + 1;
-	}
-	if(iBStart > iBEnd) {
-		return iAEnd - iAStart + 1;
-	}
+    printf("iAStart=%d,iAEnd=%d, iBStart=%d, iBEnd=%d\n", iAStart, iAEnd, iBStart, iBEnd);
+    if(iAStart > iAEnd && iBStart > iBEnd) {
+        return 0;
+    }
+    if(iAStart > iAEnd) {
+        return iBEnd - iBStart + 1;
+    }
+    if(iBStart > iBEnd) {
+        return iAEnd - iAStart + 1;
+    }
 
-	if(ppiResult[iAStart][iBStart] != 0) {
-		return ppiResult[iAStart][iBStart];
-	}
+    if(ppiResult[iAStart][iBStart] != 0) {
+        return ppiResult[iAStart][iBStart];
+    }
 
-	if(pcStrA[iAStart] == pcStrB[iBStart])
-	{
-		int iRet = iDistance(pcStrA, iAStart+1, iAEnd, pcStrB, iBStart+1, iBEnd, ppiResult);
-		if(iRet != 0) ppiResult[iAStart+1][iBStart+1] = iRet;
-		return iRet;
-	}
+    if(pcStrA[iAStart] == pcStrB[iBStart])
+    {
+        int iRet = iDistance(pcStrA, iAStart+1, iAEnd, pcStrB, iBStart+1, iBEnd, ppiResult);
+        if(iRet != 0) ppiResult[iAStart+1][iBStart+1] = iRet;
+        return iRet;
+    }
 
-	int a = iDistance(pcStrA, iAStart+1, iAEnd, pcStrB, iBStart+1, iBEnd, ppiResult);
-	int b = iDistance(pcStrA, iAStart+1, iAEnd, pcStrB, iBStart, iBEnd, ppiResult);
-	int c = iDistance(pcStrA, iAStart, iAEnd, pcStrB, iBStart+1, iBEnd, ppiResult);
-	printf("[%d][%d] = %d, [%d][%d] = %d, [%d][%d] = %d\n",
-			iAStart+1, iBStart+1, a,
-			iAStart+1, iBStart, b, 
-			iAStart, iBStart+1, c);
-	if(a != 0) ppiResult[iAStart+1][iBStart+1] = a;
-	if(b != 0) ppiResult[iAStart+1][iBStart] = b;
-	if(c != 0) ppiResult[iAStart][iBStart+1] = c;
+    int a = iDistance(pcStrA, iAStart+1, iAEnd, pcStrB, iBStart+1, iBEnd, ppiResult);
+    int b = iDistance(pcStrA, iAStart+1, iAEnd, pcStrB, iBStart, iBEnd, ppiResult);
+    int c = iDistance(pcStrA, iAStart, iAEnd, pcStrB, iBStart+1, iBEnd, ppiResult);
+    printf("[%d][%d] = %d, [%d][%d] = %d, [%d][%d] = %d\n",
+            iAStart+1, iBStart+1, a,
+            iAStart+1, iBStart, b,
+            iAStart, iBStart+1, c);
+    if(a != 0) ppiResult[iAStart+1][iBStart+1] = a;
+    if(b != 0) ppiResult[iAStart+1][iBStart] = b;
+    if(c != 0) ppiResult[iAStart][iBStart+1] = c;
 
-	ppiResult[iAStart][iBStart] = iMin(a, b, c) + 1;
+    ppiResult[iAStart][iBStart] = iMin(a, b, c) + 1;
 
-	return ppiResult[iAStart][iBStart];
+    return ppiResult[iAStart][iBStart];
 }
 
 double dSimilarity(const char * pcStrA, const char * pcStrB)
 {
-	int iLenA = strlen(pcStrA);
-	int iLenB = strlen(pcStrB);
+    int iLenA = strlen(pcStrA);
+    int iLenB = strlen(pcStrB);
 
-	int ** ppiResult = (int**)malloc(sizeof(int*) * (iLenA+1));
-	for (int i = 0; i < iLenA+1; i++)
-	{
-		ppiResult[i] = (int*)malloc(sizeof(int) * (iLenB+1));
-		memset(ppiResult[i], 0, sizeof(int) * (iLenB+1));
-	}
+    int ** ppiResult = (int**)malloc(sizeof(int*) * (iLenA+1));
+    for (int i = 0; i < iLenA+1; i++)
+    {
+        ppiResult[i] = (int*)malloc(sizeof(int) * (iLenB+1));
+        memset(ppiResult[i], 0, sizeof(int) * (iLenB+1));
+    }
 
-	int iDis = iDistance(pcStrA, 0, iLenA - 1, pcStrB, 0, iLenB - 1, ppiResult);
-	printf("iDis = %d\n", iDis);
-	return 1.0/(iDis + 1);
+    int iDis = iDistance(pcStrA, 0, iLenA - 1, pcStrB, 0, iLenB - 1, ppiResult);
+    printf("iDis = %d\n", iDis);
+    return 1.0/(iDis + 1);
 }
 
 int main()
 {
-	char acStrA[] = "abc";
-	char acStrB[] = "aef";
+    char acStrA[] = "abc";
+    char acStrB[] = "aef";
 
-	printf("similarity = %lf\n", dSimilarity(acStrA, acStrB));
+    printf("similarity = %lf\n", dSimilarity(acStrA, acStrB));
 
-	return 0;
+    return 0;
 }
 ```
-
-

@@ -11,13 +11,11 @@ published: true
 
 ## vim 常用插件
 
-
 ### Vundle 安装命令：
 
 Vundle 是一个vim插件，它可以管理其它的vim插件，比如说帮你下载安装。
 
 [https://github.com/VundleVim/Vundle.vim](https://github.com/VundleVim/Vundle.vim)
-
 
 ```
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -48,14 +46,11 @@ filetype plugin indent on
 
 在最下面的状态栏可以看到当前处理的状态。
 
-
-
 ### auto-format 安装
 
 autoformat 是一个vim插件，能够自动格式化c,c++文件。
 
 [https://github.com/Chiel92/vim-autoformat#default-formatprograms](https://github.com/Chiel92/vim-autoformat#default-formatprograms)
-
 
 因为上面我们已经安装了 vundle ，所以我们现在可以通过 vundle 来安装 auto-format 。
 
@@ -69,10 +64,9 @@ Plugin 'Chiel92/vim-autoformat'
 
 就是这么简单。
 
-
 需要注意的是，vim-autoformat只是格式化程序框架，它依赖于代码风格检查工具来进行格式化。
 
-我们需要单独安装这些工具：astyle (http://astyle.sourceforge.net/subversion.html)
+我们需要单独安装这些工具：[astyle](http://astyle.sourceforge.net/subversion.html)
 
 ```
 svn  checkout  "https://svn.code.sf.net/p/astyle/code/trunk/AStyle"
@@ -82,7 +76,6 @@ make install
 ```
 
 然后 astyle 会默认安装在 /usr/bin 目录下。具体见(AStyle/doc/astyle.html)
-
 
 astyle 常用的参数：
 
@@ -110,11 +103,9 @@ astyle 常用的参数：
 
 <hr>
 
-
 完整的 ~/.vimrc
 
 ```
-
 " vundle Brief help
 " :PluginList          -lists configured plugins
 " :PluginInstall       - installs plugins; append '!' to update or just :PluginUpdate

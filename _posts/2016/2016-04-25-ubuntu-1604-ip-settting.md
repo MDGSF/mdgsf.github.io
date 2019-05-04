@@ -10,7 +10,6 @@ description: ""
 published: true #default true
 ---
 
-
 vim /etc/network/interfaces
 
 ```

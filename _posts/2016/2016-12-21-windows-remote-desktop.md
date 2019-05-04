@@ -9,11 +9,6 @@ description:
 published: true
 ---
 
-
 <img src="{{ site.url }}/images/201612/21_15.png" alt="21_15" />
 
 <img src="{{ site.url }}/images/201612/21_16.png" alt="21_16" />
-
-
-
-

@@ -9,7 +9,6 @@ description:
 published: true
 ---
 
-
 ```cpp
 #include <iostream>
 #include <ctime>

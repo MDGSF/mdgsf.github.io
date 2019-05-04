@@ -26,10 +26,7 @@ The first reason can be explained by looking at Figure 2.5 and assuming that the
 
 To understand the second reason for the TIME_WAIT state, assume we have a TCP connection between 12.106.32.254 port 1500 and 206.168.112.219 port 21. This connection is closed and then sometime later, we establish another connection between the same IP addresses and ports: 12.106.32.254 port 1500 and 206.168.112.219 port 21. This latter connection is called an incarnation of the previous connection since the IP addresses the ports are the same. TCP must prevent old duplicates from a connection from reappearing at some later time an being misinterpreted as belonging to a new incarnation of the same connection. To do this, TCP will not initial a new incarnation of a connection that is currently in the TIME_WAIT state. Since the duration of the TIME_WAIT state is twice of the MSL, this allows MSL seconds for a packet in one direction to be lost, and another MSL seconds for the reply to be lost. By enforcing this rule, we are guaranteed that when we successfully establish a TCP connection, all old duplicates from previous incarnations of the connection have expired in the network.
 
-
-
 以上摘自 «Unix Network Programming Vol 1» 2.7节。
-
 
 <hr />
 

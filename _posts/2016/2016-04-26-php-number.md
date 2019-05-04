@@ -75,7 +75,6 @@ echo "<br>";
 
 ```
 
-
 ### number_format
 
 ```php
@@ -85,7 +84,6 @@ string number_format ( float $number [, int $decimals = 0 ] )
 ```php
 string number_format ( float $number , int $decimals = 0 , string $dec_point = "." , string $thousands_sep = "," )
 ```
-
 
 本函数可以接受1个、2个或者4个参数（注意：不能是3个）:
 

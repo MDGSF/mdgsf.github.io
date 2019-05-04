@@ -25,6 +25,3 @@ published: true #default true
 <img src="{{ site.url }}/images/201608/12_06.png" alt="12_06" />
 
 <img src="{{ site.url }}/images/201608/12_07.png" alt="12_07" />
-
-
-

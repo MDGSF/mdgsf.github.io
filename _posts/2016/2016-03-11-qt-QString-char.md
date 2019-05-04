@@ -9,8 +9,6 @@ description:
 published: true
 ---
 
-
-
 ### (1) QString 转 char*
 
 ```cpp

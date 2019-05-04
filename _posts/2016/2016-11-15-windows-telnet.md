@@ -9,11 +9,4 @@ description:
 published: true
 ---
 
-
 control panel --> application or functions --> open or close windows function.
-
-
-
-
-
-

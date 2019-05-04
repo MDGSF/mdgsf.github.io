@@ -10,11 +10,9 @@ description:
 published: true #default true
 ---
 
-
 <<编程之法>> 学习
 
-
-```
+```cpp
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
@@ -155,5 +153,3 @@ int main()
     return 0;
 }
 ```
-
-

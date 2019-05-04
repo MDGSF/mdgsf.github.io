@@ -9,7 +9,7 @@ description: "qt 制作多语言"
 published: true
 ---
 
-## 1. Add below code to .pro file.
+## 1. Add below code to .pro file
 
 ```
 TRANSLATIONS = projectName_en.ts \
@@ -22,13 +22,13 @@ Tools-->External-->Qt 语言家-->lupdate
 
 and then, it will generate .ts file in project root directory.
 
-## 3. use Linguist to open .ts file. Edit .ts file.
+## 3. use Linguist to open .ts file. Edit .ts file
 
 ## 4. After finish edit
 
 Linguist-->文件-->发布, it will generate .qm file in project root directory.
 
-## 5. Use .qm file in source code.
+## 5. Use .qm file in source code
 
 ```cpp
 enum ECountry {

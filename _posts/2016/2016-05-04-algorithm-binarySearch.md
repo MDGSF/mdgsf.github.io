@@ -81,23 +81,23 @@ n/(2^k) >= 1
 // BinarySearch binary search
 // 二分查找，非递归版本
 func BinarySearch(a []int, v int) int {
-	if len(a) == 0 {
-		return -1
-	}
+    if len(a) == 0 {
+        return -1
+    }
 
-	low := 0
-	high := len(a) - 1
-	for low <= high {
-		mid := low + (high-low)/2
-		if a[mid] == v {
-			return mid
-		} else if a[mid] > v {
-			high = mid - 1
-		} else {
-			low = mid + 1
-		}
-	}
-	return -1
+    low := 0
+    high := len(a) - 1
+    for low <= high {
+        mid := low + (high-low)/2
+        if a[mid] == v {
+            return mid
+        } else if a[mid] > v {
+            high = mid - 1
+        } else {
+            low = mid + 1
+        }
+    }
+    return -1
 }
 ```
 
@@ -107,24 +107,24 @@ func BinarySearch(a []int, v int) int {
 // BinarySearchRecursive binary search
 // 二分查找，递归版本
 func BinarySearchRecursive(a []int, v int) int {
-	if len(a) == 0 {
-		return -1
-	}
-	return BinarySearchRecursiveInner(a, v, 0, len(a)-1)
+    if len(a) == 0 {
+        return -1
+    }
+    return BinarySearchRecursiveInner(a, v, 0, len(a)-1)
 }
 
 func BinarySearchRecursiveInner(a []int, v int, low int, high int) int {
-	if low > high {
-		return -1
-	}
-	mid := low + (high-low)/2
-	if a[mid] == v {
-		return mid
-	} else if a[mid] > v {
-		return BinarySearchRecursiveInner(a, v, low, mid-1)
-	} else {
-		return BinarySearchRecursiveInner(a, v, mid+1, high)
-	}
+    if low > high {
+        return -1
+    }
+    mid := low + (high-low)/2
+    if a[mid] == v {
+        return mid
+    } else if a[mid] > v {
+        return BinarySearchRecursiveInner(a, v, low, mid-1)
+    } else {
+        return BinarySearchRecursiveInner(a, v, mid+1, high)
+    }
 }
 ```
 

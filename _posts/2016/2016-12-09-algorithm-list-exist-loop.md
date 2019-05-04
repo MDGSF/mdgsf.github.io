@@ -10,7 +10,6 @@ description:
 published: true #default true
 ---
 
-
 ```cpp
 #include <stdio.h>
 #include <stdlib.h>
@@ -90,7 +89,7 @@ PSLinkNode FindLoopPort(PSLinkNode head)
         }
     }
 
-    if (fast == NULL || fast->next == NULL) 
+    if (fast == NULL || fast->next == NULL)
     {
         return NULL;
     }
@@ -126,7 +125,3 @@ int main()
     return 0;
 }
 ```
-
-
-
-

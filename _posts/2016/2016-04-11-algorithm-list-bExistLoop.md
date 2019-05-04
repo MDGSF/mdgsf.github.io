@@ -9,7 +9,6 @@ description:
 published: true
 ---
 
-
 ## 1、如何判断一个链表是不是有环？
 
 方法一：在链表中增加一个域visited，初始化都为0，从链表的头部开始走，每走过一个链表就标记visited为1，如果要访问的下一个节点的visited域为1，那么证明链表中有环。
@@ -42,7 +41,7 @@ s = a + x   (slow一定走不完一圈，用笔在纸张上画画就明白了。
 
 2s = s + n*r ， 可得  s = n*r
 
-将s=a+x，带入s =n*r，可得 a+x = n*r, 也就是 a+x = (n-1)*r + r 　　
+将s=a+x，带入s =n*r，可得 a+x = n*r, 也就是 a+x = (n-1)*r + r
 
 从表头移动到入口点，再从入口点移动到入口点，也就是移动了整个链表的距离，即是 L =  a + r , 所以r = L - a
 
@@ -91,10 +90,6 @@ PList FindLoopPort(PList head)
     return slow;
 }
 ```
-
-
-
-
 
 ### 链接
 

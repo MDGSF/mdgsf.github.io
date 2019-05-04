@@ -41,8 +41,7 @@ published: true #default true
 
 Dis(x) = max(Dis(x->left), Dis(x->right), height(x->left)+height(x->right))
 
-
-**Code**
+## Code
 
 ```cpp
 #include <stdio.h>

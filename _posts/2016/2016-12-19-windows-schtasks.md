@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Windows] 任务计划schtasks"
+title:  "[Windows] 任务计划 schtasks"
 date:   2016-12-19
 comments: true
 categories: Windows
@@ -9,11 +9,9 @@ description:
 published: true
 ---
 
-
 打开任务计划
 
 左下角开始-->搜索任务计划
-
 
 ```cpp
 char acCmd[2048] = {0};
@@ -32,7 +30,7 @@ if(m_bAutoStart)
     if((iRet!=-1) && (iRet!=-2))
     {
         printf("schtasks DIASkipUAC create success\n");
-    } 
+    }
     else
     {
         printf("schtasks DIASkipUAC create failed\n");
@@ -47,14 +45,10 @@ else
     if((iRet!=-1) && (iRet!=-2))
     {
         printf("schtasks DIASkipUAC delete success\n");
-    } 
+    }
     else
     {
         printf("schtasks DIASkipUAC delete failed\n");
     }
-} 
+}
 ```
-
-
-
-

@@ -9,7 +9,6 @@ description:
 published: true
 ---
 
-
 ```cpp
     apr_thread_mutex_lock(m_pstMutex);
     apr_int32_t iMaxTryTime = m_oLBServerVector.size();
@@ -66,8 +65,6 @@ published: true
         （这种方法相当于是一个ring，所有线程共享一个指针。）
 
 解决方法四：用一个ring，每个线程都有一个自己的移动指针。
-
-
 
 解决方法三 的代码如下：
 

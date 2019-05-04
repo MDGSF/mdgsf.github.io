@@ -15,7 +15,7 @@ published: true
 
 ```
 isalnum() 字母或数字
-isalpha() 字母 
+isalpha() 字母
 isblank() 空白字符
 isspace() 空白字符
 isdigit() 数字
@@ -29,15 +29,15 @@ tolower()
 toupper()
 ```
 
-### 2 
+### 2
 
 一个 if/else 的 bug
 
 ```cpp
 if(number > 6)
     if(number < 12)
-	    printf("You're close!\n");
-else 
+        printf("You're close!\n");
+else
     printf("Sorry, you lose a turn\n");
 ```
 
@@ -47,7 +47,6 @@ else和它最近的一个if相匹配。
 
 **TIPS**：只要所有的if和else都加上括号，就永远不会有这种bug。
 
-
 ### 3
 
 判素数
@@ -55,20 +54,19 @@ else和它最近的一个if相匹配。
 ```cpp
 bool bIsPrimer(int num)
 {
-	int div = 2;
-	bool isPrime = true;
-	for ( ; (div*div) <= num; div++)
-	{
-	    if(num % div == 0)
-		{
-		    isPrime = false;
-			break;
-		}
-	}
-	return isPrime;
+    int div = 2;
+    bool isPrime = true;
+    for ( ; (div*div) <= num; div++)
+    {
+        if(num % div == 0)
+        {
+            isPrime = false;
+            break;
+        }
+    }
+    return isPrime;
 }
 ```
-
 
 ### 4
 
@@ -94,7 +92,6 @@ while (x++ < 10 && x+y < 20)
 
 &&运算符是序列的分界点。保证了在对右边表达式求值之前，先把x的值增加1.
 
-
 ### 6
 
 switch 的判断表达式应具有整数值（包括char类型）。
@@ -102,18 +99,3 @@ switch 的判断表达式应具有整数值（包括char类型）。
 case 标签必须是 整形常量 或 整数常量表达式。
 
 case 标签不能使用变量。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

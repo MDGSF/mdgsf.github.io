@@ -9,7 +9,6 @@ description:
 published: true
 ---
 
-
 ```
 //let the window icon in taskbar when clicked, it can max or min the window
 this->setWindowFlags(Qt::Window|Qt::FramelessWindowHint

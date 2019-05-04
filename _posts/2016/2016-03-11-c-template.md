@@ -9,7 +9,6 @@ description: "a simple template for c"
 published: true
 ---
 
-
 ```cpp
 #include <stdio.h>
 
@@ -35,8 +34,3 @@ int main()
     return 0;
 }
 ```
-
-
-
-
-

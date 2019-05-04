@@ -9,8 +9,7 @@ description:
 published: true
 ---
 
-
-```
+```cpp
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -28,7 +27,7 @@ published: true
 #define UBUF_SIZE 64
 #define NBUF_SIZE 32
 
-int 
+int
 iGetFileSize(FILE * fp)
 {
     fseek(fp, 0, SEEK_END);
@@ -82,7 +81,7 @@ iGetFileData(const char * pcFile, char ** ppcContent, int * piContentSize)
     return 0;
 }
 
-int 
+int
 iWriteToFile(const char * pcFileName, const char * pcContent, int iContentSize)
 {
     if(NULL == pcFileName || NULL == pcContent) {
@@ -180,13 +179,13 @@ void vReplaceFileTab(const char * pcFileName)
     char * pcNewContent = NULL;
     int iNewSize = 0;
     iRet = iReplaceTab(pcContent, iContentSize, &pcNewContent, &iNewSize);
-    if(iRet == 1) 
+    if(iRet == 1)
     {
         //printf("There is no tab in %s\n", pcFileName);
         free(pcContent);
         return ;
     }
-    else if(iRet != 0) 
+    else if(iRet != 0)
     {
         printf("NULL == pcNewContent\n");
         return ;
@@ -216,7 +215,7 @@ bool bIsMarkDownFile(const char * pcFileName)
     }
 
     int iLen = strlen(pcFileName);
-    if(iLen <= 3) 
+    if(iLen <= 3)
     {
         return false;
     }
@@ -252,7 +251,7 @@ void vReplaceTabInDirectory(const char * pcDirectory)
         {
             continue;
         }
-        else if(DT_DIR == ptr->d_type) 
+        else if(DT_DIR == ptr->d_type)
         {
             if(strcmp(".", ptr->d_name) == 0 ||
                strcmp("..", ptr->d_name) == 0)
@@ -282,4 +281,3 @@ int main()
     return 0;
 }
 ```
-

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[C/C++] hashtable "
+title:  "[C/C++] hashtable"
 date:   2016-07-01
 comments: true
 categories: C/C++
@@ -15,7 +15,7 @@ published: true
 
 A simple hashtabl.
 
-```
+```cpp
 #ifndef HASHTABLE_HJ
 #define HASHTABLE_HJ
 
@@ -104,10 +104,7 @@ namespace JCL
 #endif
 ```
 
-
-
-
-```
+```cpp
 #include "hashtable.h"
 #include <stdlib.h>
 
@@ -363,7 +360,6 @@ CHashTable::APHash(const char* str)
     return hash;
 }
 ```
-
 
 hash 算法是从下面这个链接复制来的。
 

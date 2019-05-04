@@ -32,8 +32,8 @@ CFLAGS = -Wall $(CROSSCFLAGS) -fsigned-char
 CXXFLAGS = -Wall $(CROSSCFLAGS) -fsigned-char
 COMMONFLAGS = -Wall $(CROSSCFLAGS) -fsigned-char
 LINKFLAGS=
-DYLINKFLAGS = -Wl,--retain-symbols-file=ExportedFunctions -fPIC --share 
-DEBUGFLAGS = $(COMMONFLAGS) -g -D_DEBUG -Werror 
+DYLINKFLAGS = -Wl,--retain-symbols-file=ExportedFunctions -fPIC --share
+DEBUGFLAGS = $(COMMONFLAGS) -g -D_DEBUG -Werror
 RELEASEFLAGS = $(COMMONFLAGS) -O2 -fno-strict-aliasing
 UTFLAGS = -Dprivate=public -Dprotected=public
 COVERAGE = -fprofile-arcs -ftest-coverage
@@ -50,7 +50,7 @@ INCS = \
 LIBS = \
 
 OBJS= \
-      main.o 
+      main.o
 
 
 %.o : %.c

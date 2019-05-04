@@ -9,15 +9,14 @@ description: "qt 无边框窗体基类"
 published: true
 ---
 
-
 ### 无边框窗体基类
 
 只要继承这个ui类，生成的窗体就是无边框的。
 
 虚函数： virtual QWidget * m_pGetDragnWidget()=0; 返回的就是鼠标可以拖动窗体的部分。
 
-
 ### moveableframelesswindow.h
+
 ```cpp
 #ifndef MOVEABLEFRAMELESSWINDOW_H
 #define MOVEABLEFRAMELESSWINDOW_H
@@ -121,9 +120,8 @@ private:
 #endif // MOVEABLEFRAMELESSWINDOW_H
 ```
 
-
-
 ### moveableframelesswindow.cpp
+
 ```cpp
 #include <QtGui>
 #include <QKeyEvent>
@@ -370,5 +368,4 @@ void MoveableFramelessWindow::changeEvent(QEvent *e)
         e->ignore();
     }
 }
-
 ```

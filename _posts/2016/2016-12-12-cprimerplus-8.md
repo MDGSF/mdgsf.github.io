@@ -21,8 +21,7 @@ published: true
 
 键盘输入是标准的行缓冲，因此按下回车键将清空缓冲区。
 
-
-### 2 
+### 2
 
 使用标准I/O包时，就会自动屏蔽掉不同系统下的文件差异。
 
@@ -30,20 +29,18 @@ published: true
 
 如果该系统实际上使用回车/换行的组合，则I/O函数自动在两种表示法之间转换。
 
-
 ### 3
 
 ```cpp
 int ch;
 while ((ch = getchar()) != EOF)
-	putchar(ch);
+    putchar(ch);
 ```
-
 
 ### 4
 
 ```
-拷贝一份mywords的副本 
+拷贝一份mywords的副本
 mycopy > savewords < mywords  (正确)
 mycopy < mywords > savewords  (正确)
 
@@ -53,7 +50,6 @@ mycopy < mywords > mywords  (错误)
 
 **Tips**: 输入不能来自一个以上的文件，输出也不能定向至一个以上的文件。
 
-
 ### 5
 
 ```
@@ -62,38 +58,13 @@ mycopy < mywords > mywords  (错误)
  | 管道运算符，它可以将一个程序的输出与第二个程序的输入连接起来。
 ```
 
-
 ### 6
 
 ```cpp
 while (getchar() != '\n')
-	continue;
+    continue;
 ```
 
 ### 7
 
 getchar() 和 scanf() 在检测到文件结尾时，都返回 EOF
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

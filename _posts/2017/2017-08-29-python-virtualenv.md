@@ -9,13 +9,17 @@ description:
 published: true
 ---
 
-1. 安装virtualenv
+## 1
+
+安装virtualenv
 
 ```
 pip install virtualenv
 ```
 
-2. 新建一个目录
+## 2
+
+新建一个目录
 
 ```
 E:\>mkdir VEnvDir
@@ -31,7 +35,9 @@ E:\VEnvDir>ls
 env
 ```
 
-3. 启动虚拟环境
+## 3
+
+启动虚拟环境
 
 ```
 E:\VEnvDir>ls
@@ -53,11 +59,11 @@ E:\VEnvDir\env\Scripts>activate.bat
 (env) E:\VEnvDir\env\Scripts>
 ```
 
-4. 退出虚拟环境
+## 4
+
+退出虚拟环境
 
 ```
 (env) E:\VEnvDir\env\Scripts>deactivate.bat
 E:\VEnvDir\env\Scripts>
 ```
-
-

@@ -17,7 +17,6 @@ The prime factors of 13195 are 5, 7, 13 and 29.
 
 What is the largest prime factor of the number 600851475143 ?
 
-
 ## Answer
 
 6857
@@ -30,28 +29,27 @@ package main
 import "fmt"
 
 func main() {
-	//13195 5 7 13 29
-	//600851475143
+    //13195 5 7 13 29
+    //600851475143
 
-	iMaxFactor := 0
-	num := 600851475143
-	i := 2
+    iMaxFactor := 0
+    num := 600851475143
+    i := 2
 
-	for {
-		if i > num {
-			break
-		}
+    for {
+        if i > num {
+            break
+        }
 
-		if num%i == 0 {
-			num = num / i
-			iMaxFactor = i
-			continue
-		} else {
-			i++
-		}
-	}
+        if num%i == 0 {
+            num = num / i
+            iMaxFactor = i
+            continue
+        } else {
+            i++
+        }
+    }
 
-	fmt.Println(iMaxFactor)
+    fmt.Println(iMaxFactor)
 }
 ```
-

@@ -35,10 +35,3 @@ private:
 可以看下上面这个伪代码，在这个类中，memA，memB，memC中的内存都是并排的。
 
 所以如果在funcA中修改了memA的内容，结果由于代码bug导致内存越界了，就有可能修改到memB，这样就会出现明明没有动过memB，程序却在memB的地方Crash掉。
-
-
-
-
-
-
-

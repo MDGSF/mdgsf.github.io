@@ -22,7 +22,6 @@ linux中是用时间轮实现的。
 
 我记得还有用最小堆实现定时器的。
 
-
 ## 全局数据变量
 
 ```c
@@ -34,7 +33,6 @@ ngx_rbtree_t              ngx_event_timer_rbtree;
 
 static ngx_rbtree_node_t  ngx_event_timer_sentinel;
 ```
-
 
 ## ngx_event_timer_init
 
@@ -98,9 +96,7 @@ ngx_rbtree_insert_timer_value(ngx_rbtree_node_t *temp, ngx_rbtree_node_t *node,
 }
 ```
 
-
 ## ngx_event_add_timer
-
 
 ```c
 /*
@@ -181,7 +177,6 @@ ngx_event_del_timer(ngx_event_t *ev)
 }
 ```
 
-
 ## ngx_event_find_timer
 
 ```c
@@ -211,7 +206,6 @@ ngx_event_find_timer(void)
     return (ngx_msec_t) (timer > 0 ? timer : 0);
 }
 ```
-
 
 ## ngx_event_expire_timers
 
@@ -301,12 +295,3 @@ ngx_event_no_timers_left(void)
     return NGX_OK;
 }
 ```
-
-
-
-
-
-
-
-
-

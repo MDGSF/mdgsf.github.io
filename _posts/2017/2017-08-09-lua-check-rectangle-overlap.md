@@ -10,14 +10,13 @@ description:
 published: true #default true
 ---
 
-
 ```lua
 function collisions.check_rectangles_overlap(a, b)
     local overlap = false
-    if not( 
-        a.x + a.width < b.x or 
-        b.x + b.width < a.x or 
-        a.y + a.height < b.y or 
+    if not(
+        a.x + a.width < b.x or
+        b.x + b.width < a.x or
+        a.y + a.height < b.y or
         b.y + b.height < a.y
          ) then
         overlap = true

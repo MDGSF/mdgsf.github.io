@@ -9,7 +9,6 @@ description:
 published: true
 ---
 
-
 ```python
 """
 This is bubble
@@ -36,7 +35,7 @@ def bubble_while(collection):
                 collection[j], collection[j+1] = collection[j+1], collection[j]
             j = j + 1
         i = i - 1
-    
+
     return collection
 
 

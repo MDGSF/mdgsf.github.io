@@ -9,11 +9,9 @@ description:
 published: true
 ---
 
-
 ## 什么是Google Breakpad？
 
 Google Breakpad is a cross platform crash handler which generates minidumps when your application crash. Users can send these minidumps to you and it contains valuable information allowing you to figure out why it crashed on them.
-
 
 ## breakpad 的地址
 
@@ -50,7 +48,6 @@ python setup.py install
 
 **拷贝gyp文件夹到breakpad\src\tools文件夹下**
 
-
 ## 使用gyp生成breakpad的sln工程文件
 
 ```
@@ -76,11 +73,9 @@ Warning: Missing input files:
 
 <img src="{{ site.url }}/images/2017/09/1305.png" alt="2017091305" />
 
-
 ## 生成的lib
 
 <img src="{{ site.url }}/images/2017/09/1306.png" alt="2017091306" />
-
 
 ## 测试工程
 
@@ -91,43 +86,43 @@ Warning: Missing input files:
 using namespace google_breakpad;
 
 static bool s_bMinidumpCallback(
-	const wchar_t* dump_path,
-	const wchar_t* minidump_id,
-	void* context,
-	EXCEPTION_POINTERS* exinfo,
-	MDRawAssertionInfo* assertion,
-	bool succeeded)
+    const wchar_t* dump_path,
+    const wchar_t* minidump_id,
+    void* context,
+    EXCEPTION_POINTERS* exinfo,
+    MDRawAssertionInfo* assertion,
+    bool succeeded)
 {
-	if (succeeded)
-	{
-		printf("dump guid is %ws\n", minidump_id);
-	}
-	else
-	{
-		printf("dump failed\n");
-	}
-	fflush(stdout);
-	return succeeded;
+    if (succeeded)
+    {
+        printf("dump guid is %ws\n", minidump_id);
+    }
+    else
+    {
+        printf("dump failed\n");
+    }
+    fflush(stdout);
+    return succeeded;
 }
 
 void errFun(int * p)
 {
-	*p = 1;
+    *p = 1;
 }
 
 int main()
 {
-	google_breakpad::ExceptionHandler oExceptionHandler(
-		L".",
-		NULL,
-		s_bMinidumpCallback,
-		NULL,
-		google_breakpad::ExceptionHandler::HANDLER_ALL
-	);
+    google_breakpad::ExceptionHandler oExceptionHandler(
+        L".",
+        NULL,
+        s_bMinidumpCallback,
+        NULL,
+        google_breakpad::ExceptionHandler::HANDLER_ALL
+    );
 
-	int * p = NULL;
-	errFun(p);
-	return 0;
+    int * p = NULL;
+    errFun(p);
+    return 0;
 }
 ```
 
@@ -142,6 +137,3 @@ int main()
 ## 参考链接
 
 <a href="http://blog.csdn.net/wangshubo1989/article/details/53334033" target="_blank">http://blog.csdn.net/wangshubo1989/article/details/53334033</a>
-
-
-

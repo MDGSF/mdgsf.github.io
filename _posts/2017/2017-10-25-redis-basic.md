@@ -9,13 +9,11 @@ description: ""
 published: true
 ---
 
-
 ## 启动redis服务器
 
 redis-server.exe redis.windows.conf
 
 默认为127.0.0.1:6379
-
 
 ## 客户端连接
 
@@ -25,7 +23,6 @@ redis-cli.exe -h 127.0.0.1 -p 6379
 
 可简写为redis-cli
 
-
 ## 获取redis服务器的配置信息
 
 config get * : 获取所有的信息
@@ -33,7 +30,6 @@ config get * : 获取所有的信息
 config get requirepass : 获取密码
 
 config get dir : 获取redis的目录
-
 
 ## 设置密码
 
@@ -45,7 +41,6 @@ auth "123456"
 
 取消密码: config set requirepass ""
 
-
 ## 备份数据
 
 save : 该命名将在redis目录下创建dump.rdb文件。
@@ -53,7 +48,6 @@ save : 该命名将在redis目录下创建dump.rdb文件。
 bgsave: 该命令将在后台执行。
 
 如果需要恢复数据，只需将备份文件 (dump.rdb) 移动到 redis 安装目录并重新启动服务即可。
-
 
 ## 哈希表
 
@@ -110,7 +104,6 @@ OK
 在客户端2发布消息: publish mychannel "Redis is great"
 
 然后客户端1就可以收到。
-
 
 ## 查看所有数据
 

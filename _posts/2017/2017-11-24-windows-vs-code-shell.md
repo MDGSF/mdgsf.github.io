@@ -11,6 +11,7 @@ published: true
 
 文件-->首选项-->设置-->用户设置
 
+```
 {
     "files.trimTrailingWhitespace": true,
     "typescript.check.npmIsInstalled": false,
@@ -22,3 +23,4 @@ published: true
     ],
     "terminal.external.windowsExec":"C:\\Program Files\\Git\\bin\\bash.exe"
 }
+```

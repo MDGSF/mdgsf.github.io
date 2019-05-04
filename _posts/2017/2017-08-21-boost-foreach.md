@@ -9,7 +9,6 @@ description:
 published: true
 ---
 
-
 项目右键点击-->属性--> C/C++ --> 常规 --> 附加包含目录
 
 C:\local\boost_1_64_0
@@ -22,14 +21,11 @@ C:\local\boost_1_64_0
 
 int main()
 {
-	using namespace boost::lambda;
-	typedef std::istream_iterator<int> in;
+    using namespace boost::lambda;
+    typedef std::istream_iterator<int> in;
 
-	std::for_each(
-		in(std::cin), in(), std::cout << (_1 * 3) << " "
-	);
+    std::for_each(
+        in(std::cin), in(), std::cout << (_1 * 3) << " "
+    );
 }
 ```
-
-
-

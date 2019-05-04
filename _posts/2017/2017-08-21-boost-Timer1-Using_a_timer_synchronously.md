@@ -9,16 +9,13 @@ description:
 published: true
 ---
 
-
 项目右键点击-->属性--> C/C++ --> 常规 --> 附加包含目录
 
 C:\local\boost_1_64_0
 
-
 项目右键点击-->属性--> VC++ 目录 --> 库目录
 
 C:\local\boost_1_64_0\lib32-msvc-14.0
-
 
 ```c++
 #include <iostream>
@@ -27,19 +24,16 @@ C:\local\boost_1_64_0\lib32-msvc-14.0
 
 int main()
 {
-	boost::asio::io_service io;
+    boost::asio::io_service io;
 
-	boost::asio::deadline_timer t(io, boost::posix_time::seconds(5));
+    boost::asio::deadline_timer t(io, boost::posix_time::seconds(5));
 
-	t.wait(); //会在这里停5秒
+    t.wait(); //会在这里停5秒
 
-	std::cout << "Hello, world!" << std::endl;
+    std::cout << "Hello, world!" << std::endl;
 
-	return 0;
+    return 0;
 }
 ```
 
-
 <a href="http://www.boost.org/doc/libs/1_64_0/doc/html/boost_asio/tutorial/tuttimer1.html" target="_blank">http://www.boost.org/doc/libs/1_64_0/doc/html/boost_asio/tutorial/tuttimer1.html</a>
-
-

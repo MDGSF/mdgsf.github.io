@@ -9,7 +9,6 @@ description:
 published: true
 ---
 
-
 ## 1. 链接
 
 https://github.com/google/protobuf
@@ -58,9 +57,7 @@ Visual Studio 7 .NET 2003    = Deprecated.  Generates Visual Studio .NET
 
 然后就会在 solution 目录下生成 Visual Studio 的工程。
 
-
 ## 3. 使用
-
 
 新建Message.proto文件
 
@@ -70,27 +67,27 @@ syntax = "proto2";
 package tutorial;
 
 message Person {
-	optional string name = 1;
-	optional int32 id = 2;
-	optional string email = 3;
-	
-	enum PhoneType {
-		MOBILE = 0;
-		HOME = 1;
-		WORK = 2;
-	}
-	
-	message PhoneNumber {
-		optional string number = 1;
-		optional PhoneType type = 2 [default = HOME];
-	}
-	
-	repeated PhoneNumber phone = 4;
+    optional string name = 1;
+    optional int32 id = 2;
+    optional string email = 3;
+
+    enum PhoneType {
+        MOBILE = 0;
+        HOME = 1;
+        WORK = 2;
+    }
+
+    message PhoneNumber {
+        optional string number = 1;
+        optional PhoneType type = 2 [default = HOME];
+    }
+
+    repeated PhoneNumber phone = 4;
 }
 
 
 message AddressBook {
-	repeated Person person = 1;
+    repeated Person person = 1;
 }
 ```
 
@@ -116,47 +113,47 @@ using namespace std;
 
 int main()
 {
-	printf("ProtoBuf Demo\n");
+    printf("ProtoBuf Demo\n");
 
-	GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-
-	tutorial::AddressBook oAddressBook;
-
-	printf("oAddressBook.person_size() = %d\n", oAddressBook.person_size());
-
-	::tutorial::Person* poPerson = oAddressBook.add_person();
-	poPerson->set_id(1);
-	poPerson->set_name("Person 1");
-	poPerson->set_email("person1@qq.com");
-
-	::tutorial::Person_PhoneNumber* poPhoneNumberHome = poPerson->add_phone();
-	poPhoneNumberHome->set_number("12345678");
-	poPhoneNumberHome->set_type(::tutorial::Person::HOME); 
-	poPhoneNumberHome->set_type(::tutorial::Person_PhoneType_HOME);
-
-	::tutorial::Person_PhoneNumber* poPhoneNumberWork = poPerson->add_phone();
-	poPhoneNumberWork->set_number("87654321");
-	poPhoneNumberWork->set_type(::tutorial::Person::WORK);
-	//poPhoneNumberWork->set_type(::tutorial::Person_PhoneType_WORK);
-
-	printf("poPerson->phone_size() = %d\n", poPerson->phone_size());
-
-	printf("oAddressBook.person_size() = %d\n", oAddressBook.person_size());
+    GOOGLE_PROTOBUF_VERIFY_VERSION;
 
 
-	string strOutput;
-	oAddressBook.SerializePartialToString(&strOutput);
-	printf("strOutput: [%s]\n", strOutput.c_str());
+    tutorial::AddressBook oAddressBook;
+
+    printf("oAddressBook.person_size() = %d\n", oAddressBook.person_size());
+
+    ::tutorial::Person* poPerson = oAddressBook.add_person();
+    poPerson->set_id(1);
+    poPerson->set_name("Person 1");
+    poPerson->set_email("person1@qq.com");
+
+    ::tutorial::Person_PhoneNumber* poPhoneNumberHome = poPerson->add_phone();
+    poPhoneNumberHome->set_number("12345678");
+    poPhoneNumberHome->set_type(::tutorial::Person::HOME);
+    poPhoneNumberHome->set_type(::tutorial::Person_PhoneType_HOME);
+
+    ::tutorial::Person_PhoneNumber* poPhoneNumberWork = poPerson->add_phone();
+    poPhoneNumberWork->set_number("87654321");
+    poPhoneNumberWork->set_type(::tutorial::Person::WORK);
+    //poPhoneNumberWork->set_type(::tutorial::Person_PhoneType_WORK);
+
+    printf("poPerson->phone_size() = %d\n", poPerson->phone_size());
+
+    printf("oAddressBook.person_size() = %d\n", oAddressBook.person_size());
 
 
-	tutorial::AddressBook oAddressBookOutput;
-	oAddressBookOutput.ParseFromString(strOutput);
-	printf("oAddressBookOutput.person_size() = %d\n", oAddressBookOutput.person_size());
+    string strOutput;
+    oAddressBook.SerializePartialToString(&strOutput);
+    printf("strOutput: [%s]\n", strOutput.c_str());
 
 
-	google::protobuf::ShutdownProtobufLibrary();
+    tutorial::AddressBook oAddressBookOutput;
+    oAddressBookOutput.ParseFromString(strOutput);
+    printf("oAddressBookOutput.person_size() = %d\n", oAddressBookOutput.person_size());
 
-	return 0;
+
+    google::protobuf::ShutdownProtobufLibrary();
+
+    return 0;
 }
 ```

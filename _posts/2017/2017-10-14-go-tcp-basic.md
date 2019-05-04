@@ -9,7 +9,6 @@ description: ""
 published: true
 ---
 
-
 ## client
 
 ```go
@@ -49,7 +48,7 @@ func main() {
 }
 ```
 
-## server 
+## server
 
 ```go
 package main
@@ -230,5 +229,3 @@ func Write(conn net.Conn, msg string) error {
     return nil
 }
 ```
-
-

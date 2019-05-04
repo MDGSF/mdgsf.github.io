@@ -15,30 +15,30 @@ published: true
 package main
 
 import (
-	"fmt"
+    "fmt"
 )
 
 func main() {
-	mymap := make(map[int]string)
+    mymap := make(map[int]string)
 
-	mymap[1] = "test1"
-	mymap[2] = "test2"
-	mymap[3] = "test3"
-	mymap[4] = "test4"
+    mymap[1] = "test1"
+    mymap[2] = "test2"
+    mymap[3] = "test3"
+    mymap[4] = "test4"
 
-	fmt.Println(mymap)
+    fmt.Println(mymap)
 
-	for k, v := range mymap {
-		fmt.Println(k, v)
-	}
+    for k, v := range mymap {
+        fmt.Println(k, v)
+    }
 
-	for k := range mymap {
-		if k == 1 {
-			delete(mymap, k) //如果C++这么写的话，迭代器会出问题。
-		}
-	}
+    for k := range mymap {
+        if k == 1 {
+            delete(mymap, k) //如果C++这么写的话，迭代器会出问题。
+        }
+    }
 
-	fmt.Println(mymap)
+    fmt.Println(mymap)
 }
 ```
 
@@ -61,21 +61,21 @@ package main
 import "fmt"
 
 func testSlice() {
-	a := []int{1, 2, 3, 4, 5}
+    a := []int{1, 2, 3, 4, 5}
 
-	fmt.Println(a)
-	first := true
-	for i, userID := range a {
-		fmt.Println(i, userID)
-		if first {
-			a = a[:2]
-		}
-		fmt.Println(a)
-	}
+    fmt.Println(a)
+    first := true
+    for i, userID := range a {
+        fmt.Println(i, userID)
+        if first {
+            a = a[:2]
+        }
+        fmt.Println(a)
+    }
 }
 
 func main() {
-	testSlice()
+    testSlice()
 }
 ```
 
@@ -95,7 +95,6 @@ func main() {
 [1 2]
 ```
 
-
 ## 3
 
 ```go
@@ -104,20 +103,20 @@ package main
 import "fmt"
 
 func testDump() {
-	a := []int{2, 2}
+    a := []int{2, 2}
 
-	fmt.Println(a)
-	for i, userID := range a {
-		fmt.Println(i, userID)
-		if userID == 2 {
-			a = append(a[:i], a[i+1:]...)
-		}
-		fmt.Println(a)
-	}
+    fmt.Println(a)
+    for i, userID := range a {
+        fmt.Println(i, userID)
+        if userID == 2 {
+            a = append(a[:i], a[i+1:]...)
+        }
+        fmt.Println(a)
+    }
 }
 
 func main() {
-	testDump()
+    testDump()
 }
 ```
 
@@ -140,4 +139,3 @@ exit status 2
 ```
 
 这种情况下会crash掉，所以在遍历的时候，最好还是不要乱修改。
-

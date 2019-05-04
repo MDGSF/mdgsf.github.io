@@ -10,8 +10,6 @@ description:
 published: true #default true
 ---
 
-
-
 ```c++
 #include <iostream>
 #include <vector>
@@ -153,4 +151,3 @@ int main()
     return 0;
 }
 ```
-

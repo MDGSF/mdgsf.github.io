@@ -9,7 +9,6 @@ description:
 published: true
 ---
 
-
 ```python
 >>> L = ['Michael', 'Sarah', 'Tracy', 'Bob', 'Jack']
 >>> L[0:3]  # 从索引0开始取，直到索引3为止，但不包括索引3。
@@ -50,26 +49,9 @@ published: true
 1, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99]
 ```
 
-
 ```python
 >>> 'abcdefg'[:3]
 'abc'
 >>> 'abcdefg'[::2]
 'aceg'
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

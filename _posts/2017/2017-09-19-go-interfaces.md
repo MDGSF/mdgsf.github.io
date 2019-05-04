@@ -15,50 +15,50 @@ published: true
 
 接口类型的值可以存放实现这些方法的任何值。
 
-注意： 示例代码的 22 行存在一个错误。 由于 Abs 只定义在 *Vertex（指针类型）上， 所以 Vertex（值类型）不满足 Abser。 
+注意： 示例代码的 22 行存在一个错误。 由于 Abs 只定义在 *Vertex（指针类型）上， 所以 Vertex（值类型）不满足 Abser。
 
 ```go
 package main
 
 import (
-	"fmt"
-	"math"
+    "fmt"
+    "math"
 )
 
 type Abser interface {
-	Abs() float64
+    Abs() float64
 }
 
 func main() {
-	var a Abser
-	f := MyFloat(-math.Sqrt2)
-	v := Vertex{3, 4}
+    var a Abser
+    f := MyFloat(-math.Sqrt2)
+    v := Vertex{3, 4}
 
-	a = f  // a MyFloat 实现了 Abser
-	a = &v // a *Vertex 实现了 Abser
+    a = f  // a MyFloat 实现了 Abser
+    a = &v // a *Vertex 实现了 Abser
 
-	// 下面一行，v 是一个 Vertex（而不是 *Vertex）
-	// 所以没有实现 Abser。
-	a = v
+    // 下面一行，v 是一个 Vertex（而不是 *Vertex）
+    // 所以没有实现 Abser。
+    a = v
 
-	fmt.Println(a.Abs())
+    fmt.Println(a.Abs())
 }
 
 type MyFloat float64
 
 func (f MyFloat) Abs() float64 {
-	if f < 0 {
-		return float64(-f)
-	}
-	return float64(f)
+    if f < 0 {
+        return float64(-f)
+    }
+    return float64(f)
 }
 
 type Vertex struct {
-	X, Y float64
+    X, Y float64
 }
 
 func (v *Vertex) Abs() float64 {
-	return math.Sqrt(v.X*v.X + v.Y*v.Y)
+    return math.Sqrt(v.X*v.X + v.Y*v.Y)
 }
 ```
 
@@ -70,33 +70,33 @@ func (v *Vertex) Abs() float64 {
 package main
 
 import (
-	"fmt"
+    "fmt"
 )
 
 type Connector interface {
-	Connect()
+    Connect()
 }
 
 type PhoneConnecter struct {
-	name string
+    name string
 }
 
 func (pc PhoneConnecter) Name() string{
-	return pc.name
+    return pc.name
 }
 
 func (pc PhoneConnecter) Connect() {
-	fmt.Println("connected:", pc.name)
+    fmt.Println("connected:", pc.name)
 }
 
 func main() {
-	pc := PhoneConnecter{"PhoneConnecter"}
-	var a Connector
-	a = Connector(pc)
-	a.Connect()
+    pc := PhoneConnecter{"PhoneConnecter"}
+    var a Connector
+    a = Connector(pc)
+    a.Connect()
 
-	pc.name = "pc"
-	a.Connect()
+    pc.name = "pc"
+    a.Connect()
 }
 ```
 
@@ -116,15 +116,15 @@ connected: PhoneConnecter
 package main
 
 import (
-	"fmt"
+    "fmt"
 )
 
 func main() {
-	var a interface{}
-	fmt.Println("a == nil", a == nil)
+    var a interface{}
+    fmt.Println("a == nil", a == nil)
 
-	var p * int = nil
-	a = p 
-	fmt.Println("a == nil", a == nil)
+    var p * int = nil
+    a = p
+    fmt.Println("a == nil", a == nil)
 }
 ```

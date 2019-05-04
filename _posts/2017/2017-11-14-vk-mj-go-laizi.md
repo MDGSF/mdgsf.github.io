@@ -13,7 +13,6 @@ published: true
 
 https://github.com/yuanfengyun/qipai
 
-
 **核心思想：**
 
 1、名词解释：eye(将），字牌（feng、东南西北中发白），花色（万、筒、条、字牌）
@@ -36,13 +35,12 @@ https://github.com/yuanfengyun/qipai
 0        | eye_table_0   | table_0      | feng_eye_table_0  |      feng_table_0
 1        | eye_table_1   |  table_1     | feng_eye_table_0  |      feng_table_1
 2        | eye_table_2   |  table_2     | feng_eye_table_0  |      feng_table_2
-3        | eye_table_3   |  table_3     | feng_eye_table_0  |      feng_table_3     
+3        | eye_table_3   |  table_3     | feng_eye_table_0  |      feng_table_3
 4        | eye_table_4   |  table_4     | feng_eye_table_0  |      feng_table_4
 5        | eye_table_5   |  table_5     | feng_eye_table_0  |      feng_table_5
 6        | eye_table_6   |  table_6     | feng_eye_table_0  |      feng_table_6
 7        | eye_table_7   |  table_7     | feng_eye_table_0  |      feng_table_7
 8        | eye_table_8   |  table_8     | feng_eye_table_0  |      feng_table_8
-
 
 **步骤：**
 
@@ -66,7 +64,7 @@ https://github.com/yuanfengyun/qipai
 
 比如：
 
-手上有3个赖子，可以分配万、筒、条各一张，也可以万、同、字牌各一张 
+手上有3个赖子，可以分配万、筒、条各一张，也可以万、同、字牌各一张
 
 每种花色与赖子组合，如果所有花色都能配型成功则可胡牌
 
@@ -93,8 +91,6 @@ https://github.com/yuanfengyun/qipai
 表的大小：总量在2M左右
 
 表生成耗时：2-3S
-
-
 
 ```go
 package main

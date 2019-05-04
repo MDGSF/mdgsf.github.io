@@ -9,7 +9,6 @@ description:
 published: true
 ---
 
-
 ## 1 基础运算
 
 ```python
@@ -22,7 +21,6 @@ published: true
 >>> 22 // 8
 2
 ```
-
 
 ## 2 字符串连接
 
@@ -38,7 +36,6 @@ published: true
 'AliceAliceAliceAliceAlice'
 ```
 
-
 ## 4 hello.py
 
 ```python
@@ -53,7 +50,6 @@ print('What is your age?')
 myAge = input()
 print('You will be ' + str(int(myAge) + 1) + ' in a year.')
 ```
-
 
 ## 5 str() int() float()
 
@@ -78,9 +74,7 @@ Traceback (most recent call last):
 ValueError: invalid literal for int() with base 10: '3.14'
 ```
 
-
 ## 6 round()
-
 
 round(...)
     round(number[, ndigits]) -> number

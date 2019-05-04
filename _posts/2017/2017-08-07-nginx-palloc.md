@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Nginx] palloc内存分配"
+title: "[Nginx] palloc 内存分配"
 date: 2017-08-07
 author: mdgsf
 comments: true
@@ -9,7 +9,6 @@ tags: [Nginx]
 description:
 published: true #default true
 ---
-
 
 ### 用到的结构体定义
 
@@ -85,8 +84,6 @@ typedef struct {
     (u_char *) (((uintptr_t) (p) + ((uintptr_t) a - 1)) & ~((uintptr_t) a - 1))
 ```
 
-
-
 ### ngx_alloc
 
 就只是对malloc的调用。
@@ -115,8 +112,7 @@ ngx_alloc(size_t size, ngx_log_t *log)
 }
 ```
 
-
-### ngx_calloc 
+### ngx_calloc
 
 ```c
 #define ngx_memzero(buf, n)       (void) memset(buf, 0, n)
@@ -187,14 +183,11 @@ ngx_create_pool(size_t size, ngx_log_t *log)
 
 选择小于sizeof(ngx_pool_t)的值会造成程序崩溃。由于初始大小的内存块中要用一部分来存储ngx_pool_t这个信息本身。
 
-
-### ngx_memalign 
+### ngx_memalign
 
 <a href="http://mdgsf.github.io/linux/2017/08/07/linux-memalign.html" target="_blank">http://mdgsf.github.io/linux/2017/08/07/linux-memalign.html</a>
 
-
 ```c
-
 /*
 @brief: 如果memalign() 或者 posix_memalign() 可以只用，那就用这两个函数申请一块对齐的内存空间;
 否则的话，就调用malloc()申请一块空间。
@@ -265,7 +258,6 @@ ngx_memalign(size_t alignment, size_t size, ngx_log_t *log)
 
 ```
 
-
 ### ngx_palloc 和 ngx_pnalloc
 
 ```c
@@ -307,7 +299,6 @@ ngx_pnalloc(ngx_pool_t *pool, size_t size)
 ```
 
 可以看到，当size <= pool->max 时，调用ngx_palloc_small()。否则调用ngx_palloc_large()。
-
 
 ### ngx_palloc_small
 
@@ -390,7 +381,6 @@ ngx_palloc_block(ngx_pool_t *pool, size_t size)
     return m;
 }
 ```
-
 
 ### ngx_palloc_large
 
@@ -482,7 +472,7 @@ ngx_pmemalign(ngx_pool_t *pool, size_t size, size_t alignment)
 @brief: 从pool->large链表中查找是否存在首地址为p的内存空间，如果存在则释放这块空间。
 @param pool[inout]: 内存池对象。
 @param p[in]: 要释放的内存空间。
-@return: 
+@return:
 NGX_OK: 释放成功。
 NGX_DECLINED: 没有找到。
 */
@@ -509,7 +499,6 @@ ngx_pfree(ngx_pool_t *pool, void *p)
 对于被置于大块内存链，也就是被large字段管理的一列内存中的某块进行释放。该函数的实现是顺序遍历large管理的大块内存链表。所以效率比较低下。如果在这个链表中找到了这块内存，则释放，并返回NGX_OK。否则返回NGX_DECLINED。
 
 由于这个操作效率比较低下，除非必要，也就是说这块内存非常大，确应及时释放，否则一般不需要调用。反正内存在这个pool被销毁的时候，总归会都释放掉的嘛！
-
 
 ### 参考链接
 

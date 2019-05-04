@@ -23,10 +23,3 @@ published: true #default true
 6. 然后会生成 game.exe
 
 7. 把game.exe和love游戏引擎目录下的dll一起打包发布就好了。
-
-
-
-
-
-
-

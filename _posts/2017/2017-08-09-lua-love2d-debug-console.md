@@ -13,4 +13,3 @@ published: true #default true
 love --console Snake
 
 equivalent to setting t.console=true in conf.lua
-

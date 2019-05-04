@@ -9,7 +9,6 @@ description:
 published: true
 ---
 
-
 ```python
 print('Hello')
 print('World')
@@ -33,8 +32,3 @@ Hello World
 cats dogs mice
 cats,dogs,mice
 ```
-
-
-
-
-

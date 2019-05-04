@@ -9,14 +9,17 @@ description:
 published: true
 ---
 
+## 1
 
-1. 创建目录
+创建目录
 
 ```
 E:\ScrapyLego>
 ```
 
-2. 创建一个独立的Python运行环境，命名为venv：
+## 2
+
+创建一个独立的Python运行环境，命名为venv：
 
 ```
 E:\ScrapyLego>virtualenv --no-site-packages venv
@@ -27,15 +30,18 @@ Installing setuptools, pip, wheel...done.
 
 命令virtualenv就可以创建一个独立的Python运行环境，我们还加上了参数--no-site-packages，这样，已经安装到系统Python环境中的所有第三方包都不会复制过来，这样，我们就得到了一个不带任何第三方包的“干净”的Python运行环境。
 
-3. 进入该环境：
+## 3
+
+进入该环境：
 
 ```
 E:\ScrapyLego\venv\Scripts>activate.bat
 (venv) E:\ScrapyLego\venv\Scripts>
 ```
 
+## 4
 
-4. 安装lxml
+安装lxml
 
 <a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/" target="_blank">http://www.lfd.uci.edu/~gohlke/pythonlibs/</a>
 
@@ -50,8 +56,9 @@ lxml-3.7.3-cp34-cp34m-win_amd64.whl 就是lxml的安装包
 
 **cp34**: python的版本是3.4
 
+## 5
 
-5. 安装scrapy
+安装scrapy
 
 <a href="https://docs.scrapy.org/en/latest/intro/install.html" target="_blank">https://docs.scrapy.org/en/latest/intro/install.html</a>
 
@@ -59,7 +66,9 @@ lxml-3.7.3-cp34-cp34m-win_amd64.whl 就是lxml的安装包
 (venv) E:\ScrapyLego>pip install scrapy
 ```
 
-6. 新建文件scraper.py 
+## 6
+
+新建文件scraper.py
 
 ```python
 
@@ -85,11 +94,9 @@ class BrickSetSpider(scrapy.Spider):
             }
 ```
 
-
 ```
 (venv) E:\ScrapyLego>scrapy runspider scraper.py
 ```
-
 
 **Tips**: ImportError: No module named 'win32api'
 
@@ -100,7 +107,6 @@ Collecting pypiwin32
 Installing collected packages: pypiwin32
 Successfully installed pypiwin32-219
 ```
-
 
 ```python
 
@@ -141,14 +147,8 @@ class BrickSetSpider(scrapy.Spider):
 
 ```
 
-
-
 <a href="https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/001432712108300322c61f256c74803b43bfd65c6f8d0d0000" target="_blank">https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/001432712108300322c61f256c74803b43bfd65c6f8d0d0000</a>
-
 
 <a href="https://github.com/scrapy/scrapy" target="_blank">https://github.com/scrapy/scrapy</a>
 
-
 <a href="https://www.digitalocean.com/community/tutorials/how-to-crawl-a-web-page-with-scrapy-and-python-3" target="_blank">https://www.digitalocean.com/community/tutorials/how-to-crawl-a-web-page-with-scrapy-and-python-3</a>
-
-

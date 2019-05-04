@@ -16,7 +16,6 @@ nginx-1.13.1\src\core\ngx_queue.h
 
 nginx-1.13.1\src\core\ngx_queue.c
 
-
 ## 两种不同的链表类型
 
 <img src="{{ site.url }}/images/2017/08/0901.png" alt="0901" />
@@ -55,7 +54,6 @@ struct ngx_queue_s {
     (h == (h)->prev)
 ```
 
-
 ## ngx_queue_insert_head
 
 往队列h的头部插入节点x，也就是插入到h的下一个节点。
@@ -72,7 +70,6 @@ h是队列的头部，是一个空节点，也就是哨兵节点。
 #define ngx_queue_insert_after   ngx_queue_insert_head
 ```
 
-
 ## ngx_queue_insert_tail
 
 往队列h的尾部插入节点x，因为是双向链表，所以尾部就是h的前一个节点。
@@ -84,8 +81,6 @@ h是队列的头部，是一个空节点，也就是哨兵节点。
     (x)->next = h;                                                            \
     (h)->prev = x
 ```
-
-## 
 
 ```c
 //获取第一个节点
@@ -113,7 +108,6 @@ h是队列的头部，是一个空节点，也就是哨兵节点。
     (q)->prev
 ```
 
-
 ## ngx_queue_remove
 
 删除节点x
@@ -123,7 +117,6 @@ h是队列的头部，是一个空节点，也就是哨兵节点。
     (x)->next->prev = (x)->prev;                                              \
     (x)->prev->next = (x)->next
 ```
-
 
 ## ngx_queue_split
 
@@ -139,7 +132,6 @@ h是队列的头部，是一个空节点，也就是哨兵节点。
     (q)->prev = n;
 ```
 
-
 ## ngx_queue_add
 
 连接两个链表，把链表n连接到链表h的尾部。
@@ -151,7 +143,6 @@ h是队列的头部，是一个空节点，也就是哨兵节点。
     (h)->prev = (n)->prev;                                                    \
     (h)->prev->next = h;
 ```
-
 
 ## ngx_queue_data
 
@@ -167,7 +158,6 @@ h是队列的头部，是一个空节点，也就是哨兵节点。
 不理解的话，看下面的这个链接，在文章的最底部。
 
 <a href="http://mdgsf.github.io/linux-kernel/2017/07/21/linux-kernel-list.html" target="_blank">http://mdgsf.github.io/linux-kernel/2017/07/21/linux-kernel-list.html</a>
-
 
 ## ngx_queue_middle
 
@@ -212,8 +202,6 @@ ngx_queue_middle(ngx_queue_t *queue)
 }
 ```
 
-
-
 ## ngx_queue_sort
 
 ```c
@@ -251,8 +239,3 @@ ngx_queue_sort(ngx_queue_t *queue,
     }
 }
 ```
-
-
-
-
-

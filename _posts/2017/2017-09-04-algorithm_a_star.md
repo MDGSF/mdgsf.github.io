@@ -10,5 +10,4 @@ description:
 published: true #default true
 ---
 
-
 http://www.redblobgames.com/pathfinding/a-star/introduction.html

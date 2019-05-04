@@ -9,36 +9,35 @@ description: ""
 published: true
 ---
 
-
 ## Example 1
 
 ```go
 package main
 
 import (
-	"fmt"
-	"math/rand"
-	"time"
+    "fmt"
+    "math/rand"
+    "time"
 )
 
 func funcname(a interface{}) string {
-	return a.(string)
+    return a.(string)
 }
 
 func main() {
-	var v interface{}
+    var v interface{}
 
-	r := rand.New(rand.NewSource(time.Now().UnixNano()))
-	for i := 0; i < 10; i++ {
-		v = i
-		if (r.Intn(100) % 2) == 0 {
-			v = "hello"
-		}
+    r := rand.New(rand.NewSource(time.Now().UnixNano()))
+    for i := 0; i < 10; i++ {
+        v = i
+        if (r.Intn(100) % 2) == 0 {
+            v = "hello"
+        }
 
-		if _, ok := v.(int); ok {
-			fmt.Printf("int %d\n", v)
-		}
-	}
+        if _, ok := v.(int); ok {
+            fmt.Printf("int %d\n", v)
+        }
+    }
 }
 ```
 
@@ -52,20 +51,19 @@ import "fmt"
 type Element interface{}
 
 func main() {
-	var e Element = 100
-	switch value := e.(type) {
-	case int:
-		fmt.Println("int", value)
-	case string:
-		fmt.Println("string", value)
-	default:
-		fmt.Println("unknown", value)
-	}
+    var e Element = 100
+    switch value := e.(type) {
+    case int:
+        fmt.Println("int", value)
+    case string:
+        fmt.Println("string", value)
+    default:
+        fmt.Println("unknown", value)
+    }
 }
 ```
 
 **type** 是go的一个关键字
-
 
 ## Example 3
 
@@ -75,29 +73,28 @@ package main
 import "fmt"
 
 type Stringer interface {
-	String() string
+    String() string
 }
 
 type aa int
 
 func (a aa) String() string {
-	return "String() function"
+    return "String() function"
 }
 
 func test(a interface{}) {
-	if _, ok := a.(Stringer); ok {
-		fmt.Println("aa is type of Stringer")
-	} else {
-		fmt.Println("aa is not type of Stringer")
-	}
+    if _, ok := a.(Stringer); ok {
+        fmt.Println("aa is type of Stringer")
+    } else {
+        fmt.Println("aa is not type of Stringer")
+    }
 }
 
 func main() {
-	var a aa
-	test(a)
+    var a aa
+    test(a)
 }
 ```
-
 
 ## Interface conversions and type assertions (Effective Go)
 
@@ -153,4 +150,3 @@ if str, ok := value.(string); ok {
     return str.String()
 }
 ```
-

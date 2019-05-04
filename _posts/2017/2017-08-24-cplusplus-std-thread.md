@@ -11,34 +11,33 @@ published: true
 
 c++11 之后在STL中引入了thread
 
-
 ```c++
 #include <iostream>
 #include <thread>
 
 void foo()
 {
-	std::cout << "foo thread thread id: " << std::this_thread::get_id() << '\n';
+    std::cout << "foo thread thread id: " << std::this_thread::get_id() << '\n';
 }
 
 void bar(int x)
 {
-	std::cout << "bar thread thread id: " << std::this_thread::get_id() << '\n';
+    std::cout << "bar thread thread id: " << std::this_thread::get_id() << '\n';
 }
 
 int main()
 {
-	std::thread first(foo);
-	std::thread second(bar, 0);
+    std::thread first(foo);
+    std::thread second(bar, 0);
 
-	std::cout << "main thread id: " << std::this_thread::get_id() << '\n';
+    std::cout << "main thread id: " << std::this_thread::get_id() << '\n';
 
-	first.join();
-	second.join();
+    first.join();
+    second.join();
 
-	std::cout << "main end\n";
+    std::cout << "main end\n";
 
-	return 0;
+    return 0;
 }
 ```
 
@@ -53,21 +52,20 @@ std::thread::id main_thread_id = std::this_thread::get_id();
 
 void is_main_thread()
 {
-	if (main_thread_id == std::this_thread::get_id())
-		std::cout << "This is the main thread.\n";
-	else
-		std::cout << "This is no the main thread.\n";
+    if (main_thread_id == std::this_thread::get_id())
+        std::cout << "This is the main thread.\n";
+    else
+        std::cout << "This is no the main thread.\n";
 }
 
 int main()
 {
-	is_main_thread();
-	std::thread th(is_main_thread);
-	th.join();
-	return 0;
+    is_main_thread();
+    std::thread th(is_main_thread);
+    th.join();
+    return 0;
 }
 ```
-
 
 ## detach()
 
@@ -78,21 +76,21 @@ int main()
 
 void pause_thread(int n)
 {
-	std::this_thread::sleep_for(std::chrono::seconds(n));
-	std::cout << "pause of " << n << " seconds ended\n";
+    std::this_thread::sleep_for(std::chrono::seconds(n));
+    std::cout << "pause of " << n << " seconds ended\n";
 }
 
 int main()
 {
-	std::cout << "Spawning and detaching 3 threads...\n";
-	std::thread(pause_thread, 1).detach();
-	std::thread(pause_thread, 2).detach();
-	std::thread(pause_thread, 3).detach();
-	std::cout << "Done spawning threads.\n";
+    std::cout << "Spawning and detaching 3 threads...\n";
+    std::thread(pause_thread, 1).detach();
+    std::thread(pause_thread, 2).detach();
+    std::thread(pause_thread, 3).detach();
+    std::cout << "Done spawning threads.\n";
 
-	std::cout << "(the main thread will now pause for 5 seconds)\n";
-	pause_thread(5);
-	return 0;
+    std::cout << "(the main thread will now pause for 5 seconds)\n";
+    pause_thread(5);
+    return 0;
 }
 /*
 output:
@@ -106,7 +104,6 @@ pause of 5 seconds ended
 */
 ```
 
-
 ## joinable()
 
 ```c++
@@ -115,28 +112,28 @@ pause of 5 seconds ended
 
 void mythread()
 {
-	std::cout << "mythread\n";
+    std::cout << "mythread\n";
 }
 
 int main()
 {
-	std::thread foo;
-	std::thread bar(mythread);
+    std::thread foo;
+    std::thread bar(mythread);
 
-	std::cout << "Joinable after construction:\n" << std::boolalpha;
-	std::cout << "foo: " << foo.joinable() << '\n';
-	std::cout << "bar: " << bar.joinable() << '\n';
+    std::cout << "Joinable after construction:\n" << std::boolalpha;
+    std::cout << "foo: " << foo.joinable() << '\n';
+    std::cout << "bar: " << bar.joinable() << '\n';
 
-	if (foo.joinable())
-		foo.join();
-	if (bar.joinable())
-		bar.join();
+    if (foo.joinable())
+        foo.join();
+    if (bar.joinable())
+        bar.join();
 
-	std::cout << "Joinable after construction:\n" << std::boolalpha;
-	std::cout << "foo: " << foo.joinable() << '\n';
-	std::cout << "bar: " << bar.joinable() << '\n';
+    std::cout << "Joinable after construction:\n" << std::boolalpha;
+    std::cout << "foo: " << foo.joinable() << '\n';
+    std::cout << "bar: " << bar.joinable() << '\n';
 
-	return 0;
+    return 0;
 }
 /*
 output:
@@ -149,5 +146,3 @@ foo: false
 bar: false
 */
 ```
-
-

@@ -9,7 +9,6 @@ description:
 published: true
 ---
 
-
 ```python
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
@@ -43,10 +42,7 @@ while True:
     sock, addr = s.accept()
     t = threading.Thread(target = tcplink, args = (sock, addr))
     t.start()
-
 ```
-
-
 
 ```python
 #!/usr/bin/env python3
@@ -65,4 +61,3 @@ for data in [b'Michael', b'Tracy', b'Sarah']:
 s.send(b'exit')
 s.close()
 ```
-

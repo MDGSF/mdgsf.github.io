@@ -17,7 +17,6 @@ A palindromic number reads the same both ways. The largest palindrome made from 
 
 Find the largest palindrome made from the product of two 3-digit numbers.
 
-
 ## Answer
 
 906609
@@ -30,38 +29,37 @@ package main
 import "fmt"
 
 func bIsPalindromic(num int) bool {
-	tNum := num
-	rNum := 0
-	for tNum > 0 {
-		t := tNum % 10
-		tNum = tNum / 10
+    tNum := num
+    rNum := 0
+    for tNum > 0 {
+        t := tNum % 10
+        tNum = tNum / 10
 
-		rNum = rNum*10 + t
-	}
+        rNum = rNum*10 + t
+    }
 
-	if rNum == num {
-		return true
-	}
+    if rNum == num {
+        return true
+    }
 
-	return false
+    return false
 }
 
 func main() {
-	fmt.Println(bIsPalindromic(101))
+    fmt.Println(bIsPalindromic(101))
 
-	iMax := 0
-	for i := 100; i < 1000; i++ {
-		for j := 100; j < 1000; j++ {
-			iPalindromic := i * j
-			if bIsPalindromic(iPalindromic) {
-				if iPalindromic > iMax {
-					iMax = iPalindromic
-				}
-			}
-		}
-	}
+    iMax := 0
+    for i := 100; i < 1000; i++ {
+        for j := 100; j < 1000; j++ {
+            iPalindromic := i * j
+            if bIsPalindromic(iPalindromic) {
+                if iPalindromic > iMax {
+                    iMax = iPalindromic
+                }
+            }
+        }
+    }
 
-	fmt.Println(iMax)
+    fmt.Println(iMax)
 }
 ```
-

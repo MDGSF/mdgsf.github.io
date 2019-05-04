@@ -9,7 +9,6 @@ description: ""
 published: true
 ---
 
-
 ```go
 func Run() {
    in, out := make(chan *Work), make(chan *Work)

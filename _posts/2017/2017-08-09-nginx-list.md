@@ -92,7 +92,6 @@ ngx_list_init(ngx_list_t *list, ngx_pool_t *pool, ngx_uint_t n, size_t size)
 }
 ```
 
-
 ## ngx_list_push
 
 ```c
@@ -119,7 +118,7 @@ ngx_list_push(ngx_list_t *l)
         }
 
         //分配一块新的内存块，这块内存块的大小和之前的是一样的。应该说每一块内存块的大小都是一样的。
-        last->elts = ngx_palloc(l->pool, l->nalloc * l->size); 
+        last->elts = ngx_palloc(l->pool, l->nalloc * l->size);
         if (last->elts == NULL) {
             return NULL;
         }
@@ -137,17 +136,3 @@ ngx_list_push(ngx_list_t *l)
     return elt;
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-

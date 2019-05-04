@@ -17,7 +17,6 @@ http://hp.vector.co.jp/authors/VA046927/mjscore/AgariIndex.java
 
 http://hp.vector.co.jp/authors/VA046927/mjscore/AgariBacktrack.java
 
-
 **核心思想：**
 
 9张万，9张条，9张饼，4张风，3张箭，一共34种牌。
@@ -27,7 +26,6 @@ http://hp.vector.co.jp/authors/VA046927/mjscore/AgariBacktrack.java
 麻将的手牌有14张，14张 * 6bit = 84bit
 
 麻将的所有组合大约有1700万种，所以需要的内存为 84bit * 1700万 = 175MB 左右。
-
 
 所以需要进行优化：
 
@@ -55,7 +53,6 @@ http://hp.vector.co.jp/authors/VA046927/mjscore/AgariBacktrack.java
 
 很容易看出，这样编码后每张牌只占用1到2位空间，最恶情况子下（十四张不连单牌）仅占用27位。跟之前的84位相比，单组数据压缩了三分之二以上。更牛逼的是，和牌表从1700万种具体组合下降到仅仅9362种形状排列！
 
-
 ### 下面给出几个二进制化的例子
 
 需要倒过来看，对照上面的规则从右往左看：
@@ -71,11 +68,3 @@ http://hp.vector.co.jp/authors/VA046927/mjscore/AgariBacktrack.java
 2303 --> 0x3EFB --> 0011 1110 1111 1011
 
 21110330 --> 0x1F7A3 --> 0001 1111 0111 1010 0011
-
-
-
-
-
-
-
-

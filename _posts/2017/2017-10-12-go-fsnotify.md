@@ -9,7 +9,6 @@ description: ""
 published: true
 ---
 
-
 ```go
 package main
 
@@ -109,5 +108,3 @@ func main() {
     <-done
 }
 ```
-
-

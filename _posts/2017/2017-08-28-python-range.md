@@ -9,13 +9,11 @@ description:
 published: true
 ---
 
-
 range(stop) -> range object
 
 range(start, stop[, step]) -> range object
 
 Return a sequence of numbers from start to stop by step.
-
 
 ```python
 >>> list(range(10))
@@ -32,6 +30,4 @@ Return a sequence of numbers from start to stop by step.
 [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 >>> list(range(10, -1, -2))
 [10, 8, 6, 4, 2, 0]
-``` 
-
-
+```

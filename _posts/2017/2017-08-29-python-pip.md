@@ -9,7 +9,6 @@ description:
 published: true
 ---
 
-
 1. 进入目录 C:\Python34\Scripts
 
 2. 进入命令行
@@ -17,6 +16,3 @@ published: true
 3. 执行easy_install.exe pip
 
 4. 然后就安装好了
-
-
-

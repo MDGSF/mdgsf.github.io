@@ -9,7 +9,6 @@ description: ""
 published: true
 ---
 
-
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -75,4 +74,3 @@ int main(int argc, char ** argv)
 https://github.com/alex85k/wingetopt
 
 https://en.wikipedia.org/wiki/Getopt
-

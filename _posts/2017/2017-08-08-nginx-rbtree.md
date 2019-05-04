@@ -16,7 +16,6 @@ nginx-1.13.1\src\core\ngx_rbtree.h
 
 nginx-1.13.1\src\core\ngx_rbtree.c
 
-
 ## 红黑树原理
 
 <a href="http://blog.csdn.net/yang_yulei/article/details/26066409" target="_blank">http://blog.csdn.net/yang_yulei/article/details/26066409</a>
@@ -26,7 +25,6 @@ nginx-1.13.1\src\core\ngx_rbtree.c
 <a href="http://www.cs.princeton.edu/~rs/talks/LLRB/RedBlack.pdf" target="_blank">http://www.cs.princeton.edu/~rs/talks/LLRB/RedBlack.pdf</a>
 
 <a href="https://github.com/julycoding/The-Art-Of-Programming-By-July/blob/master/ebook/zh/03.01.md" target="_blank">https://github.com/julycoding/The-Art-Of-Programming-By-July/blob/master/ebook/zh/03.01.md</a>
-
 
 <img src="{{ site.url }}/images/2017/08/0802.png" alt="0802" />
 
@@ -40,7 +38,7 @@ nginx-1.13.1\src\core\ngx_rbtree.c
 
 4）如果一个结点是红的，那么它的俩个儿子都是黑的。  
 
-5）对于任一结点而言，其到叶结点树尾端NIL指针的每一条路径都包含相同数目的黑结点。 
+5）对于任一结点而言，其到叶结点树尾端NIL指针的每一条路径都包含相同数目的黑结点。
 
 ## 2-3树 和 红黑树
 
@@ -56,7 +54,6 @@ nginx-1.13.1\src\core\ngx_rbtree.c
 
 **黑色节点**: 相当于2节点。黑色表示指向该节点的连接是黑色的，黑色的连接可以是左儿子，也可以是右儿子。
 所有叶子节点到根节点的黑色连接数量是一样的。
-
 
 ## 2-3-4树 和 红黑树
 
@@ -75,8 +72,6 @@ nginx-1.13.1\src\core\ngx_rbtree.c
 在2-3-4树中，3-node转为左斜杠为红色的红黑树。
 
 在2-3-4树中，4-node转为左右斜杠为红色的红黑树。
-
-
 
 ## 基础数据结构
 
@@ -122,9 +117,7 @@ struct ngx_rbtree_s {
 #define ngx_rbt_is_red(node)            ((node)->color)
 #define ngx_rbt_is_black(node)          (!ngx_rbt_is_red(node))
 #define ngx_rbt_copy_color(n1, n2)      (n1->color = n2->color)
-
 ```
-
 
 ## 插入
 
@@ -209,8 +202,6 @@ ngx_rbtree_insert(ngx_rbtree_t *tree, ngx_rbtree_node_t *node)
 }
 ```
 
-
-
 ## 遍历
 
 ```c
@@ -218,7 +209,7 @@ ngx_rbtree_insert(ngx_rbtree_t *tree, ngx_rbtree_node_t *node)
 @brief: 返回以node作为树根的这个红黑树中，最小的那个节点。
 @param node[in]: 作为树根节点。
 @param sentinel[in]: 哨兵节点。
-@return: 
+@return:
 */
 static ngx_inline ngx_rbtree_node_t *
 ngx_rbtree_min(ngx_rbtree_node_t *node, ngx_rbtree_node_t *sentinel)
@@ -262,7 +253,7 @@ ngx_rbtree_next(ngx_rbtree_t *tree, ngx_rbtree_node_t *node)
 }
 ```
 
-##### 如何遍历整个红黑树？
+### 如何遍历整个红黑树？
 
 先调用 ngx_rbtree_min，传入树根，就可以得到该红黑树的最小节点。
 
@@ -272,9 +263,4 @@ ngx_rbtree_next(ngx_rbtree_t *tree, ngx_rbtree_node_t *node)
 
 “在删除结点后，原红黑树的性质可能被改变，如果删除的是红色结点，那么原红黑树的性质依旧保持，此时不用做修正操作，如果删除的结点是黑色结点，原红黑树的性质可能会被改变，我们要对其做修正操作。那么哪些树的性质会发生变化呢，如果删除结点不是树唯一结点，那么删除结点的那一个支的到各叶结点的黑色结点数会发生变化，此时性质5被破坏。如果被删结点的唯一非空子结点是红色，而被删结点的父结点也是红色，那么性质4被破坏。如果被删结点是根结点，而它的唯一非空子结点是红色，则删除后新根结点将变成红色，违背性质2。”
 
-
 <img src="{{ site.url }}/images/2017/08/0803.png" alt="0803" />
-
-
-
-

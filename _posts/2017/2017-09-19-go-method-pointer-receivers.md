@@ -21,33 +21,32 @@ published: true
 
 Abs 的工作方式是一样的。只不过，仅仅读取 v。所以读取的是原始值（通过指针）还是那个值的副本并没有关系。
 
-
 ```go
 package main
 
 import (
-	"fmt"
-	"math"
+    "fmt"
+    "math"
 )
 
 type Vertex struct {
-	X, Y float64
+    X, Y float64
 }
 
 func (v *Vertex) Scale(f float64) {
-	v.X = v.X * f
-	v.Y = v.Y * f
+    v.X = v.X * f
+    v.Y = v.Y * f
 }
 
 func (v *Vertex) Abs() float64 {
-	return math.Sqrt(v.X*v.X + v.Y*v.Y)
+    return math.Sqrt(v.X*v.X + v.Y*v.Y)
 }
 
 func main() {
-	v := &Vertex{3, 4}
-	fmt.Printf("Before scaling: %+v, Abs: %v\n", v, v.Abs())
-	v.Scale(5)
-	fmt.Printf("After scaling: %+v, Abs: %v\n", v, v.Abs())
+    v := &Vertex{3, 4}
+    fmt.Printf("Before scaling: %+v, Abs: %v\n", v, v.Abs())
+    v.Scale(5)
+    fmt.Printf("After scaling: %+v, Abs: %v\n", v, v.Abs())
 }
 ```
 
@@ -73,11 +72,11 @@ After scaling: &{X:3 Y:4}, Abs: 5
 package main
 
 import (
-	"fmt"
+    "fmt"
 )
 
 type Point struct {
-	a, b int
+    a, b int
 }
 
 type intPairs []Point
@@ -88,19 +87,19 @@ func (d intPairs) Less(i, j int) bool { return d[i].a < d[j].a }
 func (d intPairs) Swap(i, j int)      { d[i], d[j] = d[j], d[i] }
 
 func main() {
-	var d intPairs
+    var d intPairs
 
-	p1 := Point{1, 2}
-	p2 := Point{3, 4}
-	p3 := Point{5, 6}
-	d = append(d, p1)
-	d = append(d, p2)
-	d = append(d, p3)
+    p1 := Point{1, 2}
+    p2 := Point{3, 4}
+    p3 := Point{5, 6}
+    d = append(d, p1)
+    d = append(d, p2)
+    d = append(d, p3)
 
-	fmt.Println(d)
+    fmt.Println(d)
 
-	d.Swap(1, 2)
-	fmt.Println(d)
+    d.Swap(1, 2)
+    fmt.Println(d)
 }
 ```
 
@@ -110,4 +109,3 @@ func main() {
 [{1 2} {3 4} {5 6}]
 [{1 2} {5 6} {3 4}]
 ```
-

@@ -12,7 +12,6 @@ published: true #default true
 
 装饰者模式：被装饰的 和 装饰 要继承自同一个基类。
 
-
 ```c++
 #include <iostream>
 #include <string>
@@ -144,4 +143,3 @@ int main()
     return 0;
 }
 ```
-

@@ -22,6 +22,8 @@ type: page
 
 [Python 资源汇总]({{ site.url }}/2019/03/23/python-resource/)
 
+[Rust 资源汇总]({{ site.url }}/2019/07/04/rust-resource/)
+
 [Mysql 资源汇总]({{ site.url }})
 
 ## 画图

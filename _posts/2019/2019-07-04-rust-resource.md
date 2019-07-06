@@ -17,6 +17,8 @@ published: true
 
 [awesome-rust](https://github.com/rust-unofficial/awesome-rust)
 
+[Rust语言中文社区](https://rust.cc/)
+
 ## 书
 
 [The Rust Programming Language](https://doc.rust-lang.org/book/title-page.html)

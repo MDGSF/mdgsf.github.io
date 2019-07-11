@@ -26,3 +26,10 @@ published: true
 ## web 框架
 
 [Rocket](https://github.com/SergioBenitez/Rocket)
+
+## 离线文档
+
+```
+rustup doc -h 这个是查看当前工具链的文档。
+cargo doc -h 这个是查看当前包的文档。
+```

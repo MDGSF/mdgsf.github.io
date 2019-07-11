@@ -119,3 +119,5 @@ fn test4() {
     println!("test4> {:?}", scores);
 }
 ```
+
+[std::collections::HashMap](https://doc.rust-lang.org/std/collections/struct.HashMap.html)

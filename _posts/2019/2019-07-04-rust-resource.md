@@ -19,6 +19,8 @@ published: true
 
 [Rust语言中文社区](https://rust.cc/)
 
+[Command line apps in Rust](https://rust-lang-nursery.github.io/cli-wg/)
+
 ## 书
 
 [The Rust Programming Language](https://doc.rust-lang.org/book/title-page.html)

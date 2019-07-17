@@ -27,6 +27,8 @@ published: true
 
 [The Rust Programming Language](https://www.cs.brandeis.edu/~cs146a/rust/doc-02-21-2015/book/README.html)
 
+[Cookin' with Rust](https://rust-lang-nursery.github.io/rust-cookbook/intro.html)
+
 ## web 框架
 
 [Rocket](https://github.com/SergioBenitez/Rocket)

@@ -124,3 +124,11 @@ autossh -M 0 -f -nNTf -L 16379:127.0.0.1:6379 user@biao
 ```
 autossh -M 0 -f -nNTf -R 16000:127.0.0.1:6000 user@biao
 ```
+
+### example 3
+
+把本地的 6000 端口映射到服务器上的 6000 端口。并且 autossh 会在后台监控 ssh 是否正常运行。
+
+```
+# autossh -M 0 -f -nNTf -R 6000:127.0.0.1:6000 user@biao -F /home/huangjian/.ssh/config
+```

@@ -18,6 +18,9 @@ stuffs, enjoy yourself.
 
 # 个人简历
 
+<details>
+<summary>展开查看</summary>
+
 ## 专业技能
 
 * **语言**：Golang（熟悉），C++（熟悉），Python（熟悉）。
@@ -78,6 +81,8 @@ stuffs, enjoy yourself.
 * **个人博客**：[https://mdgsf.github.io](https://mdgsf.github.io)。
 * **代码风格**：良好，坚持写注释。
 * **座右铭**：Stay hungry, stay foolish。
+
+</details>
 
 ## Comments
 

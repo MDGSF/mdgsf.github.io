@@ -29,6 +29,8 @@ published: true
 
 [Cookin' with Rust](https://rust-lang-nursery.github.io/rust-cookbook/intro.html)
 
+[too many lists](https://github.com/rust-unofficial/too-many-lists)
+
 ## web 框架
 
 [Rocket](https://github.com/SergioBenitez/Rocket)

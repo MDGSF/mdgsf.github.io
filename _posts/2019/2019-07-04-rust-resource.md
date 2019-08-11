@@ -35,9 +35,10 @@ published: true
 
 [Rocket](https://github.com/SergioBenitez/Rocket)
 
-## 离线文档
+## 常用命令
 
 ```
+rustup component add rust-src 安装当前工具链源码
 rustup doc -h 这个是查看当前工具链的文档。
 cargo doc -h 这个是查看当前包的文档。
 ```

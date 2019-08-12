@@ -31,6 +31,8 @@ published: true
 
 [too many lists](https://github.com/rust-unofficial/too-many-lists)
 
+[too many lists 中文版](https://github.com/WeAthFoLD/rust-too-many-lists-zhcn)
+
 ## web 框架
 
 [Rocket](https://github.com/SergioBenitez/Rocket)

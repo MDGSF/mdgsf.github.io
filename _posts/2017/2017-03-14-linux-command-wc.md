@@ -61,7 +61,7 @@ the following order: newline, word, character, byte, maximum line length.
       --version          显示版本信息并退出
 ```
 
-### 统计当前目录下有多少个 h头文件
+### 统计当前目录下有多少个 h 头文件
 
 ```
 mdgsf@mdgsf-ThinkPad-X260:~/svn/AStyle$ find . -name "*.h"
@@ -72,14 +72,14 @@ mdgsf@mdgsf-ThinkPad-X260:~/svn/AStyle$ find . -name "*.h" | wc -l
 3
 ```
 
-### 统计当前目录下所有 h头文件中的代码行数
+### 统计当前目录下所有 h 头文件中的代码行数
 
 ```
 mdgsf@mdgsf-ThinkPad-X260:~/svn/AStyle$ find . -name "*.h" | xargs cat | wc -l
 1642
 ```
 
-### 统计当前目录下所有 h头文件中的代码行数，字数，字节数
+### 统计当前目录下所有 h 头文件中的代码行数，字数，字节数
 
 ```
 mdgsf@mdgsf-ThinkPad-X260:~/svn/AStyle$ find . -name "*.h" | xargs cat | wc
@@ -109,3 +109,22 @@ drwxr-xr-x  2 root root 4096 2月  12 14:13 file
 drwxr-xr-x  2 root root 4096 2月  12 14:13 src
 mdgsf@mdgsf-ThinkPad-X260:~/svn/AStyle$
 ```
+
+### 统计当前目录包括子目录下所有 go 文件的行数，并显示每个文件的行数
+
+```
+find . -name "*.go" -print0 | wc -l --files0-from=-
+```
+
+### 统计当前目录包括子目录下所有文件的行数，并显示每个文件的行数
+
+```
+find . -type f -print0 | wc -l --files0-from=-
+```
+
+### 统计当前目录包括子目录下所有文件的行数，只显示总行数
+
+```
+find . -type f -exec cat {} + | wc -l
+```
+

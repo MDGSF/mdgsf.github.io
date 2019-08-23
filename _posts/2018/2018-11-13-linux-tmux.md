@@ -11,7 +11,7 @@ published: true
 
 ### ~/.tmux.conf
 
-```
+```conf
 #
 # ~/.tmux.conf
 #
@@ -40,6 +40,7 @@ published: true
 # ctrl+b c 创建一个新窗口
 # ctrl+b & 关闭当前窗口
 # ctrl+b 1/2/3/数字 切换窗口
+# ctrl+b l 转到上一个使用的窗口。
 # ctrl+b n 转到下一个 (n)ext 窗口。
 # ctrl+b p 转到之前的 (p)revious 窗口。
 # ctrl+b w 打开窗口列表，用方向键,hjkl切换窗口。
@@ -93,10 +94,14 @@ published: true
 # set -g prefix C-b
 
 # 使用 alt-left/right/up/down 来选择面板
-bind -n M-Left select-pane -L
-bind -n M-Right select-pane -R
-bind -n M-Up select-pane -U
-bind -n M-Down select-pane -D
+# bind -n M-Left select-pane -L
+# bind -n M-Right select-pane -R
+# bind -n M-Up select-pane -U
+# bind -n M-Down select-pane -D
+bind -n M-h select-pane -L
+bind -n M-l select-pane -R
+bind -n M-k select-pane -U
+bind -n M-j select-pane -D
 
 set-option -g base-index 1
 set-option -g display-time 5000
@@ -105,6 +110,20 @@ set-option -g repeat-time 1000
 set-window-option -g mode-keys vi
 
 set -g mouse on
+
+set -s escape-time 0
+
+# apt-get install xclip
+# 先用 ctrl+b [ 进入复制模式复制
+# 然后用 ctrl+b ctrl+c 把 tmux 缓冲区中的内容复制到系统剪切板
+# 用 ctrl+b ctrl+v 把系统剪切板复制到 tmux
+bind C-c run " tmux save-buffer - | xclip -i -sel clipboard > /dev/null"
+bind C-v run " tmux set-buffer \"$(xclip -o -sel clipboard)\"; tmux paste-buffer"
+
+bind '"' split-window -c "#{pane_current_path}"
+bind % split-window -h -c "#{pane_current_path}"
+bind c new-window -c "#{pane_current_path}"
+
 ```
 
 ### 参考链接
@@ -112,3 +131,4 @@ set -g mouse on
 [https://github.com/tmux/tmux](https://github.com/tmux/tmux)
 
 [https://blog.csdn.net/gatieme/article/details/49301037](https://blog.csdn.net/gatieme/article/details/49301037)
+

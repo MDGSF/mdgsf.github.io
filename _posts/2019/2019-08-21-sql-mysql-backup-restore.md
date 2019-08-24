@@ -13,8 +13,7 @@ published: true
 
 <details>
 <summary>文件： mysql_back.sh</summary>
-
-```bash
+<pre><code>
 #!/bin/bash
 
 # 以下配置信息请自己修改
@@ -88,8 +87,7 @@ else
         echo "All database backup success! Thank you!"
         exit
 fi
-```
-
+</code></pre>
 </details>
 
 `mysql_back.sh` 文件可以作为一个定时任务运行。

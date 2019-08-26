@@ -127,4 +127,3 @@ find . -type f -print0 | wc -l --files0-from=-
 ```
 find . -type f -exec cat {} + | wc -l
 ```
-

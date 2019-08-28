@@ -9,6 +9,8 @@ description:
 published: true
 ---
 
+### 方法一
+
 删除用户
 
 ```
@@ -49,4 +51,14 @@ su lyy
 
 ```
 sudo su
+```
+
+### 方法二
+
+```
+adduser username
+```
+
+```
+usermod -aG sudo username
 ```

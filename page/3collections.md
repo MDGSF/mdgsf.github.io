@@ -26,6 +26,8 @@ type: page
 
 [Mysql 资源汇总]({{ site.url }})
 
+[JavaScript 资源汇总]({{ site.url }}/2019/09/07/js-resource/)
+
 ## 画图
 
 [http://asciiflow.com/](http://asciiflow.com/)

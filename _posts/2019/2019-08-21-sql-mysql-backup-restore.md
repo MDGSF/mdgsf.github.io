@@ -11,9 +11,9 @@ published: true
 
 ## 备份数据库
 
-<details>
-<summary>文件： mysql_back.sh</summary>
-<pre><code>
+文件： mysql_back.sh
+
+```sh
 #!/bin/bash
 
 # 以下配置信息请自己修改
@@ -87,8 +87,7 @@ else
         echo "All database backup success! Thank you!"
         exit
 fi
-</code></pre>
-</details>
+```
 
 `mysql_back.sh` 文件可以作为一个定时任务运行。
 
@@ -112,3 +111,4 @@ mysql -u root -p databasename < databasename_backup.sql
 
 这个会还原到备份的那个时间点的所有数据，新增的数据，还是被删除掉的数据，都会被还原。
 ```
+

@@ -11,13 +11,13 @@ published: true
 
 ### 获取 RDS 基础信息
 
-```mysql
+```
 select * from information_schema.tables;
 ```
 
 ### 获取所有数据库的大小
 
-```mysql
+```
 SELECT
     table_schema,
     SUM((data_length + index_length) / 1024 / 1024) AS MB
@@ -28,7 +28,7 @@ GROUP BY 1;
 
 ### 获取指定数据库的大小
 
-```mysql
+```
 SELECT
     table_schema,
     SUM((data_length + index_length) / 1024 / 1024) AS MB
@@ -41,7 +41,7 @@ GROUP BY table_schema;
 
 ### 获取指定数据库有多少个表格
 
-```mysql
+```
 SELECT
     COUNT(*)
 FROM
@@ -52,7 +52,7 @@ WHERE
 
 ### 获取指定数据库中每个表格占用空间大小
 
-```mysql
+```
 SELECT
     table_schema,
     table_name,

@@ -187,7 +187,7 @@ Day of week  | 0-6 or SUN-SAT  | * / , - ?
 * 23,0-7/2 * * * echo `date` >> /home/huangjian/crontab_demo/hour_0_2_4_6_23_every_minute.txt
 
 # 每天的 3 点到 5 点，17 点到 20 点，每隔 30 分钟执行命令
-*/30 [3-5],[17-20] * * * echo `date` >> /home/huangjian/crontab_demo/hour_3-5_17-20_every_30_minute.txt
+*/30 3-5,17-20 * * * echo `date` >> /home/huangjian/crontab_demo/hour_3-5_17-20_every_30_minute.txt
 
 # 每年的 8 月 20 号的 00:00 执行命令
 0 0 20 8 * echo `date` >> /home/huangjian/crontab_demo/month_8_20th.txt

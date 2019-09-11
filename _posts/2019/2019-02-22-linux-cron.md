@@ -193,6 +193,8 @@ Day of week  | 0-6 or SUN-SAT  | * / , - ?
 0 0 20 8 * echo `date` >> /home/huangjian/crontab_demo/month_8_20th.txt
 ```
 
+**注意：** 在有的 crontab 上，配置里面如果有空行也会报错，实在是太坑了。
+
 #### 每分钟执行一次 test.sh
 
 ```

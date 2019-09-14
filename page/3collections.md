@@ -14,6 +14,8 @@ type: page
 
 ## 资源
 
+[C 语言资源汇总]({{ site.url }}/2019/09/14/c-resource/)
+
 [常用算法]({{ site.url }}/2019/02/28/algorithm-resource/)
 
 [Nginx 资源汇总]({{ site.url }}/2019/02/21/nginx-resource/)

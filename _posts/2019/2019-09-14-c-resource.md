@@ -14,7 +14,7 @@ published: true #default true
 
 [C Programming Resources](http://www.isthe.com/chongo/tech/comp/c/index.html)
 
-[EssentialC](cslibrary.stanford.edu/101/EssentialC.pdf)
+[EssentialC](cslibrary.stanford.edu/101/EssentialC.pdf) [百度网盘链接](https://pan.baidu.com/s/1G85hkXQ8kifkmuwyJqDUdw) 提取码: f4vx
 
 [Build Your Own Lisp 中文版](https://ksco.gitbooks.io/build-your-own-lisp/)
 

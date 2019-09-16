@@ -156,6 +156,9 @@ Day of week  | 0-6 or SUN-SAT  | * / , - ?
 # 每天的 6 点到 12 点之间，每隔 3 小时执行命令
 0 6-12/3 * * * echo `date` >> /home/huangjian/crontab_demo/everyday_6-12_hour_every_3_hour.txt
 
+# 每天的 7 点到 12 点之间，每隔 3 小时执行命令
+0 7-12/3 * * * echo `date` >> /home/huangjian/crontab_demo/everyday_7-12_hour_every_3_hour.txt
+
 # 每天的 0 点 20 分，2 点 20 分，4 点 20 分，....　执行命令
 20 0-23/2 * * * echo `date` >> /home/huangjian/crontab_demo/every_2_hour_20th_minute.txt
 
@@ -219,6 +222,280 @@ Day of week  | 0-6 or SUN-SAT  | * / , - ?
 
 ```
 0 0 * * * test.sh
+```
+
+### 实际测试数据
+
+#### every_1_minute.txt
+
+```
+# 每隔 1 分钟执行命令
+*/1 * * * * echo `date` >> /home/huangjian/crontab_demo/every_1_minute.txt
+```
+
+```
+Wed Sep 11 12:53:01 UTC 2019
+Wed Sep 11 12:54:01 UTC 2019
+Wed Sep 11 12:55:01 UTC 2019
+Wed Sep 11 12:56:01 UTC 2019
+Wed Sep 11 12:57:01 UTC 2019
+Wed Sep 11 12:58:01 UTC 2019
+Wed Sep 11 12:59:01 UTC 2019
+Wed Sep 11 13:00:01 UTC 2019
+Wed Sep 11 13:01:01 UTC 2019
+Wed Sep 11 13:02:01 UTC 2019
+Wed Sep 11 13:03:01 UTC 2019
+```
+
+#### every_2_minute.txt
+
+你会发现，这个不仅仅是只隔两分钟，而且分钟数也是 2 的倍数。
+
+```
+# 每隔 2 分钟执行命令
+*/2 * * * * echo `date` >> /home/huangjian/crontab_demo/every_2_minute.txt
+```
+
+```
+Wed Sep 11 12:44:01 UTC 2019
+Wed Sep 11 12:46:02 UTC 2019
+Wed Sep 11 12:48:01 UTC 2019
+Wed Sep 11 12:50:01 UTC 2019
+Wed Sep 11 12:52:01 UTC 2019
+Wed Sep 11 12:54:01 UTC 2019
+Wed Sep 11 12:56:01 UTC 2019
+Wed Sep 11 12:58:01 UTC 2019
+Wed Sep 11 13:00:01 UTC 2019
+Wed Sep 11 13:02:01 UTC 2019
+Wed Sep 11 13:04:01 UTC 2019
+Wed Sep 11 13:06:01 UTC 2019
+Wed Sep 11 13:08:01 UTC 2019
+Wed Sep 11 13:10:01 UTC 2019
+Wed Sep 11 13:12:01 UTC 2019
+Wed Sep 11 13:14:01 UTC 2019
+Wed Sep 11 13:16:01 UTC 2019
+Wed Sep 11 13:18:01 UTC 2019
+```
+
+#### every_3_minute.txt
+
+每隔 3 分钟，并且分钟数也是 3 的倍数。
+
+```
+# 每隔 3 分钟执行命令
+*/3 * * * * echo `date` >> /home/huangjian/crontab_demo/every_3_minute.txt
+```
+
+```
+Wed Sep 11 12:42:01 UTC 2019
+Wed Sep 11 12:45:02 UTC 2019
+Wed Sep 11 12:48:01 UTC 2019
+Wed Sep 11 12:51:01 UTC 2019
+Wed Sep 11 12:54:01 UTC 2019
+Wed Sep 11 12:57:01 UTC 2019
+Wed Sep 11 13:00:01 UTC 2019
+Wed Sep 11 13:03:01 UTC 2019
+Wed Sep 11 13:06:01 UTC 2019
+Wed Sep 11 13:09:01 UTC 2019
+Wed Sep 11 13:12:01 UTC 2019
+Wed Sep 11 13:15:01 UTC 2019
+```
+
+#### every_4_minute.txt
+
+```
+# 每隔 4 分钟执行命令
+*/4 * * * * echo `date` >> /home/huangjian/crontab_demo/every_4_minute.txt
+```
+
+```
+Wed Sep 11 12:44:01 UTC 2019
+Wed Sep 11 12:48:01 UTC 2019
+Wed Sep 11 12:52:01 UTC 2019
+Wed Sep 11 12:56:01 UTC 2019
+Wed Sep 11 13:00:01 UTC 2019
+Wed Sep 11 13:04:01 UTC 2019
+Wed Sep 11 13:08:01 UTC 2019
+Wed Sep 11 13:12:01 UTC 2019
+```
+
+#### every_5_minute.txt
+
+```
+# 每隔 5 分钟执行命令
+*/5 * * * * echo `date` >> /home/huangjian/crontab_demo/every_5_minute.txt
+```
+
+```
+Wed Sep 11 12:45:02 UTC 2019
+Wed Sep 11 12:50:01 UTC 2019
+Wed Sep 11 12:55:01 UTC 2019
+Wed Sep 11 13:00:01 UTC 2019
+Wed Sep 11 13:05:01 UTC 2019
+Wed Sep 11 13:10:01 UTC 2019
+Wed Sep 11 13:15:01 UTC 2019
+```
+
+#### every_6_minute.txt
+
+```
+# 每隔 6 分钟执行命令
+*/6 * * * * echo `date` >> /home/huangjian/crontab_demo/every_6_minute.txt
+```
+
+```
+Wed Sep 11 12:42:01 UTC 2019
+Wed Sep 11 12:48:01 UTC 2019
+Wed Sep 11 12:54:01 UTC 2019
+Wed Sep 11 13:00:01 UTC 2019
+Wed Sep 11 13:06:01 UTC 2019
+Wed Sep 11 13:12:01 UTC 2019
+Wed Sep 11 13:18:01 UTC 2019
+Wed Sep 11 13:24:01 UTC 2019
+```
+
+#### every_7_minute.txt
+
+认真观察这个情况，你会发现，在 56 分的时候，下一个就变成了 00 了。
+
+所以，这并不是严格的每隔 7 分钟执行一次。
+
+```
+# 每隔 7 分钟执行命令
+*/7 * * * * echo `date` >> /home/huangjian/crontab_demo/every_7_minute.txt
+```
+
+```
+Wed Sep 11 12:42:01 UTC 2019
+Wed Sep 11 12:49:01 UTC 2019
+Wed Sep 11 12:56:01 UTC 2019
+Wed Sep 11 13:00:01 UTC 2019
+Wed Sep 11 13:07:01 UTC 2019
+Wed Sep 11 13:14:01 UTC 2019
+Wed Sep 11 13:21:01 UTC 2019
+Wed Sep 11 13:28:01 UTC 2019
+Wed Sep 11 13:35:01 UTC 2019
+Wed Sep 11 13:42:01 UTC 2019
+Wed Sep 11 13:49:01 UTC 2019
+Wed Sep 11 13:56:01 UTC 2019
+Wed Sep 11 14:00:01 UTC 2019
+Wed Sep 11 14:07:01 UTC 2019
+```
+
+#### every_hour_0th.txt
+
+```
+# 每小时的第 0 分钟执行命令
+0 * * * * echo `date` >> /home/huangjian/crontab_demo/every_hour_0th.txt
+```
+
+```
+Wed Sep 11 13:00:01 UTC 2019
+Wed Sep 11 14:00:01 UTC 2019
+Wed Sep 11 15:00:01 UTC 2019
+Wed Sep 11 16:00:01 UTC 2019
+Wed Sep 11 17:00:01 UTC 2019
+Wed Sep 11 18:00:01 UTC 2019
+Wed Sep 11 19:00:01 UTC 2019
+Wed Sep 11 20:00:01 UTC 2019
+```
+
+#### every_hour_1th.txt
+
+```
+# 每小时的第 1 分钟执行命令
+1 * * * * echo `date` >> /home/huangjian/crontab_demo/every_hour_1th.txt
+```
+
+```
+Wed Sep 11 13:01:01 UTC 2019
+Wed Sep 11 14:01:01 UTC 2019
+Wed Sep 11 15:01:01 UTC 2019
+Wed Sep 11 16:01:01 UTC 2019
+Wed Sep 11 17:01:01 UTC 2019
+Wed Sep 11 18:01:01 UTC 2019
+Wed Sep 11 19:01:01 UTC 2019
+```
+
+#### every_hour_2th.txt
+
+```
+# 每小时的第 2 分钟执行命令
+2 * * * * echo `date` >> /home/huangjian/crontab_demo/every_hour_2th.txt
+```
+
+```
+Wed Sep 11 13:02:01 UTC 2019
+Wed Sep 11 14:02:01 UTC 2019
+Wed Sep 11 15:02:01 UTC 2019
+Wed Sep 11 16:02:01 UTC 2019
+Wed Sep 11 17:02:01 UTC 2019
+Wed Sep 11 18:02:02 UTC 2019
+Wed Sep 11 19:02:01 UTC 2019
+```
+
+#### everyday_01_00.txt
+
+```
+# 每天的 1 点时执行命令
+0 1 * * * echo `date` >> /home/huangjian/crontab_demo/everyday_01_00.txt
+```
+
+```
+Thu Sep 12 01:00:01 UTC 2019
+Fri Sep 13 01:00:01 UTC 2019
+Sat Sep 14 01:00:01 UTC 2019
+Sun Sep 15 01:00:01 UTC 2019
+Mon Sep 16 01:00:01 UTC 2019
+```
+
+#### everyday_02_00.txt
+
+```
+# 每天的 2 点时执行命令
+0 2 * * * echo `date` >> /home/huangjian/crontab_demo/everyday_02_00.txt
+```
+
+```
+Thu Sep 12 02:00:01 UTC 2019
+Fri Sep 13 02:00:01 UTC 2019
+Sat Sep 14 02:00:01 UTC 2019
+Sun Sep 15 02:00:01 UTC 2019
+Mon Sep 16 02:00:01 UTC 2019
+```
+
+#### everyday_24_00.txt
+
+```
+# 每天的 0 点时执行命令
+0 0 * * * echo `date` >> /home/huangjian/crontab_demo/everyday_24_00.txt
+```
+
+```
+Thu Sep 12 00:00:01 UTC 2019
+Fri Sep 13 00:00:01 UTC 2019
+Sat Sep 14 00:00:01 UTC 2019
+Sun Sep 15 00:00:01 UTC 2019
+Mon Sep 16 00:00:01 UTC 2019
+```
+
+#### everyday_6-12_hour_every_3_hour.txt
+
+```
+# 每天的 6 点到 12 点之间，每隔 3 小时执行命令
+0 6-12/3 * * * echo `date` >> /home/huangjian/crontab_demo/everyday_6-12_hour_every_3_hour.txt
+```
+
+```
+Thu Sep 12 06:00:01 UTC 2019
+Thu Sep 12 09:00:01 UTC 2019
+Thu Sep 12 12:00:01 UTC 2019
+Fri Sep 13 06:00:01 UTC 2019
+Fri Sep 13 09:00:01 UTC 2019
+Fri Sep 13 12:00:01 UTC 2019
+Sat Sep 14 06:00:01 UTC 2019
+Sat Sep 14 09:00:01 UTC 2019
+Sat Sep 14 12:00:02 UTC 2019
 ```
 
 ### 相关文章

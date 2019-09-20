@@ -16,3 +16,7 @@ published: true #default true
 
 [ruanyf web free book](https://github.com/ruanyf/free-books#web-%E5%BC%80%E5%8F%91)
 
+[http://es6.ruanyifeng.com/](http://es6.ruanyifeng.com/)
+
+[Node 调试工具入门教程](http://www.ruanyifeng.com/blog/2018/03/node-debugger.html)
+

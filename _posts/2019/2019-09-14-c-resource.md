@@ -12,6 +12,8 @@ published: true #default true
 
 ### 网站
 
+[cppreference.com](https://en.cppreference.com/w/c)
+
 [C Programming Resources](http://www.isthe.com/chongo/tech/comp/c/index.html)
 
 [EssentialC](cslibrary.stanford.edu/101/EssentialC.pdf) [百度网盘链接](https://pan.baidu.com/s/1G85hkXQ8kifkmuwyJqDUdw) 提取码: f4vx

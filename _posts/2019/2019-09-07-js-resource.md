@@ -20,3 +20,7 @@ published: true #default true
 
 [Node 调试工具入门教程](http://www.ruanyifeng.com/blog/2018/03/node-debugger.html)
 
+[https://npm.taobao.org/](https://npm.taobao.org/)
+
+[https://cnodejs.org/](https://cnodejs.org/)
+

@@ -1,14 +1,16 @@
 ---
 layout: post
-title: "[JavaScript] 资源汇总"
+title: '[JavaScript] 资源汇总'
 date: 2019-09-07
 author: mdgsf
 comments: true
 categories: Web
 tags: [js, javascript]
-description: ""
+description: ''
 published: true #default true
 ---
+
+[JavaScript 全栈教程](https://www.liaoxuefeng.com/wiki/1022910821149312)
 
 [https://github.com/getify/You-Dont-Know-JS](https://github.com/getify/You-Dont-Know-JS)
 
@@ -31,4 +33,3 @@ published: true #default true
 
 [javascript-algorithms](https://github.com/trekhleb/javascript-algorithms) : 用
 js 实现基础数据结构和算法
-

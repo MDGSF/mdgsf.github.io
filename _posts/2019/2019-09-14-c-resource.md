@@ -7,7 +7,7 @@ comments: true
 categories: C语言
 tags: [C]
 description: ""
-published: true #default true
+published: true
 ---
 
 ### 网站

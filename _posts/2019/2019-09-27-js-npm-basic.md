@@ -7,7 +7,7 @@ comments: true
 categories: Web
 tags: [js, javascript]
 description: ""
-published: true #default true
+published: true
 ---
 
 ### 根据 package.json 来安装相应的模块

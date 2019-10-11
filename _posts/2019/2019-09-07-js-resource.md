@@ -7,7 +7,7 @@ comments: true
 categories: Web
 tags: [js, javascript]
 description: ''
-published: true #default true
+published: true
 ---
 
 [JavaScript 全栈教程](https://www.liaoxuefeng.com/wiki/1022910821149312)

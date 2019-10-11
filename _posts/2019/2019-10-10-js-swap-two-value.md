@@ -7,7 +7,7 @@ comments: true
 categories: Web
 tags: [js, javascript]
 description: ''
-published: true #default true
+published: true
 ---
 
 ```

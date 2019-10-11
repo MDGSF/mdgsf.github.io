@@ -7,7 +7,7 @@ comments: true
 categories: C语言
 tags: [clang]
 description: ""
-published: true #default true
+published: true
 ---
 
 安装 clang-format

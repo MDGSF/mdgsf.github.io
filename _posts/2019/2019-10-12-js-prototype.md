@@ -10,14 +10,15 @@ description: ''
 published: true
 ---
 
-1. `js` 会顺着 `__proto__` 一直向上找，直到 `Object` 根对象。
-2. 只有 `class` 和 `function` 有 `prototype`。
-3. `prototype` 是给 `new` 出来的对象使用的。
-4. `class A{}` 这里的 `A` 是一个类。
-5. `function B(){}` 这里的 `B` 也是一个类。
-6. `const C = {}` 这里的 `C` 是一个对象，不是一个类。
-7. 该文章把有 `prototype` 这个属性的，都称为一个类。
-8. `class A{}` 只是一个 `function A(){}` 的语法糖。
+1. `js` 会顺着 `__proto__` 属性一直向上找，直到 `Object.prototype` 根对象。
+2. `js` 不会顺着 `prototype` 属性向上找。
+3. 只有 `class` 和 `function` 有 `prototype`。
+4. `prototype` 是给 `new` 出来的对象使用的。
+5. `class A{}` 这里的 `A` 是一个类。
+6. `function B(){}` 这里的 `B` 也是一个类。
+7. `const C = {}` 这里的 `C` 是一个对象，不是一个类。
+8. 该文章把有 `prototype` 这个属性的，都称为一个类。
+9. `class A{}` 只是一个 `function A(){}` 的语法糖。
 
 ### 测试代码
 
@@ -68,6 +69,28 @@ const d1 = new D();
 
 console.log('end');
 ```
+
+### chrome 测试
+
+按 `F12` 在 `console` 中查看。
+
+输入 `a = {}` 和 `Object.prototype` 观察下。
+
+`a.__proto__ === Object.prototype`
+
+`a.__proto__.constructor === Object`
+
+`Object.prototype.constructor === Object`
+
+`Object.prototype.__proto__ === null`
+
+`Object.__proto__ === Function.prototype`
+
+`Function.prototype.constructor === Function`
+
+`Function.prototype.__proto__ === Object.prototype`
+
+`Function.__proto__ === Function.prototype`
 
 ### 参考链接
 

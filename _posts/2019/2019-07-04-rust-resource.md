@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "[Rust] 资源汇总"
-date:   2019-07-04
+title: '[Rust] 资源汇总'
+date: 2019-07-04
 comments: true
 categories: Rust
 tags: [Rust]
@@ -17,9 +17,11 @@ published: true
 
 [awesome-rust](https://github.com/rust-unofficial/awesome-rust)
 
-[Rust语言中文社区](https://rust.cc/)
+[Rust 语言中文社区](https://rust.cc/)
 
 [Command line apps in Rust](https://rust-lang-nursery.github.io/cli-wg/)
+
+[async-book](https://rust-lang.github.io/async-book/)
 
 ## 书
 

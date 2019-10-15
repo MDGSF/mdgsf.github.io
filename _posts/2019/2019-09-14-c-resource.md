@@ -52,6 +52,8 @@ published: true
 
 [libuv](https://github.com/libuv/libuv)
 
+[uvbook](https://github.com/nikhilm/uvbook)
+
 **Redis 设计与实现**
 
 [coreutil](https://www.gnu.org/software/coreutils/coreutils.html)

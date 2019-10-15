@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "[C语言] 资源汇总"
+title: '[C语言] 资源汇总'
 date: 2019-09-14
 author: mdgsf
 comments: true
 categories: C语言
 tags: [C]
-description: ""
+description: ''
 published: true
 ---
 
@@ -26,11 +26,11 @@ published: true
 
 **C Primer Plus**
 
-**C和指针**，**POINTERS ON C**
+**C 和指针**，**POINTERS ON C**
 
-**C专家编程**，**Expert C Programming**
+**C 专家编程**，**Expert C Programming**
 
-**C陷阱与缺陷**，**C Traps and Pitfalls**，[百度网盘链接](https://pan.baidu.com/s/13VY51_t7jqCt3GcnMc9ubA) 提取码: **6z6r**
+**C 陷阱与缺陷**，**C Traps and Pitfalls**，[百度网盘链接](https://pan.baidu.com/s/13VY51_t7jqCt3GcnMc9ubA) 提取码: **6z6r**
 
 **Kernighan 和 Ritchie: The C Programming Language**
 
@@ -50,11 +50,12 @@ published: true
 
 [redis](https://github.com/antirez/redis)
 
-**Redis设计与实现**
+[libuv](https://github.com/libuv/libuv)
+
+**Redis 设计与实现**
 
 [coreutil](https://www.gnu.org/software/coreutils/coreutils.html)
 
 [coreutil download](https://ftp.gnu.org/gnu/coreutils/)
 
 [https://github.com/coreutils/coreutils](https://github.com/coreutils/coreutils)
-

@@ -37,3 +37,7 @@ js 实现基础数据结构和算法
 [https://developer.mozilla.org/zh-CN/docs/Web/Tutorials](https://developer.mozilla.org/zh-CN/docs/Web/Tutorials) : MDN 教程
 
 [https://stackoverflow.com/questions/111102/how-do-javascript-closures-work](https://stackoverflow.com/questions/111102/how-do-javascript-closures-work)
+
+[https://github.com/addyosmani/essential-js-design-patterns](https://github.com/addyosmani/essential-js-design-patterns)
+
+[js-design-pattern](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)

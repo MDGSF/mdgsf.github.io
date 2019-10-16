@@ -367,6 +367,39 @@ f();
 
 可以看到上图中并没有闭包。
 
+### 例 8
+
+用闭包来实现 `private` 的效果。
+
+```
+var myNamespace = (function() {
+  // A private counter variable
+  var myPrivateVar = 0;
+
+  // A private function which logs any arguments
+  var myPrivateMethod = function(foo) {
+    console.log(foo);
+  };
+
+  return {
+    // A public variable
+    myPublicVar: 'foo',
+
+    // A public function utilizing privates
+    myPublicFunction: function(bar) {
+      myPrivateVar++;
+      myPrivateMethod(bar);
+    },
+  };
+})();
+
+myNamespace.myPublicFunction(myNamespace.myPublicVar);
+```
+
+`node --inspect-brk=9229 test.js` 用 `chrome` 调试代码，断点设置在最后一行。
+
+<img src="{{ site.url }}/images/2019/10/20191016_10.png" alt="20191016_10.png" />
+
 ## 参考链接
 
 [https://stackoverflow.com/questions/111102/how-do-javascript-closures-work](https://stackoverflow.com/questions/111102/how-do-javascript-closures-work)

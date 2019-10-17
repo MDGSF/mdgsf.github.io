@@ -43,3 +43,5 @@ js 实现基础数据结构和算法
 [js-design-pattern](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 
 [JavaScript-Garden](http://bonsaiden.github.io/JavaScript-Garden/)
+
+[https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide)

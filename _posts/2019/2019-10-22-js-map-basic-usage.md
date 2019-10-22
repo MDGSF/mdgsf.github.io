@@ -54,6 +54,10 @@ myMap.set(keyString, newKeyStringValue);
 // has
 console.log(myMap.has('notExists')); // false
 console.log(myMap.has(keyString)); // true
+
+// clear all data
+myMap.clear();
+console.log(myMap); // Map {}
 ```
 
 ### for of

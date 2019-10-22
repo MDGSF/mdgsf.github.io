@@ -45,3 +45,5 @@ js 实现基础数据结构和算法
 [JavaScript-Garden](http://bonsaiden.github.io/JavaScript-Garden/)
 
 [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide)
+
+[https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects)

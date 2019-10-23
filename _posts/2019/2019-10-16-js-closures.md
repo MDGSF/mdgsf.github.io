@@ -398,7 +398,7 @@ myNamespace.myPublicFunction(myNamespace.myPublicVar);
 
 `node --inspect-brk=9229 test.js` 用 `chrome` 调试代码，断点设置在最后一行。
 
-<img src="{{ site.url }}/images/2019/10/20191016_10.png" alt="20191016_10.png" />
+<img src="{{ site.url }}/images/2019/10/20191016_11.png" alt="20191016_11.png" />
 
 ## 参考链接
 

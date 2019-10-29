@@ -47,3 +47,7 @@ js 实现基础数据结构和算法
 [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide)
 
 [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects)
+
+[https://github.com/justjavac/free-programming-books-zh_CN#javascript](https://github.com/justjavac/free-programming-books-zh_CN#javascript)
+
+[http://liubin.org/promises-book/](http://liubin.org/promises-book/)

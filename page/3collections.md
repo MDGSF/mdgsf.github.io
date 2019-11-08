@@ -38,6 +38,10 @@ type: page
 
 [加个小鸡腿](https://www.cnblogs.com/zndxall/)
 
+[plus7wist](https://plus7wist.github.io/)
+
+[westernsun](https://westernsun.github.io/)
+
 ## Comments
 
 {% include comments.html %}

@@ -160,6 +160,12 @@ openssl dgst -sha256 -sign key.pem -out signature.sin record.txt  //用私钥 ke
 openssl dgst -sha256 -verify pubkey.pem -signature signature.sin record.txt  //用公钥 pubkey.pem 和 signature.sin 对 record.txt 进行验证
 ```
 
+[openssl-dgst](https://www.openssl.org/docs/man1.0.2/man1/openssl-dgst.html)
+
+file or files to digest. If no files are specified then standard input is used.
+
+如果没有提供 record.txt 这个参数，那就可以从标准输入读取要验证签名的数据。
+
 ```
 生成 record.txt 文件的消息摘要
 root@jian-VirtualBox:~/opensslDemo# openssl dgst -md5 -hex record.txt
@@ -264,15 +270,25 @@ https://github.com/MDGSF/GoPractice/tree/master/HTTPSDemo
 ## 参考链接
 
 https://www.openssl.org/
+
 https://www.openssl.org/docs/manmaster/man1/
+
 https://github.com/openssl/openssl
 
 https://github.com/bigwhite/experiments/tree/master/gohttps/6-dual-verify-certs
+
 https://yq.aliyun.com/articles/40398
+
 https://www.cnblogs.com/littleatp/p/5878763.html
+
 https://blog.csdn.net/liuchunming033/article/details/48470575
+
 https://blog.csdn.net/gladmustang/article/details/42240999
+
 https://timnash.co.uk/guessing-ssl-questions/
+
 https://zhuanlan.zhihu.com/p/26646377
+
 https://www.jianshu.com/p/79c284e826fa
+
 https://github.com/openssl/openssl/blob/master/apps/openssl.cnf

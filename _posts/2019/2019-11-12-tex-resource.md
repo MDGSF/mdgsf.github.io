@@ -27,3 +27,7 @@ published: true #default true
 [https://www.cnblogs.com/yfceshi/p/6763758.html](https://www.cnblogs.com/yfceshi/p/6763758.html)
 
 [https://www.linuxidc.com/Linux/2015-07/120653.htm](https://www.linuxidc.com/Linux/2015-07/120653.htm)
+
+[https://www.cnblogs.com/tenderwx/p/6920283.html](https://www.cnblogs.com/tenderwx/p/6920283.html)
+
+[http://www.sascha-frank.com/latex-font-size.html](http://www.sascha-frank.com/latex-font-size.html)

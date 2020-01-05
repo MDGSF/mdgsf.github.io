@@ -38,6 +38,12 @@ type: page
 
 [加个小鸡腿](https://www.cnblogs.com/zndxall/)
 
+[王垠大神](http://www.yinwang.org/)
+
+[酷壳](https://coolshell.cn/)
+
+[云风的BLOG](https://blog.codingnow.com/)
+
 [plus7wist](https://plus7wist.github.io/)
 
 [westernsun](https://westernsun.github.io/)

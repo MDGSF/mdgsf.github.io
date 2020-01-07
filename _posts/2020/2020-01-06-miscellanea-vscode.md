@@ -61,7 +61,9 @@ Ctrl + [ Outdent line 和上一个命令相反
 
 ```
 多行插入删除
-先按住 Alt + Shift，然后用鼠标点击多个位置
+先按住 Alt + Shift，
+然后用鼠标点击多个位置
+也可以用 UpArrow 和 DownArrow 上下扩展
 
 字体放大
 Ctrl +
@@ -70,4 +72,10 @@ Ctrl -
 
 Ctrl + p   Go to File...
 Ctrl + g   Go to Line...
+
+Ctrl + Shift + p 
+这个命令和 Ctrl + p 的唯一区别就是帮你自动输入了 > 这个符号。
+
+Ctrl + B  打开/关闭侧边栏
+Ctrl + `  打开/关闭集成终端
 ```

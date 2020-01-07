@@ -61,6 +61,8 @@ Ctrl + [ Outdent line 和上一个命令相反
 
 ```
 多行插入删除
+Alt + 鼠标点击，可以在多个位置插入光标
+
 先按住 Alt + Shift，
 然后用鼠标点击多个位置
 也可以用 UpArrow 和 DownArrow 上下扩展

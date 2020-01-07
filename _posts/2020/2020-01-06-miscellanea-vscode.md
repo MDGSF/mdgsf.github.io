@@ -48,7 +48,7 @@ Alt + UpArrow
 Ctrl + Shift + DownArrow 
 Alt + DownArrow
 
-Ctrl + y 删除光标所在的行
+Ctrl + Shift + k 删除光标所在的行
 Ctrl + c 复制光标所在的行，不需要选中
 Ctrl + x 剪切光标所在的行，不需要选中
 

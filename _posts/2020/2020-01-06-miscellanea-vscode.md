@@ -41,11 +41,9 @@ Alt + PgDn 向下翻页
 
 ```
 将当前行和上一行交换位置
-Ctrl + Shift + UpArrow  
 Alt + UpArrow
 
 将当前行和下一行交换位置
-Ctrl + Shift + DownArrow 
 Alt + DownArrow
 
 Ctrl + Shift + k 删除光标所在的行

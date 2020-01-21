@@ -30,7 +30,11 @@ type: page
 
 [JavaScript 资源汇总]({{ site.url }}/2019/09/07/js-resource/)
 
+[函数式编程 资源汇总]({{ site.url }}/2020/01/21/fp-resource/)
+
 ## 画图
+
+[https://www.draw.io/](https://www.draw.io/)
 
 [http://asciiflow.com/](http://asciiflow.com/)
 

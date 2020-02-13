@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Art][智力题] 被6整除的数"
+title:  "[算法学习][智力题] 被6整除的数"
 date:   2018-04-14
 comments: true
 categories: Art

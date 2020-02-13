@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Art] Manacher Algorithm"
+title:  "[算法学习] Manacher Algorithm"
 date:   2019-01-06
 comments: true
 categories: Art

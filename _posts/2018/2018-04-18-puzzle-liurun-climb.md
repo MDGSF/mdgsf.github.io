@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Art][智力题] 爬山"
+title:  "[算法学习][智力题] 爬山"
 date:   2018-04-18
 comments: true
 categories: Art

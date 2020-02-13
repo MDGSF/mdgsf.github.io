@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Art][leetcode] 2 Add Two Numbers"
+title: "[算法学习][leetcode] 2 Add Two Numbers"
 date: 2017-07-19
 author: mdgsf
 comments: true

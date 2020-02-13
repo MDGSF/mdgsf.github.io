@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Art][面试题] 2015华为校招机试"
+title: "[算法学习][面试题] 2015华为校招机试"
 date: 2017-03-06
 author: mdgsf
 comments: true

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Art][leetcode] 24 Swap Nodes in Pairs"
+title: "[算法学习][leetcode] 24 Swap Nodes in Pairs"
 date: 2016-12-21
 author: mdgsf
 comments: true

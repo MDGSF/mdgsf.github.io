@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Art][LintCode] A + B"
+title:  "[算法学习][LintCode] A + B"
 date:   2016-06-15
 comments: true
 categories: Art

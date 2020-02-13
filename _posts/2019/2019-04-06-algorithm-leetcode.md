@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Art] leetcode 汇总"
+title:  "[算法学习] leetcode 汇总"
 date:   2019-04-06
 comments: true
 categories: Art

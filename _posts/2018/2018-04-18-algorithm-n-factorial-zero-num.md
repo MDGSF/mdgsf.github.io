@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Art][Math] n的阶乘的末尾有几个零？"
+title:  "[算法学习][Math] n的阶乘的末尾有几个零？"
 date:   2018-04-18
 comments: true
 categories: Art

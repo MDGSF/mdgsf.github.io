@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Art][leetcode] 1 Two Sum"
+title: "[算法学习][leetcode] 1 Two Sum"
 date: 2017-07-19
 author: mdgsf
 comments: true

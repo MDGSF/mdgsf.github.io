@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Art] 资源汇总"
+title:  "[算法学习] 资源汇总"
 date:   2019-02-28
 comments: true
 categories: Art

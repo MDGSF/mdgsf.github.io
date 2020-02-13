@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Art][动态规划] 斐波那契数列"
+title: "[算法学习][动态规划] 斐波那契数列"
 date: 2019-01-26
 author: mdgsf
 comments: true

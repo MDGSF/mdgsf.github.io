@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Art][leetcode] 3 Longest Substring without Repeating Characters"
+title: "[算法学习][leetcode] 3 Longest Substring without Repeating Characters"
 date: 2017-07-20
 author: mdgsf
 comments: true

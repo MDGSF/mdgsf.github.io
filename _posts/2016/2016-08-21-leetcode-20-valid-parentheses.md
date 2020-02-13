@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Art][leetcode] 20 Valid Parentheses"
+title: "[算法学习][leetcode] 20 Valid Parentheses"
 date: 2016-08-21
 author: mdgsf
 comments: true

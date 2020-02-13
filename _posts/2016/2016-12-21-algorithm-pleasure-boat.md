@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Art][动态规划] 游船费问题"
+title: "[算法学习][动态规划] 游船费问题"
 date: 2016-12-21
 author: mdgsf
 comments: true

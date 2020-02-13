@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Art][动态规划] 乘积最大子序列"
+title: "[算法学习][动态规划] 乘积最大子序列"
 date: 2019-03-09
 author: mdgsf
 comments: true

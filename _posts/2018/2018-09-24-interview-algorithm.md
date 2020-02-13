@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Art] 需要学习的算法大纲"
+title:  "[算法学习] 需要学习的算法大纲"
 date:   2018-09-24
 comments: true
 categories: Art

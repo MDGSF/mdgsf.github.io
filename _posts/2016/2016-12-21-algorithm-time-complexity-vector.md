@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Art][时间复杂度] C++ vector 的时间复杂度分析"
+title: "[算法学习][时间复杂度] C++ vector 的时间复杂度分析"
 date: 2016-12-21
 author: mdgsf
 comments: true

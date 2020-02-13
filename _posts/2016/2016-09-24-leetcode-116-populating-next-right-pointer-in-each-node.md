@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Art][leetcode] 116 Populating Next Right Pointers in Each Node"
+title: "[算法学习][leetcode] 116 Populating Next Right Pointers in Each Node"
 date: 2016-09-24
 author: mdgsf
 comments: true

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Art][动态规划] 爬楼梯"
+title: "[算法学习][动态规划] 爬楼梯"
 date: 2019-01-27
 author: mdgsf
 comments: true

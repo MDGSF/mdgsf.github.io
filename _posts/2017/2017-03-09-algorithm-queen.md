@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Art][排列组合] N 皇后问题"
+title: "[算法学习][排列组合] N 皇后问题"
 date: 2017-03-09
 author: mdgsf
 comments: true

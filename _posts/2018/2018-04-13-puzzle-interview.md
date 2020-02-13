@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Art][智力题] 喝酒问题"
+title:  "[算法学习][智力题] 喝酒问题"
 date:   2018-04-13
 comments: true
 categories: Art

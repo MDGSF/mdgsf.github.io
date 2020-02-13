@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Art][动态规划] 计算路径数"
+title: "[算法学习][动态规划] 计算路径数"
 date: 2019-01-27
 author: mdgsf
 comments: true

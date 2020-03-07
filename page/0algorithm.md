@@ -16,4 +16,5 @@ type: page
 
 #### 数组、链表
 
-[leetcode 11 盛最多水的容器]({{ site.url }}/2020/02/13/leetcode-11/)
+- [leetcode 11. 盛最多水的容器]({{ site.url }}/2020/02/13/leetcode-11/)
+- [leetcode 283. 移动零]({{ site.url }}/2020/03/07/leetcode-283/)

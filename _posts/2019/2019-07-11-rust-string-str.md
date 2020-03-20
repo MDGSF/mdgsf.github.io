@@ -64,3 +64,14 @@ fn test2() {
     println!();
 }
 ```
+
+`bytes` 和 `chars` 返回的是迭代器。
+
+`as_bytes` 所有权没有转移。
+
+`into_bytes` 所有权被转移了。
+
+- [bytes](https://doc.rust-lang.org/std/primitive.str.html#method.bytes)
+- [chars](https://doc.rust-lang.org/std/primitive.str.html#method.chars)
+- [as_bytes](https://doc.rust-lang.org/std/string/struct.String.html#method.as_bytes)
+- [into_bytes](https://doc.rust-lang.org/std/string/struct.String.html#method.into_bytes)

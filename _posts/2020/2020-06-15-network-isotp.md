@@ -10,17 +10,30 @@ description:
 published: true #default true
 ---
 
+- [背景介绍](#背景介绍)
+- [CAN 协议介绍](#can-协议介绍)
+- [ISO-TP 协议介绍](#iso-tp-协议介绍)
+  - [ISO-TP 协议发送数据流程图](#iso-tp-协议发送数据流程图)
+  - [ISO-TP 协议帧详细设计](#iso-tp-协议帧详细设计)
+    - [Single Frame(SF)](#single-framesf)
+    - [First Frame(FF)](#first-frameff)
+    - [Consecutive Frame(CF)](#consecutive-framecf)
+    - [Flow Control Frame(FC)](#flow-control-framefc)
+  - [ISO-TP 协议对丢包的处理](#iso-tp-协议对丢包的处理)
+- [isotptun 介绍](#isotptun-介绍)
+- [相关资源](#相关资源)
+
 ## 背景介绍
 
 **CAN** 是控制器局域网络（Controller Area Network, CAN）的简称，是由以研发和生产汽车电子产品著称的德国 BOSCH 公司开发的，并最终成为国际标准（ISO 11898），是国际上应用最广泛的现场总线之一。CAN 传输协议提供点对点的通信，在两个 CAN 节点之间通过 `CAN ID` 来进行通信。如下图所示：
 
 ![15_03.png]({{ site.url }}/images/2020/06/15_03.png)
 
-**ISO-TP 协议**是一个基于 CAN 协议的请求应答协议。ISO-TP 是一个不可靠的数据报协议。因此，不支持错误提示，例如：“由于错误的序列号导致了数据包丢失”是没有任何提示的。ISO-TP 示意图如下：
+**ISO-TP 协议**是一个基于 **CAN 协议**的请求应答协议。**ISO-TP 协议**是一个不可靠的数据报协议。因此，不支持错误提示，例如：“由于错误的序列号导致了数据包丢失”是没有任何提示的。**ISO-TP 协议**示意图如下：
 
 ![15_04.png]({{ site.url }}/images/2020/06/15_04.png)
 
-**isotptun** 是基于 ISO-TP 协议的双向 IP 隧道。示意图如下：
+**isotptun** 是基于 **ISO-TP 协议**的双向 IP 隧道。示意图如下：
 
 ![15_05.png]({{ site.url }}/images/2020/06/15_05.png)
 
@@ -67,7 +80,7 @@ struct can_frame {
 
 因为每一个 CAN 帧都至少使用了一个字节来标识类型，所以基于 8 个字节的 **CAN 协议**的 **ISO-TP 协议**开销至少是 `1/8 = 12.5%`。有一种叫 `CAN FD` 的扩展 **CAN 协议**，可以携带高达 64 字节的数据，如果 **ISO-TP 协议**是基于 `CAN FD` 的话，那协议的开销就是 `1/64 = 1.6%`。但是很可惜，windows 下的第三方驱动只支持 8 个字节的经典 **CAN 协议**。
 
-### ISO-TP 协议发送数据图例
+### ISO-TP 协议发送数据流程图
 
 **ISO-TP 协议**提供了分段、带流控的数据传输、重组这些功能。**ISO-TP 协议**的主要作用是能够传输大于单个 CAN 帧能够传输的数据。大于单个 CAN 帧的数据会被拆分为多个部分（**分段**），每个部分都能够通过单个 CAN 帧来传输，接收端对收到的数据进行重组。
 
@@ -81,14 +94,14 @@ struct can_frame {
 
 ### ISO-TP 协议帧详细设计
 
-下面我们来看下 **ISO-TP 协议** 4 个帧的详细设计，这里只显示了前面 5 个字节：
+下面我们来看下 **ISO-TP 协议** 4 个帧的详细设计：
 
-| PCI B[0]     | B[1]      | B[2] | B[3] | B[4] |
-| ------------ | --------- | ---- | ---- | ---- |
-| SF 0000 LLLL | data      | data | data | data |
-| FF 0001 LLLL | LLLLLLLL  | data | data | data |
-| CF 0010 NNNN | data      | data | data | data |
-| FC 0011 FFFF | Blocksize | STm  | n.a. | n.a. |
+| PCI |   B[0]    |   B[1]    | B[2] | B[3] | B[4] | B[5] | B[6] | B[7] |
+|-----|-----------|-----------|------|------|------|------|------|------|
+| SF  | 0000 LLLL | data      | data | data | data | data | data | data |
+| FF  | 0001 LLLL | LLLLLLLL  | data | data | data | data | data | data |
+| CF  | 0010 NNNN | data      | data | data | data | data | data | data |
+| FC  | 0011 FFFF | Blocksize | STm  | n.a. | n.a. | n.a. | n.a. | n.a. |
 
 - **LLLL**：PDU（Protocol Data Unit） 的长度信息。
 - **NNNN**：`连续帧`中的序列号，一共只有 4 比特，所以数据范围是 `0 ~ 15`。
@@ -119,7 +132,7 @@ struct can_frame {
 
 **CF** 的第一个字节的后面 4 个比特，表示的是序列号，范围是 `0 ~ 15`，从 0 开始一直增加到 15，然后再次从 0 开始。
 
-**CF** 是没有表示数据长度的字段的，除了第一个字节之外，剩下的都是数据。只有最后一个 **CF** 的数据才可能没有填充满。
+**CF** 没有表示数据长度的字段的，除了第一个字节之外，剩下的都是数据。只有最后一个 **CF** 的数据才可能没有填充满。
 
 #### Flow Control Frame(FC)
 

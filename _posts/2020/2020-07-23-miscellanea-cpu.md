@@ -1,13 +1,15 @@
 ---
 layout: post
-title:  "arm arm32 armv7 arm64 aarch64 armv8 x86 i386 i686 x86_64 amd64"
+title:  "如何选取 android 系统上的编译工具链"
 date:   2020-07-23
 comments: true
 categories: miscellanea
-tags: [cpu]
+tags: [cpu, arm, arm32, armv7, arm64, aarch64, armv8, x86, i386, i686, x86_64, amd64]
 description:
 published: true
 ---
+
+先介绍一些基础背景知识。
 
 1. **Intel**. 我们一般买的电脑都是 Intel 的 CPU。
 2. **AMD**. AMD 是 Intel 的最大竞争对手。AMD 的 CPU 一般也用在电脑上。
@@ -34,7 +36,7 @@ ARM 有两层含义：
 
 现在的手机和电脑一般都是 64 位的，所以如果要给手机编译一个软件，一般使用 aarch64 类型的交叉编译工具链。
 
-## 交叉编译工具链
+## 交叉编译工具链三元组格式介绍
 
 Triple 三元组格式：
 
@@ -56,7 +58,7 @@ arm-unknown-linux-gnueabihf
 - ABI：gnueabihf。gnueabihf 表示系统使用 glibc 作为其 C 标准库 libc 实现，
     并且具有硬件加速浮点算法。
 
-然后有的 triple 三元组会把**供应商（vendor）**或**ABI**给省略掉。例如：
+然后有的 triple 三元组会把**供应商（vendor）**或 **ABI** 给省略掉。例如：
 
 ```
 x86_64-apple-darwin
@@ -66,7 +68,118 @@ x86_64-apple-darwin
 - 供应商（vendor）：apple。
 - 系统（system）：darwin。
 
-下面是一些常见的例子：
+那我们要怎么确定我们要用哪一个呢？
+
+- 架构（architecture）：在 UNIX 系统上，我们可以使用 `uname -m` 查看。
+- 供应商（vendor）：Linux 通常是 `unknown`，Windows 是 `pc`，OSX/IOS 是 `apple`。
+- 系统（system）：在 UNIX 系统上，我们可以使用 `uname -s` 查看。
+- ABI：Linux 上可以使用 `ldd --version` 查看。Mac 和 *BSD 忽略这个选项。Windows 是 `gnu` 或 `msvc`。
+
+因为我们是要给 64 位的 android 系统使用，所以一定要有 **aarch64** 和 **android** 出现，这样就可以排除掉其他不可以使用的了。
+下面我们看具体要怎么选。
+
+## android 编译工具链
+
+你可以从 [ndk 下载] 地址下载最新的 ndk。目前最新的稳定版本是 r21b。
+我这里是 ubuntu 系统，所以下载 `android-ndk-r21b-linux-x86_64.zip` 这个压缩包。
+解压之后得到 `android-ndk-r21b` 这个目录，比如就解压到 `HOME` 目录 `/home/huangjian` 下面。
+
+我们可以编写一个如下的编译脚本，来编译最简单的 hello world 的 cpp 程序。
+
+```sh
+export NDK=/home/huangjian/android-ndk-r21b
+export TOOLCHAIN=$NDK/toolchains/llvm/prebuilt/linux-x86_64
+export TARGET=aarch64-linux-android
+export API=29
+
+export CC=$TOOLCHAIN/bin/$TARGET$API-clang
+export CXX=$TOOLCHAIN/bin/$TARGET$API-clang++
+export AR=$TOOLCHAIN/bin/$TARGET-ar
+export RANLIB=$TOOLCHAIN/bin/$TARGET-ranlib
+export STRIP=$TOOLCHAIN/bin/$TARGET-strip
+
+echo 'CC = '$CC
+echo 'AR = '$AR
+echo 'RANLIB = '$RANLIB
+echo 'STRIP = '$STRIP
+
+$CC hello.cpp -o hello
+```
+
+我们可以看到在目录 `/home/huangjian/android-ndk-r21b/toolchains/llvm/prebuilt/linux-x86_64/bin`
+下面，有非常多的不同 CPU 架构的编译器，我们需要选择其中一个来使用。上面的编译脚本中，
+我们选择的是 `aarch64-linux-android29-clang`。
+
+```
+aarch64-linux-android21-clang       armv7a-linux-androideabi23-clang    ld.lld
+aarch64-linux-android21-clang++     armv7a-linux-androideabi23-clang++  lldb-argdumper
+aarch64-linux-android22-clang       armv7a-linux-androideabi24-clang    llvm-addr2line
+aarch64-linux-android22-clang++     armv7a-linux-androideabi24-clang++  llvm-ar
+aarch64-linux-android23-clang       armv7a-linux-androideabi26-clang    llvm-as
+aarch64-linux-android23-clang++     armv7a-linux-androideabi26-clang++  llvm-cfi-verify
+aarch64-linux-android24-clang       armv7a-linux-androideabi27-clang    llvm-config
+aarch64-linux-android24-clang++     armv7a-linux-androideabi27-clang++  llvm-cov
+aarch64-linux-android26-clang       armv7a-linux-androideabi28-clang    llvm-dis
+aarch64-linux-android26-clang++     armv7a-linux-androideabi28-clang++  llvm-lib
+aarch64-linux-android27-clang       armv7a-linux-androideabi29-clang    llvm-link
+aarch64-linux-android27-clang++     armv7a-linux-androideabi29-clang++  llvm-modextract
+aarch64-linux-android28-clang       bisect_driver.py                    llvm-nm
+aarch64-linux-android28-clang++     clang                               llvm-objcopy
+aarch64-linux-android29-clang       clang++                             llvm-objdump
+aarch64-linux-android29-clang++     clang-check                         llvm-profdata
+aarch64-linux-android-addr2line     clang-cl                            llvm-ranlib
+aarch64-linux-android-ar            clang-format                        llvm-readelf
+aarch64-linux-android-as            clang-tidy                          llvm-readobj
+aarch64-linux-android-c++filt       clang-tidy.real                     llvm-size
+aarch64-linux-android-dwp           dsymutil                            llvm-strings
+aarch64-linux-android-elfedit       git-clang-format                    llvm-strip
+aarch64-linux-android-gprof         i686-linux-android16-clang          llvm-symbolizer
+aarch64-linux-android-ld            i686-linux-android16-clang++        sancov
+aarch64-linux-android-ld.bfd        i686-linux-android17-clang          sanstats
+aarch64-linux-android-ld.gold       i686-linux-android17-clang++        scan-build
+aarch64-linux-android-nm            i686-linux-android18-clang          scan-view
+aarch64-linux-android-objcopy       i686-linux-android18-clang++        x86_64-linux-android21-clang
+aarch64-linux-android-objdump       i686-linux-android19-clang          x86_64-linux-android21-clang++
+aarch64-linux-android-ranlib        i686-linux-android19-clang++        x86_64-linux-android22-clang
+aarch64-linux-android-readelf       i686-linux-android21-clang          x86_64-linux-android22-clang++
+aarch64-linux-android-size          i686-linux-android21-clang++        x86_64-linux-android23-clang
+aarch64-linux-android-strings       i686-linux-android22-clang          x86_64-linux-android23-clang++
+aarch64-linux-android-strip         i686-linux-android22-clang++        x86_64-linux-android24-clang
+arm-linux-androideabi-addr2line     i686-linux-android23-clang          x86_64-linux-android24-clang++
+arm-linux-androideabi-ar            i686-linux-android23-clang++        x86_64-linux-android26-clang
+arm-linux-androideabi-as            i686-linux-android24-clang          x86_64-linux-android26-clang++
+arm-linux-androideabi-c++filt       i686-linux-android24-clang++        x86_64-linux-android27-clang
+arm-linux-androideabi-dwp           i686-linux-android26-clang          x86_64-linux-android27-clang++
+arm-linux-androideabi-elfedit       i686-linux-android26-clang++        x86_64-linux-android28-clang
+arm-linux-androideabi-gprof         i686-linux-android27-clang          x86_64-linux-android28-clang++
+arm-linux-androideabi-ld            i686-linux-android27-clang++        x86_64-linux-android29-clang
+arm-linux-androideabi-ld.bfd        i686-linux-android28-clang          x86_64-linux-android29-clang++
+arm-linux-androideabi-ld.gold       i686-linux-android28-clang++        x86_64-linux-android-addr2line
+arm-linux-androideabi-nm            i686-linux-android29-clang          x86_64-linux-android-ar
+arm-linux-androideabi-objcopy       i686-linux-android29-clang++        x86_64-linux-android-as
+arm-linux-androideabi-objdump       i686-linux-android-addr2line        x86_64-linux-android-c++filt
+arm-linux-androideabi-ranlib        i686-linux-android-ar               x86_64-linux-android-dwp
+arm-linux-androideabi-readelf       i686-linux-android-as               x86_64-linux-android-elfedit
+arm-linux-androideabi-size          i686-linux-android-c++filt          x86_64-linux-android-gprof
+arm-linux-androideabi-strings       i686-linux-android-dwp              x86_64-linux-android-ld
+arm-linux-androideabi-strip         i686-linux-android-elfedit          x86_64-linux-android-ld.bfd
+armv7a-linux-androideabi16-clang    i686-linux-android-gprof            x86_64-linux-android-ld.gold
+armv7a-linux-androideabi16-clang++  i686-linux-android-ld               x86_64-linux-android-nm
+armv7a-linux-androideabi17-clang    i686-linux-android-ld.bfd           x86_64-linux-android-objcopy
+armv7a-linux-androideabi17-clang++  i686-linux-android-ld.gold          x86_64-linux-android-objdump
+armv7a-linux-androideabi18-clang    i686-linux-android-nm               x86_64-linux-android-ranlib
+armv7a-linux-androideabi18-clang++  i686-linux-android-objcopy          x86_64-linux-android-readelf
+armv7a-linux-androideabi19-clang    i686-linux-android-objdump          x86_64-linux-android-size
+armv7a-linux-androideabi19-clang++  i686-linux-android-ranlib           x86_64-linux-android-strings
+armv7a-linux-androideabi21-clang    i686-linux-android-readelf          x86_64-linux-android-strip
+armv7a-linux-androideabi21-clang++  i686-linux-android-size             yasm
+armv7a-linux-androideabi22-clang    i686-linux-android-strings
+armv7a-linux-androideabi22-clang++  i686-linux-android-strip
+```
+
+## Rust 交叉编译工具链选择
+
+下面列出 Rust 支持的交叉编译平台：
 
 ```
 $ rustc --print target-list | pr -tw100 --columns 3
@@ -120,6 +233,50 @@ i686-linux-android               s390x-unknown-linux-gnu          x86_64-wrs-vxw
 i686-pc-windows-gnu
 ```
 
+我们可以直接搜索和 android 相关的：
+
+```
+$ rustc --print target-list | grep android
+aarch64-linux-android
+arm-linux-androideabi
+armv7-linux-androideabi
+i686-linux-android
+thumbv7neon-linux-androideabi
+x86_64-linux-android
+```
+
+- aarch64 是 64 位的 ARM CPU 架构。
+- arm 是 32 位的 ARM CPU 架构。
+- armv7 是 32 位的 ARM CPU 架构。
+- i686 是 32 位的 x86 CPU 架构。
+- x86_64 是 64 位的 x86 CPU 架构。
+- thumbv7neon 不认识。
+
+很明显我们就是选择第一个 `aarch64-linux-android`。
+
+然后我们需要安装下这个平台的开发环境：
+
+```
+rustup target add aarch64-linux-android
+```
+
+安装好之后在 `~/.cargo/config` 文件里面添加如下内容：
+
+```
+[target.aarch64-linux-android]
+linker = "/home/huangjian/android-ndk-r21b/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android29-clang"
+```
+
+这里的 linker 填写的就是我们前面下载的 android 交叉编译工具目录下的编译器路径。
+
+编译命令如下：
+
+```
+cargo build --target=aarch64-linux-android
+```
+
 ## 资源链接
 
 https://github.com/japaric/rust-cross
+
+[ndk 下载]: https://developer.android.com/ndk/downloads

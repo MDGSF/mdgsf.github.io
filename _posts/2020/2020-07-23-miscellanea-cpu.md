@@ -277,6 +277,7 @@ cargo build --target=aarch64-linux-android
 
 ## 资源链接
 
-https://github.com/japaric/rust-cross
+- https://developer.android.com/ndk
+- https://github.com/japaric/rust-cross
 
 [ndk 下载]: https://developer.android.com/ndk/downloads

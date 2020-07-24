@@ -113,7 +113,7 @@ $CC hello.cpp -o hello
 
 我们可以看到在目录 `/home/huangjian/android-ndk-r21b/toolchains/llvm/prebuilt/linux-x86_64/bin`
 下面，有非常多的不同 CPU 架构的编译器，我们需要选择其中一个来使用。上面的编译脚本中，
-我们选择的是 `aarch64-linux-android29-clang`。
+我们选择的是 `aarch64-linux-android29-clang`。数字 29 是 API 的级别，详见 [什么是 API 级别？]。
 
 ```
 aarch64-linux-android21-clang       armv7a-linux-androideabi23-clang    ld.lld
@@ -287,3 +287,4 @@ cargo build --target=aarch64-linux-android
 - https://github.com/japaric/rust-cross
 
 [ndk 下载]: https://developer.android.com/ndk/downloads
+[什么是 API 级别？]: https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels

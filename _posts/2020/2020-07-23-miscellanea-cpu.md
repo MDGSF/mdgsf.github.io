@@ -100,8 +100,11 @@ export LD=$TOOLCHAIN/bin/$TARGET-ld
 export RANLIB=$TOOLCHAIN/bin/$TARGET-ranlib
 export STRIP=$TOOLCHAIN/bin/$TARGET-strip
 
-echo 'CC = '$CC
 echo 'AR = '$AR
+echo 'AS = '$AS
+echo 'CC = '$CC
+echo 'CXX = '$CXX
+echo 'LD = '$LD
 echo 'RANLIB = '$RANLIB
 echo 'STRIP = '$STRIP
 

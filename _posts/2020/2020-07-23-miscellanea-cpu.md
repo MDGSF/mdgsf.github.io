@@ -92,9 +92,11 @@ export TOOLCHAIN=$NDK/toolchains/llvm/prebuilt/linux-x86_64
 export TARGET=aarch64-linux-android
 export API=29
 
+export AR=$TOOLCHAIN/bin/$TARGET-ar
+export AS=$TOOLCHAIN/bin/$TARGET-as
 export CC=$TOOLCHAIN/bin/$TARGET$API-clang
 export CXX=$TOOLCHAIN/bin/$TARGET$API-clang++
-export AR=$TOOLCHAIN/bin/$TARGET-ar
+export LD=$TOOLCHAIN/bin/$TARGET-ld
 export RANLIB=$TOOLCHAIN/bin/$TARGET-ranlib
 export STRIP=$TOOLCHAIN/bin/$TARGET-strip
 
@@ -278,6 +280,7 @@ cargo build --target=aarch64-linux-android
 ## 资源链接
 
 - https://developer.android.com/ndk
+- https://developer.android.com/ndk/guides/other_build_systems
 - https://github.com/japaric/rust-cross
 
 [ndk 下载]: https://developer.android.com/ndk/downloads

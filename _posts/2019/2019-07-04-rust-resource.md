@@ -37,6 +37,16 @@ published: true
 
 [too many lists 中文版](https://github.com/WeAthFoLD/rust-too-many-lists-zhcn)
 
+## Rust FFI
+
+https://rustcc.cn/search?q=Rust%20FFI
+
+[rust-bindgen](https://github.com/rust-lang/rust-bindgen)
+
+[cbindgen](https://github.com/eqrion/cbindgen)
+
+[autocxx](https://github.com/google/autocxx)
+
 ## web 框架
 
 [Rocket](https://github.com/SergioBenitez/Rocket)

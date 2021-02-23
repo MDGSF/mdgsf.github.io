@@ -712,7 +712,7 @@ fn foo<'a>(s: &'a [u32]) -> Box<dyn Foo<'a> + 'a> {
 fn main() {}
 ```
 
-## HRTB
+## HRTB -- Higher Ranked Trait Bound
 
 ### HRTB例子一
 
@@ -740,7 +740,10 @@ fn main() {
 }
 ```
 
-这个例子是无法通过编译的。报错如下：
+这个例子是无法通过编译的。报错如下，大概意思就是说 b 的生命周期比 s
+的生命周期长，函数 foo 结束的时候 s 都被销毁了，还被引用着，所以报错。
+但是实际上，`b.do_sth(&s)` 这行代码运行结束之后，就没有用到 s 了，
+所以代码逻辑上应该是没有问题的。
 
 ```shell
 error[E0597]: `s` does not live long enough
@@ -761,6 +764,8 @@ error[E0597]: `s` does not live long enough
 解决方法见下一个例子。
 
 ### HRTB例子二
+
+修改为下面这种语法之后，就不受限制了。
 
 ```rust
 fn foo(b: Box<dyn for<'f> DoSomething<&'f usize>>) {
@@ -886,4 +891,6 @@ note: the late bound lifetime parameter is introduced here
 - https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html
 - https://doc.rust-lang.org/nomicon/lifetimes.html
 - https://doc.rust-lang.org/nomicon/hrtb.html
+- https://github.com/rust-lang/rfcs/blob/master/text/0387-higher-ranked-trait-bounds.md
+- https://stackoverflow.com/questions/35592750/how-does-for-syntax-differ-from-a-regular-lifetime-bound/35595491#35595491
 

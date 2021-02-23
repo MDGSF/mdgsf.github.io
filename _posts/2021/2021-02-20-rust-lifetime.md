@@ -566,7 +566,283 @@ T: 'static
 上面代码并不是表示 T 的生命周期和整个程序的生命周期一样长。而是说 T 只包含拥有所
 有权的数据，或者是包含生命周期为 `'static` 的数据。T 不能包含有短生命周期的引用。
 
-## Rust-Quiz 11
+
+## 生命周期例子
+
+### 例子一
+
+```rust
+struct Buffer {
+  buf: Vec<u8>,
+  pos: usize,
+}
+
+impl Buffer {
+  fn new() -> Buffer {
+    Buffer {
+      buf: vec![1, 2, 3, 4, 5, 6],
+      pos: 0,
+    }
+  }
+
+  fn read_bytes<'a>(&'a mut self) -> &'a [u8] {
+    self.pos += 3;
+    &self.buf[self.pos - 3..self.pos]
+  }
+}
+
+fn print(b1: &[u8], b2: &[u8]) {
+  println!("{:#?}, {:#?}", b1, b2);
+}
+
+fn main() {
+  let mut buf = Buffer::new();
+  let b1 = buf.read_bytes();
+  //let b1 = &(buf.read_bytes().to_owned());
+  let b2 = buf.read_bytes();
+  print(b1, b2);
+}
+```
+
+报错如下，说是有两个可变借用。
+
+```shell
+error[E0499]: cannot borrow `buf` as mutable more than once at a time
+  --> src/main.rs:28:12
+   |
+26 |   let b1 = buf.read_bytes();
+   |            --- first mutable borrow occurs here
+27 |   //let b1 = &(buf.read_bytes().to_owned());
+28 |   let b2 = buf.read_bytes();
+   |            ^^^ second mutable borrow occurs here
+29 |   print(b1, b2);
+   |         -- first borrow later used here
+```
+
+### 例子二
+
+这个例子可以通过编译。
+
+```rust
+struct Buffer<'a> {
+  buf: &'a [u8],
+  pos: usize,
+}
+
+// 'a 可以认为是 main 函数中 v 的生命周期
+// 'b 可以认为是 main 函数中 buf 这个对象的生命周期
+// 'a 的意思是说 Buffer 这个类 new 出来的对象的生命周期不能超过 'a
+impl<'a: 'b, 'b> Buffer<'a> {
+  fn new(b: &'a [u8]) -> Buffer {
+    Buffer { buf: b, pos: 0 }
+  }
+
+  fn read_bytes(&'b mut self) -> &'a [u8] {
+    self.pos += 3;
+    &self.buf[self.pos - 3..self.pos]
+  }
+}
+
+fn print(b1: &[u8], b2: &[u8]) {
+  println!("{:#?}, {:#?}", b1, b2);
+}
+
+fn main() {
+  let v = vec![1, 2, 3, 4, 5, 6];
+  let mut buf = Buffer::new(&v);
+  let b1 = buf.read_bytes();
+  let b2 = buf.read_bytes();
+
+  // 即使把 buf 删除了，b1 和 b2 也不受影响
+  drop(buf);
+
+  print(b1, b2);
+}
+```
+
+### 例子三
+
+这个例子可以通过编译。
+
+```rust
+use std::fmt::Debug;
+
+#[derive(Debug)]
+struct Ref<'a, T: 'a>(&'a T);
+
+fn print<T>(t: T)
+where
+  T: Debug,
+{
+  println!("`print`: t is {:?}", t);
+}
+
+fn print_ref<'a, T>(t: &'a T)
+where
+  T: Debug + 'a,
+{
+  println!("`print_ref`: t is {:?}", t);
+}
+
+fn main() {
+  let x = 7;
+  let ref_x = Ref(&x);
+  print_ref(&ref_x);
+  print(ref_x);
+}
+```
+
+### 例子四
+
+这个例子可以通过编译。
+
+```rust
+trait Foo<'a> {}
+
+struct FooImpl<'a> {
+  s: &'a [u32],
+}
+
+impl<'a> Foo<'a> for FooImpl<'a> {}
+
+fn foo<'a>(s: &'a [u32]) -> Box<dyn Foo<'a> + 'a> {
+  Box::new(FooImpl { s: s })
+}
+
+fn main() {}
+```
+
+## HRTB
+
+### HRTB例子一
+
+```rust
+use std::fmt::Debug;
+
+trait DoSomething<T> {
+  fn do_sth(&self, value: T);
+}
+
+impl<'a, T: Debug> DoSomething<T> for &'a usize {
+  fn do_sth(&self, value: T) {
+    println!("{:?}", value);
+  }
+}
+
+fn foo<'a>(b: Box<dyn DoSomething<&'a usize>>) {
+  let s: usize = 10;
+  b.do_sth(&s);
+}
+
+fn main() {
+  let x = Box::new(&2usize);
+  foo(x);
+}
+```
+
+这个例子是无法通过编译的。报错如下：
+
+```shell
+error[E0597]: `s` does not live long enough
+  --> src/main.rs:15:12
+   |
+13 | fn foo<'a>(b: Box<dyn DoSomething<&'a usize>>) {
+   |        -- lifetime `'a` defined here
+14 |   let s: usize = 10;
+15 |   b.do_sth(&s);
+   |   ---------^^-
+   |   |        |
+   |   |        borrowed value does not live long enough
+   |   argument requires that `s` is borrowed for `'a`
+16 | }
+   | - `s` dropped here while still borrowed
+```
+
+解决方法见下一个例子。
+
+### HRTB例子二
+
+```rust
+fn foo(b: Box<dyn for<'f> DoSomething<&'f usize>>) {
+  let s: usize = 10;
+  b.do_sth(&s);
+}
+```
+
+### HRTB例子三
+
+这个例子不太理解。
+
+```rust
+trait FooTrait {
+  fn show(&self) {}
+}
+
+impl<'a> FooTrait for &'a dyn for<'b> FooTrait
+where
+  for<'b> dyn FooTrait: FooTrait,
+{
+  fn show(self: &&'a dyn for<'b> FooTrait) {
+    println!("show 1")
+  }
+}
+
+impl FooTrait for for<'a> fn(&'a dyn for<'b> FooTrait) {
+  fn show(&self) {
+    println!("show 2")
+  }
+}
+
+fn global_test(x: &dyn for<'a> FooTrait) {
+  (&x).show(); // show 1
+  x.show(); // show 2
+  <&dyn for<'a> FooTrait as FooTrait>::show(&x); // show 1
+}
+
+fn main() {
+  let x = &(global_test as for<'a> fn(&'a dyn for<'b> FooTrait));
+  global_test(x);
+}
+```
+
+## Rust-Quiz
+
+### Rust-Quiz 5
+
+https://dtolnay.github.io/rust-quiz/5
+
+https://zhuanlan.zhihu.com/p/51616607
+
+该例子可以通过编译。
+
+```rust
+trait Trait {
+  fn f(self);
+}
+
+impl<T> Trait for fn(T) {
+  fn f(self) {
+    print!("1");
+  }
+}
+
+impl<T> Trait for fn(&T) {
+  fn f(self) {
+    print!("2");
+  }
+}
+
+fn main() {
+  let a: fn(_) = |_: u8| {};
+  let b: fn(_) = |_: &u8| {};
+  let c: fn(&_) = |_: &u8| {};
+  a.f(); // 1
+  b.f(); // 1
+  c.f(); // 2
+}
+```
+
+### Rust-Quiz 11
 
 https://dtolnay.github.io/rust-quiz/11
 
@@ -603,9 +879,9 @@ note: the late bound lifetime parameter is introduced here
 - `early bound` 应该就是编译时就能够确定的。
 - `late bound` 应该就是要到程序运行的时候才能够确定。
 
-
 ## 相关资源
 
+- https://github.com/ZhangHanDong/inviting-rust
 - https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html#references-and-borrowing
 - https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html
 - https://doc.rust-lang.org/nomicon/lifetimes.html

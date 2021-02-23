@@ -893,4 +893,5 @@ note: the late bound lifetime parameter is introduced here
 - https://doc.rust-lang.org/nomicon/hrtb.html
 - https://github.com/rust-lang/rfcs/blob/master/text/0387-higher-ranked-trait-bounds.md
 - https://stackoverflow.com/questions/35592750/how-does-for-syntax-differ-from-a-regular-lifetime-bound/35595491#35595491
-
+- https://zhuanlan.zhihu.com/p/93846179
+- https://zhuanlan.zhihu.com/p/104742696

@@ -63,11 +63,7 @@ A 拥有数据的所有权，那么 A 就是出借方。B 从 A 那里借用了�
 Rust 的编译器中有一个叫做生命周期检查器的工具，英文名叫做 borrow checker。在大部
 分时候，它都可以自动推断出引用的生命周期参数，比如在一个函数内部。
 不过在一些特殊的情况下，生命周期存在不确定的情况，这个时候就需要我们自己手动标注生命周期参数，
-来告诉它我们希望用哪种情况，比如出现了跨函数的引用。
-
-引用如果只是在一个函数体的内部使用，那么 borrow checker 是可以自己推断出生命周期
-的。只有当引用用在了函数的参数、返回值的时候，borrow checker 就做不到自动推断了
-，这个时候就需要手动标注生命周期参数。
+来告诉编译期我们希望用哪种情况，比如出现了跨函数的引用，引用用在了函数的参数、返回值的时候。
 
 我们手动标注的生命周期参数并不会改变引用的生命周期，它只是用来帮助
 borrow checker 检查我们的代码。
@@ -120,35 +116,75 @@ fn main() {
 
 满足以下 3 条规则可以自动推断生命周期：
 
-1. 函数的每个引用参数都有一个独立的生命周期标注。
+**第一条：**函数的每个引用参数都有一个独立的生命周期标注。
 
-  ```rust
-  fn foo<'a>(x: &'a i32);
-  fn foo<'a, 'b>(x: &'a i32, y: &'b i32);
-  fn foo<'a, 'b, 'c>(x: &'a i32, y: &'b i32, z: &'c i32);
-  ```
+```rust
+fn foo<'a>(x: &'a i32);
+fn foo<'a, 'b>(x: &'a i32, y: &'b i32);
+fn foo<'a, 'b, 'c>(x: &'a i32, y: &'b i32, z: &'c i32);
+```
 
-2. 如果刚好只有一个引用参数，那这个引用参数的生命周期标注直接
+**第二条：**如果刚好只有一个引用参数，那这个引用参数的生命周期标注直接
   应用在所有返回值的引用上。
 
-  ```rust
-  fn foo<'a>(x: &'a i32) -> &'a i32
-  ```
+```rust
+fn foo<'a>(x: &'a i32) -> &'a i32
+```
 
-3. 如果方法的第一个参数是 `&self` 或 `&mut self`，那么直接把这个参数的
+**第三条：**如果方法的第一个参数是 `&self` 或 `&mut self`，那么直接把这个参数的
   生命周期标注应用在返回值的引用上。
 
-  ```rust
-  // 应用 1 和 2 规则：
-  fn first_word(s: &str) -> &str
-  fn first_word<'a>(s: &'a str) -> &'a str
-  ```
+```rust
+// 应用 1 和 2 规则：
+fn first_word(s: &str) -> &str
+fn first_word<'a>(s: &'a str) -> &'a str
+```
 
-  ```rust
-  // 应用 1 规则：
-  fn longest<'a, 'b>(x: &'a str, y: &'b str) -> &str
-  // 可以看到 2 和 3 规则推断不出来返回值的生命周期标注，所以只好手动标注。
-  ```
+```rust
+// 应用 1 规则：
+fn longest<'a, 'b>(x: &'a str, y: &'b str) -> &str
+// 可以看到 2 和 3 规则推断不出来返回值的生命周期标注，所以只好手动标注。
+```
+
+**生命周期自动推断例子：**
+
+```rust
+fn print1(s: &str);                                   // elided
+fn print2(s: &'_ str);                                // also elided
+fn print3<'a>(s: &'a str);                            // expanded
+
+fn debug1(lvl: usize, s: &str);                       // elided
+fn debug2<'a>(lvl: usize, s: &'a str);                // expanded
+
+fn substr1(s: &str, until: usize) -> &str;            // elided
+fn substr2<'a>(s: &'a str, until: usize) -> &'a str;  // expanded
+
+fn get_mut1(&mut self) -> &mut dyn T;                 // elided
+fn get_mut2<'a>(&'a mut self) -> &'a mut dyn T;       // expanded
+
+fn args1<T: ToCStr>(&mut self, args: &[T]) -> &mut Command;                  // elided
+fn args2<'a, 'b, T: ToCStr>(&'a mut self, args: &'b [T]) -> &'a mut Command; // expanded
+
+fn new1(buf: &mut [u8]) -> Thing<'_>;                 // elided - preferred
+fn new2(buf: &mut [u8]) -> Thing;                     // elided
+fn new3<'a>(buf: &'a mut [u8]) -> Thing<'a>;          // expanded
+
+type FunPtr1 = fn(&str) -> &str;                      // elided
+type FunPtr2 = for<'a> fn(&'a str) -> &'a str;        // expanded
+
+type FunTrait1 = dyn Fn(&str) -> &str;                // elided
+type FunTrait2 = dyn for<'a> Fn(&'a str) -> &'a str;  // expanded
+
+
+// The following examples show situations where it is not allowed to elide the
+// lifetime parameter.
+
+// Cannot infer, because there are no parameters to infer from.
+fn get_str() -> &str;                                 // ILLEGAL
+
+// Cannot infer, ambiguous if it is borrowed from the first or second parameter.
+fn frob(s: &str, t: &str) -> &str;                    // ILLEGAL
+```
 
 ## longest 生命周期例子
 

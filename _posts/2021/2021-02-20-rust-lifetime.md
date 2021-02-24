@@ -26,6 +26,7 @@ published: true
   - [例子一](#例子一)
   - [例子二](#例子二)
 - [静态生命周期标注](#静态生命周期标注)
+- [const 生命周期自动推断](#const-生命周期自动推断)
 - [early bound and late bound](#early-bound-and-late-bound)
   - [例子一 -- Rust-Quiz 11](#例子一----rust-quiz-11)
   - [例子二 -- late bound](#例子二----late-bound)
@@ -702,6 +703,44 @@ T: 'static
 
 上面代码并不是表示 T 的生命周期和整个程序的生命周期一样长。而是说 T 只包含拥有所
 有权的数据，或者是包含生命周期为 `'static` 的数据。T 不能包含有短生命周期的引用。
+
+## const 生命周期自动推断
+
+https://doc.rust-lang.org/reference/lifetime-elision.html#static-lifetime-elision
+
+const 和 static 定义的引用默认都是 `'static` 的生命周期。
+const 定义闭包或函数引用的时候，会应用生命周期自动推断的三条规则。
+
+```rust
+// STRING: &'static str
+const STRING: &str = "bitstring";
+
+struct BitsNStrings<'a> {
+  mybits: [u32; 2],
+  mystring: &'a str,
+}
+
+// BITS_N_STRINGS: BitsNStrings<'static>
+const BITS_N_STRINGS: BitsNStrings<'_> = BitsNStrings {
+  mybits: [1, 2],
+  mystring: STRING,
+};
+
+// Resolved as `fn<'a>(&'a str) -> &'a str`.
+const RESOLVED_SINGLE: fn(&str) -> &str = |x| x;
+
+// Resolved as `Fn<'a, 'b, 'c>(&'a Foo, &'b Bar, &'c Baz) -> usize`.
+const RESOLVED_MULTIPLE: &dyn Fn(&Foo, &Bar, &Baz) -> usize = &somefunc;
+
+// There is insufficient information to bound the return reference lifetime
+// relative to the argument lifetimes, so this is an error.
+const RESOLVED_STATIC: &dyn Fn(&Foo, &Bar) -> &Baz = &somefunc;
+//                                            ^
+// this function's return type contains a borrowed value, but the signature
+// does not say whether it is borrowed from argument 1 or argument 2
+
+fn main() {}
+```
 
 ## early bound and late bound
 

@@ -20,7 +20,7 @@ stuffs, enjoy yourself.
 
 ## 专业技能
 
-* **语言**：Golang（熟悉），C++（熟悉），Python（熟悉）。
+* **语言**：Rust，Golang，C++，Javascript，Python。
 * **系统**：Linux（熟悉），Windows（熟悉）。
 * **网络协议**：TCP，UDP，HTTP，DNS，Websocket 等。（熟悉）
 * **数据结构与算法** 熟悉。
@@ -30,6 +30,14 @@ stuffs, enjoy yourself.
 * **开发工具**：Nginx，Vim，VSCode，WireShark，tcpdump，gdb 等。（熟悉）
 
 ## 工作经历
+
+### 深圳佑驾可以有限公司
+
+职位：全栈工程师
+
+位置：深圳
+
+时间：2018 年 04 月 -- 至今
 
 ### 深圳维京人科技有限公司
 
